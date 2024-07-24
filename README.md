@@ -21,19 +21,20 @@ Welcome to the [dbt™ Data Modeling Challenge - Social Media Edition](https://w
 - **Verification by Paradime**: We'll review your application against the [entry requirements](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-how-it-works-2).
 
 ### Step 2: Account Setup
-After verification, you'll receive two confirmation eamils from Paradime (mail@paradime.retool-email.com):
-- **Credentials - dbt™ Data Modeling Challenge - Social Media Edition**:
-   - Using the instructions oulined in the email, setup your free MotherDuck and Hex accounts. 
-- **[Paradime] Activate your account**: 
-   - Using the instructions outlined in the "*Credentials - dbt™ Data Modeling Challenge - Social Media Edition*", set up your free Paradime account:
-      - Create Account
-      - Connect to MotherDuck
-      - Create your GitHub Branch: Your branch name should follow this format: "<first_name>_<last_name>" (ex. "john_smith").
-         - For guidance, see this [step-by-step tutorial](https://app.arcade.software/share/7kRyaYbPoGc5ofmJfmvY)
+After verification, you'll receive two confirmation eamils from Paradime:
+- **Credentials - dbt™ Data Modeling Challenge - Social Media Edition**
+- **[Paradime] Activate your account**
+
+Using the instructions oulined in the email to set up your free Paradime, MotherDuck, and Hex Accounts
 
 
-**Need Additional Help?** 
-- For all technical support and challenge inquiries, use Paradime's #social-media-data-challenge [Slack channel](https://paradimers.slack.com/join/shared_invite/zt-1mzax4sb8-jgw~hXRlDHAx~KN0az18bw#/shared-invite/email). You can also find support in the [MotherDuck Slack Community](https://join.slack.com/t/motherduckcommunity/shared_invite/zt-2hh1g7kec-Z9q8wLd_~alry9~VbMiVqA).
+**Frequently Asked Questions** 
+- **Where do I go for technical support?** For all technical support and challenge inquiries, use Paradime's #social-media-data-challenge [Slack channel](https://paradimers.slack.com/join/shared_invite/zt-1mzax4sb8-jgw~hXRlDHAx~KN0az18bw#/shared-invite/email). You can also find support in the [MotherDuck Slack Community](https://join.slack.com/t/motherduckcommunity/shared_invite/zt-2hh1g7kec-Z9q8wLd_~alry9~VbMiVqA)
+- **Where are my confirmation emails?**
+   - Make sure you meet the [entry requirements](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-how-it-works-2). If you do, and still haven't received confirmation, DM Parker Rogers via Paradime's Challenge Slack.
+      - Note: If you registered using a personal email, check LinkedIn for DMs from Parker Rogers. We use LinkedIn to verify non-business email registrants. 
+   - Search for "mail@paradime.retool-email.com" in the Email account used to Register. 
+  
 
 ---
 
@@ -50,12 +51,14 @@ Before investing valuable time and energy into your project, learn key informati
 
 Now that you're set up, you have until **September 2nd, 2024** to submit your project!
 
-### Step 1: Get familiar with the required tools:
-- **Paradime**:
-   - Get familiar with the paradime IDE using this [interactive guide](https://app.arcade.software/share/7kRyaYbPoGc5ofmJfmvY). You can also watch our YouTube videos:
-   - [All features in our intuitive IDE Commands Panel](https://www.youtube.com/watch?v=wQtIn-tnnbg) - Learn how to use key Paradime features like: Integrated Terminal, Data Explorer, Data Lineage, and Data Catalog 
-   - [DinoAI Copilot](https://www.youtube.com/watch?v=KqiosgQFsuk) - Learn how to improve dbt™ development with Paradime's AI-enabled features. 
-  - **Paradime Help Docs**: For a comprehensive understanding of all the features and how to make the most of Paradime for your project, explore the [Paradime Help Docs](https://docs.paradime.io/app-help/welcome-to-paradime.io/readme).
+### Step 1: Get familiar with the required Platforms:
+
+#### Paradime:
+You're required to utilize Paradime for SQL and dbt™ development. Get familar with the platform using these resources:
+- **Code IDE UI:** Follow our [interactive tutorial](https://app.arcade.software/share/7kRyaYbPoGc5ofmJfmvY)
+- **Commands Panel:** Learn how to use the Integrated Terminal, Data Explorer, Data Lineage, and Data Catalog with our [video tutorial](https://www.youtube.com/watch?v=wQtIn-tnnbg).  
+- **DinoAI Copilot** - Discover how DinoAI improves your SQL and dbt development through our [video tutorial](https://www.youtube.com/watch?v=KqiosgQFsuk). 
+- **Paradime Help Docs**: For a comprehensive understanding of all the features and how to make the most of Paradime for your project, explore the [Paradime Help Docs](https://docs.paradime.io/app-help).
 - **MotherDuck**:
 - **Hex**: 
 
@@ -113,22 +116,23 @@ Here's an example project that fulfills all requirements and would be elligble f
 3. [Methodology](#methodology)
    - [Tools Used](#tools-used)
    - [Applied Techniques](#applied-techniques)
-4. [Visualizations](#visualizations)
-   - [Vizualization #1](vizualization-1)
-   - [Vizualization #2](Vizualization-2)
-   - [Vizualization #3](Vizualization-3)
-   - etc.
+4. [Insights](#insights)
+   - [Insight #1](insight-1)
+   - [Insight #2](insight-2)
+   - [Insight #3](insight-3)
+   - [Insight #4](insight-4)
 5. [Conclusions](#conclusions)
 
 ## Introduction
-A simple intro. Example - "Explore my project for the dbt™ data modeling challenge - Social Media Edition, Hosted by [Paradime](https://www.paradime.io/), [MotherDuck](https://motherduck.com/), and [Hex](https://hex.tech/)! This project dives into the analysis and visualization of Social Media Data!"
+A simple intro. Example - "Explore my project for the dbt™ data modeling challenge - Social Media Edition, Hosted by [Paradime](https://www.paradime.io/), [MotherDuck](https://motherduck.com/), and [Hex](https://hex.tech/)! This project dives into the analysis of Social Media Data!"
 
 ## Data Sources
 My analysis leverages four key data sets:
-- *data set name #1*
-- *data set name #2*
-- *data set name #3*
-- *data set name #4*
+- *data set name #1* - Description / purpose. 
+- *data set name #2* - Description / purpose. 
+- *data set name #3* - Description / purpose. 
+- *data set name #4* - Description / purpose. 
+- etc. 
 
 ### Data Lineage
 [Image]
@@ -136,7 +140,7 @@ My analysis leverages four key data sets:
 
 ## Methodology
 #### Tools Used:
-- **[Paradime](https://www.paradime.io/)** for SQL, dbt™.
+- **[Paradime](https://www.paradime.io/)** for SQL and dbt™ development. 
 - **[MotherDuck](https://motherduck.com/)** for data storage and computing.
 - **[Hex](https://hex.tech/)** for data visualization.
 - **Other tool(s) used** and why.
@@ -149,25 +153,33 @@ My analysis leverages four key data sets:
    - Used [function] to perform [task], which resulted in [outcome]
    - etc.
 
-## Visualizations
+## Insights
 
-### vizualization 1
-- #### Visualizations title
+### Insight 1
+- #### Insight title
 - #### Intro sentence to vizualization
 - #### Image of vizualization
-- #### Insights
+- #### Written Insight
 
-### vizualization 2
-- #### Visualizations title
+### Insight 2
+- #### Insight title
 - #### Intro sentence to vizualization
 - #### Image of vizualization
-- #### Insights
+- #### Written Insight
 
-### vizualization 3
-- #### Visualizations title
+### Insight 3
+- #### Insight title
 - #### Intro sentence to vizualization
 - #### Image of vizualization
-- #### Insights
+- #### Written Insight
+
+### Insight 4
+- #### Insight title
+- #### Intro sentence to vizualization
+- #### Image of vizualization
+- #### Written Insight
+
+- etc. 
 
 ## Conclusions
-Share a clear and concise conclusion of your findings!
+Share a clear and concise conclusion of your insights!
