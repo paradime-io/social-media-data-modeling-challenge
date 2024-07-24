@@ -46,7 +46,7 @@ Before starting your project, familiarize yourself with the following key inform
 
 ## 🛠 Building Your Project
 
-**Deadline: September 2nd, 2024**
+**Deadline: September 10, 2024**
 
 ### Step 1: Master the Required Platforms
 
@@ -127,7 +127,7 @@ Use Hex to build impactful visualizations that complement your insights.
 
 ## 📤 Submission Guidelines
 
-**Deadline: September 3rd, 2024**
+**Deadline: September 10, 2024**
 
 Follow this step-by-step tutorial to submit your project:
 
