@@ -7,7 +7,7 @@ Welcome to the [dbt™ Data Modeling Challenge - Social Media Edition](https://w
 2. [Competition Details](#-competition-details)
 3. [Building Your Project](#-building-your-project)
 4. [Submission Guidelines](#-submission-guidelines)
-5. [Example Submission Template](#-example-submission-template)
+5. [Submission Template](#-submission-template)
 
 ## 🚀 Getting Started
 
@@ -28,15 +28,16 @@ Follow the instructions in these emails to set up your free accounts for:
 ### 3. Support and FAQs
 - **Technical Support**: Join Paradime's [#social-media-data-challenge Slack channel](https://paradimers.slack.com/join/shared_invite/zt-1mzax4sb8-jgw~hXRlDHAx~KN0az18bw#/shared-invite/email).
 - **Additional Support**: Check out the [MotherDuck Slack Community](https://join.slack.com/t/motherduckcommunity/shared_invite/zt-2hh1g7kec-Z9q8wLd_~alry9~VbMiVqA).
-- **Missing Confirmation Emails?**: 
+- **Troubleshooting Confirmation Emails**: 
   - Ensure you meet the [entry requirements](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-how-it-works-2).
   - Search for "mail@paradime.retool-email.com" in your registration email account.
-  - If using a personal email, check LinkedIn for DMs from Parker Rogers.
+  - If using a personal email to register, check LinkedIn for DMs from Parker Rogers (I ask for business email if applicable). 
   - Still no luck? DM Parker Rogers via Paradime's Challenge Slack.
 
 ## 🏆 Competition Details
 
-Before diving in, familiarize yourself with:
+Before starting your project, familiarize yourself with the following key information:
+
 - [Entry Requirements](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-how-it-works-2)
 - [Competition Deliverables](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-how-it-works-2)
 - [Judging Criteria](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-how-it-works-2)
@@ -48,6 +49,8 @@ Before diving in, familiarize yourself with:
 **Deadline: September 2nd, 2024**
 
 ### Step 1: Master the Required Platforms
+
+To excel in this challenge, you'll need to become proficient with the following platforms:
 
 #### Paradime
 Utilize [Paradime](https://www.paradime.io/) for SQL and dbt™ development:
@@ -67,38 +70,57 @@ Employ [Hex](https://hex.tech/) for data visualization:
 - [Data Visualization Best Practices](https://learn.hex.tech/tutorials/visualize-data)
 
 ### Step 2: Kickstart Your Project
+
+To give you a starting point (though entirely optional):
 - Your MotherDuck account includes two pre-loaded social media datasets: `data_set_1` and `data_set_2`.
-- Your Paradime account connects to a GitHub repository with pre-configured dbt™ models.
-- These are starting points; incorporate additional datasets to excel in this challenge.
+- Your Paradime account links to a GitHub repository with pre-configured dbt™ models.
+
+Important: These resources are provided merely as a convenience. You are not required to use them in your project. In fact, to excel in this challenge, you must incorporate additional datasets beyond these initial offerings. Here's what you need to know:
+
+1. The pre-loaded datasets and models are optional tools – use them if they benefit your analysis, or disregard them completely if they don't fit your chosen direction.
+2. Regardless of whether you use the provided resources, you are required to bring in and analyze additional datasets as part of your submission.
+3. Your project should demonstrate your ability to work with diverse data sources and create insightful models beyond any pre-configured setups.
+
+Remember, the most impactful submissions often come from participants who think outside the box and bring fresh data and perspectives to their analysis. We're excited to see how you'll leverage various data sources to uncover unique insights!
 
 ### Step 3: Generate Insights
 Use Paradime, MotherDuck, and Hex to uncover compelling insights from social media data. Aim for accurate, relevant, and engaging discoveries.
 
-#### Inspiration Resources
-- [Winning Strategies for Paradime's Movie Data Modeling Challenge](https://www.paradime.io/blog/winning-strategies-movie-challenge)
-- Previous winning submissions:
-  - [Nikita Volynets' NBA Challenge Submission](https://github.com/nikita-volynets/nba-challenge-dbt-paradime/blob/main/README.md)
-  - [Spence Perry's NBA Challenge Submission](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/blob/nba-spence-perry/README.md)
-  - [Isin Pesch's Movie Challenge Submission](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/README.md)
+### Need a spark of inspiration?
+
+Check out these resources:
+- **[Winning Strategies for Paradime's Movie Data Modeling Challenge](https://www.paradime.io/blog/winning-strategies-movie-challenge):** Learn the strategies, best practices, and insights uncovered from winning participants in previous Data Modeling Challenges.
+- **Explore winning submissions from Paradime's recent Data Modeling Challenges:**
+  - [Nikita Volynets' Submission](https://github.com/nikita-volynets/nba-challenge-dbt-paradime/blob/main/README.md) - 2nd Place winner from Paradime's dbt Data Modeling Challenge - NBA Edition.
+  - [Spence Perry's Submission](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/blob/nba-spence-perry/README.md) - 1st place winner from Paradime's dbt Data Modeling Challenge - NBA Edition.
+  - [Isin Pesch's Submission](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/README.md) - 1st place winner from Paradime's dbt Data Modeling Challenge - Movie Edition.
 
 #### Potential Insight Ideas
-1. **COVID-19 Sentiment on Reddit**
-   - Data: [Reddit COVID-19 Dataset](https://www.kaggle.com/datasets/pavellexyr/the-reddit-covid-dataset)
-   - Supplement: Key dates, news, events
 
-2. **Donald Trump's Popularity Trends**
-   - Data: Twitter posts, mentions, engagement (10-year span)
-   - Supplement: Key dates, news, events
+Your primary goal is to use Paradime, MotherDuck, and Hex to unearth compelling insights from social media data. With so many social media platforms, chat forums, and supplementary datasets, the possibilities for discovery are virtually limitless. Aim to generate accurate, relevant, scroll-stopping insights. Here are some ideas:
 
-3. **Top YouTube Creators Analysis**
-   - Data: YouTube comments, engagement metrics
-   - Supplement: [Trending YouTube Video Statistics](https://www.kaggle.com/datasets/datasnaek/youtube-new?select=CAvideos.csv)
+- **COVID-19 Sentiment Analysis**
+   - **Analysis Question:** How has the sentiment around COVID-19 on Reddit changed over time? Why?
+   - **Required Social Media Data**: [Reddit posts and comments related to COVID-19](https://www.kaggle.com/datasets/pavellexyr/the-reddit-covid-dataset), or similar dataset.
+   - **Optional/Supplementary Data**: Key dates, news, events, and/or anything that points to why sentiment has changed over time.
 
-4. **2022 NFL Superbowl Commercial Popularity**
-   - Data: Twitter/Reddit posts during Superbowl
-   - Supplement: 
-     - Stock data for advertisers
-     - [Superbowl ad cost data](https://money.usnews.com/money/personal-finance/spending/articles/how-much-does-the-average-super-bowl-commercial-cost)
+- **Donald Trump Popularity Trends**
+   - **Analysis Question:** How has Donald Trump's popularity changed over time?
+   - **Required Social Media Data**: A sample of Twitter posts, mentions, and engagement, containing the words "Donald Trump" over the last 10 years.
+   - **Optional/Supplementary Data**: Key dates, news, events, and/or anything that points to why popularity has changed over time.
+
+- **Top YouTube Creators Study**
+   - **Analysis Question:** Who are the biggest YouTube creators, and why?
+   - **Required Social Media Data**: YouTube comments, engagement metrics, etc.
+   - **Optional/Supplementary Data**: [Trending YouTube Video statistics](https://www.kaggle.com/datasets/datasnaek/youtube-new?select=CAvideos.csv), or similar datasets.
+
+- **2022 NFL Superbowl Commercial Impact**
+   - **Analysis Question:** Which Commercials were most popular during the 2022 NFL Superbowl?
+   - **Required Social Media Data**: Twitter and/or Reddit posts, mentions, and engagement during the 4-hour time block of the NFL Superbowl. Only pull data that contains information about [brands that had Superbowl commercials](https://www.foxsports.com/stories/nfl/super-bowl-commercials-2022).
+   - **Optional/Supplementary Data**:
+     - For public companies that advertised, pull stock market data to see if there's any correlation between Superbowl commercial success and stock price.
+     - Using [Superbowl advertisement cost data](https://money.usnews.com/money/personal-finance/spending/articles/how-much-does-the-average-super-bowl-commercial-cost), identify which brands had the highest social engagement per dollar spent.
+
 
 ### Step 4: Create Data Visualizations
 Use Hex to build impactful visualizations that complement your insights.
@@ -107,15 +129,17 @@ Use Hex to build impactful visualizations that complement your insights.
 
 **Deadline: September 3rd, 2024**
 
-Follow [this tutorial](https://app.arcade.software/share/mpoE0fK5HknHZJ3xLVVs) to submit your project:
+Follow this step-by-step tutorial to submit your project:
 
 1. Email your submission to Parker Rogers (parker@paradime.io)
-2. Subject: "<Your_Name> - dbt Data Modeling Challenge - Social Media Edition"
+2. Subject: "<first_and_last_name> - dbt Data Modeling Challenge - Social Media Edition"
 3. Include:
    - GitHub branch link with your dbt™ models
    - README.md file (use the template below)
 
-## 📝 Example Submission Template
+## 📝 Submission Template
+
+Use this template as a starting point for your submission. Feel free to customize it to best showcase your project:
 
 ```markdown
 # Social Media Data Analysis - dbt™ Modeling Challenge
