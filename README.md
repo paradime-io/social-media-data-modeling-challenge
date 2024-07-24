@@ -1,6 +1,6 @@
 # dbt™ Data Modeling Challenge - Social Media Edition
 
-Welcome to the [dbt™ Data Modeling Challenge - Social Media Edition](https://www.paradime.io/dbt-data-modeling-challenge-social-edition)! This challenge invites you to showcase your data modeling skills using social media data.
+Welcome to the [dbt™ Data Modeling Challenge - Social Media Edition](https://www.paradime.io/dbt-data-modeling-challenge)! This challenge invites you to showcase your data modeling skills using social media data.
 
 ## 📋 Table of Contents
 1. [Getting Started](#-getting-started)
@@ -12,8 +12,8 @@ Welcome to the [dbt™ Data Modeling Challenge - Social Media Edition](https://w
 ## 🚀 Getting Started
 
 ### 1. Registration and Verification
-- **Submit Your Application**: Fill out the [registration form](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-registration-form).
-- **Verification**: We'll review your application against the [entry requirements](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-how-it-works-2).
+- **Submit Your Application**: Fill out the [registration form](https://www.paradime.io/dbt-data-modeling-challenge)
+- **Verification**: We'll review your application against the [entry requirements](https://www.paradime.io/dbt-data-modeling-challenge)
 
 ### 2. Account Setup
 After verification, you'll receive two confirmation emails from Paradime:
@@ -29,7 +29,7 @@ Follow the instructions in these emails to set up your free accounts for:
 - **Technical Support**: Join Paradime's [#social-media-data-challenge Slack channel](https://paradimers.slack.com/join/shared_invite/zt-1mzax4sb8-jgw~hXRlDHAx~KN0az18bw#/shared-invite/email).
 - **Additional Support**: Check out the [MotherDuck Slack Community](https://join.slack.com/t/motherduckcommunity/shared_invite/zt-2hh1g7kec-Z9q8wLd_~alry9~VbMiVqA).
 - **Troubleshooting Confirmation Emails**: 
-  - Ensure you meet the [entry requirements](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-how-it-works-2).
+  - Ensure you meet the [entry requirements](https://www.paradime.io/dbt-data-modeling-challenge)
   - Search for "mail@paradime.retool-email.com" in your registration email account.
   - If using a personal email to register, check LinkedIn for DMs from Parker Rogers (I ask for business email if applicable). 
   - Still no luck? DM Parker Rogers via Paradime's Challenge Slack.
@@ -38,44 +38,46 @@ Follow the instructions in these emails to set up your free accounts for:
 
 Before starting your project, familiarize yourself with the following key information:
 
-- [Entry Requirements](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-how-it-works-2)
-- [Competition Deliverables](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-how-it-works-2)
-- [Judging Criteria](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-how-it-works-2)
-- [Required Tools](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-how-it-works-2)
-- [Prizes](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-whats-in-it-for-you)
+- [Entry Requirements](https://www.paradime.io/dbt-data-modeling-challenge)
+- [Competition Deliverables](https://www.paradime.io/dbt-data-modeling-challenge)
+- [Judging Criteria](https://www.paradime.io/dbt-data-modeling-challenge)
+- [Required Tools](https://www.paradime.io/dbt-data-modeling-challenge)
+- [Prizes](https://www.paradime.io/dbt-data-modeling-challenge)
 
 ## 🛠 Building Your Project
 
-**Deadline: September 10, 2024**
+**Deadline: September 9, 2024**
 
-### Step 1: Master the Required Platforms
+### Step 1: Learn How To Use the Required Tools
 
-To excel in this challenge, you'll need to become proficient with the following platforms:
+To excel in this challenge, you'll need to learn how to use the required tools:
 
 #### Paradime
-Utilize [Paradime](https://www.paradime.io/) for SQL and dbt™ development:
+Use [Paradime](https://www.paradime.io/) for SQL and dbt™ development:
 - [Code IDE UI Tutorial](https://app.arcade.software/share/7kRyaYbPoGc5ofmJfmvY)
 - [Commands Panel Video Tutorial](https://www.youtube.com/watch?v=wQtIn-tnnbg)
 - [DinoAI Copilot Video Tutorial](https://www.youtube.com/watch?v=KqiosgQFsuk)
 - [Paradime Help Docs](https://docs.paradime.io/app-help)
 
 #### MotherDuck
-Use [MotherDuck](https://motherduck.com/) for data storage and querying:
-- [Getting Started with MotherDuck](https://motherduck.com/docs/getting-started/)
-- [MotherDuck Documentation](https://motherduck.com/docs/)
+Use [MotherDuck](https://motherduck.com/) for data storage compute. 
+-
+-
+
 
 #### Hex
 Employ [Hex](https://hex.tech/) for data visualization:
-- [Hex Documentation](https://learn.hex.tech/)
-- [Data Visualization Best Practices](https://learn.hex.tech/tutorials/visualize-data)
+-
+-
+
 
 ### Step 2: Kickstart Your Project
 
 To give you a starting point (though entirely optional):
 - Your MotherDuck account includes two pre-loaded social media datasets: `data_set_1` and `data_set_2`.
-- Your Paradime account links to a GitHub repository with pre-configured dbt™ models.
+- Your Paradime account links to a GitHub repository with pre-configured dbt™ models, which reference the pre-loaded social media data sets in MotherDuck. 
 
-Important: These resources are provided merely as a convenience. You are not required to use them in your project. In fact, to excel in this challenge, you must incorporate additional datasets beyond these initial offerings. Here's what you need to know:
+*Important:* These resources are provided merely as a convenience. You are not required to use them in your project. In fact, to excel in this challenge, you must incorporate additional datasets beyond these initial offerings. Here's what you need to know:
 
 1. The pre-loaded datasets and models are optional tools – use them if they benefit your analysis, or disregard them completely if they don't fit your chosen direction.
 2. Regardless of whether you use the provided resources, you are required to bring in and analyze additional datasets as part of your submission.
@@ -127,7 +129,7 @@ Use Hex to build impactful visualizations that complement your insights.
 
 ## 📤 Submission Guidelines
 
-**Deadline: September 10, 2024**
+**Deadline: September 9, 2024**
 
 Follow this step-by-step tutorial to submit your project:
 
