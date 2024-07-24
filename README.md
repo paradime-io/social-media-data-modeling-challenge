@@ -3,11 +3,11 @@
 Welcome to the [dbt™ Data Modeling Challenge - Social Media Edition](https://www.paradime.io/dbt-data-modeling-challenge-social-edition)! This challenge invites you to showcase your data modeling skills using social media data.
 
 ## 📋 Table of Contents
-1. [Getting Started](#getting-started)
-2. [Competition Details](#competition-details)
-3. [Building Your Project](#building-your-project)
-4. [Submission Guidelines](#submission-guidelines)
-5. [Example Submission Template](#example-submission-template)
+1. [Getting Started](#-getting-started)
+2. [Competition Details](#-competition-details)
+3. [Building Your Project](#-building-your-project)
+4. [Submission Guidelines](#-submission-guidelines)
+5. [Example Submission Template](#-example-submission-template)
 
 ## 🚀 Getting Started
 
@@ -107,55 +107,4 @@ Use Hex to build impactful visualizations that complement your insights.
 
 **Deadline: September 3rd, 2024**
 
-Follow [this tutorial](https://app.arcade.software/share/mpoE0fK5HknHZJ3xLVVs) to submit your project:
-
-1. Email your submission to Parker Rogers (parker@paradime.io)
-2. Subject: "<Your_Name> - dbt Data Modeling Challenge - Social Media Edition"
-3. Include:
-   - GitHub branch link with your dbt™ models
-   - README.md file (use the template below)
-
-## 📝 Example Submission Template
-
-```markdown
-# Social Media Data Analysis - dbt™ Modeling Challenge
-
-## Table of Contents
-1. [Introduction](#introduction)
-2. [Data Sources](#data-sources)
-3. [Methodology](#methodology)
-4. [Insights](#insights)
-5. [Conclusions](#conclusions)
-
-## Introduction
-[Brief project overview and goals]
-
-## Data Sources
-- Dataset 1: [Name] - [Description]
-- Dataset 2: [Name] - [Description]
-- [Add more as needed]
-
-### Data Lineage
-[Insert data lineage image]
-
-## Methodology
-### Tools Used
-- Paradime: SQL and dbt™ development
-- MotherDuck: Data storage and computing
-- Hex: Data visualization
-- [Other tools]
-
-### Applied Techniques
-- [List key techniques and practices used]
-
-## Insights
-
-### Insight 1
-- Title
-- Visualization
-- Analysis
-
-[Repeat for additional insights]
-
-## Conclusions
-[Summarize key findings and their implications]
+Follow [this tutorial](https://app.arcade.software
