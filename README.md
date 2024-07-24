@@ -9,8 +9,7 @@ Welcome to the [dbt™ Data Modeling Challenge - Social Media Edition](https://w
    - [Kickstart Your Project](#step-3-kickstart-your-project)
 2. [Competition Details](#competition-details)
 3. [Building Your Project](#building-your-project)
-   -
-5. [Example Submission](#Example-submission-template)
+4. [Example Submission Template](#Example-submission-template)
 
 ---
 
@@ -26,7 +25,6 @@ After verification, you'll receive two confirmation eamils from Paradime:
 - **[Paradime] Activate your account**
 
 Using the instructions oulined in the email to set up your free Paradime, MotherDuck, and Hex Accounts
-
 
 **Frequently Asked Questions** 
 - **Where do I go for technical support?** For all technical support and challenge inquiries, use Paradime's #social-media-data-challenge [Slack channel](https://paradimers.slack.com/join/shared_invite/zt-1mzax4sb8-jgw~hXRlDHAx~KN0az18bw#/shared-invite/email). You can also find support in the [MotherDuck Slack Community](https://join.slack.com/t/motherduckcommunity/shared_invite/zt-2hh1g7kec-Z9q8wLd_~alry9~VbMiVqA)
@@ -54,13 +52,17 @@ Now that you're set up, you have until **September 2nd, 2024** to submit your pr
 ### Step 1: Get familiar with the required Platforms:
 
 #### Paradime:
-You're required to utilize Paradime for SQL and dbt™ development. Get familar with the platform using these resources:
+You're required to utilize [Paradime](https://www.paradime.io/) for SQL and dbt™ development. Get familar with the platform using these resources:
 - **Code IDE UI:** Follow our [interactive tutorial](https://app.arcade.software/share/7kRyaYbPoGc5ofmJfmvY)
 - **Commands Panel:** Learn how to use the Integrated Terminal, Data Explorer, Data Lineage, and Data Catalog with our [video tutorial](https://www.youtube.com/watch?v=wQtIn-tnnbg).  
 - **DinoAI Copilot** - Discover how DinoAI improves your SQL and dbt development through our [video tutorial](https://www.youtube.com/watch?v=KqiosgQFsuk). 
 - **Paradime Help Docs**: For a comprehensive understanding of all the features and how to make the most of Paradime for your project, explore the [Paradime Help Docs](https://docs.paradime.io/app-help).
-- **MotherDuck**:
-- **Hex**: 
+
+#### MotherDuck**:
+
+
+#### Hex: 
+
 
 ### Step 2: Kickstart your project:
 Your MotherDuck account comes pre-loaded with two social media datasets: data_set_1 and data_set_2. Additionally, your Paradime account is connected to a GitHub repository with pre-configured dbt™ models to get you started.
