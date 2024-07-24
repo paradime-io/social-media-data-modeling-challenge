@@ -6,11 +6,11 @@ Welcome to the [dbt™ Data Modeling Challenge - Social Media Edition](https://w
 1. [Getting Started](#getting-started)
    - [Registration and Verification](#step-1-registration-and-verification)
    - [Account Set-Up](#step-2-account-set-up)
-   - [Paradime Account Configuration](#step-3-paradime-account-configuration)
-   - [Kickstart Your Project](#step-4-kickstart-your-project)
+   - [Kickstart Your Project](#step-3-kickstart-your-project)
 2. [Competition Details](#competition-details)
 3. [Building Your Project](#building-your-project)
-4. [Example Submission](#Example-submission-template)
+   -
+5. [Example Submission](#Example-submission-template)
 
 ---
 
@@ -20,34 +20,29 @@ Welcome to the [dbt™ Data Modeling Challenge - Social Media Edition](https://w
 - **Submit Your Application**: Fill out the [registration form](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-registration-form).
 - **Verification by Paradime**: We'll review your application against the [entry requirements](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-how-it-works-2).
 
-### Step 2: Confirmation
-After verification, you'll receive two confirmation eamils from Paradime:
-1. **Snowflake Account Credentials**: Contains your Snowflake account details. Search for an email with subject line "*Credentials - dbt™ Data Modeling Challenge - Social Media Edition*."
-2. **Paradime Platform Invitation**: An invitation to access the Paradime Platform. Search for an email with the subject line "*[Paradime] Activate your account*."
+### Step 2: Account Setup
+After verification, you'll receive two confirmation eamils from Paradime (mail@paradime.retool-email.com):
+- **Credentials - dbt™ Data Modeling Challenge - Social Media Edition**:
+   - Using the instructions oulined in the email, setup your free MotherDuck and Hex accounts. 
+- **[Paradime] Activate your account**: 
+   - Using the instructions outlined in the "*Credentials - dbt™ Data Modeling Challenge - Social Media Edition*", set up your free Paradime account:
+      - Create Account
+      - Connect to MotherDuck
+      - Create your GitHub Branch: Your branch name should follow this format: "<first_name>_<last_name>" (ex. "john_smith").
+         - For guidance, see this [step-by-step tutorial](https://app.arcade.software/share/7kRyaYbPoGc5ofmJfmvY)
 
-### Step 3: Account Setup
-Using the instructions outlined in the confirmation email,"*Credentials - dbt™ Data Modeling Challenge - Social Media Edition*.", set up your accounts: 
-- **MotherDuck**
-- **Paradime**
-  - Create Account
-  - Connect to MotherDuck
-  - **Create your GitHub Branch**: Open the Paradime Editor and create a new branch. Your branch name should follow this format: "<first_name>_<last_name>". For guidance, see this [step-by-step tutorial](https://app.arcade.software/share/7kRyaYbPoGc5ofmJfmvY)
-- **Hex**
-
-### Step 4: Kickstart Your Project
-
-- **Start Developing**: Begin crafting SQL queries, developing dbt™ models, and generating insights!
 
 **Need Additional Help?** 
-- For technical support, join the #social-media-data-challenge channel on [Slack](https://paradimers.slack.com/join/shared_invite/zt-1mzax4sb8-jgw~hXRlDHAx~KN0az18bw#/shared-invite/email) and contact the team. 
+- For all technical support and challenge inquiries, use Paradime's #social-media-data-challenge [Slack channel](https://paradimers.slack.com/join/shared_invite/zt-1mzax4sb8-jgw~hXRlDHAx~KN0az18bw#/shared-invite/email). You can also find support in the [MotherDuck Slack Community](https://join.slack.com/t/motherduckcommunity/shared_invite/zt-2hh1g7kec-Z9q8wLd_~alry9~VbMiVqA).
 
 ---
 
 ## Competition Details
-Before investing time and energy into your project, learn key information about the competition:
+Before investing valuable time and energy into your project, learn key information about the competition:
 - **[Entry Requirements](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-how-it-works-2)**
 - **[Competition Deliverables](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-how-it-works-2)**
 - **[Judging Criteria](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-how-it-works-2)**
+- **[Required tools]()**
 
 ---
 
@@ -55,66 +50,62 @@ Before investing time and energy into your project, learn key information about 
 
 Now that you're set up, you have until **September 2nd, 2024** to submit your project!
 
-### Step 1: Getting to Know the Tools
+### Step 1: Get familiar with the required tools:
 - **Paradime**:
    - Get familiar with the paradime IDE using this [interactive guide](https://app.arcade.software/share/7kRyaYbPoGc5ofmJfmvY). You can also watch our YouTube videos:
-   - [All features in our intuitive IDE Apps Panel](https://www.youtube.com/watch?v=wQtIn-tnnbg)
-   - [AI-enabled IDE for dbt™ development | DinoAI | Paradime.io](https://www.youtube.com/watch?v=-WG4JUv3sI8)
+   - [All features in our intuitive IDE Commands Panel](https://www.youtube.com/watch?v=wQtIn-tnnbg) - Learn how to use key Paradime features like: Integrated Terminal, Data Explorer, Data Lineage, and Data Catalog 
+   - [DinoAI Copilot](https://www.youtube.com/watch?v=KqiosgQFsuk) - Learn how to improve dbt™ development with Paradime's AI-enabled features. 
   - **Paradime Help Docs**: For a comprehensive understanding of all the features and how to make the most of Paradime for your project, explore the [Paradime Help Docs](https://docs.paradime.io/app-help/welcome-to-paradime.io/readme).
 - **MotherDuck**:
-- **Lightdash**: Discover how to setup and utilize Lightdash in this [YouTube video](https://www.youtube.com/watch?v=Z4Y0KM0MroQ).
+- **Hex**: 
 
-### Step 2: Getting to Know the Social Media Data Data
-Your motherDuck . These data sets contain roughly 1,700,000 rows of detailed Movie and TV Show data.
-Please understand that these data sets are not entirely accurate; They're simply a starting point - you will need to bring in your datasets to truly excel in this challenge.
-- **In Snowflake**: Directly explore the datasets in [Snowflake](https://app.snowflake.com/kbuwhsf/xrb98600) for hands-on analysis.
-- **GitHub Repository Resources**:
-  - [Staging Files](https://github.com/paradime-io/paradime-dbt-movie-challenge/tree/main/models/sources): These files provide a preliminary view and structure of the datasets available in this repository.
-  - [schema.yml File](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/main/models/sources/schema.yml): This file contains schema definitions, helping you understand the data models and their relationships.
-- **Paradime Catalog UI**: Use the [Paradime Catalog UI](https://app.paradime.io/catalog/search) for an interactive exploration of the datasets, featuring intuitive search and navigation.
+### Step 2: Kickstart your project:
+Your MotherDuck account comes pre-loaded with two social media datasets: data_set_1 and data_set_2. Additionally, your Paradime account is connected to a GitHub repository with pre-configured dbt™ models to get you started.
+These datasets are simply a starting point. While you're welcome to use them to generate insights, you'll need to incorporate additional datasets to truly excel in this challenge.
 
 ### Step 3: Generating Insights
-Your primary goal is to construct dbt™ models that unearth compelling insights, captivating Movie fans. These three datasets are your starting point, and as you bring in additional data, the possibilities for discovery are virtually limitless. This is your playground to innovate and explore the depths of Movie and TV data.
+Your primary goal is to use Paradime, MotherDuck, and Hex to unearth compelling insights from social media data. With so many social media platforms, chat forums, and supplementary datasets, the possibilities for discovery are virtually limitless. 
+Aim to generate accurate, relavant, scroll-stopping insights. 
 
-Before diving in, ensure you're familiar with the [Judging Criteria](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-how-it-works-2) so you have a chance to win the [$500-$1500 Amazon gift cards](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-whats-in-it-for-you)!
+##### Need a spark of inspiration?
+Check out these resources: 
+- Blog - [Winning Strategies for Paradime's Movie Data Modeling Challenge](https://www.paradime.io/blog/winning-strategies-movie-challenge): Learn the stragegies, best practices, and insights uncovered from winning participant in previous Data Modeling Challenges.
+- Explore winning submissions Paradime's recent Data Modeling Challenge:
+   - [Nikita Volynets' Submission](https://github.com/nikita-volynets/nba-challenge-dbt-paradime/blob/main/README.md) - 2nd Place winner from Paradime's dbt Data Modeling Challenge - NBA Editon.
+   - [Spence Perry's Submission](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/blob/nba-spence-perry/README.md) - 1st place winner from Paradime's dbt Data Modeling Challenge - NBA Editon.
+   - [Isin Pesch's Submission](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/README.md) - 1st place winner from Paradime's dbt Data Modeling Challenge - Movie Editon.
 
-[What's in it for you?](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-whats-in-it-for-you)
+- Potential insights to uncover:
+   - How has the sentiment around COVID-19 on Reddit changed over time? Why?
+      - **Required Social Media Data**: [Reddit posts and comments related to COVID-19](https://www.kaggle.com/datasets/pavellexyr/the-reddit-covid-dataset), or similar dataset.
+      - **Optional/Supplementary Data**: Key dates, news, events, and/or anything that points to why popularity has changed over time.
+   - How has Donald Trumps popularity changed over time?
+      - **Required Social Media Data**: A sample of Twitter posts, mentions, and engagement, containing the words, “Donald Trump” over the last 10 years. 
+      - **Optional/Supplementary Data:** Key dates, news, events, and/or anything that points to why popularity has changed over time.
+   - Who are the biggest YouTube creators, and why?
+      - **Required Social Media Data:** YouTube comments, engagement, etc.
+      - **Optional/Supplementary Data:** [Trending YouTube Video statistics](https://www.kaggle.com/datasets/datasnaek/youtube-new?select=CAvideos.csv), or similar datasets.
+   - Which Commercials were most popular during the 2022 NFL Superbowl?
+   - **Required Social Media Data**: Twitter and/or Reddit posts, mentions, and engagement during the 4-hour time block of the NFL Superbowl. Only pull data that contains information about [brands that superbowl commercials](https://www.foxsports.com/stories/nfl/super-bowl-commercials-2022).
+   - **Optional/Supplementary Data:**
+      - For public companies that advertised, pull stock market data to see if there's any coorelation between superbowl commercial success and stock price.
+      - Using [superbowl advertisement cost data](https://money.usnews.com/money/personal-finance/spending/articles/how-much-does-the-average-super-bowl-commercial-cost), identify which brands had the highest social engagement per dollar spent. 
+
+Again, befoe diving in to your project, ensure you're familiar with the all the [competiton deliverables](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-how-it-works-2), [judging criteria](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-how-it-works-2), and required tools so you have a chance to win the [$1000-$3000 Amazon gift cards](https://www.paradime.io/dbt-data-modeling-challenge-movie-edition#div-whats-in-it-for-you)!
 
 ### Step 4: Build data vizualizations
-Once you've generated insights, you're required to use Lightdash for data vizualizations. Utilize Lightdash's provided [YouTube video](https://www.youtube.com/watch?v=Z4Y0KM0MroQ) and [documentation](https://docs.lightdash.com/) for best practices. 
+Once you've generated insights, you're required to use Hex for data vizualizations. Utilize Utilize Hex's provided [YouTube video](https://www.youtube.com/watch?v=Z4Y0KM0MroQ) and [documentation](https://docs.lightdash.com/) for best practices. 
 
 ### Step 5: Submitting Your Project
-**Submission Deadline:** May 26th, 2024
-Once your project is complete, please submit the following materials to Parker Rogers (parker@paradime.io) with Subject Line "<your_name> - Movie Data Modeling Challenge Submission":
+**Submission Deadline:** September 3th, 2024
+Once your project is complete, please follow [this tutorial](https://app.arcade.software/share/mpoE0fK5HknHZJ3xLVVs) to submit your materials to Parker Rogers (parker@paradime.io) with Subject Line "<your_name> - dbt Data Modeling Challenge - Social Media Edition":
 - **GitHub Branch**: Send the link to your GitHub branch containing your dbt™ models.
-- **README.md**: Include a README file that narrates your project's story, methodology, and insights. Check out this [example README](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/blob/main/README.md#example-submission) from our previous NBA Data Modeling challenge.
-- **Data Visualizations and Insights**: Showcase your findings, ideally within your README.md. For inspiration, refer to these [example visualizations](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/blob/main/README.md#visualizations) from our previous NBA Data Modeling challenge.
+- **README.md**: Make sure you're Github branch includes a README file that narrates your methodology, data vizualizations, and accompanied written insights. [Here's a high-quality example of a readme.md file](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/README.md). 
 
-#### Need a spark of inspiration?
-- Blog - [Winning Strategies for Paradime's Movie Data Modeling Challenge](https://www.paradime.io/blog/winning-strategies-movie-challenge)
-
-- Explore top submissions Paradime's recent NBA Data Modeling Challenge
-   - First Place - [Spence Perry's Submission](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/blob/nba-spence-perry/README.md)
-   - Second Place - [Chris Hughes' Submission](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/blob/nba-cahughes95-gmail-com/README.md)
-   - Third Place - [István Mózes' Submission](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/blob/nba-istvan-mozes-90-gmail-com/README.md)
-
-- Additionally, Here are some questions you might consider answering:
-   - **Highest grossing films of all time**:
-      - Data Required: [omdb_movies](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/main/models/sources/stg_omdb_movies.sql) and/or [tmdb_movies](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/main/models/sources/stg_tmdb_movies.sql).
-      - You might also consider bringing in third party data to understand highest grossing films by country.
-   - **Highest/lowest ROI films of all time**:
-      - Data Required: [omdb_movies](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/main/models/sources/stg_omdb_movies.sql) and/or [tmdb_movies](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/main/models/sources/stg_tmdb_movies.sql). See columns "budget", "revenue", and "box office".
-   - **Actors who appear in most films**:
-      - Data Required: [omdb_movies](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/main/models/sources/stg_omdb_movies.sql). See column "actors"
-   - **Highest grossing directors and writers**:
-      - Data Required: [omdb_movies](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/main/models/sources/stg_omdb_movies.sql). See columns "director" and "writer"
-
-If you're having issues submitting your project, watch this [interactive tutorial](https://app.arcade.software/share/TqmPGQAdXjopPO9LWdnz).
-
-We look forward to seeing your creative and insightful analyses!
+---
 
 # Example Submission template
-Here's an example project that fulfills all requirements and would be elligble eligible for cash prizes. Feel free to use this template for your submission. We also recommend diving into the the [winner's submissions](#need-a-spark-of-inspiration) from our recent NBA Data Modeling Challenge for inspiration. 
+Here's an example project that fulfills all requirements and would be elligble for cash prizes. Feel free to use this template for your submission. We also recommend diving into the the [winner's submissions](#need-a-spark-of-inspiration) from our recent dbt Data Modeling Challenge for inspiration. 
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -122,35 +113,17 @@ Here's an example project that fulfills all requirements and would be elligble e
 3. [Methodology](#methodology)
    - [Tools Used](#tools-used)
    - [Applied Techniques](#applied-techniques)
-   - [Data Sources and Data Lineage](#data-sources-and-data-lineage)
 4. [Visualizations](#visualizations)
    - [Vizualization #1](vizualization-1)
    - [Vizualization #2](Vizualization-2)
    - [Vizualization #3](Vizualization-3)
-   - etc
+   - etc.
 5. [Conclusions](#conclusions)
 
 ## Introduction
-A simple intro. Example - "Explore my project for the _dbt™ data modeling challenge - Movie Edition_, Hosted by [Paradime](https://www.paradime.io/)! This project dives into the analysis and visualization of Movie and TV data!"
+A simple intro. Example - "Explore my project for the dbt™ data modeling challenge - Social Media Edition, Hosted by [Paradime](https://www.paradime.io/), [MotherDuck](https://motherduck.com/), and [Hex](https://hex.tech/)! This project dives into the analysis and visualization of Social Media Data!"
 
-## Data Sources and Data Lineage
-My analysis leverages four key data sets:
-- *data set name #1*
-- *data set name #2*
-- *data set name #3*
-- *data set name #4*
-
-### Data Lineage
-- Copy and paste your data lineage image here. Watch this [YouTube Tutorial](https://youtu.be/wQtIn-tnnbg?feature=shared&t=135) to learn how.
-
-## Methodology
-#### Tools Used
-- **[Paradime](https://www.paradime.io/)** for SQL, dbt™.
-- **[Snowflake](https://www.snowflake.com/)** for data storage and computing.
-- **[Lightdash](https://www.lightdash.com/)** for data visualization.
-- **Other tool(s) used** and why.
-
-### Data Sources
+## Data Sources
 My analysis leverages four key data sets:
 - *data set name #1*
 - *data set name #2*
@@ -159,6 +132,22 @@ My analysis leverages four key data sets:
 
 ### Data Lineage
 [Image]
+- Copy and paste your data lineage image here. Watch this [YouTube Tutorial](https://youtu.be/wQtIn-tnnbg?feature=shared&t=135) to learn how.
+
+## Methodology
+#### Tools Used:
+- **[Paradime](https://www.paradime.io/)** for SQL, dbt™.
+- **[MotherDuck](https://motherduck.com/)** for data storage and computing.
+- **[Hex](https://hex.tech/)** for data visualization.
+- **Other tool(s) used** and why.
+
+#### Applied Techniques:
+- Talk about the advanced analytics engineering practices you used.
+- Examples:
+   - I used Python to pull data from the [data source] API
+   - I used [feature name] in [Paradime, Hex, Motherduck, etc. to get [result]
+   - Used [function] to perform [task], which resulted in [outcome]
+   - etc.
 
 ## Visualizations
 
