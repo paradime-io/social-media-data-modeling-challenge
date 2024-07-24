@@ -48,28 +48,38 @@ Before starting your project, familiarize yourself with the following key inform
 
 **Deadline: September 9, 2024**
 
-### Step 1: Learn How To Use the Required Tools
+### Step 1: Master the Required Tools
 
-To excel in this challenge, you'll need to learn how to use the required tools:
+To excel in this challenge, familiarize yourself with these essential tools:
 
 #### Paradime
-Use [Paradime](https://www.paradime.io/) for SQL and dbt™ development:
-- [Code IDE UI Tutorial](https://app.arcade.software/share/7kRyaYbPoGc5ofmJfmvY)
-- [Commands Panel Video Tutorial](https://www.youtube.com/watch?v=wQtIn-tnnbg)
-- [DinoAI Copilot Video Tutorial](https://www.youtube.com/watch?v=KqiosgQFsuk)
-- [Paradime Help Docs](https://docs.paradime.io/app-help)
+[Paradime](https://www.paradime.io/) is required for SQL and dbt™ development. Other Paradime features are optional.
+
+**Learning Resources:**
+- [Code IDE Tutorial](https://app.arcade.software/share/7kRyaYbPoGc5ofmJfmvY): Navigate the [code IDE](https://docs.paradime.io/app-help/documentation/code-ide) and master basic features.
+- [Commands Panel Tutorial](https://www.youtube.com/watch?v=wQtIn-tnnbg): Learn valuable Paradime features:
+  - [Integrated Terminal](https://docs.paradime.io/app-help/documentation/code-ide/terminal)
+  - [Data Explorer](https://docs.paradime.io/app-help/documentation/code-ide/command-panel/data-explorer)
+  - [Data Catalog](https://docs.paradime.io/app-help/documentation/code-ide/command-panel/docs-preview)
+  - [Data Lineage](https://docs.paradime.io/app-help/documentation/code-ide/command-panel/lineage-preview)
+- [DinoAI Copilot Tutorial](https://www.youtube.com/watch?v=KqiosgQFsuk): Enhance your SQL and dbt™ development with [DinoAI](https://docs.paradime.io/app-help/documentation/code-ide/dino-ai).
+- [Paradime Help Docs](https://docs.paradime.io/app-help): Comprehensive product documentation for advanced learning.
 
 #### MotherDuck
-Use [MotherDuck](https://motherduck.com/) for data storage compute. 
--
--
+[MotherDuck](https://motherduck.com/) is required for data storage and compute. Other MotherDuck & DuckDB features are optional.
 
+**Learning Resources:**
+- [Resource 1]
+- [Resource 2]
+- [Resource 3]
 
 #### Hex
-Employ [Hex](https://hex.tech/) for data visualization:
--
--
+[Hex](https://hex.tech/) is required for data visualizations and additional analysis. Other Hex features are optional.
 
+**Learning Resources:**
+- [Resource 1]
+- [Resource 2]
+- [Resource 3]
 
 ### Step 2: Kickstart Your Project
 
