@@ -63,15 +63,16 @@ To excel in this challenge, familiarize yourself with these essential tools:
   - [Data Catalog](https://docs.paradime.io/app-help/documentation/code-ide/command-panel/docs-preview)
   - [Data Lineage](https://docs.paradime.io/app-help/documentation/code-ide/command-panel/lineage-preview)
 - [DinoAI Copilot Tutorial](https://www.youtube.com/watch?v=KqiosgQFsuk): Enhance your SQL and dbt™ development with [DinoAI](https://docs.paradime.io/app-help/documentation/code-ide/dino-ai).
-- [Paradime Help Docs](https://docs.paradime.io/app-help): Comprehensive product documentation for advanced learning.
+- [Paradime Documentation](https://docs.paradime.io/app-help): Comprehensive product documentation for additional learning.
 
 #### MotherDuck
 [MotherDuck](https://motherduck.com/) is required for data storage and compute. Other MotherDuck & DuckDB features are optional.
 
 **Learning Resources:**
-- [Resource 1]
-- [Resource 2]
-- [Resource 3]
+- [Getting started tutorial with Motherduck & DuckDB](https://motherduck.com/docs/getting-started/e2e-tutorial/)
+- [Working with dbt and MotherDuck](https://motherduck.com/docs/integrations/transformation/dbt/): understand how to configure your dbt project and more!
+- [How to connect MotherDuck and Hex](https://learn.hex.tech/docs/connect-to-data/data-connections/data-connections-introduction#supported-data-sources)
+- [MotherDuck documentation website](https://motherduck.com/docs)
 
 #### Hex
 [Hex](https://hex.tech/) is required for data visualizations and additional analysis. Other Hex features are optional.
