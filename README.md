@@ -3,9 +3,22 @@
 Welcome to the [dbt™ Data Modeling Challenge - Social Media Edition](https://www.paradime.io/dbt-data-modeling-challenge)! This challenge invites you to showcase your data modeling skills using social media data.
 
 ## 📋 Table of Contents
+
 1. [Getting Started](#-getting-started)
+   - [Registration and Verification](#1-registration-and-verification)
+   - [Account Setup](#2-account-setup)
+   - [Support and FAQs](#3-support-and-faqs)
 2. [Competition Details](#-competition-details)
 3. [Building Your Project](#-building-your-project)
+   - [Master the Required Tools](#step-1-master-the-required-tools)
+     - [Paradime](#paradime)
+     - [MotherDuck](#motherduck)
+     - [Hex](#hex)
+   - [Kickstart Your Project](#step-2-kickstart-your-project)
+   - [Generate Insights](#step-3-generate-insights)
+     - [Need a spark of inspiration?](#need-a-spark-of-inspiration)
+     - [Potential Insight Ideas](#potential-insight-ideas)
+   - [Create Data Visualizations](#step-4-create-data-visualizations)
 4. [Submission Guidelines](#-submission-guidelines)
 5. [Submission Template](#-submission-template)
 
