@@ -53,9 +53,11 @@ Before starting your project, familiarize yourself with the following key inform
 To excel in this challenge, familiarize yourself with these essential tools:
 
 #### Paradime
+
 [Paradime](https://www.paradime.io/) is required for SQL and dbt™ development. Other Paradime features are optional.
 
-**Learning Resources:**
+##### Learning Resources:
+
 - [Code IDE Tutorial](https://app.arcade.software/share/7kRyaYbPoGc5ofmJfmvY): Navigate the [code IDE](https://docs.paradime.io/app-help/documentation/code-ide) and master basic features.
 - [Commands Panel Tutorial](https://www.youtube.com/watch?v=wQtIn-tnnbg): Learn valuable Paradime features:
   - [Integrated Terminal](https://docs.paradime.io/app-help/documentation/code-ide/terminal)
@@ -66,18 +68,22 @@ To excel in this challenge, familiarize yourself with these essential tools:
 - [Paradime Documentation](https://docs.paradime.io/app-help): Comprehensive product documentation for additional learning.
 
 #### MotherDuck
+
 [MotherDuck](https://motherduck.com/) is required for data storage and compute. Other MotherDuck & DuckDB features are optional.
 
-**Learning Resources:**
+##### Learning Resources:
+
 - [Getting started tutorial with Motherduck & DuckDB](https://motherduck.com/docs/getting-started/e2e-tutorial/)
 - [Working with dbt and MotherDuck](https://motherduck.com/docs/integrations/transformation/dbt/): understand how to configure your dbt project and more!
 - [How to connect MotherDuck and Hex](https://learn.hex.tech/docs/connect-to-data/data-connections/data-connections-introduction#supported-data-sources)
 - [MotherDuck documentation website](https://motherduck.com/docs)
 
 #### Hex
+
 [Hex](https://hex.tech/) is required for data visualizations and additional analysis. Other Hex features are optional.
 
-**Learning Resources:**
+##### Learning Resources:
+
 - [Resource 1]
 - [Resource 2]
 - [Resource 3]
@@ -133,7 +139,6 @@ Your primary goal is to use Paradime, MotherDuck, and Hex to unearth compelling 
    - **Optional/Supplementary Data**:
      - For public companies that advertised, pull stock market data to see if there's any correlation between Superbowl commercial success and stock price.
      - Using [Superbowl advertisement cost data](https://money.usnews.com/money/personal-finance/spending/articles/how-much-does-the-average-super-bowl-commercial-cost), identify which brands had the highest social engagement per dollar spent.
-
 
 ### Step 4: Create Data Visualizations
 Use Hex to build impactful visualizations that complement your insights.
