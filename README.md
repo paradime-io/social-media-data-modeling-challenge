@@ -14,7 +14,7 @@ Welcome to the [dbt™ Data Modeling Challenge - Social Media Edition](https://w
      - [Paradime](#paradime)
      - [MotherDuck](#motherduck)
      - [Hex](#hex)
-   - [Kickstart Your Project](#step-2-kickstart-your-project)
+   - [Bringing in New Data](#step-2-bringing-in-new-data)
    - [Generate Insights](#step-3-generate-insights)
      - [Need a spark of inspiration?](#need-a-spark-of-inspiration)
      - [Potential Insight Ideas](#potential-insight-ideas)
@@ -25,8 +25,8 @@ Welcome to the [dbt™ Data Modeling Challenge - Social Media Edition](https://w
 ## 🚀 Getting Started
 
 ### 1. Registration and Verification
-- **Submit Your Application**: Fill out the [registration form](https://www.paradime.io/dbt-data-modeling-challenge)
-- **Verification**: We'll review your application against the [entry requirements](https://www.paradime.io/dbt-data-modeling-challenge)
+- **Submit Your Application**: Fill out the [registration form](https://www.paradime.io/dbt-data-modeling-challenge#div-registration-form)
+- **Verification**: We'll review your application against the [entry requirements](https://www.paradime.io/dbt-data-modeling-challenge#div-judges)
 
 ### 2. Account Setup
 After verification, you'll receive two confirmation emails from Paradime:
@@ -42,7 +42,7 @@ Follow the instructions in these emails to set up your free accounts for:
 - **Technical Support**: Join Paradime's [#social-media-data-challenge Slack channel](https://paradimers.slack.com/join/shared_invite/zt-1mzax4sb8-jgw~hXRlDHAx~KN0az18bw#/shared-invite/email).
 - **Additional Support**: Check out the [MotherDuck Slack Community](https://join.slack.com/t/motherduckcommunity/shared_invite/zt-2hh1g7kec-Z9q8wLd_~alry9~VbMiVqA).
 - **Troubleshooting Confirmation Emails**: 
-  - Ensure you meet the [entry requirements](https://www.paradime.io/dbt-data-modeling-challenge)
+  - Ensure you meet the [entry requirements](https://www.paradime.io/dbt-data-modeling-challenge#div-judges)
   - Search for "mail@paradime.retool-email.com" in your registration email account.
   - If using a personal email to register, check LinkedIn for DMs from Parker Rogers (I ask for business email if applicable). 
   - Still no luck? DM Parker Rogers via Paradime's Challenge Slack.
@@ -51,11 +51,11 @@ Follow the instructions in these emails to set up your free accounts for:
 
 Before starting your project, familiarize yourself with the following key information:
 
-- [Entry Requirements](https://www.paradime.io/dbt-data-modeling-challenge)
-- [Competition Deliverables](https://www.paradime.io/dbt-data-modeling-challenge)
-- [Judging Criteria](https://www.paradime.io/dbt-data-modeling-challenge)
-- [Required Tools](https://www.paradime.io/dbt-data-modeling-challenge)
-- [Prizes](https://www.paradime.io/dbt-data-modeling-challenge)
+- [Entry Requirements](https://www.paradime.io/dbt-data-modeling-challenge#div-judges)
+- [Competition Deliverables](https://www.paradime.io/dbt-data-modeling-challenge#div-judges)
+- [Judging Criteria](https://www.paradime.io/dbt-data-modeling-challenge#div-judges)
+- [Required Tools](https://www.paradime.io/dbt-data-modeling-challenge#div-who-should-participate)
+- [Prizes](https://www.paradime.io/dbt-data-modeling-challenge#section-challenge-overview)
 
 ## 🛠 Building Your Project
 
@@ -102,19 +102,19 @@ To excel in this challenge, familiarize yourself with these essential tools:
 - [Hex Use Case Gallery](https://hex.tech/use-cases/) for inspiration and examples
 - [Hex Foundations YouTube course](https://www.youtube.com/playlist?list=PLB_A53wXEFlo-rL8Gbqv387wMjB1K6mkX)
 
-### Step 2: Kickstart Your Project
+### Step 2: Bringing in New Data
+You can bring in any data you want as long as it's user-generated social media data or relevant data to supplement the user-generated social media data.
 
-To give you a starting point (though entirely optional):
-- Your MotherDuck account includes two pre-loaded social media datasets: `data_set_1` and `data_set_2`.
-- Your Paradime account links to a GitHub repository with pre-configured dbt™ models, which reference the pre-loaded social media data sets in MotherDuck. 
+#### How to bring in New Data
 
-*Important:* These resources are provided merely as a convenience. You are not required to use them in your project. In fact, to excel in this challenge, you must incorporate additional datasets beyond these initial offerings. Here's what you need to know:
+- Your MotherDuck account includes a sample social media dataset, [hacker_news](https://news.ycombinator.com/), which contains posts and comments. 
+- Your Paradime account links to this GitHub repository, with a pre-configured dbt™ model, stg_hacker_news.sql, which references the hackernews table in MotherDuck. 
 
-1. The pre-loaded datasets and models are optional tools – use them if they benefit your analysis, or disregard them completely if they don't fit your chosen direction.
-2. Regardless of whether you use the provided resources, you are required to bring in and analyze additional datasets as part of your submission.
-3. Your project should demonstrate your ability to work with diverse data sources and create insightful models beyond any pre-configured setups.
+*Important:* These resources are provided merely as a convenience. You are not required to use this in your project. In fact, to excel in this challenge, you must bring in data on your own. 
 
-Remember, the most impactful submissions often come from participants who think outside the box and bring fresh data and perspectives to their analysis. We're excited to see how you'll leverage various data sources to uncover unique insights!
+#### How to bring new data into MotherDuck
+1. Query data directly from your [local machine](https://motherduck.com/docs/key-tasks/loading-data-into-motherduck/loading-data-from-local-machine/) or [an object storage service](https://motherduck.com/docs/key-tasks/loading-data-into-motherduck/loading-data-from-cloud-or-https/) (AWS S3, Azure Blob Storage, Google Cloud Storage).
+2. Query data directly from [Hugging Face](https://duckdb.org/docs/extensions/httpfs/hugging_face), which has countless social media datasets at your disposal.
 
 ### Step 3: Generate Insights
 Use Paradime, MotherDuck, and Hex to uncover compelling insights from social media data. Aim for accurate, relevant, and engaging discoveries.
