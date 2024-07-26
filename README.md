@@ -97,9 +97,10 @@ To excel in this challenge, familiarize yourself with these essential tools:
 
 ##### Learning Resources:
 
-- [Resource 1]
-- [Resource 2]
-- [Resource 3]
+- [Getting started with Hex](https://learn.hex.tech/docs/getting-started)
+- [Writing SQL in Hex](https://learn.hex.tech/docs/explore-data/cells/sql-cells/sql-cells-introduction)
+- [Hex Use Case Gallery](https://hex.tech/use-cases/) for inspiration and examples
+- [Hex Foundations YouTube course](https://www.youtube.com/playlist?list=PLB_A53wXEFlo-rL8Gbqv387wMjB1K6mkX)
 
 ### Step 2: Kickstart Your Project
 
