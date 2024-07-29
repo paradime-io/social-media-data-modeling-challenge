@@ -30,13 +30,13 @@ Welcome to the [dbt™ Data Modeling Challenge - Social Media Edition](https://w
 
 ### 2. Account Setup
 After verification, you'll receive two confirmation emails from Paradime:
-- **Credentials - dbt™ Data Modeling Challenge - Social Media Edition**
+- **Your Credentials for the dbt™ Data Modeling Challenge - Social Media Edition**
 - **[Paradime] Activate your account**
 
 Follow the instructions in these emails to set up your free accounts for:
-- [Paradime](https://www.paradime.io/)
-- [MotherDuck](https://motherduck.com/)
-- [Hex](https://hex.tech/)
+- [MotherDuck](https://hubs.la/Q02HHmK-0)
+- Paradime](https://www.paradime.io/)
+- [Hex](https://app.hex.tech/signup/social-media-hackathon)
 
 ### 3. Support and FAQs
 - **Technical Support**: Join Paradime's [#social-media-data-challenge Slack channel](https://paradimers.slack.com/join/shared_invite/zt-1mzax4sb8-jgw~hXRlDHAx~KN0az18bw#/shared-invite/email).
