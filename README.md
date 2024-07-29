@@ -35,7 +35,7 @@ After verification, you'll receive two confirmation emails from Paradime:
 
 Follow the instructions in these emails to set up your free accounts for:
 - [MotherDuck](https://hubs.la/Q02HHmK-0)
-- Paradime](https://www.paradime.io/)
+- [Paradime](https://www.paradime.io/)
 - [Hex](https://app.hex.tech/signup/social-media-hackathon)
 
 ### 3. Support and FAQs
