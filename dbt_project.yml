@@ -1,0 +1,21 @@
+name: "paradime_social_media_challenge"
+version: "1.0.0"
+config-version: 2
+
+profile: "dbt-motherduck"
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  paradime_social_media_challenge:
+    example:
+      +materialized: view
