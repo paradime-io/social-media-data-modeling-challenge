@@ -1,0 +1,9 @@
+# Documentaion: https://docs.paradime.io/app-help/bolt-scheduler/create-your-first-dbt-tm-schedule#yaml-based-schedules
+
+schedules:
+  - name: compile
+    schedule: "OFF"
+    environment: production
+    commands:
+      - dbt compile
+    owner_email: "john@acme.io"
