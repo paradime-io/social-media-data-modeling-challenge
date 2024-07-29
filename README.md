@@ -17,7 +17,7 @@ Welcome to the [dbt™ Data Modeling Challenge - Social Media Edition](https://w
    - [Bringing in New Data](#step-2-bringing-in-new-data)
    - [Generate Insights](#step-3-generate-insights)
      - [Need a spark of inspiration?](#need-a-spark-of-inspiration)
-     - [Potential Insight Ideas](#potential-insight-ideas)
+        - [Potential Insight Ideas](#potential-insight-ideas)
    - [Create Data Visualizations](#step-4-create-data-visualizations)
 4. [Submission Guidelines](#-submission-guidelines)
 5. [Submission Template](#-submission-template)
