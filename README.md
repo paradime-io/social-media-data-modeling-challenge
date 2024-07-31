@@ -1,3 +1,5 @@
+Hello World!
+
 # dbt™ Data Modeling Challenge - Social Media Edition
 
 Welcome to the [dbt™ Data Modeling Challenge - Social Media Edition](https://www.paradime.io/dbt-data-modeling-challenge)! This challenge invites you to showcase your data modeling skills using social media data.
