@@ -26,7 +26,7 @@ Welcome to the [dbt™ Data Modeling Challenge - Social Media Edition](https://w
 
 ### 1. Registration and Verification
 - **Submit Your Application**: Fill out the [registration form](https://www.paradime.io/dbt-data-modeling-challenge#div-registration-form)
-- **Verification**: We'll review your application against the [entry requirements](https://www.paradime.io/dbt-data-modeling-challenge#div-judges)
+- **Verification**: We'll review your application against the [entry requirements](https://www.paradime.io/dbt-data-modeling-challenge#div-eval-criteria-summary)
 
 ### 2. Account Setup
 After verification, you'll receive two confirmation emails from Paradime:
@@ -42,7 +42,7 @@ Follow the instructions in these emails to set up your free accounts for:
 - **Technical Support**: Join Paradime's [#social-media-data-challenge Slack channel](https://paradimers.slack.com/join/shared_invite/zt-1mzax4sb8-jgw~hXRlDHAx~KN0az18bw#/shared-invite/email).
 - **Additional Support**: Check out the [MotherDuck Slack Community](https://join.slack.com/t/motherduckcommunity/shared_invite/zt-2hh1g7kec-Z9q8wLd_~alry9~VbMiVqA).
 - **Troubleshooting Confirmation Emails**: 
-  - Ensure you meet the [entry requirements](https://www.paradime.io/dbt-data-modeling-challenge#div-judges)
+  - Ensure you meet the [entry requirements](https://www.paradime.io/dbt-data-modeling-challenge#div-eval-criteria-summary)
   - Search for "mail@paradime.retool-email.com" in your registration email account.
   - If using a personal email to register, check LinkedIn for DMs from Parker Rogers (I ask for business email if applicable). 
   - Still no luck? DM Parker Rogers via Paradime's Challenge Slack.
@@ -51,9 +51,9 @@ Follow the instructions in these emails to set up your free accounts for:
 
 Before starting your project, familiarize yourself with the following key information:
 
-- [Entry Requirements](https://www.paradime.io/dbt-data-modeling-challenge#div-judges)
-- [Competition Deliverables](https://www.paradime.io/dbt-data-modeling-challenge#div-judges)
-- [Judging Criteria](https://www.paradime.io/dbt-data-modeling-challenge#div-judges)
+- [Entry Requirements](https://www.paradime.io/dbt-data-modeling-challenge#div-eval-criteria-summary)
+- [Challenge Deliverables](https://www.paradime.io/dbt-data-modeling-challenge#div-eval-criteria-summary)
+- [Judging Criteria](https://www.paradime.io/dbt-data-modeling-challenge#div-eval-criteria-summary)
 - [Required Tools](https://www.paradime.io/dbt-data-modeling-challenge#div-who-should-participate)
 - [Prizes](https://www.paradime.io/dbt-data-modeling-challenge#section-challenge-overview)
 
