@@ -154,6 +154,11 @@ Your primary goal is to use Paradime, MotherDuck, and Hex to unearth compelling 
      - For public companies that advertised, pull stock market data to see if there's any correlation between Superbowl commercial success and stock price.
      - Using [Superbowl advertisement cost data](https://money.usnews.com/money/personal-finance/spending/articles/how-much-does-the-average-super-bowl-commercial-cost), identify which brands had the highest social engagement per dollar spent.
 
+- **Hacker News Trend Analysis**
+   - **Analysis Question:** What are the most discussed topics and popular websites on Hacker News in 2022?
+   - **Required Social Media Data**: [Hacker News dataset sample](https://motherduck.com/docs/getting-started/sample-data-queries/hacker-news/) (January 2022 to November 2022).
+   - **Optional/Supplementary Data**: Tech industry news and events, stock market data for frequently mentioned tech companies.
+
 ### Step 4: Create Data Visualizations
 Use Hex to build impactful visualizations that complement your insights.
 
