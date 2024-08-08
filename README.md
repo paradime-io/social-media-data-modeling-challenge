@@ -9,7 +9,9 @@
 
 ## Introduction
 
-
+* cluster based on emotion, and see which factors are most important to being able to predict emotion
+* regression for time vs other factors? maybe do a reverse, like "these behaviors tend to get people to stay on longer"
+    * y=time spent
 
 ## Data Sources
 - Dataset 1: [Social Media Usage and Emotional Well-Being](https://www.kaggle.com/datasets/emirhanai/social-media-usage-and-emotional-well-beinghttps://www.kaggle.com/datasets/emirhanai/social-media-usage-and-emotional-well-being) - Kaggle dataset tracking dominant emotional state alongside social media user activity.
