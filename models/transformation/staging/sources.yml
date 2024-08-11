@@ -1,0 +1,5 @@
+sources:
+  - name: main
+    database: raw
+    tables:
+      - name: instagram_data
