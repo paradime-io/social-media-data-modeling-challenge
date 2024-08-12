@@ -2,7 +2,6 @@
 with insta_post_data as (
     select * from {{ ref('stg_instagram_data') }} 
     where category in ('travel_&_adventure', 'food_&_dining')
-    limit 10
 ),
 
 insta_countries as(
@@ -18,6 +17,7 @@ insta_countries as(
             when countries.post_id is null and cities.post_id is not null then cities.country_code_derived
             else null
         end as country_mentioned,
+        cities.city_name_mentioned as city_mentioned,
         ipd.language,
         ipd.category,
         ipd.description,
