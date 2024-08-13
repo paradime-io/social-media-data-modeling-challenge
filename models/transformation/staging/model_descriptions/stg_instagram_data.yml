@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: stg_instagram_data
+    description: |  
+      Staging model showing instagram posts and its details.
+
+    columns:
+      - name: post_id
+        tests:
+          - unique
+          - not_null
