@@ -1,4 +1,4 @@
--- int_instagrammable_countries.sql
+-- int_instagrammable_destinations.sql
 with insta_post_data as (
     select * from {{ ref('stg_instagram_data') }} 
     where category in ('travel_&_adventure', 'food_&_dining')
@@ -7,8 +7,8 @@ with insta_post_data as (
 insta_countries as(
     select distinct
          -- IDs
-        ipd.post_id,
-
+        {{ dbt_utils.generate_surrogate_key(['ipd.post_id', 'countries.country_name_mentioned','cities.country_name_derived', 'cities.city_name_mentioned']) }} as unique_key,
+    
         -- Strings
         case 
             -- if post mentions a country in desciption column, get that directly from the mention itself

@@ -11,7 +11,8 @@ with filtered_insta_data as (
 -- Filter out words that are in the stop words list
 
 matched_cities as (
-    select
+    select distinct
+        {{ dbt_utils.generate_surrogate_key(['i.post_id', 'c.city_name_latin', 'c.country_name' ]) }} as unique_key,
         i.post_id,
         c.city_name_latin as city_name_mentioned,
         c.city_population,

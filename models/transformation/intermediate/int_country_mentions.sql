@@ -10,16 +10,22 @@ with filtered_insta_data as (
         category in ('travel_&_adventure', 'food_&_dining')
 
 ),
--- Filter out words that are in the stop words list
+
+world_countries as(
+    select distinct
+        country_name
+    from {{ ref('stg_world_cities_countries') }}
+),
 
 matched_countries as (
-    select
+    select distinct
+        {{ dbt_utils.generate_surrogate_key(['i.post_id', 'c.country_name' ]) }} as unique_key,
         i.post_id,
         c.country_name as country_name_mentioned
     from
         filtered_insta_data i
     inner join
-        {{ ref('stg_world_cities_countries') }} c
+        world_countries c
     on
         i.word = '#' || lower(c.country_name) -- Match country
 )

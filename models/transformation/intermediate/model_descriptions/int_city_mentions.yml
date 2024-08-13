@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: int_country_mentions
+    description: |  
+      Contains all cities mentioned in the desciption column of the instagram post.
+
+    columns:
+      - name: unique_key
+        tests:
+          - unique
+          - not_null
