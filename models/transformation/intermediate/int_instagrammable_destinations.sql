@@ -5,16 +5,16 @@ with insta_post_data as (
 ),
 
 insta_countries as(
-    select
+    select distinct
          -- IDs
         ipd.post_id,
 
         -- Strings
         case 
             -- if post mentions a country in desciption column, get that directly from the mention itself
-            when countries.post_id is not null then countries.country_mentioned
+            when countries.post_id is not null then countries.country_name_mentioned
             --there is no country mentioned but a city mentioned, drive the country from where the city is
-            when countries.post_id is null and cities.post_id is not null then cities.country_code_derived
+            when countries.post_id is null and cities.post_id is not null then cities.country_name_derived
             else null
         end as country_mentioned,
         cities.city_name_mentioned as city_mentioned,

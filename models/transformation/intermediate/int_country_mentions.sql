@@ -1,28 +1,29 @@
 -- int_country_mentions.sql
 
-with final as (
+with filtered_insta_data as (
     select
-        i.post_id,
-        c.country_code as country_mentioned
+        post_id,
+        unnest(string_to_array(lower(description), ' ')) as word
     from
-        {{ ref('stg_instagram_data') }} as i
-    inner join
-        {{ ref('stg_world_cities_countries') }} as c
-        on
-            lower(i.description) like '%' || lower(c.country_name) || '%'
-    union all
-    select
-        i.post_id,
-        c.country_code as country_mentioned
-    from
-        {{ ref('stg_instagram_data') }} as i
-    inner join
-        {{ ref('stg_world_cities_countries') }} as c
-        on
-            lower(i.description) like '%' || lower(c.country_code) || '%'
-    order by
-        i.post_id
-)
+        {{ ref('stg_instagram_data') }}
+    where
+        category in ('travel_&_adventure', 'food_&_dining')
 
+),
+-- Filter out words that are in the stop words list
+
+matched_countries as (
+    select
+        i.post_id,
+        c.country_name as country_name_mentioned
+    from
+        filtered_insta_data i
+    inner join
+        {{ ref('stg_world_cities_countries') }} c
+    on
+        i.word = '#' || lower(c.country_name) -- Match country
+)
 select *
-from final
+from matched_countries
+
+
