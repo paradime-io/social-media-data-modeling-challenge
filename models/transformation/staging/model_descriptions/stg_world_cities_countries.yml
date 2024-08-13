@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: stg_world_cities_countries
+    description: |  
+      Staging model showing worlds most populated 25000 cities and their corresponding countries.
+
+    columns:
+      - name: unique_key
+        tests:
+          - unique
+          - not_null
