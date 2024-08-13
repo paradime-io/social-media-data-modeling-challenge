@@ -18,4 +18,6 @@ clean-targets:
 models:
   paradime_social_media_challenge:
     example:
-      +materialized: view
+      +materialized: table
+    transformation:
+      +materialized: table
