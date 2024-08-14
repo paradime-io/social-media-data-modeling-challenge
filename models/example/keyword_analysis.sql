@@ -4,6 +4,6 @@ SELECT
     COUNT(*) AS keyword_mentions
 FROM {{ source('hn', 'hacker_news') }} 
 WHERE
-    1=1 AND (title LIKE '%duckdb%' OR text LIKE '%duckdb%')
+    1=1 OR (title LIKE '%duckdb%' OR text LIKE '%duckdb%')
 GROUP BY year, month
 ORDER BY year ASC, month ASC
