@@ -6,4 +6,4 @@ schedules:
     environment: production
     commands:
       - dbt compile
-    owner_email: "john@acme.io"
+    owner_email: "cyrilmotte4collab@gmail.com"
