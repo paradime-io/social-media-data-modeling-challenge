@@ -1,4 +1,10 @@
-WITH ranked_stories AS (
+WITH hacker_news AS (
+    SELECT
+    *
+    FROM {{ source('hn', 'hacker_news') }}
+)
+,
+ranked_stories AS (
     SELECT
         title,
         'https://news.ycombinator.com/item?id=' || id AS hn_url,
@@ -8,7 +14,7 @@ WITH ranked_stories AS (
         ROW_NUMBER()
             OVER (PARTITION BY YEAR(timestamp), MONTH(timestamp) ORDER BY score DESC)
         AS rn
-    FROM {{ source('hn', 'hacker_news') }} 
+    FROM hacker_news 
     WHERE type = 'story'
 )
 
