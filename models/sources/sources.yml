@@ -1,0 +1,516 @@
+version: 2
+
+sources:
+  - name: main
+    database: my_db
+    tables:
+      - name: benefits
+        description: 'Table with benefits details associated to job posting'
+        tests:
+          - dbt_utils.unique_combination_of_columns:
+              combination_of_columns:
+                - job_id
+                - type
+        columns:
+          - name: job_id
+            description: "{{ doc('job_id') }}"
+            tests:
+              - not_null
+              - relationships:
+                  field: job_id
+                  to: source('main', 'job_postings')
+                  config:
+                    severity: warn
+          - name: type
+            description: 'Type of benefit provided (401K, Medical Insurance, etc)'
+            tests:
+              - not_null
+          - name: inferred
+            description: 'Whether the benefit was explicitly tagged or inferred through text by LinkedIn'
+            tests:
+              - not_null
+              
+      - name: companies
+        description: 'Table with companies data'
+        columns:
+          - name: company_id
+            description: "{{ doc('company_id') }}"
+            tests:
+              - unique
+              - not_null
+          - name: name
+            description: 'Company name'
+            tests:
+              - not_null
+          - name: description
+            description: 'Company description'
+          - name: company_size
+            description: 'Company grouping based on number of employees (0 Smallest - 7 Largest)'
+            tests:
+              - accepted_values:
+                  name: company_size_accepted_values
+                  values: [0,1,2,3,4,5,6,7]
+                  config:
+                    where: "company_size is not null"
+          - name: country
+            description: 'Country of company headquarters (Alpha-2 code)'
+          - name: state
+            description: 'State of company headquarters'
+          - name: city
+            description: 'City of company headquarters'
+          - name: zip_code
+            description: "ZIP code of company's headquarters"
+          - name: address
+            description: "Address of company's headquarters"
+          - name: url
+            description: "Link to company's LinkedIn page"
+      
+      - name: company_industries
+        description: 'Table with the companies and respective industries which they operate'
+        tests:
+          - dbt_utils.unique_combination_of_columns:
+              combination_of_columns:
+                - company_id
+                - industry
+        columns:
+          - name: company_id
+            description: "{{ doc('company_id') }}"
+            tests:
+              - not_null
+              - relationships:
+                  name: company_industries_relationship_company_id
+                  field: company_id
+                  to: source('main', 'companies')
+          - name: industry
+            description: 'Industry name'
+            tests:
+              - relationships:
+                  name: company_industry_name_relationship_industries
+                  field: industry_name
+                  to: source('main', 'industries')
+
+      - name: company_specialities
+        description: 'Table with the companies and respective specialities'
+        tests:
+          - dbt_utils.unique_combination_of_columns:
+              combination_of_columns:
+                - company_id
+                - speciality
+        columns:
+          - name: company_id
+            description: "{{ doc('company_id') }}"
+            tests:
+              - not_null
+              - relationships:
+                  name: company_specialities_relationship_company_id
+                  field: company_id
+                  to: source('main', 'companies')
+          - name: speciality
+            description: 'Speciality identifier'
+            tests:
+              - not_null
+
+      - name: countries
+        description: 'Table with countries details'
+        columns:
+          - name: English short name lower case
+            description: 'Country name'
+            quote: true
+            tests:
+              - not_null
+          - name: alpha_2_code
+            description: '2 letters code to uniquely identify a country'
+            tests:
+              - unique
+              - not_null
+
+      - name: countries_postal_codes
+        description: 'Table with countries postal codes'
+        tests:
+          - unique:
+              name: countries_postal_codes_unique
+              column_name: '("country code" || "postal code" || "place name" || "admin name1" || "admin code1" || "admin name2" || "admin code2" || "admin name3" || "admin code3" || "coordinates")'
+        columns:
+          - name: country code
+            description: 'Country Alpha-2 code'
+            quote: true
+            tests:
+              - not_null
+              - relationships:
+                  field: alpha_2_code
+                  to: source('main', 'countries')
+          - name: postal code
+            description: '2 letters code to uniquely identify a country'
+            quote: true
+            tests:
+              - not_null
+          - name: place name
+            description: 'Name of the place'
+            quote: true
+          - name: admin name1
+            description: 'County name'
+            quote: true
+          - name: admin code1
+            description: 'County code'
+            quote: true
+          - name: admin name2
+            description: 'Council name'
+            quote: true
+          - name: admin code2
+            description: 'Council code'
+            quote: true
+          - name: admin name3
+            description: 'Postal designation name'
+            quote: true
+          - name: admin code3
+            description: 'Postal designation code'
+            quote: true
+          - name: latitude
+            description: 'Latitude coordinates'
+          - name: longitude
+            description: 'Longitude coordinates'
+          - name: accuracy
+            description: 'Accuracy level (higher the value, better the accuracy)'
+            tests:
+              - dbt_expectations.expect_column_values_to_be_in_set:
+                  name: accuracy_level_expected_values
+                  value_set: [1,2,3,4,5,6]
+                  row_condition: "accuracy is not null"
+          - name: coordinates
+            description: 'Latitude and longitude coordinates'
+            tests:
+              - not_null
+
+      - name: employee_counts
+        description: 'Table with employee counts by company'
+        columns:
+          - name: company_id
+            description: "{{ doc('company_id') }}"
+            tests:
+              - not_null
+              - relationships:
+                  name: employee_counts_relationship_company_id
+                  field: company_id
+                  to: source('main', 'companies')
+          - name: employee_count
+            description: 'Number of employees at company'
+            tests:
+              - not_null
+          - name: follower_count
+            description: 'Number of company followers on LinkedIn'
+            tests:
+              - not_null
+          - name: time_recorded
+            description: 'Unix time of data collection'
+            tests:
+              - not_null
+
+      - name: exchange_rates
+        description: 'Daily Forex Exchange Rates for over 160 countries'
+        tests: 
+          - dbt_utils.unique_combination_of_columns:
+                combination_of_columns:
+                  - currency
+                  - base_currency
+                  - date
+        columns:
+          - name: currency
+            description: 'The currency code for the foreign currency'
+            tests:
+              - dbt_expectations.expect_column_values_to_match_regex:
+                  regex: "^\\w{3}"
+          - name: base_currency
+            description: 'The currency code for the base currency'
+            tests:
+              - dbt_expectations.expect_column_values_to_match_regex:
+                  regex: "^\\w{3}"
+          - name: currency_name
+            description: 'The name of the currency'
+          - name: exchange_rate
+            description: 'The exchange for the currency against the base currency'
+            tests:
+              - not_null
+          - name: date
+            description: 'The date when the exchange rate was recorded'
+            tests:
+              - not_null
+
+      - name: global_jobs_salaries_2024
+        description: 'Dataset with comprehensive information on salaries for various job roles across different countries'
+        columns:
+          - name: country
+            description: 'The name of the country for which the salary information is provided'
+            tests:
+              - not_null
+          - name: job title
+            description: 'The specific job title or role for which the salary is listed'
+            quote: true
+            tests:
+              - not_null
+          - name: category
+            description: 'The broader category or industry to which the job title belongs'
+            tests:
+              - not_null
+          - name: salary
+            description: 'The annual gross salary amount in the local currency of the respective country'
+            tests:
+              - not_null
+          - name: currency
+            description: 'The currency code or symbol representing the local currency of the country.'
+            tests:
+              - not_null
+              - dbt_expectations.expect_column_values_to_match_regex:
+                  regex: "^\\w{3}"
+              - relationships:
+                  field: currency
+                  to: source('main', 'exchange_rates')
+                  where: "country != 'Sao Tome and Principe'"
+          - name: exchange rate
+            description: 'The exchange rate value used to convert the local currency salary to US dollars.'
+            quote: true
+            tests:
+              - not_null
+              - dbt_expectations.expect_column_values_to_be_between:
+                  min_value: 0
+          - name: salary (usd)
+            description: 'The salary amount converted to US dollars using the provided exchange rate.'
+            quote: true
+            tests:
+              - not_null
+              - dbt_expectations.expect_column_values_to_be_between:
+                  min_value: 0
+
+      - name: industries
+        description: 'Table with industries data'
+        columns:
+          - name: industry_id
+            description: "The industry ID (primary key)"
+            tests:
+              - unique
+              - not_null
+          - name: industry_name
+            description: 'The industry name'
+            tests:
+              - unique:
+                  config:
+                    where: 'industry_name is not null'
+
+      - name: job_industries
+        description: 'Table with industries data'
+        tests: 
+          - dbt_utils.unique_combination_of_columns:
+                combination_of_columns:
+                  - job_id
+                  - industry_id
+        columns:
+          - name: job_id
+            description: "{{ doc('job_id') }}"
+            tests:
+              - not_null
+              - relationships:
+                  field: job_id
+                  to: source('main', 'job_postings')
+                  config:
+                    severity: warn
+          - name: industry_id
+            description: 'Industry unique identifier'
+            tests:
+              - relationships:
+                  field: industry_id
+                  to: source('main', 'industries')
+              - not_null
+
+      - name: job_postings
+        description: 'Table with job postings data'
+        columns:
+          - name: job_id
+            description: "{{ doc('job_id') }}"
+            tests:
+              - unique
+              - not_null
+          - name: company_id
+            description: "{{ doc('company_id') }}"
+            tests:
+              - relationships:
+                  field: company_id
+                  to: source('main', 'companies')
+                  config:
+                    severity: warn
+          - name: title
+            description: "{{ doc('title') }}"
+            tests:
+              - not_null
+          - name: description
+            description: 'Job description'
+            tests:
+              - not_null:
+                  config:
+                    severity: error
+                    error_if: ">10"
+          - name: max_salary
+            description: "{{ doc('max_salary') }}"
+          - name: med_salary
+            description: "{{ doc('med_salary') }}"
+          - name: min_salary
+            description: "{{ doc('min_salary') }}"
+          - name: pay_period
+            description: "{{ doc('pay_period') }}"
+            tests:
+              - accepted_values:
+                  name: pay_period_accepted_values
+                  values: ['HOURLY', 'WEEKLY', 'YEARLY', 'MONTHLY', 'BIWEEKLY']
+                  config:
+                    where: "pay_period is not null"
+          - name: formatted_work_type
+            description: "{{ doc('formatted_work_type') }}"
+            tests:
+              - accepted_values:
+                  name: formatted_work_type_accepted_values
+                  values: ['Other', 'Contract', 'Full-time', 'Volunteer', 'Internship', 'Part-time', 'Temporary']
+                  config:
+                    where: "formatted_work_type is not null"
+          - name: location
+            description: "{{ doc('job_location') }}"
+          - name: applies
+            description: "{{ doc('applies') }}"
+            tests:
+              - dbt_expectations.expect_column_values_to_be_between:
+                  min_value: 0
+                  row_condition: "applies is not null"
+          - name: original_listed_time
+            description: "Original time the job was listed"
+          - name: remote_allowed
+            description: 'Whether job permits remote work'
+          - name: views
+            description: 'Number of times the job posting has been viewed'
+            tests:
+              - dbt_expectations.expect_column_values_to_be_between:
+                  min_value: 0
+                  row_condition: "views is not null"
+          - name: job_posting_url
+            description: 'URL to the job posting on a platform'
+          - name: application_url
+            description: 'URL where applications can be submitted'
+          - name: application_type
+            description: 'Type of application process (offsite, complex/simple onsite)'
+            tests:
+              - accepted_values:
+                  name: application_type_accepted_values
+                  values: ['OffsiteApply', 'ComplexOnsiteApply', 'UnknownApply', 'SimpleOnsiteApply']
+          - name: expiry
+            description: 'Expiration date or time for the job listing'
+          - name: closed_time
+            description: 'Time to close job listing'
+          - name: formatted_experience_level
+            description: 'Job experience level (entry, associate, executive, etc)'
+            tests:
+              - accepted_values:
+                  name: formatted_experience_level_accepted_values
+                  values: ['Director', 'Internship', 'Entry level', 'Executive', 'Associate', 'Mid-Senior level']
+                  config:
+                    where: "formatted_experience_level is not null"
+          - name: skills_desc
+            description: 'Description detailing required skills for job'
+          - name: listed_time
+            description: 'Time when the job was listed'
+          - name: posting_domain
+            description: 'Domain of the website with application'
+          - name: sponsored
+            description: 'Whether the job listing is sponsored or promoted'
+          - name: work_type
+            description: 'Type of work associated with the job'
+            tests:
+              - accepted_values:
+                  name: work_type_accepted_values
+                  values: ['PART_TIME', 'TEMPORARY', 'FULL_TIME', 'INTERNSHIP', 'CONTRACT', 'OTHER', 'VOLUNTEER']
+          - name: currency
+            description: 'Currency in which the salary is provided'
+            tests:
+              - dbt_expectations.expect_column_values_to_match_regex:
+                  regex: "^\\w{3}"
+              - relationships:
+                  field: currency
+                  to: source('main', 'exchange_rates')
+          - name: compensation_type
+            description: 'Type of compensation for the job'
+
+      - name: job_skills
+        description: 'Table with job skills data required from job postings'
+        tests:
+          - dbt_utils.unique_combination_of_columns:
+              combination_of_columns:
+                - job_id
+                - skill_abr
+        columns:
+          - name: job_id
+            description: "{{ doc('job_id') }}"
+            tests:
+              - not_null
+              - relationships:
+                  field: job_id
+                  to: source('main', 'job_postings')
+                  config:
+                    severity: warn
+          - name: skill_abr
+            description: 'The skill abbreviation'
+            tests:
+              - not_null
+              - relationships:
+                  field: job_id
+                  to: source('main', 'skill_abr')
+          
+      - name: salaries
+        description: 'Table with salaries details from job postings'
+        columns:
+          - name: salary_id
+            description: 'Salary unique identifier'
+            tests:
+              - unique
+              - not_null
+          - name: job_id
+            description: "{{ doc('job_id') }}"
+            tests:
+              - not_null
+              - relationships:
+                  field: job_id
+                  to: source('main', 'job_postings')
+                  config:
+                    severity: warn
+          - name: max_salary
+            description: "{{ doc('max_salary') }}"
+          - name: med_salary
+            description: "{{ doc('med_salary') }}"
+          - name: min_salary
+            description: "{{ doc('min_salary') }}"
+          - name: pay_period
+            description: "{{ doc('pay_period') }}"
+            tests:
+              - accepted_values:
+                  name: pay_period_accepted_values
+                  values: ['HOURLY', 'WEEKLY', 'YEARLY', 'MONTHLY', 'BIWEEKLY']
+                  config:
+                    where: "pay_period is not null"
+          - name: currency
+            description: 'Currency in which the salary is provided'
+            tests:
+              - dbt_expectations.expect_column_values_to_match_regex:
+                  regex: "^\\w{3}"
+              - relationships:
+                  field: currency
+                  to: source('main', 'exchange_rates')
+          - name: compensation_type
+            description: 'Type of compensation for the job (Fixed, Variable, etc)'
+
+      - name: skills
+        description: 'Skills mapping table'
+        columns:
+          - name: skill_abr
+            description: 'The skill abbreviation'
+            tests:
+              - unique
+              - not_null
+          - name: skill_name
+            description: 'The skill name'
+            tests:
+              - unique
+              - not_null
