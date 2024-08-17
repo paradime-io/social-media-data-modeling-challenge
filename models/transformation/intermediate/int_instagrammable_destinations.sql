@@ -6,41 +6,54 @@ with insta_post_data as (
 
 insta_countries as(
     select distinct
-         -- IDs
-        {{ dbt_utils.generate_surrogate_key(['ipd.post_id', 'countries.country_name_mentioned','cities.country_name_derived', 'cities.city_name_mentioned']) }} as unique_key,
-    
-        -- Strings
+        ipd.*,
         case 
             -- if post mentions a country in desciption column, get that directly from the mention itself
             when countries.post_id is not null then countries.country_name_mentioned
-            --there is no country mentioned but a city mentioned, drive the country from where the city is
+            -- if there is no country mentioned but a city mentioned, drive the country from where the city is
             when countries.post_id is null and cities.post_id is not null then cities.country_name_derived
             else null
         end as country_mentioned,
-        cities.city_name_mentioned as city_mentioned,
-        ipd.language,
-        ipd.category,
-        ipd.description,
-        ipd.comments,
-
-        -- Numerics
-        ipd.likes_count,
-        ipd.comments_count,
-        ipd.following_count,
-        ipd.followers_count,
-        ipd.post_count,
-    
-        -- Booleans
-        ipd.is_business_account,
-
-        -- Dates
-        ipd.post_date   
+        cities.city_name_mentioned as city_mentioned,  
     from insta_post_data as ipd
         left join {{ ref('int_country_mentions') }} as countries
         on ipd.post_id = countries.post_id
         left join {{ ref('int_city_mentions') }} as cities
-        on ipd.post_id = cities.post_id
+        on ipd.post_id = cities.post_id  
+),
+
+tourism_data as(
+        select
+         -- IDs
+        {{ dbt_utils.generate_surrogate_key(['ic.post_id', 'ic.country_mentioned', 'ic.city_mentioned']) }} as unique_key,
+        ic.profile_id,
+        ic.post_id,
+        
+        -- Strings
+        ic.country_mentioned,
+        ic.city_mentioned,
+        ic.language,
+        ic.category,
+        ic.description,
+        ic.comments,
+
+        -- Numerics
+        ic.likes_count,
+        ic.comments_count,
+        ic.following_count,
+        ic.followers_count,
+        ic.post_count,
+        gt.international_arrivals,
     
+        -- Booleans
+        ic.is_business_account,
+
+        -- Dates
+        ic.post_date   
+        from insta_countries as ic
+        left join {{ ref('stg_global_tourism') }} as gt
+            on lower(ic.country_mentioned) = lower(gt.country_name)
+            and extract(year from ic.post_date) = gt.year
 )
 
 select * from insta_countries
