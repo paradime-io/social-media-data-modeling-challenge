@@ -1,8 +1,0 @@
-# example profiles.yml file
-paradime_social_media_challenge:
-  target: dev
-  outputs:
-    dev:
-      dbname: analytics
-      schema: dbt_maulanamubarakahmad
-      threads: 1
