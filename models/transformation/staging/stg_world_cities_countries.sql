@@ -1,7 +1,7 @@
 -- stg_world_cities_countries.sql
 
 with final as (
-    select
+    select distinct
         -- Strings
         {{ dbt_utils.generate_surrogate_key(['c.city_name_original', 'c.country_name']) }} as unique_key,
         c.city_name_original,
