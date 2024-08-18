@@ -1,12 +1,20 @@
 version: 2
 
 models:
-  - name: int_city_mentions
+  - name: int_country_mentions
     description: |  
-      Contains all countries mentioned in the desciption column of the instagram post.
+      Contains all countries mentioned in the desciption column of the instagram post. It is a lookup table for countries.
 
     columns:
       - name: unique_key
         tests:
           - unique
           - not_null
+
+      - name: post_id
+        description: |
+          {{ doc("int_country_mentions__post_id") }}
+
+      - name: country_name_mentioned
+        description: |
+          {{ doc("int_country_mentions__country_name_mentioned") }}

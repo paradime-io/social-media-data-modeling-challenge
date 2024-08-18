@@ -11,3 +11,55 @@ models:
         tests:
           - unique
           - not_null
+
+     - name: profile_id
+        description: |
+          {{ doc("fact_profile_engagements__profile_id") }}
+
+      - name: avg_comments
+        description: |
+          {{ doc("fact_profile_engagements__avg_comments") }}
+
+      - name: avg_likes
+        description: |
+          {{ doc("fact_profile_engagements__avg_likes") }}
+
+      - name: bio
+        description: |
+          {{ doc("fact_profile_engagements__bio") }}
+
+      - name: category
+        description: |
+          {{ doc("fact_profile_engagements__category") }}
+
+      - name: follower_tier
+        description: |
+          {{ doc("fact_profile_engagements__follower_tier") }}
+
+      - name: followers_count
+        description: |
+          {{ doc("fact_profile_engagements__followers_count") }}
+
+      - name: is_business_account
+        description: |
+          {{ doc("fact_profile_engagements__is_business_account") }}
+
+      - name: total_post_count
+        description: |
+          {{ doc("fact_profile_engagements__total_post_count") }}
+
+      - name: total_profile_engagement
+        description: |
+          {{ doc("fact_profile_engagements__total_profile_engagement") }}
+
+      - name: total_profile_engagement_normalized
+        description: |
+          {{ doc("fact_profile_engagements__total_profile_engagement_normalized") }}
+
+      - name: unique_key
+        description: |
+          {{ doc("fact_profile_engagements__unique_key") }}
+
+      - name: username
+        description: |
+          {{ doc("fact_profile_engagements__username") }}

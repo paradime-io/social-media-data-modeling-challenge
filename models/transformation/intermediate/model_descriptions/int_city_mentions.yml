@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: int_country_mentions
+  - name: int_city_mentions
     description: |  
       Contains all cities mentioned in the desciption column of the instagram post.
 
@@ -10,3 +10,23 @@ models:
         tests:
           - unique
           - not_null
+          
+      - name: post_id
+        description: |
+          {{ doc("int_city_mentions__post_id") }}
+
+      - name: city_name_mentioned
+        description: |
+          {{ doc("int_city_mentions__city_name_mentioned") }}
+
+      - name: city_population
+        description: |
+          {{ doc("int_city_mentions__city_population") }}
+
+      - name: country_code_derived
+        description: |
+          {{ doc("int_city_mentions__country_code_derived") }}
+
+      - name: country_name_derived
+        description: |
+          {{ doc("int_city_mentions__country_name_derived") }}

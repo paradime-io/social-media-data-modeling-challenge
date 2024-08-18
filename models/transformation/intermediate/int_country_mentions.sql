@@ -21,8 +21,7 @@ matched_countries as (
     select distinct
         {{ dbt_utils.generate_surrogate_key(['i.post_id', 'c.country_name' ]) }} as unique_key,
         i.post_id,
-        c.country_name as country_name_mentioned,
-        gt.international_arrivals
+        c.country_name as country_name_mentioned
     from filtered_insta_data i
     inner join world_countries c
         on i.word = lower(c.country_name) -- Match country

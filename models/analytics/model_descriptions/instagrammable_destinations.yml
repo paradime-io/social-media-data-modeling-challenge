@@ -1,12 +1,15 @@
 version: 2
 
 models:
-  - name: int_instagrammable_destinations
+  - name: instagrammable_destinations
     description: |  
-      Contains all cities and countries mentioned in the desciption column of the instagram post together with the details of the posts.
+      Final model that contains all cities and countries mentioned in the desciption column of the instagram post together with the details of the posts.
 
     columns:
       - name: unique_key
+        tests:
+          - unique
+          - not_null
 
       - name: post_id
         description: |
