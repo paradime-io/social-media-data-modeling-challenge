@@ -4,7 +4,7 @@ config-version: 2
 
 profile: "dbt-motherduck"
 
-model-paths: ["md:other_test"]
+model-paths: ["models"]
 analysis-paths: ["analyses"]
 test-paths: ["tests"]
 seed-paths: ["seeds"]
@@ -17,5 +17,6 @@ clean-targets:
 
 models:
   paradime_social_media_challenge:
+    +schema: md:other_test
     example:
       +materialized: view
