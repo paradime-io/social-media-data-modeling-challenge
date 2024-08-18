@@ -5,4 +5,4 @@ paradime_social_media_challenge:
     dev:
       dbname: other_test
       schema: dbt_maulanamubarakahmad
-      threads: 8
+      threads: 1
