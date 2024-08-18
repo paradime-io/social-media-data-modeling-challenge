@@ -18,6 +18,7 @@ with final as (
         avg(likes_count) as avg_likes,
         avg(comments_count) as avg_comments,
         avg(total_post_engagement) as total_profile_engagement,
+        {{ normalize_value('total_profile_engagement') }} as total_profile_engagement_normalized,
         count(distinct post_id) as total_post_count
     from 
         {{ ref('int_instagrammable_destinations') }}
