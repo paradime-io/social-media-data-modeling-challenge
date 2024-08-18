@@ -4,7 +4,7 @@ config-version: 2
 
 profile: "dbt-motherduck"
 
-model-paths: ["models"]
+model-paths: ["md:other_test"]
 analysis-paths: ["analyses"]
 test-paths: ["tests"]
 seed-paths: ["seeds"]
