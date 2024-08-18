@@ -17,6 +17,5 @@ clean-targets:
 
 models:
   paradime_social_media_challenge:
-    +schema: md:other_test
     example:
       +materialized: view
