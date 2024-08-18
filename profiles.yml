@@ -3,6 +3,6 @@ paradime_social_media_challenge:
   target: dev
   outputs:
     dev:
-      dbname: analytics
+      dbname: other_test
       schema: dbt_maulanamubarakahmad
-      threads: 1
+      threads: 8
