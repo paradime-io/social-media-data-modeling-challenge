@@ -33,6 +33,8 @@ final as (
         ic.post_id,
 
         -- Strings
+        ic.username,
+        ic.bio,
         ic.country_mentioned,
         ic.city_mentioned,
         ic.language,
@@ -47,6 +49,7 @@ final as (
         ic.followers_count,
         ic.post_count,
         gt.international_arrivals,
+        ic.likes_count + ic.comments_count as total_post_engagement,
 
         -- Booleans
         ic.is_business_account,

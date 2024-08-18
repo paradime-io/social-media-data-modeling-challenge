@@ -1,0 +1,13 @@
+version: 2
+
+models:
+
+  - name: fact_profile_engagements
+    description: |
+        Final model for
+
+    columns:
+      - name: unique_key
+        tests:
+          - unique
+          - not_null

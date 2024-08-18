@@ -4,7 +4,7 @@ models:
 
   - name: stg_global_tourism
     description: |
-        Table description 
+        Staging model showing yearly international tourist arrivals for each country.
 
     columns:
       - name: unique_key
