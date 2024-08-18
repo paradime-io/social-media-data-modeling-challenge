@@ -7,6 +7,27 @@ models:
 
     columns:
       - name: unique_key
-        tests:
+        description: |
+          {{ doc("stg_world_cities_countries__unique_key") }}
           - unique
           - not_null
+
+      - name: city_name_latin
+        description: |
+          {{ doc("stg_world_cities_countries__city_name_latin") }}
+
+      - name: city_name_original
+        description: |
+          {{ doc("stg_world_cities_countries__city_name_original") }}
+
+      - name: city_population
+        description: |
+          {{ doc("stg_world_cities_countries__city_population") }}
+
+      - name: country_code
+        description: |
+          {{ doc("stg_world_cities_countries__country_code") }}
+
+      - name: country_name
+        description: |
+          {{ doc("stg_world_cities_countries__country_name") }}

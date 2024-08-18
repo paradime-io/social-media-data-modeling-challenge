@@ -2,6 +2,9 @@
 
 with final as (
     select
+        -- IDs
+        {{ dbt_utils.generate_surrogate_key(['entity', 'year']) }} as unique_key,
+
         -- Strings
         entity as country_name,
         code as country_iso_code,

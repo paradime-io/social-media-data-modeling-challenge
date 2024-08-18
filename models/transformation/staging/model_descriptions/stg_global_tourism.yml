@@ -1,0 +1,29 @@
+version: 2
+
+models:
+
+  - name: stg_global_tourism
+    description: |
+        Table description 
+
+    columns:
+      - name: unique_key
+        tests:
+          - unique
+          - not_null
+
+      - name: country_iso_code
+        description: |
+          {{ doc("stg_global_tourism__country_iso_code") }}
+
+      - name: country_name
+        description: |
+          {{ doc("stg_global_tourism__country_name") }}
+
+      - name: international_arrivals
+        description: |
+          {{ doc("stg_global_tourism__international_arrivals") }}
+
+      - name: year
+        description: |
+          {{ doc("stg_global_tourism__year") }}

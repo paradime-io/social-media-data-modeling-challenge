@@ -3,10 +3,76 @@ version: 2
 models:
   - name: stg_instagram_data
     description: |  
-      Staging model showing instagram posts and its details.
+      Staging model showing posts made in instagram and the details of the user account that made the post.
 
     columns:
       - name: post_id
+        description: |
+          {{ doc("stg_instagram_data__post_id") }}
         tests:
           - unique
           - not_null
+
+      - name: sid
+        description: |
+          {{ doc("stg_instagram_data__sid") }}
+
+      - name: sid_profile_id
+        description: |
+          {{ doc("stg_instagram_data__sid_profile_id") }}
+
+      - name: post_type
+        description: |
+          {{ doc("stg_instagram_data__post_type") }}
+
+      - name: language
+        description: |
+          {{ doc("stg_instagram_data__language") }}
+
+      - name: category
+        description: |
+          {{ doc("stg_instagram_data__category") }}
+
+      - name: description
+        description: |
+          {{ doc("stg_instagram_data__description") }}
+
+      - name: comments
+        description: |
+          {{ doc("stg_instagram_data__comments") }}
+
+      - name: username
+        description: |
+          {{ doc("stg_instagram_data__username") }}
+
+      - name: bio
+        description: |
+          {{ doc("stg_instagram_data__bio") }}
+
+      - name: likes_count
+        description: |
+          {{ doc("stg_instagram_data__likes_count") }}
+
+      - name: comments_count
+        description: |
+          {{ doc("stg_instagram_data__comments_count") }}
+
+      - name: following_count
+        description: |
+          {{ doc("stg_instagram_data__following_count") }}
+
+      - name: followers_count
+        description: |
+          {{ doc("stg_instagram_data__followers_count") }}
+
+      - name: post_count
+        description: |
+          {{ doc("stg_instagram_data__post_count") }}
+
+      - name: is_business_account
+        description: |
+          {{ doc("stg_instagram_data__is_business_account") }}
+
+      - name: post_date
+        description: |
+          {{ doc("stg_instagram_data__post_date") }}
