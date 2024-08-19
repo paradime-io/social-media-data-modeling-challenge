@@ -1,7 +1,7 @@
 -- fact_profile_engagements
 
 with final as (
-    select 
+    select distinct
         {{ dbt_utils.generate_surrogate_key(['profile_id', 'category' ]) }} as unique_key,
         profile_id,
         username,
@@ -19,7 +19,8 @@ with final as (
         avg(comments_count) as avg_comments,
         avg(total_post_engagement) as total_profile_engagement,
         {{ normalize_value('total_profile_engagement') }} as total_profile_engagement_normalized,
-        count(distinct post_id) as total_post_count
+        count(distinct post_id) as total_post_count,
+        {{ normalize_value('total_post_count') }} as total_post_count_normalized,
     from 
         {{ ref('int_instagrammable_destinations') }}
     group by 1, 2, 3, 4, 5, 6, 7

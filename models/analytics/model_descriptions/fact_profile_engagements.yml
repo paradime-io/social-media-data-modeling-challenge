@@ -1,10 +1,9 @@
 version: 2
 
 models:
-
   - name: fact_profile_engagements
     description: |
-        Final model for
+      Final model for user profile post engagement metrics
 
     columns:
       - name: unique_key
@@ -12,7 +11,7 @@ models:
           - unique
           - not_null
 
-     - name: profile_id
+      - name: profile_id
         description: |
           {{ doc("fact_profile_engagements__profile_id") }}
 
@@ -55,10 +54,6 @@ models:
       - name: total_profile_engagement_normalized
         description: |
           {{ doc("fact_profile_engagements__total_profile_engagement_normalized") }}
-
-      - name: unique_key
-        description: |
-          {{ doc("fact_profile_engagements__unique_key") }}
 
       - name: username
         description: |
