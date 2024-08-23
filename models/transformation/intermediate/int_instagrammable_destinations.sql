@@ -23,6 +23,7 @@ insta_countries as (
         on ipd.post_id = countries.post_id
     left join {{ ref('int_city_mentions') }} as cities
         on ipd.post_id = cities.post_id
+    where countries.source = 'instagram'
 ),
 
 final as (

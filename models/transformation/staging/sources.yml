@@ -3,3 +3,4 @@ sources:
     database: raw
     tables:
       - name: instagram_data
+      - name: twitter_data

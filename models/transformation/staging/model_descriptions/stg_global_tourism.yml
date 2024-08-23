@@ -4,7 +4,8 @@ models:
 
   - name: stg_global_tourism
     description: |
-        Staging model showing yearly international tourist arrivals for each country.
+        Staging model showing yearly international tourist arrivals for each country. Taken from Kaggle global tourism dataset.
+        https://www.kaggle.com/datasets/abmsayem/global-tourism
 
     columns:
       - name: unique_key
