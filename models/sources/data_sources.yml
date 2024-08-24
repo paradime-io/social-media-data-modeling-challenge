@@ -31,3 +31,7 @@ sources:
       - name: Australia_Youtube
       - name: Youtube_playlist_comments
       - name: Argentina_Youtube
+      - name: Panama_Youtube
+      - name: Philippines_Youtube
+      - name: Youtube_video_category_PH
+      - name: Youtube_video_category_PA
