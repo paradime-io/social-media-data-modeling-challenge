@@ -1,0 +1,33 @@
+version: 2
+
+sources:
+  - name: dbt_paradime_nancy_amandi
+    description: "These are the data sources associated with this project including the internal and sourced data"
+    database: analytics
+    schema: main
+    tables:
+      - name: TrendingTopics
+      - name: relatedQueries
+      - name: relatedEntities
+      - name: Peru_Youtube
+      - name: Nicaragua_Youtube
+      - name: multiTimeline__Websearch
+      - name: Mongolia_Youtube
+      - name: Paraguay_Youtube
+      - name: Mexico_Youtube
+      - name: Indonesia_Youtube
+      - name: Honduras_Youtube
+      - name: Guatemala_Youtube
+      - name: geoMap__Youtube
+      - name: New_Zealand_Youtube
+      - name: Ecuador_videos
+      - name: combined_video_categories
+      - name: Chile_Videos
+      - name: Bolivia_Youtube
+      - name: Myanmar_Youtube
+      - name: multiTimeline_Youtube
+      - name: Malaysia_Youtube
+      - name: geoMap1_Websearch
+      - name: Australia_Youtube
+      - name: Youtube_playlist_comments
+      - name: Argentina_Youtube

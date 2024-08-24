@@ -19,3 +19,7 @@ models:
   paradime_social_media_challenge:
     example:
       +materialized: view
+    INTERMEDIATE:
+      +materialized: view
+    CORE:
+      +materialized: table
