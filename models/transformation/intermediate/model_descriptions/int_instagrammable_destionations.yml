@@ -7,6 +7,9 @@ models:
 
     columns:
       - name: unique_key
+        tests:
+          - unique
+          - not_null
 
       - name: post_id
         description: |

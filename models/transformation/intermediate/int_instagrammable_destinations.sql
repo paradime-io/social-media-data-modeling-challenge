@@ -1,9 +1,12 @@
 -- int_instagrammable_destinations.sql
+
+-- Filter instagram data to only travel related posts
 with insta_post_data as (
     select * from {{ ref('stg_instagram_data') }}
     where category in ('travel_&_adventure', 'food_&_dining')
 ),
 
+-- Get all posts related to each country and city mentioned
 insta_countries as (
     select distinct
         ipd.*,
@@ -19,10 +22,10 @@ insta_countries as (
                 then cities.country_name_derived
         end as country_mentioned
     from insta_post_data as ipd
-    left join {{ ref('int_country_mentions') }} as countries
-        on ipd.post_id = countries.post_id
-    left join {{ ref('int_city_mentions') }} as cities
-        on ipd.post_id = cities.post_id
+        left join {{ ref('int_country_mentions') }} as countries
+            on ipd.post_id = countries.post_id
+        left join {{ ref('int_city_mentions') }} as cities
+            on ipd.post_id = cities.post_id
 ),
 
 final as (
@@ -57,9 +60,10 @@ final as (
         -- Dates
         ic.post_date
     from insta_countries as ic
-    left join {{ ref('stg_global_tourism') }} as gt
-        on lower(ic.country_mentioned) = lower(gt.country_name)
-            and extract(year from ic.post_date) = gt.year
+        left join {{ ref('stg_global_tourism') }} as gt
+            on
+                lower(ic.country_mentioned) = lower(gt.country_name)
+                and extract(year from ic.post_date) = gt.year
 )
 
 select * from final

@@ -1,3 +1,6 @@
+-- int_city_mentions
+
+-- Filter instagram data to only travel related posts
 with filtered_insta_data as (
     select
         post_id,
@@ -8,8 +11,8 @@ with filtered_insta_data as (
         category in ('travel_&_adventure', 'food_&_dining')
 
 ),
--- Filter out words that are in the stop words list
 
+-- Extract city names mentioned from the post description
 matched_cities as (
     select distinct
         {{ dbt_utils.generate_surrogate_key(['i.post_id', 'c.city_name_latin', 'c.country_name' ]) }} as unique_key,
@@ -18,13 +21,12 @@ matched_cities as (
         c.country_name as country_name_derived,
         c.country_code as country_code_derived
     from
-        filtered_insta_data i
-    inner join
-        {{ ref('stg_world_cities_countries') }} c
-    on
-        i.word = '#' || lower(c.city_name_latin) -- Match city name as-is
+        filtered_insta_data as i
+        inner join
+            {{ ref('stg_world_cities_countries') }} as c
+            on
+                i.word = '#' || lower(c.city_name_latin) -- Match city name as-is
 )
+
 select *
 from matched_cities
-
-

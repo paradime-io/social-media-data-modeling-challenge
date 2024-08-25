@@ -11,10 +11,11 @@ with final as (
         c.population as city_population
 
     from {{ ref('world_cities_countries') }} as c
-    left join
-       {{ ref('common_english_words') }} sw
-    on
-        lower(c.city_name_latin) = lower(sw.word)
+    -- remove common english words from the city list 
+        left join
+            {{ ref('common_english_words') }} as sw
+            on
+                lower(c.city_name_latin) = lower(sw.word)
     where
         sw.word is null
 )
