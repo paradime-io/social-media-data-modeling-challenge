@@ -1,4 +1,10 @@
 -- stg_instagram_data.sql
+{{
+  config(
+    materialized = 'view',
+    database = 'transformation'
+  )
+}}
 
 with final as (
     select

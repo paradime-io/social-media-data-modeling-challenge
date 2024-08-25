@@ -1,4 +1,10 @@
 -- int_city_mentions
+{{
+  config(
+    materialized = 'table',
+    database = 'transformation'
+  )
+}}
 
 -- Filter instagram data to only travel related posts
 with filtered_insta_data as (

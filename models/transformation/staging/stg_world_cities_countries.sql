@@ -1,4 +1,10 @@
 -- stg_world_cities_countries.sql
+{{
+  config(
+    materialized = 'view',
+    database = 'transformation'
+  )
+}}
 
 with final as (
     select distinct

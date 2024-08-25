@@ -1,4 +1,10 @@
 -- int_instagrammable_destinations.sql
+{{
+  config(
+    materialized = 'table',
+    database = 'transformation'
+  )
+}}
 
 -- Filter instagram data to only travel related posts
 with insta_post_data as (

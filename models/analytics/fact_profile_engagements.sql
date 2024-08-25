@@ -1,4 +1,10 @@
 -- fact_profile_engagements
+{{
+  config(
+    materialized = 'table',
+    database = 'analytics'
+  )
+}}
 
 with final as (
     select

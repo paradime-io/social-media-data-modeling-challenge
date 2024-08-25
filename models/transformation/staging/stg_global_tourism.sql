@@ -1,4 +1,11 @@
 -- stg_global_tourism.sql
+{{
+  config(
+    materialized = 'view',
+    database = 'transformation'
+  )
+}}
+
 
 with final as (
     select

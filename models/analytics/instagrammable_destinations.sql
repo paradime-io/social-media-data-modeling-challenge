@@ -1,4 +1,10 @@
 -- instagrammable_destinations
+{{
+  config(
+    materialized = 'table',
+    database = 'analytics'
+  )
+}}
 
 with final as (
     select *
