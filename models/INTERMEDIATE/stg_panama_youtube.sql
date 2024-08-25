@@ -7,7 +7,8 @@ WITH video_categories as (
 
 SELECT
     video_id,
-    'Panama' as country,
+    'Panama'as country,
+    {{ dbt_utils.generate_surrogate_key(['video_id', 'country']) }} as youtube_video_key,
     title as video_title,
     publishedAt as published_at,
     channelTitle as youtube_channel,

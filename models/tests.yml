@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: dim_country_youtube_videos
+    columns:
+      - name: youtube_video_key
+        data_tests:
+          - unique
+          - not_null
+  - name: fact_youtube_videos_events
+    columns:
+      - name: youtube_video_key
+        data_tests:
+           - relationships:
+              to: ref('dim_country_youtube_videos')
+              field: youtube_video_key
