@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: stg_yt_category
+    description: category_id mapping with (non)active flag
+
+    columns:
+      - name: id
+        description: category identifier
+
+  - name: stg_yt_trending
+    description: trending videos on Youtube
+
+    columns:
+      - name: video_id
+        description: video identifier

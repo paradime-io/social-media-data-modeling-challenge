@@ -1,0 +1,23 @@
+version: 2
+
+
+sources:
+  - name: main
+    database: analytics
+    tables:
+      - name: trending_daily
+        columns:
+          - name: video_id
+            description: "video identifier"
+
+      - name: category_daily
+        columns:
+          - name: id
+            description: "category identifier"
+
+      - name: country_code_mapping
+        columns:
+          - name: Name
+            description: "Full country name"
+          - name: Code
+            description: "2 letter code"
