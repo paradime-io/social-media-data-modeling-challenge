@@ -17,5 +17,9 @@ clean-targets:
 
 models:
   paradime_social_media_challenge:
-    example:
+    bronze:
+      +materialized: table
+    silver:
+      +materialized: table
+    gold:
       +materialized: view

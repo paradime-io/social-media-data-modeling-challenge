@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: main
+    database: source_data
+    tables:
+      - name: mlb_g
+        columns:
+          - name: reviewId
+            description: "Unique identifier of the review"
+      - name: nhl_g
+      - name: nfl_g
+      - name: nba_g

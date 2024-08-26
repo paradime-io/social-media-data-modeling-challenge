@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: bronze_nba_g
+    description: "This model contains the raw data from Google Play about the NBA application."
+  - name: bronze_nhl_g
+  - name: bronze_nfl_g
+  - name: bronze_mlb_g
+
