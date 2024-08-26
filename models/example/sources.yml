@@ -36,3 +36,11 @@ sources:
             description: "The rank of the post on the front page"
           - name: deleted
             description: "Indicates whether the post or comment has been deleted (true/false)"
+  
+  - name: main
+    database: source_data
+    tables:
+      - name: mlb_g
+      - name: nhl_g
+      - name: nfl_g
+      - name: nba_g
