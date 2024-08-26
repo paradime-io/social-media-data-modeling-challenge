@@ -55,4 +55,4 @@ nfl_reviews = reviews_all(
     )
 
 nfl_df = pd.DataFrame(np.array(nfl_reviews),columns=['review'])
-nfl_df2 = nba_df.join(pd.DataFrame(nfl_df.pop('review').tolist()))
+nfl_df2 = nfl_df.join(pd.DataFrame(nfl_df.pop('review').tolist()))
