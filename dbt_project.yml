@@ -18,8 +18,11 @@ clean-targets:
 models:
   paradime_social_media_challenge:
     bronze:
+      +schema: staging
       +materialized: table
     silver:
+      +schema: intermediary
       +materialized: table
     gold:
+      +schema: data_mart
       +materialized: view

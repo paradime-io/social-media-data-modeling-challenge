@@ -2,7 +2,7 @@ with nfl as (
     select 
         *,
         'nfl' as appName 
-    from {{ref ('nfl_g') }}
+    from {{source ('main','nfl_g') }}
 )
 
 select * from nfl
