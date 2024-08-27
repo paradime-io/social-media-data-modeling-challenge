@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: daily_active_users
+    description: "Daily count of active users and contributors"
+    columns:
+      - name: event_date
+        description: "Date of the events"
+        tests:
+          - unique
+          - not_null
+      - name: daily_active_users
+        description: "Number of unique users who performed any action on this date"
+      - name: daily_active_contributors
+        description: "Number of unique users who performed a PushEvent on this date"
+
+  - name: event_type_distribution
+    description: "Distribution of event types by date"
+    columns:
+      - name: event_date
+        description: "Date of the events"
+      - name: event_type
+        description: "Type of GitHub event"
+      - name: event_count
+        description: "Number of events of this type on this date"
+      - name: event_percentage
+        description: "Percentage of events of this type relative to all events on this date"

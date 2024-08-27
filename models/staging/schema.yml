@@ -1,0 +1,24 @@
+version: 2
+
+sources:
+  - name: raw
+    database: analytics  
+    schema: main
+    tables:
+      - name: github_events
+        description: "Raw GitHub events data"
+        columns:
+          - name: created_at
+            description: "Timestamp of when the event occurred"
+          - name: actor_login
+            description: "GitHub username of the user who performed the action"
+          - name: repo_name
+            description: "Full name of the repository (owner/repo_name)"
+          - name: event_type
+            description: "Type of GitHub event"
+          - name: event_details
+            description: "Additional details about the event (varies by event type)"
+          - name: public
+            description: "Whether the event occurred in a public repository"
+          - name: org_login
+            description: "GitHub organization associated with the event (if applicable)"

@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: user_acquisition
+    description: "Daily count of new users"
+    columns:
+      - name: acquisition_date
+        description: "Date when users were first seen"
+        tests:
+          - unique
+          - not_null
+      - name: new_users
+        description: "Number of new users acquired on this date"

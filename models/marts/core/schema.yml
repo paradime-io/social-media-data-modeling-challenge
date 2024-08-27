@@ -1,0 +1,61 @@
+version: 2
+
+models:
+  - name: dim_users
+    description: "Dimension table for GitHub users"
+    columns:
+      - name: user_id
+        description: "GitHub username of the user"
+        tests:
+          - unique
+          - not_null
+      - name: first_seen_at
+        description: "Timestamp of the user's first event in the dataset"
+      - name: last_seen_at
+        description: "Timestamp of the user's most recent event in the dataset"
+      - name: organization_count
+        description: "Number of distinct organizations the user is associated with"
+
+  - name: dim_repositories
+    description: "Dimension table for GitHub repositories"
+    columns:
+      - name: repository_id
+        description: "Full name of the repository (owner/repo_name)"
+        tests:
+          - unique
+          - not_null
+      - name: owner
+        description: "Owner of the repository"
+      - name: repo_name
+        description: "Name of the repository"
+      - name: is_public
+        description: "Whether the repository is public"
+      - name: first_event_at
+        description: "Timestamp of the first event for this repository in the dataset"
+      - name: last_event_at
+        description: "Timestamp of the most recent event for this repository in the dataset"
+
+  - name: fct_github_events
+    description: "Fact table containing all GitHub events"
+    columns:
+      - name: event_id
+        description: "Unique identifier for the event"
+        tests:
+          - unique
+          - not_null
+      - name: created_at
+        description: "Timestamp of when the event occurred"
+      - name: user_id
+        description: "GitHub username of the user who performed the action"
+      - name: repository_id
+        description: "Full name of the repository where the event occurred"
+      - name: event_type
+        description: "Type of GitHub event"
+      - name: push_size
+        description: "Number of commits in a push event (null for other event types)"
+      - name: event_details_text
+        description: "Additional details about the event (varies by event type)"
+      - name: public
+        description: "Whether the event occurred in a public repository"
+      - name: org_login
+        description: "GitHub organization associated with the event (if applicable)"

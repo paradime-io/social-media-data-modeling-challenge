@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: int_daily_events
+    description: "Daily aggregated GitHub events data"
+    columns:
+      - name: event_date
+        description: "Date of the events"
+        tests:
+          - unique
+          - not_null
+      - name: event_type
+        description: "Type of GitHub event"
+      - name: event_count
+        description: "Total number of events of this type on this date"
+      - name: unique_users
+        description: "Number of unique users who performed this event type on this date"
+      - name: public_event_count
+        description: "Number of events that occurred in public repositories"
+      - name: org_event_count
+        description: "Number of events associated with organizations"
+      - name: avg_push_size
+        description: "Average number of commits per push event on this date"

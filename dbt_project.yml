@@ -1,8 +1,8 @@
-name: "paradime_social_media_challenge"
-version: "1.0.0"
+name: 'dbt_github_analytics'
+version: '1.0.0'
 config-version: 2
 
-profile: "dbt-motherduck"
+profile: 'dbt-motherduck'
 
 model-paths: ["models"]
 analysis-paths: ["analyses"]
@@ -11,11 +11,35 @@ seed-paths: ["seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 
+target-path: "target"
 clean-targets:
   - "target"
   - "dbt_packages"
 
 models:
-  paradime_social_media_challenge:
-    example:
-      +materialized: view
+  dbt_github_analytics:
+    +schema: dbt_github_analytics
+    staging:
+      +schema: stg
+
+    intermediate:
+      +schema: int
+    marts:
+      +schema: marts
+      core:
+        +schema: core
+      product:
+        +schema: product
+      marketing:
+        +schema: marketing
+
+vars:
+  start_date: '2024-08-12'
+  end_date: '2024-08-18'
+
+seeds:
+  dbt_github_analytics:
+    event_type_categories:
+      +column_types:
+        event_type: varchar
+        category: varchar

@@ -1,0 +1,6 @@
+event_type,category
+PushEvent,Code
+PullRequestEvent,Code
+IssuesEvent,Collaboration
+WatchEvent,Engagement
+ForkEvent,Engagement
