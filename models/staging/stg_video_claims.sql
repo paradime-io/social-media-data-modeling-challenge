@@ -1,8 +1,11 @@
 WITH base AS (
-SELECT
-    video_id,
-    claim_status
-FROM {{source('main', 'tiktok_dataset')}}
+  SELECT
+      video_id,
+      claim_status
+  FROM {{ source('main', 'tiktok_dataset') }}
 )
 
-SELECT * FROM base
+SELECT
+  video_id,
+  claim_status
+FROM base
