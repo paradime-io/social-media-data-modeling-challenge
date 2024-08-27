@@ -1,7 +1,6 @@
 {{ config(
     materialized='incremental',
-    unique_key='event_date',
-    schema='marts.product'
+    unique_key='event_date'
 ) }}
 
 SELECT

@@ -1,4 +1,4 @@
-{{ config(materialized='table',  schema='marts.core') }}
+{{ config(materialized='table') }}
 
 SELECT DISTINCT
     repo_name AS repository_id,

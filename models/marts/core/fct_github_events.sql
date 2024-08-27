@@ -1,7 +1,6 @@
 {{ config(
     materialized='incremental',
-    unique_key='event_id',
-    schema='marts.core'
+    unique_key='event_id'
 ) }}
 
 SELECT DISTINCT  -- Add DISTINCT to remove duplicates

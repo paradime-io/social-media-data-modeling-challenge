@@ -1,4 +1,4 @@
-{{ config(materialized='table',  schema='dbt_github_analytics.marts.core') }}
+{{ config(materialized='table') }}
 
 SELECT DISTINCT
     actor_login AS user_id,

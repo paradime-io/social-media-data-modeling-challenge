@@ -1,7 +1,6 @@
 {{ config(
     materialized='incremental',
-    unique_key='acquisition_date',
-    schema='marts.marketing'
+    unique_key='acquisition_date'
 ) }}
 
 SELECT

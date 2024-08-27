@@ -16,22 +16,27 @@ clean-targets:
   - "target"
   - "dbt_packages"
 
+
 models:
   dbt_github_analytics:
     +schema: dbt_github_analytics
     staging:
+      +materialized: view
       +schema: stg
-
     intermediate:
+      +materialized: view  
       +schema: int
     marts:
-      +schema: marts
       core:
-        +schema: core
+        +materialized: table
+        +schema: reporting
       product:
+        +materialized: table
         +schema: product
       marketing:
+        +materialized: table
         +schema: marketing
+
 
 vars:
   start_date: '2024-08-12'
