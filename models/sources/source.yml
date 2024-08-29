@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: raw_data
+    database: analytics
+    schema: main
+
+    tables:
+      - name: tiktok_videos
+        identifier: tiktok_dataset
+        description: "Raw TikTok video data including video metadata, author information, music metadata, and engagement metrics."
+
+      - name: spotify_tracks
+        identifier: spotify_tracks
+        description: "Raw data of Spotify tracks including track details, album information, and artist associations."
+
+      - name: spotify_artists
+        identifier: spotify_artists
+        description: "Raw data of Spotify artists including artist information, genres, followers, and popularity."
+
+      - name: apple_music_tracks
+        identifier: apple_music_tracks
+        description: "Raw data of Apple Music tracks including track and album details, as well as popularity metrics."
+
+      - name: music_tracks
+        identifier: music_tracks
+        description: "General raw data of music tracks across various platforms, including track details and artist information."
