@@ -1,3 +1,5 @@
+-- correlation whether or not a viral video with certain music goes hand in hand with popularity on spotify
+
 with base as (
     select
         music_id,
