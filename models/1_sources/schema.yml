@@ -3,7 +3,7 @@ version: 2
 sources:
   - name: sources
     tables:
-      - name: spotify_30k_songs
+      - name: spotify_songs
         description: >-
           Kaggle dataset with over 30,000 Spotify songs, 
           including song/audio attributes: https://www.kaggle.com/datasets/joebeachcapital/30000-spotify-songs/data
@@ -89,7 +89,7 @@ sources:
               dimension:
                 type: number
 
-      - name: tiktok_songs_spotify
+      - name: tiktok_songs_on_spotify
         description: >-
           Kaggle datasets of Spotify data of TikTok songs between 2019 and 2022, including song/audio attributes
         columns:
