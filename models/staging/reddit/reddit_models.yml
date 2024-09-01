@@ -1,0 +1,36 @@
+models:
+  - name: stg_reddit_covid__comments
+    description: This table shows all the reddit comments posted during COVID period.
+    columns:
+      - name: comment_id
+        tests:
+          - not_null
+          - unique
+      - name: created_at
+      - name: created_date
+      - name: type
+        tests:
+          - accepted_values:
+              values:
+                - comment
+      - name: subreddit_id
+      - name: subreddit_name
+      - name: subreddit_nsfw
+      - name: permalink
+      - name: body
+      - name: sentiment
+      - name: score
+
+  - name: stg_reddit__covid_comments_in_covid_subreddit
+    description: This table shows all the comments under coravirus subreddit.
+    columns:
+      - name: comment_id
+        tests:
+          - not_null
+          - unique
+      - name: created_date
+      - name: body
+      - name: sentiment
+      - name: score
+        tests:
+          - not_null

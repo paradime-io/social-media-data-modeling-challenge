@@ -1,0 +1,40 @@
+models:
+
+  - name: sentiment_score_by_date
+    description: This table shows total sentiment score by date for the comments under covid subreddit.
+    columns:
+      - name: date
+        tests:
+          - not_null
+          - unique
+      - name: total_sentiment_score
+        tests:
+          - not_null
+
+  - name: sentiment_score_by_date_with_events
+    description: This table shows total sentiment score by date for the comments in covid subreddit with the key events. The key events' effect on the comments are considered as 2 days.
+    columns:
+      - name: date
+        tests:
+          - not_null
+          - unique
+      - name: event_name
+      - name: total_sentiment_score
+        tests:
+          - not_null
+
+  - name: most_upvoted_comments
+    description: This table shows the top 10 highest-scoring comments from the COVID subreddit.
+    columns:
+      - name: comment_id
+        tests:
+          - not_null
+          - unique
+      - name: created_date
+      - name: body
+        tests:
+          - not_null
+      - name: sentiment
+      - name: score
+        tests:
+          - not_null

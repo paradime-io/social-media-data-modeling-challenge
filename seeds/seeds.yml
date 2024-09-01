@@ -1,0 +1,14 @@
+seeds:
+  - name: covid_key_dates
+    description: This table shows the important events during covid.
+    config:
+      full_refresh: true
+    columns:
+      - name: Date
+        description: The date of the important event.
+        tests:
+          - not_null
+      - name: EventTitle
+        description: Short description of the importan event.
+        tests:
+          - not_null

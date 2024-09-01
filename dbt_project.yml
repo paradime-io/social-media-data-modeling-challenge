@@ -19,3 +19,7 @@ models:
   paradime_social_media_challenge:
     example:
       +materialized: view
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

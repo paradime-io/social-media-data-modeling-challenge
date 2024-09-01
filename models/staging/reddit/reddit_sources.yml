@@ -1,0 +1,60 @@
+version: 2
+
+# About the dataset: https://motherduck.com/docs/getting-started/sample-data-queries/hacker-news/#about-the-dataset
+
+sources:
+  - name: reddit_covid
+    database: reddit
+    schema: covid
+    tables:
+      - name: comments
+        description: This dataset contains a comprehensive collection of comments mentioning COVID in their body text.
+        columns:
+          - name: type
+            description: "Type of the datapoint."
+          - name: id
+            description: "Unique Base-36 ID of the comment."
+          - name: subreddit.id
+            description: "Unique Base-36 ID of the comment's subreddit."
+          - name: subreddit.name
+            description: "Human-readable name of the comment's subreddit."
+          - name: subreddit.nsfw
+            description: "Is the comment's subreddit NSFW?"
+          - name: created_utc
+            description: "Timestamp of the comment's creation."
+          - name: permalink
+            description: "Permalink to the comment on Reddit."
+          - name: body
+            description: "Comment's body text."
+          - name: sentiment
+            description: "Analyzed sentiment for the comment."
+          - name: score
+            description: "Comment's score."
+
+      - name: posts
+        description: This dataset contains a comprehensive collection of posts mentioning COVID in their title.
+        columns:
+          - name: type
+            description: "Type of the datapoint."
+          - name: id
+            description: "Unique Base-36 ID of the post."
+          - name: subreddit.id
+            description: "Unique Base-36 ID of the post's subreddit."
+          - name: subreddit.name
+            description: "Human-readable name of the post's subreddit."
+          - name: subreddit.nsfw
+            description: "Is the post's subreddit NSFW?"
+          - name: created_utc
+            description: "Timestamp of the post's creation."
+          - name: permalink
+            description: "Permalink to the post on Reddit."
+          - name: domain
+            description: "Domain of the post's link."
+          - name: url
+            description: "Post's link, if any."
+          - name: selftext
+            description: "Post's selftext, if any."
+          - name: title
+            description: "Post's title."
+          - name: score
+            description: "Post's score."
