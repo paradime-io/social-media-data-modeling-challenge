@@ -6,7 +6,7 @@ with combined as (
      
     select
         track_name
-        , artist_name as track_artist
+        , track_artist
         , danceability
         , energy
         , key
@@ -25,14 +25,14 @@ with combined as (
 sort_by_track as (
     select 
         *
-        , row_number() over (partition by track_name, track_artist order by track_name, track_artist desc) as row_number
+        , row_number() over (partition by track_name, track_artist order by track_name, track_artist desc) as rn
     from combined
 ),
 
 deduped as ( 
     -- removing duplicates attribute data
     select
-        dbt_utils.surrogate_key(['track_name', 'track_artist']) as track_id
+        {{ dbt_utils.generate_surrogate_key(['track_name', 'track_artist']) }} as track_id
         , track_name
         , track_artist
         , danceability
