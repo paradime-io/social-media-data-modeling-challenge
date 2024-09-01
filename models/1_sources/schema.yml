@@ -166,12 +166,12 @@ sources:
             meta:
               dimension:
                 type: timestamp
-          - name: title
+          - name: track_name
             description: "The title of the TikTok video"
             meta:
               dimension:
                 type: string
-          - name: artist
+          - name: track_author
             description: "The artist featured in the video"
             meta:
               dimension:
