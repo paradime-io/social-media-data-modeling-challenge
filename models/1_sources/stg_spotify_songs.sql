@@ -2,8 +2,8 @@ with source as (
     select distinct
         track_name
         , track_artist
-        , playlist_genre as genre
-        , playlist_subgenre as subgenre
+        -- , playlist_genre as genre
+        -- , playlist_subgenre as subgenre
         , danceability
         , energy
         , key
