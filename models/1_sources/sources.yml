@@ -1,0 +1,7 @@
+sources:
+  - name: main
+    database: sources
+    tables:
+      - name: spotify_30k_songs
+      - name: tiktok_songs_spotify
+      - name: tiktok_top_100
