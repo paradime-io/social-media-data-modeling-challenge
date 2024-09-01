@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: main 
+  - name: sources 
     database: sources
     schema: main
     tables:

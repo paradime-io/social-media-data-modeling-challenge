@@ -14,6 +14,8 @@ with source as (
         , valence
         , tempo
         , duration_ms
+        , year
+        , source
     from {{ source('main', 'tiktok_songs_spotify') }} 
 )
 
