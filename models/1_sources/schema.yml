@@ -153,6 +153,16 @@ sources:
             meta:
               dimension:
                 type: number
+          - name: source
+            description: "Dataset source."
+            meta:
+              dimension:
+                type: string
+          - name: year
+            description: "Dataset year."
+            meta:
+              dimension:
+                type: number
 
       - name: tiktok_top_100
         description: >-

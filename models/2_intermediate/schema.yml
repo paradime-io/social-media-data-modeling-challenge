@@ -1,0 +1,82 @@
+version: 2
+
+models:
+  - name: combined_song_list
+    description: >-
+      combined and deduped song list between spotify_songs dataset and tiktok_songs_on_spotify dataset
+    columns:
+      - name: track_id
+        description: "Unique track identifier"
+        meta:
+          dimension:
+            type: string
+      - name: track_name
+        description: "The name of the track"
+        meta:
+          dimension:
+            type: string
+      - name: track_artist
+        description: "The artist of the track"
+        meta:
+          dimension:
+            type: string
+      - name: danceability
+        description: "A measure of the track's danceability"
+        meta:
+          dimension:
+            type: number
+      - name: energy
+        description: "A measure of the energy of the track"
+        meta:
+          dimension:
+            type: number
+      - name: key
+        description: "The key the track is in"
+        meta:
+          dimension:
+            type: number
+      - name: loudness
+        description: "The loudness of the track"
+        meta:
+          dimension:
+            type: number
+      - name: mode
+        description: "The mode of the track"
+        meta:
+          dimension:
+            type: number
+      - name: speechiness
+        description: "A measure of the presence of spoken words in the track"
+        meta:
+          dimension:
+            type: number
+      - name: acousticness
+        description: "A measure of the acoustics in the track"
+        meta:
+          dimension:
+            type: number
+      - name: instrumentalness
+        description: "A measure of the track's instrumental content"
+        meta:
+          dimension:
+            type: number
+      - name: liveness
+        description: "A measure of the presence of an audience in the track"
+        meta:
+          dimension:
+            type: number
+      - name: valence
+        description: "A measure of the positivity conveyed by the track"
+        meta:
+          dimension:
+            type: number
+      - name: tempo
+        description: "The tempo of the track"
+        meta:
+          dimension:
+            type: number
+      - name: duration_ms
+        description: "The duration of the track in milliseconds"
+        meta:
+          dimension:
+            type: number
