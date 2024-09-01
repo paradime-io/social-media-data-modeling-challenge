@@ -1,9 +1,7 @@
 with source as (
     select distinct
         track_name
-        , track_artist
-        , playlist_genre as genre
-        , playlist_subgenre as subgenre
+        , artist_name as track_artist
         , danceability
         , energy
         , key
@@ -16,7 +14,7 @@ with source as (
         , valence
         , tempo
         , duration_ms
-    from {{ source('source', 'spotify_30k_songs') }} 
+    from {{ source('source', 'tiktok_songs_spotify') }} 
 )
 
 select
