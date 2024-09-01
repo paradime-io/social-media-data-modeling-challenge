@@ -8,7 +8,7 @@ with source as (
         , rank as rank_by_videos
         , views
         , popularVideos as viral_video_count
-    from {{ source('source', 'tiktok_top_100') }}
+    from {{ source('sources', 'tiktok_top_100') }}
 )
 
 select *
