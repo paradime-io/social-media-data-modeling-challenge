@@ -16,7 +16,7 @@ with source as (
         , valence
         , tempo
         , duration_ms
-    from {{ source('sources', 'spotify_30k_songs') }} 
+    from {{ source('main', 'spotify_30k_songs') }} 
 )
 
 select
