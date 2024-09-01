@@ -1,0 +1,193 @@
+version: 2
+
+sources:
+  - name: sources
+    tables:
+      - name: spotify_30k_songs
+        columns:
+          - name: track_name
+            description: "The name of the track"
+            meta:
+              dimension:
+                type: string
+          - name: track_artist
+            description: "The artist of the track"
+            meta:
+              dimension:
+                type: string
+          - name: playlist_genre
+            description: "The genre of the playlist featuring the track"
+            meta:
+              dimension:
+                type: string
+          - name: playlist_subgenre
+            description: "The subgenre of the playlist featuring the track"
+            meta:
+              dimension:
+                type: string
+          - name: danceability
+            description: "A measure of the track's danceability"
+            meta:
+              dimension:
+                type: number
+          - name: energy
+            description: "A measure of the energy of the track"
+            meta:
+              dimension:
+                type: number
+          - name: key
+            description: "The key the track is in"
+            meta:
+              dimension:
+                type: number
+          - name: loudness
+            description: "The loudness of the track"
+            meta:
+              dimension:
+                type: number
+          - name: mode
+            description: "The mode of the track"
+            meta:
+              dimension:
+                type: number
+          - name: speechiness
+            description: "A measure of the presence of spoken words in the track"
+            meta:
+              dimension:
+                type: number
+          - name: acousticness
+            description: "A measure of the acoustics in the track"
+            meta:
+              dimension:
+                type: number
+          - name: instrumentalness
+            description: "A measure of the track's instrumental content"
+            meta:
+              dimension:
+                type: number
+          - name: liveness
+            description: "A measure of the presence of an audience in the track"
+            meta:
+              dimension:
+                type: number
+          - name: valence
+            description: "A measure of the positivity conveyed by the track"
+            meta:
+              dimension:
+                type: number
+          - name: tempo
+            description: "The tempo of the track"
+            meta:
+              dimension:
+                type: number
+          - name: duration_ms
+            description: "The duration of the track in milliseconds"
+            meta:
+              dimension:
+                type: number
+
+      - name: tiktok_songs_spotify
+        columns:
+          - name: track_name
+            description: "The name of the track"
+            meta:
+              dimension:
+                type: string
+          - name: artist_name
+            description: "The artist of the track"
+            meta:
+              dimension:
+                type: string
+          - name: danceability
+            description: "A measure of the track's danceability"
+            meta:
+              dimension:
+                type: number
+          - name: energy
+            description: "A measure of the energy of the track"
+            meta:
+              dimension:
+                type: number
+          - name: key
+            description: "The key the track is in"
+            meta:
+              dimension:
+                type: number
+          - name: loudness
+            description: "The loudness of the track"
+            meta:
+              dimension:
+                type: number
+          - name: mode
+            description: "The mode of the track"
+            meta:
+              dimension:
+                type: number
+          - name: speechiness
+            description: "A measure of the presence of spoken words in the track"
+            meta:
+              dimension:
+                type: number
+          - name: acousticness
+            description: "A measure of the acoustics in the track"
+            meta:
+              dimension:
+                type: number
+          - name: instrumentalness
+            description: "A measure of the track's instrumental content"
+            meta:
+              dimension:
+                type: number
+          - name: liveness
+            description: "A measure of the presence of an audience in the track"
+            meta:
+              dimension:
+                type: number
+          - name: valence
+            description: "A measure of the positivity conveyed by the track"
+            meta:
+              dimension:
+                type: number
+          - name: tempo
+            description: "The tempo of the track"
+            meta:
+              dimension:
+                type: number
+          - name: duration_ms
+            description: "The duration of the track in milliseconds"
+            meta:
+              dimension:
+                type: number
+
+      - name: tiktok_top_100
+        columns:
+          - name: date
+            description: "The month and year related to the ranking"
+            meta:
+              dimension:
+                type: timestamp
+          - name: title
+            description: "The title of the TikTok video"
+            meta:
+              dimension:
+                type: string
+          - name: artist
+            description: "The artist featured in the video"
+            meta:
+              dimension:
+                type: string
+          - name: rank_by_videos
+            description: "The rank by number of videos"
+            meta:
+              dimension:
+                type: number
+          - name: views
+            description: "The number of views of the video"
+            meta:
+              dimension:
+                type: string
+          - name: viral_video_count
+            description: "The count of viral videos"
+            meta:
+              dimension:
+                type: string
