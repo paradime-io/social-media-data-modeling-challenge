@@ -1,7 +1,13 @@
+version: 2
+
 sources:
-  - name: main
+  - name: main 
     database: sources
+    schema: main
     tables:
       - name: spotify_30k_songs
+        description: "Table containing 30k song records from Spotify."
       - name: tiktok_songs_spotify
+        description: "Table containing TikTok song data mirrored from Spotify."
       - name: tiktok_top_100
+        description: "Table with top 100 TikTok tracks."
