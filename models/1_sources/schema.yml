@@ -3,7 +3,7 @@ version: 2
 sources:
   - name: sources
     tables:
-      - name: spotify_songs
+      - name: stg_spotify_songs
         description: >-
           Kaggle dataset with over 30,000 Spotify songs, 
           including song/audio attributes: https://www.kaggle.com/datasets/joebeachcapital/30000-spotify-songs/data
@@ -79,7 +79,7 @@ sources:
               dimension:
                 type: number
 
-      - name: tiktok_songs_on_spotify
+      - name: stg_tiktok_songs_on_spotify
         description: >-
           Kaggle datasets of Spotify data of TikTok songs between 2019 and 2022, including song/audio attributes
         columns:
@@ -164,7 +164,7 @@ sources:
               dimension:
                 type: number
 
-      - name: tiktok_top_100
+      - name: stg_tiktok_top_100
         description: >-
           Top ~100 performing audios by month ranked by number of popular videos. 
           Data scraped from https://tokboard.com/ - includes data across a 30-month period (between December 2018 and May 2021)
