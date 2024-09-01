@@ -1,0 +1,11 @@
+version: 2
+
+# About the dataset: https://motherduck.com/docs/getting-started/sample-data-queries/hacker-news/#about-the-dataset
+
+sources:
+
+  - name: main
+    database: analytics
+    tables:
+      - name: survey_results_public      
+      - name: big_mac_source_data_v2

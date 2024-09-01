@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: bigmac_salary
+    description: "Join of the two datasets"
+  - name: survey_cleaned_agg
+    description: "Stack Overflow Survey"
+  - name: bigmac_dollar
+    description: "The Economist Big Mac Index."
