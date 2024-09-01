@@ -18,16 +18,6 @@ sources:
             meta:
               dimension:
                 type: string
-          - name: playlist_genre
-            description: "The genre of the playlist featuring the track"
-            meta:
-              dimension:
-                type: string
-          - name: playlist_subgenre
-            description: "The subgenre of the playlist featuring the track"
-            meta:
-              dimension:
-                type: string
           - name: danceability
             description: "A measure of the track's danceability"
             meta:
