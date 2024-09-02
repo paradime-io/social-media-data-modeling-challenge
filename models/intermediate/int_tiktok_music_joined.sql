@@ -7,7 +7,7 @@ music as (
 ),
 
 spotify as (
-    select * from {{ ref('stg_spotify_tracks') }}
+    select * from {{ ref('stg_spotify_tracks_original') }}
 )
 
 select
@@ -17,6 +17,7 @@ select
     music.album_name,
     music.music_length, 
     spotify.spotify_popularity,
+    count(distinct tiktok.video_id) as number_of_videos, 
     sum(tiktok.likes_count) as total_likes_count,
     sum(tiktok.shares_count) as total_shares_count,
     sum(tiktok.comment_count) as total_comment_count,

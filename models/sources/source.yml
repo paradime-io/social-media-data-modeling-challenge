@@ -14,9 +14,18 @@ sources:
         identifier: spotify_tracks
         description: "Raw data of Spotify tracks including track details, album information, and artist associations."
 
+      - name: spotify_tracks_2 
+        identifier: spotify_tracks_2
+        description: "Raw data of Spotify tracks - additional dataset containing 100k+ tracks"
+
       - name: spotify_artists
         identifier: spotify_artists
         description: "Raw data of Spotify artists including artist information, genres, followers, and popularity."
+
+      - name: spotify_artists_2
+        identifier: spotify_artists_2
+        description: "Raw data of Spotify artists including artist information, genres, followers, and popularity."
+
 
       - name: apple_music_tracks
         identifier: apple_music_tracks

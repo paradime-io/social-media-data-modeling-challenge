@@ -1,25 +1,25 @@
 with base as (
     select
-        id as spotify_track_id,
-        name as track_name,
-        popularity as spotify_popularity,
-        is_playable as is_playable,
-        disc_number as disc_number,
-        duration_ms as duration_ms,
-        explicit as is_explicit,
-        "album.name" as album_name,
-        "album.album_group" as album_group,
-        "album.album_type" as album_type,
-        "album.id" as album_id,
-        "album.uri" as album_uri,
-        "album.href" as album_href,
-        "album.release_date" as album_release_date,
-        "album.release_date_precision" as release_date_precision,
-        "external_ids.isrc" as isrc,
-        "external_urls.spotify" as spotify_track_url,
-        artists_ids as artists_ids
-    from 
-        {{ source('raw_data', 'spotify_tracks') }}
+       id as track_id, 
+       name as track_name, 
+       popularity, 
+       duration_ms / 1000 as duration_seconds,
+       REPLACE(REPLACE(REPLACE(artists, '[', ''), ']', ''), '''', '') AS artists,
+       REPLACE(REPLACE(REPLACE(id_artists, '[', ''), ']', ''), '''', '') AS id_artists,
+       release_date, 
+       danceability, 
+       energy, 
+       loudness, 
+       speechiness, 
+       acousticness, 
+       instrumentalness, 
+       liveness, 
+       valence as positivness, 
+       tempo, 
+       time_signature as beats_per_bar
+     from 
+        {{ source('raw_data', 'spotify_tracks_2') }} t1 
+    
 )
 
 select * from base
