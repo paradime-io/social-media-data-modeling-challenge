@@ -3,7 +3,7 @@ version: 2
 models:
   - name: int_combined_song_list
     description: >-
-      combined and deduped song list between spotify_songs dataset and tiktok_songs_on_spotify dataset
+      Combined and deduped song list between spotify_songs dataset and tiktok_songs_on_spotify dataset
     columns:
       - name: track_id
         description: "Unique track identifier"
