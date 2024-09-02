@@ -1,9 +1,10 @@
 with tiktok_top as (
     select
-        to_date(date, 'YYYY-MM') as year_month
+        strftime('%Y-%m', date) as year_month
         , track_name
         , track_author
-        , rank_by_videos
+        , RANK() OVER (PARTITION BY year_month ORDER BY viral_video_count DESC) as rank_by_videos
+        , RANK() OVER (PARTITION BY year_month ORDER BY views DESC) as rank_by_views
         , views
         , viral_video_count
         , CASE 
@@ -19,12 +20,16 @@ with tiktok_top as (
         , CASE
             WHEN viral_video_count_cleaned != 0 THEN views_cleaned / viral_video_count_cleaned
             ELSE 0
-            END AS avg_view_per_viral_video
+            END AS avg_views_per_viral_video
         , case when lower(track_name) like '%original sound%' then 'original sound'
             when track_name in (select track_name from dbt_jayeson_gao.int_combined_song_list) 
                 or track_author in (select distinct track_artist from dbt_jayeson_gao.int_combined_song_list)  
+                or track_author in (select artist from {{ ref('other_artists') }})
                 then 'official song'
             else 'undetermined'
-
-
+            end as audio_category
+    from {{ ref('stg_tiktok_top_100') }}
 )
+
+select *
+from tiktok_top
