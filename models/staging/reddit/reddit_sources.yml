@@ -11,7 +11,7 @@ sources:
         description: This dataset contains a comprehensive collection of comments mentioning COVID in their body text.
         columns:
           - name: type
-            description: "Type of the datapoint."
+            description: Type of the datapoint.
           - name: id
             description: "Unique Base-36 ID of the comment."
           - name: subreddit.id
