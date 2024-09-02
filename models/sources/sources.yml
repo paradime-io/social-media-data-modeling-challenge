@@ -1,0 +1,4 @@
+sources:
+  - name: main
+    tables:
+      - name: reddit_jokes
