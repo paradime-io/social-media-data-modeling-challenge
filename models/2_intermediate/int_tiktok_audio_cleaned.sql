@@ -21,7 +21,8 @@ with tiktok_top as (
             ELSE 0
             END AS avg_view_per_viral_video
         , case when lower(track_name) like '%original sound%' then 'original sound'
-            when track_name in (select track_name from dbt_jayeson_gao.int_combined_song_list) or track_author in (select distinct track_artist from dbt_jayeson_gao.int_combined_song_list)  
+            when track_name in (select track_name from dbt_jayeson_gao.int_combined_song_list) 
+                or track_author in (select distinct track_artist from dbt_jayeson_gao.int_combined_song_list)  
                 then 'official song'
             else 'undetermined'
 
