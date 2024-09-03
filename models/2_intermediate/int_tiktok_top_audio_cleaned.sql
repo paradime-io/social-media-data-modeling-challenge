@@ -4,6 +4,13 @@ with other_artists as (
     from {{ ref('other_artists') }}
 ), 
 
+official as (
+    select
+        track_name
+        , track_artist
+    from {{ ref('int_combined_song_list') }}
+),
+
 tiktok_top as (
     select
         strftime('%Y-%m', date) as year_month
@@ -28,8 +35,8 @@ tiktok_top as (
             ELSE 0
             END AS avg_views_per_viral_video
         , case when lower(track_name) like '%original sound%' then 'original sound'
-            when track_name in (select track_name from dbt_jayeson_gao.int_combined_song_list) 
-                or track_author in (select distinct track_artist from dbt_jayeson_gao.int_combined_song_list)  
+            when track_name in (select track_name from official) 
+                or track_author in (select distinct track_artist from official)  
                 or track_author in (select artist_list from other_artists)
                 then 'official song'
             else 'undetermined'
