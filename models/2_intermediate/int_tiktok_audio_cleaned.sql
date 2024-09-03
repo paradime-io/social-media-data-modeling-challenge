@@ -1,6 +1,6 @@
 with other_artists as (
     select
-        artist_list
+        *
     from {{ ref('other_artists') }}
 ), 
 
@@ -30,12 +30,21 @@ tiktok_top as (
         , case when lower(track_name) like '%original sound%' then 'original sound'
             when track_name in (select track_name from dbt_jayeson_gao.int_combined_song_list) 
                 or track_author in (select distinct track_artist from dbt_jayeson_gao.int_combined_song_list)  
-                or track_author in (select artist_list from other_artists)
+                --or track_author in (select artist_list from other_artists)
                 then 'official song'
             else 'undetermined'
             end as audio_category
     from {{ ref('stg_tiktok_top_100') }}
 )
 
-select *
+select
+    year_month
+    , track_name
+    , track_author
+    , rank_by_videos
+    , rank_by_views
+    , views_cleaned as views
+    , viral_video_count_cleaned as viral_video_count
+    , avg_views_per_viral_video
+    , audio_category
 from tiktok_top
