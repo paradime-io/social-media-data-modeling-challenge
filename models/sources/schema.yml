@@ -1,9 +1,15 @@
 version: 2
-
 models:
   - name: bigmac_salary
-    description: "Join of the two datasets"
+    description: >-
+      This model combines data from two sources to generate insights on salary
+      and cost of living by country. It merges survey data on country salaries
+      with the Big Mac Index, which provides information on local currency
+      prices converted to U.S. dollars. The model calculates how many Big Macs
+      an individual can buy with their salary, providing a unique perspective on
+      purchasing power. The data is ordered based on country names for easy
+      analysis.
   - name: survey_cleaned_agg
-    description: "Stack Overflow Survey"
+    description: Stack Overflow Survey
   - name: bigmac_dollar
-    description: "The Economist Big Mac Index."
+    description: The Economist Big Mac Index.
