@@ -34,6 +34,9 @@ tiktok_top as (
                 then 'official song'
             else 'undetermined'
             end as audio_category
+        , case when date > '2020-03-01' then 'post-covid' 
+            else 'pre-covid'
+            end as era
     from {{ ref('stg_tiktok_top_audio') }}
 )
 
@@ -47,4 +50,5 @@ select
     , viral_video_count_cleaned as viral_video_count
     , avg_views_per_viral_video
     , audio_category
+    , era
 from tiktok_top
