@@ -14,7 +14,7 @@ with base as (
        acousticness, 
        instrumentalness, 
        liveness, 
-       valence as positivness, 
+       valence as positiveness, 
        tempo, 
        time_signature as beats_per_bar
      from 

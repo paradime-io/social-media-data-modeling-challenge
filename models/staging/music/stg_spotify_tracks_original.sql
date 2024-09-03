@@ -22,4 +22,4 @@ with base as (
         {{ source('raw_data', 'spotify_tracks') }}
 )
 
-select * from base
+select * from base 
