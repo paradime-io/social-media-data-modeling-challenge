@@ -15,11 +15,11 @@ select
   , avg(base_performance_score) as avg_base_performance_score
   , avg(consistency_score) as avg_consistency_score
   , avg(peak_score) as avg_peak_score
-  , case when track_author in (select distinct track_artist from {{ ref('int_audio_performance')}}) then 'official artist'
-        or or track_author in (select artist_list from other_artists)
+  , case when track_author in (select distinct track_author from {{ ref('int_audio_performance')}}) then 'official artist'
+        or track_author in (select artist_list from other_artists)
         else 'other / tiktok user'
     end as author_category
-from dbt_jayeson_gao.int_audio_performance
+from {{ ref('int_audio_performance') }}
 group by 1
 )
 
