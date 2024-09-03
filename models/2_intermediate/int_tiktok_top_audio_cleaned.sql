@@ -34,7 +34,7 @@ tiktok_top as (
                 then 'official song'
             else 'undetermined'
             end as audio_category
-    from {{ ref('stg_tiktok_top_100') }}
+    from {{ ref('stg_tiktok_top_audio') }}
 )
 
 select

@@ -164,7 +164,7 @@ sources:
               dimension:
                 type: number
 
-      - name: stg_tiktok_top_100
+      - name: stg_tiktok_top_audio
         description: >-
           Top ~100 performing audios by month ranked by number of popular videos. 
           Data scraped from https://tokboard.com/ - includes data across a 30-month period (between December 2018 and May 2021)
