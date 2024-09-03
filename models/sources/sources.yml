@@ -21,3 +21,7 @@ sources:
             description: "Full country name"
           - name: Code
             description: "2 letter code"
+      - name: raw_date
+        columns:
+          - name: ful_date
+            description: "full date"

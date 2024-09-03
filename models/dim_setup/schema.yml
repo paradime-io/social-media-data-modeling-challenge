@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: dim_channel
+    description: trending channel on Youtube, all channel from 2020 with channel_id, title and date granurality
+    columns:
+      - name: channel_id
+        description: channel identifier
+      - name: channel_title
+        description: channel title
+
+  - name: prep_yt_channel
+    description: trending channel on Youtube
+    columns:
+      - name: channel_id
+        description: channel identifier
+      - name: channel_title
+        description: channel title
+
+  - name: dim_date
+    description: date dimension with several granurality (quarter, year, month)
+    columns:
+      - name: full_date
+        description: date with yyyyMMdd format
+      - name: month_number
+        description: number of the month (0-12)

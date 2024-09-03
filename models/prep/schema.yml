@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: prep_yt_country
+    description: distinct country from youtube country
+    columns:
+      - name: country_code
+        description: 2 letters country_code
+      - name: country_desc
+        description: full country name
+
+  - name: prep_yt_current_channel
+    description: trending channel on Youtube
+    columns:
+      - name: channel_id
+        description: channel identifier
+      - name: channel_title
+        description: channel title
+
+  - name: prep_yt_category
+    description: category on Youtube
+    columns:
+      - name: category_id
+        description: category identifier
+      - name: category_title
+        description: category title
+
+  - name: prep_yt_trending
+    description: trending videos on Youtube
+    columns:
+      - name: video_id
+        description: video identifier
+      - name: video_title
+        description: video title

@@ -1,0 +1,35 @@
+version: 2
+
+models:
+
+  - name: dim_category
+    description: category on Youtube
+    columns:
+      - name: category_id
+        description: category identifier
+      - name: category_title
+        description: category title
+
+  - name: dim_country
+    description: distinct country from youtube country
+    columns:
+      - name: country_code
+        description: 2 letters country_code
+      - name: country_desc
+        description: full country name
+
+  - name: dim_current_channel
+    description: trending channel on Youtube, all channel from 2020 with channel_id, title and date granurality
+    columns:
+      - name: channel_id
+        description: channel identifier
+      - name: channel_title
+        description: channel title
+
+  - name: dim_thumbnail
+    description: dimension with youtube thumbnail picture
+    columns:
+      - name: dim_yt_thumbnail_sk
+        description: dim thumbnail surrogate key
+      - name: thumbnail_link
+        description: youtube thumbnail link

@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: fct_yt_trending
+    description: trending videos on Youtube
+    columns:
+      - name: fct_yt_trending_sk
+        data_tests:
+          - unique
+          - not_null
+        description: unique surrogate key
+      - name: video_id
+        description: video identifier
+      - name: video_title
+        description: video title

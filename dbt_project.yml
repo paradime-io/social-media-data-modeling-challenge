@@ -18,6 +18,17 @@ clean-targets:
 models:
   paradime_social_media_challenge:
     stg:
+      +materialized: view
+      +tags: "before_snapshot"
+    prep:
       +materialized: table
-    inter:
+      +tags: "before_snapshot"
+    dim:
       +materialized: table
+      +tags: "before_snapshot"
+    dim_setup:
+      +materialized: table
+      +tags: "setup"
+    fct:
+      +materialized: table
+      +tags: "after_snapshot"
