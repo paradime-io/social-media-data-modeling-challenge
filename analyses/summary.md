@@ -17,36 +17,50 @@ By integrating these datasets, one can calculate how many Big Macs a developer�
 
 
 ## Data Sources
-- Dataset 1: Stack Overflow Developer Survey 2024 - A comprehensive survey that gathers insights from developers worldwide on various topics such as technology usage, work habits, salary and community trends.
-- Dataset 2: Big Mac Index July 2024 -  An informal measure of purchasing power parity (PPP) between different currencies, created by The Economist in 1986, which compares the price of a Big Mac burger in various countries to determine the relative value of currencies.
+- Dataset 1 (*survey dataset*): Stack Overflow Developer Survey 2024 - A comprehensive survey that gathers insights from developers worldwide on various topics such as technology usage, work habits, salary and community trends. The data was supplied from the official Stack Overflow site: [The 2024 Developer Survey - Meta Stack Overflow](https://meta.stackoverflow.com/questions/430298/the-2024-developer-survey).
+- Dataset 2 (*bigmac dataset*) : Big Mac Index July 2024 -  An informal measure of purchasing power parity (PPP) between different currencies, created by The Economist in 1986, which compares the price of a Big Mac burger in various countries to determine the relative value of currencies. The data was supplied from the official Github repository of The Economist:  [TheEconomist/big-mac-data: Data and methodology for the Big Mac index (github.com)](https://github.com/TheEconomist/big-mac-data)
 
 ### Data Lineage
+Data lineage image:
 ![alt text](lineage.png "Lineage")
+
 
 ## Methodology
 ### Tools Used
 - Paradime: SQL and dbt™ development
 - MotherDuck: Data storage and computing
 - Hex: Data visualization
-- [Other tools]
+- ChatGPT: Language style
 
 ### Applied Techniques
-- [List key techniques and practices used]
+- Data cleansing:
+	- survey dataset: 
+		- Two columns contain the salary data in the local currency "*CompTotal*" and "*ConvertedCompYearly*" in the dollar currency. The latter column contained empty values declared as "*NA*" that were removed. As statet in the methodology section the salaries from user currencies to USD were converted using the exchange rate on June 11, 2024 [Methodology | 2024 Stack Overflow Developer Survey](https://survey.stackoverflow.co/2024/methodology/#general).
+	- bigmac dataset:
+		- The data provided is cleaned and well formated. The most recent dataset range was selected for further analyses, which is from July 2024.
+- Key measures: 
+	- In the aggregated data the median was used to compare the measured, because in contrast to the average the median is not sensitive to outliers. 
 
 ## Insights
 
-### Insight 1
+### Salary Insights
+- Salary Distribution across countries
+- Visualization
+- Analysis
+
+### Big Mac Index Insights
 - Title
 - Visualization
 - Analysis
 
-[Repeat for additional insights]
+### Purchasing Power for Salaries Insights
+- Title
+- Visualization
+- Analysis
 
 ## Conclusions
 [Summarize key findings and their implications]
-To compare salaries across countries wh
 
-While accounting for differences in the cost of living, you can use the Big Mac Index as a proxy to adjust salaries, effectively translating them into a "real" salary that reflects purchasing power. Here’s how you can approach this:
 
 ### 1. **Calculate the Purchasing Power Parity (PPP) Adjusted Salary**
 
