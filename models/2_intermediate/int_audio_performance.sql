@@ -9,7 +9,7 @@ WITH view_aggregates AS (
         AVG(CASE WHEN rank_by_views <= 50 THEN rank_by_views ELSE 51 END) AS avg_top50_vw_rank,
         AVG(CASE WHEN rank_by_views <= 10 THEN rank_by_views ELSE 51 END) AS avg_top10_vw_rank,
     FROM
-        ref{{ ('int_tiktok_top_audio_cleaned') }}
+        {{ ref('int_tiktok_top_audio_cleaned') }}
     GROUP BY
         track_name, track_author
 ), 
@@ -46,5 +46,11 @@ normalized_view_aggregates as (
 
 select
     *
-    , {{ calculate_performance_scores('norm_total_views', 'norm_top50_app', 'norm_top10_app', 'norm_avg_top50_rank', 'norm_avg_top10_rank') }}
+    , {{ calculate_performance_scores(
+            'norm_total_views',
+            'norm_top50_app',
+            'norm_top10_app',
+            'norm_avg_top50_rank',
+            'norm_avg_top10_rank'
+        ) }}
 from normalized_view_aggregates
