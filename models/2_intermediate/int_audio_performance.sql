@@ -3,43 +3,48 @@ WITH view_aggregates AS (
         track_name,
         track_author,
         SUM(views) AS total_views,
-        SUM(CASE WHEN rank_by_views <= 50 THEN 1 END) AS top50_vw_app,
-        SUM(CASE WHEN rank_by_views <= 10 THEN 1 END) AS top10_vw_app,
-        AVG(CASE WHEN rank_by_views <= 50 THEN rank_by_views END) AS avg_top50_vw_rank,
-        AVG(CASE WHEN rank_by_views <= 10 THEN rank_by_views END) AS avg_top10_vw_rank,
+        SUM(viral_video_count) as total_viral_videos,
+        SUM(CASE WHEN rank_by_views <= 50 THEN 1 ELSE 0 END) AS top50_vw_app,
+        SUM(CASE WHEN rank_by_views <= 10 THEN 1 ELSE 0 END) AS top10_vw_app,
+        AVG(CASE WHEN rank_by_views <= 50 THEN rank_by_views ELSE 51 END) AS avg_top50_vw_rank,
+        AVG(CASE WHEN rank_by_views <= 10 THEN rank_by_views ELSE 51 END) AS avg_top10_vw_rank,
     FROM
-        {{ ref('tiktok_top_audio_cleaned') }}
+        ref{{ ('int_tiktok_top_audio_cleaned') }}
     GROUP BY
         track_name, track_author
 ), 
 
-performance_scores_views as (
+normalized_factors AS (
     SELECT
-        track_name,
-        {{ calculate_performance_scores('total views', 'top50_vw_app', 'top10_vw_app', 'avg_top50_vw_rank', 'avg_top10_vw_rank') }}
-    FROM
-        view_aggregates
+        MAX(total_views) AS max_views, MIN(total_views) AS min_views,
+        MAX(top50_vw_app) AS max_top50, MIN(top50_vw_app) AS min_top50,
+        MAX(top10_vw_app) AS max_top10, MIN(top10_vw_app) AS min_top10,
+        MIN(avg_top50_vw_rank) AS max_avg_top50, MAX(avg_top50_vw_rank) AS min_avg_top50,
+        MIN(avg_top10_vw_rank) AS max_avg_top10, MAX(avg_top10_vw_rank) AS min_avg_top10
+    FROM view_aggregates
 ), 
 
-video_aggregates AS (
+normalized_view_aggregates as (
     SELECT
         track_name,
         track_author,
-        SUM(viral_video_count) AS total_videos,
-        SUM(CASE WHEN rank_by_views <= 50 THEN 1 END) AS top50_vid_app,
-        SUM(CASE WHEN rank_by_views <= 10 THEN 1 END) AS top10_vid_app,
-        AVG(CASE WHEN rank_by_views <= 50 THEN rank_by_views END) AS avg_top50_vid_rank,
-        AVG(CASE WHEN rank_by_views <= 10 THEN rank_by_views END) AS avg_top10_vid_rank,
+        total_views,
+        total_viral_videos,
+        total_views / total_viral_videos as avg_views_per_viral_video,
+        top50_vw_app,
+        top10_vw_app,
+        avg_top50_vw_rank,
+        avg_top10_vw_rank,
+        (v.total_views - nf.min_views) / (nf.max_views - nf.min_views) AS norm_total_views,
+        (v.top50_vw_app - nf.min_top50) / (nf.max_top50 - nf.min_top50) AS norm_top50_app,
+        (v.top10_vw_app - nf.min_top10) / (nf.max_top10 - nf.min_top10) AS norm_top10_app,
+        (nf.min_avg_top50 - v.avg_top50_vw_rank) / (nf.min_avg_top50 - nf.max_avg_top50) AS norm_avg_top50_rank,
+        (nf.min_avg_top10 - v.avg_top10_vw_rank) / (nf.min_avg_top10 - nf.max_avg_top10) AS norm_avg_top10_rank
     FROM
-        {{ ref('tiktok_top_audio_cleaned') }}
-    GROUP BY
-        track_name, track_author
-), 
+        view_aggregates v, normalized_factors nf
+)
 
-performance_scores_videos as (
-    SELECT
-        track_name,
-        {{ calculate_performance_scores('total_videos', 'top50_vid_app', 'top10_vid_app', 'avg_top50_vid_rank', 'avg_top10_vid_rank') }}
-    FROM
-        video_aggregates
-), 
+select
+    *
+    , {{ calculate_performance_scores('norm_total_views', 'norm_top50_app', 'norm_top10_app', 'norm_avg_top50_rank', 'norm_avg_top10_rank') }}
+from normalized_view_aggregates
