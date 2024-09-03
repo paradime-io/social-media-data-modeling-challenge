@@ -30,7 +30,7 @@ tiktok_top as (
         , case when lower(track_name) like '%original sound%' then 'original sound'
             when track_name in (select track_name from dbt_jayeson_gao.int_combined_song_list) 
                 or track_author in (select distinct track_artist from dbt_jayeson_gao.int_combined_song_list)  
-                --or track_author in (select artist_list from other_artists)
+                or track_author in (select artist_list from other_artists)
                 then 'official song'
             else 'undetermined'
             end as audio_category
