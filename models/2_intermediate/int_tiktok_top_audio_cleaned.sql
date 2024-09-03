@@ -21,7 +21,7 @@ tiktok_top as (
         , CASE 
             WHEN viral_video_count LIKE '%K%' THEN CAST(REPLACE(viral_video_count, 'K popular videos', '') AS DECIMAL(10,1)) * 1000
             WHEN viral_video_count LIKE '%k%' THEN CAST(REPLACE(viral_video_count, 'k popular videos', '') AS DECIMAL(10,1)) * 1000
-            ELSE CAST(REPLACE(viral_video_count, ' popular videos', '') AS DECIMAL(10,1)) * 1000
+            ELSE CAST(REPLACE(viral_video_count, ' popular videos', '') AS DECIMAL(10,1))
         END AS viral_video_count_cleaned
         , CASE
             WHEN viral_video_count_cleaned != 0 THEN views_cleaned / viral_video_count_cleaned

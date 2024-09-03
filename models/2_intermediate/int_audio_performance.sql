@@ -2,6 +2,7 @@ WITH view_aggregates AS (
     SELECT
         track_name,
         track_author,
+        audio_category,
         SUM(views) AS total_views,
         SUM(viral_video_count) as total_viral_videos,
         SUM(CASE WHEN rank_by_views <= 50 THEN 1 ELSE 0 END) AS top50_vw_app,
@@ -11,7 +12,7 @@ WITH view_aggregates AS (
     FROM
         {{ ref('int_tiktok_top_audio_cleaned') }}
     GROUP BY
-        track_name, track_author
+        track_name, track_author, audio_category
 ), 
 
 normalized_factors AS (
@@ -28,6 +29,7 @@ normalized_view_aggregates as (
     SELECT
         track_name,
         track_author,
+        audio_category,
         total_views,
         total_viral_videos,
         total_views / total_viral_videos as avg_views_per_viral_video,
