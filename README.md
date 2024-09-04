@@ -25,9 +25,9 @@ Welcome to the [dbt™ Data Modeling Challenge - Social Media Edition](https://w
 
 # Objective
 Uncovering insights around tiktok audio popularity across a variety of criteria, specifically during TikTok's early days thru the first year of COVID (roughly). 
-1. Hook 1
-2. Hook 2
-3. Hook 3
+1. Hook 1: Who is the King / Queen of TikTok audio?
+2. Hook 2: What song held the most number 1 monthly leaderboard spots? Most Top 10 spots?
+3. Hook 3: Are/were top tiktok audios mostly official songs or original sounds? 
 
 For avid current and ex-TikTok users, how many of these audios do you remember? 
 
@@ -73,6 +73,8 @@ same song that had slightly different attributes using window functions: *`row_n
 2. Because the tiktok top audio dataset was scraped, many fields were weirdly formatted. I used string parsing and datetime functions to
 extract the values I needed, in particular the user engagement data (# of viral videos, # of views) that are key for this analysis.
 
+Note: as I do not have access to all tiktok engagement data spanning across every video, I am using leaderboard data as a proxy.
+
 ### Key Metrics
 Since the focus of the analysis revolves around tiktok audio performance, I created a composite performance metric to score and compare
 each audio to identify which ones stand out.
@@ -97,3 +99,7 @@ skewing toward consistency, and the other skewing toward peaks - since I was cur
 
 And just for fun, I reperformed this analysis on monthly rankings based on number of viral videos instead of number of views. This is where the 
 performance calculation macro came in handy.
+
+# Key Insights & Visualizations
+
+### Data Profile
