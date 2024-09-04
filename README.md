@@ -71,7 +71,29 @@ This analysis is built off of two datasets: spotify song data from two kaggle so
 1. For spotify song data, ensured that the data from the two sources did not duplicate *`select distinct`* and removed variants of the 
 same song that had slightly different attributes using window functions: *`row_number()`* (ex: acousticness for variant A: .91, for variant B: .90)
 2. Because the tiktok top audio dataset was scraped, many fields were weirdly formatted. I used string parsing and datetime functions to
-extract the values I needed, in particular the user engagement data (viral videos, views) that are key for this analysis.
+extract the values I needed, in particular the user engagement data (# of viral videos, # of views) that are key for this analysis.
 
 ### Key Metrics
-The core 
+Since the focus of the analysis revolves around tiktok audio performance, I created a composite performance metric to score and compare
+each audio to identify which ones stand out.
+
+The composition of this metric is as follows:
+- Total Views: these are views amassed across all viral videos associated with an audio across 30-month period
+- Top 100 Appearances: number of times an audio appeared on any monthly top 100 leaderboard per tokboard.com
+- Top 10 Appearances: number of times an audio broke into any top 10 leaderboard by views
+- Average Ranking: average leaderboard rank when an audio has appeared on the leaderboard
+- Max Ranking: the highest ranking an audio has achieved
+
+Because these metrics operate on different scales, they were all normalized to 0-1 before being funneled into the following formula to 
+calculate the composite score. Score weighting was determined based on a subjective interpretation of performance.
+
+*`performance_score`*: 0.3x *`total`* + 0.2x *`top100_count`* + 0.2x `top10_count`* + 0.15x `avg_top100_rank`* + 0.2x `max_rank`*
+
+As the definition of performance is subjective, I shifted the weights around to create two performance score variants - one 
+skewing toward consistency, and the other skewing toward peaks - since I was curious how that would impact results.
+
+*`consistency_score`*: 0.1x *`total`* + 0.5x *`top100_count`* + 0.1x `top10_count`* + 0.2x `avg_top100_rank`* + 0.1x `max_rank`*
+*`peak_score`*: 0.1x *`total`* + 0.1x *`top100_count`* + 0.35x `top10_count`* + 0.1x `avg_top100_rank`* + 0.35x `max_rank`*
+
+And just for fun, I reperformed this analysis on monthly rankings based on number of viral videos instead of number of views. This is where the 
+performance calculation macro came in handy.
