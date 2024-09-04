@@ -8,7 +8,7 @@ WITH view_aggregates AS (
         COUNT(track_name) AS top100_vw_app,
         SUM(CASE WHEN rank_by_views <= 10 THEN 1 ELSE 0 END) AS top10_vw_app,
         AVG(rank_by_views) AS avg_top100_vw_rank,
-        AVG(CASE WHEN rank_by_views <= 10 THEN rank_by_views END) AS avg_top10_vw_rank,
+        MIN(rank_by_views) AS max_vw_rank,
     FROM
         {{ ref('int_tiktok_top_audio_cleaned') }}
     GROUP BY
@@ -21,7 +21,7 @@ normalized_factors AS (
         MAX(top100_vw_app) AS max_top100, MIN(top100_vw_app) AS min_top100,
         MAX(top10_vw_app) AS max_top10, MIN(top10_vw_app) AS min_top10,
         MIN(avg_top100_vw_rank) AS max_avg_top100, MAX(avg_top100_vw_rank) AS min_avg_top100,
-        MIN(avg_top10_vw_rank) AS max_avg_top10, MAX(avg_top10_vw_rank) AS min_avg_top10
+        1 AS max_rank, 100 AS min_rank
     FROM view_aggregates
 ), 
 
@@ -36,12 +36,12 @@ normalized_view_aggregates as (
         top100_vw_app,
         top10_vw_app,
         avg_top100_vw_rank,
-        avg_top10_vw_rank,
+        max_vw_rank,
         (v.total_views - nf.min_views) / (nf.max_views - nf.min_views) AS norm_total_views,
         (v.top100_vw_app - nf.min_top100) / (nf.max_top100 - nf.min_top100) AS norm_top100_app,
         (v.top10_vw_app - nf.min_top10) / (nf.max_top10 - nf.min_top10) AS norm_top10_app,
         (nf.min_avg_top100 - v.avg_top100_vw_rank) / (nf.min_avg_top100 - nf.max_avg_top100) AS norm_avg_top100_rank,
-        (nf.min_avg_top10 - v.avg_top10_vw_rank) / (nf.min_avg_top10 - nf.max_avg_top10) AS norm_avg_top10_rank
+        (nf.min_rank - v.max_vw_rank) / (nf.min_rank - nf.max_rank) AS norm_max_rank
     FROM
         view_aggregates v, normalized_factors nf
 )
@@ -53,6 +53,6 @@ select
             'norm_top100_app',
             'norm_top10_app',
             'norm_avg_top100_rank',
-            'norm_avg_top10_rank'
+            'norm_max_rank'
         ) }}
 from normalized_view_aggregates
