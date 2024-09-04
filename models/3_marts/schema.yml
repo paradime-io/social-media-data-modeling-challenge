@@ -1,0 +1,364 @@
+version: 2
+
+models:
+  - name: mrt_spotify_song_details
+    description: >-
+      Model that serves as the master song list along with detailed song attributes
+    columns:
+      - name: track_id
+        description: "Unique track identifier"
+        meta:
+          dimension:
+            type: string
+      - name: track_name
+        description: "The name of the track"
+        meta:
+          dimension:
+            type: string
+      - name: track_artist
+        description: "The artist of the track"
+        meta:
+          dimension:
+            type: string
+      - name: danceability
+        description: "A measure of the track's danceability"
+        meta:
+          dimension:
+            type: number
+      - name: energy
+        description: "A measure of the energy of the track"
+        meta:
+          dimension:
+            type: number
+      - name: key
+        description: "The key the track is in"
+        meta:
+          dimension:
+            type: number
+      - name: loudness
+        description: "The loudness of the track"
+        meta:
+          dimension:
+            type: number
+      - name: mode
+        description: "The mode of the track"
+        meta:
+          dimension:
+            type: number
+      - name: speechiness
+        description: "A measure of the presence of spoken words in the track"
+        meta:
+          dimension:
+            type: number
+      - name: acousticness
+        description: "A measure of the acoustics in the track"
+        meta:
+          dimension:
+            type: number
+      - name: instrumentalness
+        description: "A measure of the track's instrumental content"
+        meta:
+          dimension:
+            type: number
+      - name: liveness
+        description: "A measure of the presence of an audience in the track"
+        meta:
+          dimension:
+            type: number
+      - name: valence
+        description: "A measure of the positivity conveyed by the track"
+        meta:
+          dimension:
+            type: number
+      - name: tempo
+        description: "The tempo of the track"
+        meta:
+          dimension:
+            type: number
+      - name: duration_ms
+        description: "The duration of the track in milliseconds"
+        meta:
+          dimension:
+            type: number
+  
+  - name: int_tiktok_top_audio_by_month
+    description: >-
+      Model that contains the top ~100 audios by month over the course of a 30-month period along with key baseline stats (views, number of viral videos) and rankings
+    columns:
+      - name: year_month
+        description: "Unique track identifier"
+        meta:
+          dimension:
+            type: string
+      - name: track_name
+        description: "The name of the track"
+        meta:
+          dimension:
+            type: string
+      - name: track_artist
+        description: "The artist of the track"
+        meta:
+          dimension:
+            type: string
+      - name: rank_by_videos
+        description: "A measure of the track's danceability"
+        meta:
+          dimension:
+            type: number
+      - name: rank_by_views
+        description: "A measure of the energy of the track"
+        meta:
+          dimension:
+            type: number
+      - name: views
+        description: "The mode of the track"
+        meta:
+          dimension:
+            type: number
+      - name: viral_video_count
+        description: "A measure of the presence of spoken words in the track"
+        meta:
+          dimension:
+            type: number
+      - name: avg_views_per_viral_video
+        description: "A measure of the acoustics in the track"
+        meta:
+          dimension:
+            type: number
+      - name: audio_category
+        description: "A measure of the track's instrumental content"
+        meta:
+          dimension:
+            type: string
+  
+  - name: mrt_tiktok_performance_by_audio
+    description: >-
+      Model that contains detailed metrics, including composite performance scores as well as the individual component scores associated with each audio
+    columns:
+      - name: track_name
+        description: "The name of the track"
+        meta:
+          dimension:
+            type: string
+      - name: track_author
+        description: "The author/artist of the track"
+        meta:
+          dimension:
+            type: string
+      - name: audio_category
+        description: "Whether the audio is an official song, original sound, or undetermined"
+        meta:
+          dimension:
+            type: string
+      - name: total_views
+        description: "Total views the audio has received across all viral videos"
+        meta:
+          dimension:
+            type: number
+      - name: top100_vw_app
+        description: "Appearances in the top 100"
+        meta:
+          dimension:
+            type: number
+      - name: top10_vw_app
+        description: "Appearances in the top 10 audios by TikTok views"
+        meta:
+          dimension:
+            type: number
+      - name: avg_top100_vw_rank
+        description: "Average ranking in the top 100 by views"
+        meta:
+          dimension:
+            type: number
+      - name: max_vw_rank
+        description: "Highest ranking audio has reached by views"
+        meta:
+          dimension:
+            type: number
+      - name: norm_total_views
+        description: "For score computation: total views normalized"
+        meta:
+          dimension:
+            type: number
+      - name: norm_top100_app
+        description: "For score computation: top 100 appearances by views normalized"
+        meta:
+          dimension:
+            type: number
+      - name: norm_top10_app
+        description: "For score computation: top 10 appearances by views normalized"
+        meta:
+          dimension:
+            type: number
+      - name: norm_avg_top100_rank
+        description: "For score computation: average ranking in the top 100 by views normalized"
+        meta:
+          dimension:
+            type: number
+      - name: norm_max_rank
+        description: "For score computation: max ranking by views normalized"
+        meta:
+          dimension:
+            type: number
+      - name: performance_score_by_views
+        description: "Audio performance computed by: 0.3x total views + 0.2x top 100 appearances + 0.2x top 10 appearances + 0.15x avg ranking + 0.15x highest ranking"
+        meta:
+          dimension:
+            type: number
+      - name: consistency_score_by_views
+        description: "Audio performance skewing toward consistency computed by: 0.1x total views + 0.5x top 100 appearances + 0.1x top 10 appearances + 0.2x avg ranking + 0.1x highest ranking"
+        meta:
+          dimension:
+            type: number
+      - name: peak_score_by_views
+        description: "Audio performance skewing toward peak rankings & appearances computed by: 0.1x total views + 0.1x top 100 appearances + 0.35x top 10 appearances + 0.1x avg ranking + 0.35x highest ranking"
+        meta:
+          dimension:
+            type: number
+      - name: total_viral_videos
+        description: "Total number of viral videos the audio has been used in"
+        meta:
+          dimension:
+            type: number
+      - name: top100_vid_app
+        description: "Appearances in the top 100"
+        meta:
+          dimension:
+            type: number
+      - name: top10_vid_app
+        description: "Appearances in the top 10 audios by TikTok viral videos"
+        meta:
+          dimension:
+            type: number
+      - name: avg_top100_vid_rank
+        description: "Average ranking in the top 100 by number of viral videos"
+        meta:
+          dimension:
+            type: number
+      - name: max_vid_rank
+        description: "Highest ranking audio has reached by viral videos"
+        meta:
+          dimension:
+            type: number
+      - name: norm_total_views
+        description: "For score computation: total viral videos normalized"
+        meta:
+          dimension:
+            type: number
+      - name: norm_top100_app_vid
+        description: "For score computation: top 100 appearances by viral videos normalized"
+        meta:
+          dimension:
+            type: number
+      - name: norm_top10_app_vid
+        description: "For score computation: top 10 appearances by viral videos normalized"
+        meta:
+          dimension:
+            type: number
+      - name: norm_avg_top100_rank_vid
+        description: "For score computation: average ranking in the top 100 by viral videos normalized"
+        meta:
+          dimension:
+            type: number
+      - name: norm_max_rank_vid
+        description: "For score computation: max ranking by viral videos normalized"
+        meta:
+          dimension:
+            type: number
+      - name: performance_score_by_videos
+        description: "Audio performance computed by: 0.3x total views + 0.2x top 100 appearances + 0.2x top 10 appearances + 0.15x avg ranking + 0.15x highest ranking"
+        meta:
+          dimension:
+            type: number
+      - name: consistency_score_by_videos
+        description: "Audio performance skewing toward consistency computed by: 0.1x total views + 0.5x top 100 appearances + 0.1x top 10 appearances + 0.2x avg ranking + 0.1x highest ranking"
+        meta:
+          dimension:
+            type: number
+      - name: peak_score_by_videos
+        description: "Audio performance skewing toward peak rankings & appearances computed by: 0.1x total views + 0.1x top 100 appearances + 0.35x top 10 appearances + 0.1x avg ranking + 0.35x highest ranking"
+        meta:
+          dimension:
+            type: number
+      - name: avg_views_per_viral_video
+        description: "Average number of videos per viral video"
+        meta:
+          dimension:
+            type: number
+
+  - name: mrt_tiktok_performance_by_author
+    description: >-
+      Model that contains detailed metrics, including avg performance scores associated with each audio artist/author
+    columns:
+      - name: track_author
+        description: "Audio author or song artist"
+        meta:
+          dimension:
+            type: string
+      - name: audio_count
+        description: "Count of distinct audios that made it to any top 100 list over the 30-month period"
+        meta:
+          dimension:
+            type: number
+      - name: total_views
+        description: "Total views associated with all audios across all viral videos"
+        meta:
+          dimension:
+            type: number
+      - name: top_10_app_count
+        description: "Total appearances in any top 10 list by views across all audios"
+        meta:
+          dimension:
+            type: number
+      - name: top_100_app_count
+        description: "Total appearances in any top 100 list across all audios"
+        meta:
+          dimension:
+            type: number
+      - name: avg_performance_score
+        description: "Average performance score across all audios (views)"
+        meta:
+          dimension:
+            type: number
+      - name: avg_consistency_score
+        description: "Average consistency score across all audios (views)"
+        meta:
+          dimension:
+            type: number
+      - name: avg_peak_score
+        description: "Average peak score across all audios (views)"
+        meta:
+          dimension:
+            type: number
+      - name: total_viral_videos
+        description: "Total viral videos associated with all audios across all viral videos"
+        meta:
+          dimension:
+            type: number
+      - name: top_10_app_count_vid
+        description: "Total appearances in any top 10 list by viral videos across all audios"
+        meta:
+          dimension:
+            type: number
+      - name: top_100_app_count_vid
+        description: "Total appearances in any top 100 list across all audios"
+        meta:
+          dimension:
+            type: number
+      - name: avg_performance_score_vid
+        description: "Average performance score across all audios (viral videos)"
+        meta:
+          dimension:
+            type: number
+      - name: avg_consistency_score_vid
+        description: "Average consistency score across all audios (viral videos)"
+        meta:
+          dimension:
+            type: number
+      - name: avg_peak_score
+        description: "Average peak score across all audios (viral videos)"
+        meta:
+          dimension:
+            type: number
+
+      
