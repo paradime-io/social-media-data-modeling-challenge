@@ -4,26 +4,25 @@ Welcome to the [dbt™ Data Modeling Challenge - Social Media Edition](https://w
 
 ## 📋 Table of Contents
 
-1. Intro & Objective
-2. Data Sources & Lineage
-    - Sources
-    - Intermediate Layer
-    - Mart Layer
-    - Data Lineage
-3. Methodology + Metric Definitions
-    - Tools Used
-    - Data Preparation
-    - Key Metrics
-4. Key Insights & Visualizations
-    - Data Profile
-    - 2019 - Mid-2021: Audios/Artists That Took Over TikTok
-    - Consistency vs Peak: A Case Study on Performance and Virality (Pre-Covid vs Post-Covid)
-    - Predictors of Success: Which Song Attributes Do Well?
-    - Bonus: The Stats Around These Iconic Audios
-5. Summary & Conclusions
-6. Reflection
+1. [Intro & Objective] (#intro-&-objective)
+2. [Data Sources & Lineage] (#data-sources-and-lineage)
+    - [Sources] (#sources--seeds)
+    - [Model Layers] (#intermediate-models)
+    - [Data Lineage] (#data-lineage)
+3. [Methodology + Metric Definitions] (#methodology--metrics-definition)
+    - [Tools Used] (#tools)
+    - [Data Preparation] (#data-preparation)
+    - [Key Metrics & Definitions] (#key-metrics)
+4. [Key Insights & Visualizations] (#key-insights--visualizations)
+    - [Data Profile]
+    - [2019 - Mid-2021: Audios/Artists That Took Over TikTok]
+    - [The "Best Performing" TikTok Audios - BUT What Defines "Best Performing"]
+    - [Predictors of Success: Which Song Attributes Do Well?]
+    - [Bonus: The Stats Around These Iconic Audios]
+5. [Summary & Conclusions]
+6. [Reflection]
 
-# Objective
+# Intro & Objective
 Uncovering insights around tiktok audio popularity across a variety of criteria, specifically during TikTok's early days 
 thru the first year of COVID (roughly). Across the 30-months this analysis was performed on, we'll be able to find out things like:
 1. In that time, who was the King / Queen of TikTok audio?
@@ -73,15 +72,13 @@ This analysis is built off of two datasets: spotify song data from two kaggle so
 1. For spotify song data, ensured that the data from the two sources did not duplicate *`select distinct`* and removed variants of the 
 same song that had slightly different attributes using window functions: *`row_number()`* (ex: acousticness for variant A: .91, for variant B: .90)
 2. Because the tiktok top audio dataset was scraped, many fields were weirdly formatted. I used string parsing and datetime functions to
-extract the values I needed, in particular the user engagement data (# of viral videos, # of views) that are key for this analysis.
+extract the values I needed, in particular the user engagement data (# of viral videos, # of views) that are key for this analysis
 
 Note: as I do not have access to all tiktok engagement data spanning across every video, I am using leaderboard data as a proxy.
 
 ### Key Metrics
 Since the focus of the analysis revolves around tiktok audio performance, I created a composite performance metric to score and compare
-each audio to identify which ones stand out.
-
-The composition of this metric is as follows:
+each audio to identify which ones stand out. The composition of this metric is as follows:
 - Total Views: these are views amassed across all viral videos associated with an audio across the 30-month period
 - Top 100 Appearances: number of times an audio appeared on any monthly top 100 leaderboard per tokboard.com
 - Top 10 Appearances: number of times an audio broke into any top 10 leaderboard by views
@@ -91,13 +88,13 @@ The composition of this metric is as follows:
 Because these metrics operate on different scales, they were all normalized to 0-1 before being funneled into the following formula to 
 calculate the composite score. Score weighting was determined based on a subjective interpretation of performance.
 
-*`performance_score`*: 0.3x *`total`* + 0.2x *`top100_count`* + 0.2x `top10_count`* + 0.15x `avg_top100_rank`* + 0.2x `max_rank`*
+- *`performance_score`* = 0.3x *`total`* + 0.2x *`top100_count`* + 0.2x *`top10_count`* + 0.15x *`avg_top100_rank`* + 0.15x `max_rank`*
 
-As the definition of performance is subjective, I shifted the weights around to create two performance score variants - one 
+As the definition of performance is highly variable depending on criteria, I shifted the weights around to create two performance score variants - one 
 skewing toward consistency, and the other skewing toward peaks - since I was curious how that would impact results.
 
-*`consistency_score`*: 0.1x *`total`* + 0.5x *`top100_count`* + 0.1x `top10_count`* + 0.2x `avg_top100_rank`* + 0.1x `max_rank`*
-*`peak_score`*: 0.1x *`total`* + 0.1x *`top100_count`* + 0.35x `top10_count`* + 0.1x `avg_top100_rank`* + 0.35x `max_rank`*
+- *`consistency_score`* = 0.1x *`total`* + 0.5x *`top100_count`* + 0.1x *`top10_count`* + 0.2x *`avg_top100_rank`* + 0.1x *`max_rank`*
+- *`peak_score`* = 0.1x *`total`* + 0.1x *`top100_count`* + 0.35x *`top10_count`* + 0.1x *`avg_top100_rank`* + 0.35x `max_rank`*
 
 And just for fun, I reperformed this analysis on monthly rankings based on number of viral videos instead of number of views. This is where the 
 performance calculation macro came in handy.
