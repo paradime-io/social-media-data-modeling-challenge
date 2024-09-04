@@ -4,7 +4,7 @@ Welcome to the [dbt™ Data Modeling Challenge - Social Media Edition](https://w
 
 ## 📋 Table of Contents
 
-1. Objective
+1. Intro & Objective
 2. Data Sources & Lineage
     - Sources
     - Intermediate Layer
@@ -24,10 +24,11 @@ Welcome to the [dbt™ Data Modeling Challenge - Social Media Edition](https://w
 6. Reflection
 
 # Objective
-Uncovering insights around tiktok audio popularity across a variety of criteria, specifically during TikTok's early days thru the first year of COVID (roughly). 
-1. Hook 1: Who is the King / Queen of TikTok audio?
-2. Hook 2: What song held the most number 1 monthly leaderboard spots? Most Top 10 spots?
-3. Hook 3: Are/were top tiktok audios mostly official songs or original sounds? 
+Uncovering insights around tiktok audio popularity across a variety of criteria, specifically during TikTok's early days 
+thru the first year of COVID (roughly). Across the 30-months this analysis was performed on, we'll be able to find out things like:
+1. In that time, who was the King / Queen of TikTok audio?
+2. What song held the most number 1 monthly leaderboard spots? Most top 10 appearances?
+3. Are official songs or original sounds more likely to go viral? 
 
 For avid current and ex-TikTok users, how many of these audios do you remember? 
 
@@ -36,7 +37,7 @@ For avid current and ex-TikTok users, how many of these audios do you remember?
 ### Sources / Seeds
 - *`stg_spotify_songs.sql`* kaggle spotify dataset of 20k+ popular songs between 2000 and 2020
 - *`stg_tiktok_songs_on_spotify.sql`* 4 combined spotify datasets of popular tiktok songs between 2019 and 2022
-- *`stg_tiktok_top_audio.sql`* top 100 tiktok audios by month over a 30-month period scraped from tokboard.com
+- *`stg_tiktok_top_audio.sql`* top 100 tiktok audios by month over a 30-month period scraped from tokboard.com (2019 to mid-2021)
 - *`other_artists.csv`* manually populated dataset that identifies official artists not included in the spotify datasets
 
 ### Intermediate Models
@@ -57,6 +58,7 @@ For avid current and ex-TikTok users, how many of these audios do you remember?
 - *`add_genre.py`* (deprecated) python script to assign genre based on attributes to song tracks missing genre values
 
 ### Data Lineage
+![data lineage] /screenshots/data_lineage.png
 
 
 # Methodology + Metrics Definitions
@@ -80,7 +82,7 @@ Since the focus of the analysis revolves around tiktok audio performance, I crea
 each audio to identify which ones stand out.
 
 The composition of this metric is as follows:
-- Total Views: these are views amassed across all viral videos associated with an audio across 30-month period
+- Total Views: these are views amassed across all viral videos associated with an audio across the 30-month period
 - Top 100 Appearances: number of times an audio appeared on any monthly top 100 leaderboard per tokboard.com
 - Top 10 Appearances: number of times an audio broke into any top 10 leaderboard by views
 - Average Ranking: average leaderboard rank when an audio has appeared on the leaderboard
