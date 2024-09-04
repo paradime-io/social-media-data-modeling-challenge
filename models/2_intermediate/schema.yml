@@ -80,7 +80,8 @@ models:
         meta:
           dimension:
             type: number
-  - name: int_tiktok_audio_cleaned
+  
+  - name: int_tiktok_top_audio_cleaned
     description: >-
       Cleaning up the tiktok top 100 audios.
     columns:
@@ -129,3 +130,158 @@ models:
         meta:
           dimension:
             type: string
+  
+  - name: int_audio_performance
+    description: >-
+      Table handling all the metric calculations associated with each audio over the 30-month period
+    columns:
+      - name: track_name
+        description: "The name of the track"
+        meta:
+          dimension:
+            type: string
+      - name: track_author
+        description: "The author/artist of the track"
+        meta:
+          dimension:
+            type: string
+      - name: audio_category
+        description: "Whether the audio is an official song, original sound, or undetermined"
+        meta:
+          dimension:
+            type: string
+      - name: total_views
+        description: "Total views the audio has received across all viral videos"
+        meta:
+          dimension:
+            type: number
+      - name: top100_vw_app
+        description: "Appearances in the top 100"
+        meta:
+          dimension:
+            type: number
+      - name: top10_vw_app
+        description: "Appearances in the top 10 audios by TikTok views"
+        meta:
+          dimension:
+            type: number
+      - name: avg_top100_vw_rank
+        description: "Average ranking in the top 100 by views"
+        meta:
+          dimension:
+            type: number
+      - name: max_vw_rank
+        description: "Highest ranking audio has reached by views"
+        meta:
+          dimension:
+            type: number
+      - name: norm_total_views
+        description: "For score computation: total views normalized"
+        meta:
+          dimension:
+            type: number
+      - name: norm_top100_app
+        description: "For score computation: top 100 appearances by views normalized"
+        meta:
+          dimension:
+            type: number
+      - name: norm_top10_app
+        description: "For score computation: top 10 appearances by views normalized"
+        meta:
+          dimension:
+            type: number
+      - name: norm_avg_top100_rank
+        description: "For score computation: average ranking in the top 100 by views normalized"
+        meta:
+          dimension:
+            type: number
+      - name: norm_max_rank
+        description: "For score computation: max ranking by views normalized"
+        meta:
+          dimension:
+            type: number
+      - name: performance_score_by_views
+        description: "Audio performance computed by: 0.3x total views + 0.2x top 100 appearances + 0.2x top 10 appearances + 0.15x avg ranking + 0.15x highest ranking"
+        meta:
+          dimension:
+            type: number
+      - name: consistency_score_by_views
+        description: "Audio performance skewing toward consistency computed by: 0.1x total views + 0.5x top 100 appearances + 0.1x top 10 appearances + 0.2x avg ranking + 0.1x highest ranking"
+        meta:
+          dimension:
+            type: number
+      - name: peak_score_by_views
+        description: "Audio performance skewing toward peak rankings & appearances computed by: 0.1x total views + 0.1x top 100 appearances + 0.35x top 10 appearances + 0.1x avg ranking + 0.35x highest ranking"
+        meta:
+          dimension:
+            type: number
+      - name: total_viral_videos
+        description: "Total number of viral videos the audio has been used in"
+        meta:
+          dimension:
+            type: number
+      - name: top100_vid_app
+        description: "Appearances in the top 100"
+        meta:
+          dimension:
+            type: number
+      - name: top10_vid_app
+        description: "Appearances in the top 10 audios by TikTok viral videos"
+        meta:
+          dimension:
+            type: number
+      - name: avg_top100_vid_rank
+        description: "Average ranking in the top 100 by number of viral videos"
+        meta:
+          dimension:
+            type: number
+      - name: max_vid_rank
+        description: "Highest ranking audio has reached by viral videos"
+        meta:
+          dimension:
+            type: number
+      - name: norm_total_views
+        description: "For score computation: total viral videos normalized"
+        meta:
+          dimension:
+            type: number
+      - name: norm_top100_app_vid
+        description: "For score computation: top 100 appearances by viral videos normalized"
+        meta:
+          dimension:
+            type: number
+      - name: norm_top10_app_vid
+        description: "For score computation: top 10 appearances by viral videos normalized"
+        meta:
+          dimension:
+            type: number
+      - name: norm_avg_top100_rank_vid
+        description: "For score computation: average ranking in the top 100 by viral videos normalized"
+        meta:
+          dimension:
+            type: number
+      - name: norm_max_rank_vid
+        description: "For score computation: max ranking by viral videos normalized"
+        meta:
+          dimension:
+            type: number
+      - name: performance_score_by_videos
+        description: "Audio performance computed by: 0.3x total views + 0.2x top 100 appearances + 0.2x top 10 appearances + 0.15x avg ranking + 0.15x highest ranking"
+        meta:
+          dimension:
+            type: number
+      - name: consistency_score_by_videos
+        description: "Audio performance skewing toward consistency computed by: 0.1x total views + 0.5x top 100 appearances + 0.1x top 10 appearances + 0.2x avg ranking + 0.1x highest ranking"
+        meta:
+          dimension:
+            type: number
+      - name: peak_score_by_videos
+        description: "Audio performance skewing toward peak rankings & appearances computed by: 0.1x total views + 0.1x top 100 appearances + 0.35x top 10 appearances + 0.1x avg ranking + 0.35x highest ranking"
+        meta:
+          dimension:
+            type: number
+      - name: avg_views_per_viral_video
+        description: "Average number of videos per viral video"
+        meta:
+          dimension:
+            type: number
