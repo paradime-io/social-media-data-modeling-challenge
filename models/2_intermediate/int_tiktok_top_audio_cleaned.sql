@@ -45,17 +45,22 @@ tiktok_top as (
             else 'pre-covid'
             end as era
     from {{ ref('stg_tiktok_top_audio') }}
+), 
+
+final_cleaned as (
+    select
+        year_month
+        , track_name
+        , track_author
+        , rank_by_videos
+        , rank_by_views
+        , views_cleaned as views
+        , viral_video_count_cleaned as viral_video_count
+        , avg_views_per_viral_video
+        , audio_category
+        , era
+    from tiktok_top
 )
 
-select
-    year_month
-    , track_name
-    , track_author
-    , rank_by_videos
-    , rank_by_views
-    , views_cleaned as views
-    , viral_video_count_cleaned as viral_video_count
-    , avg_views_per_viral_video
-    , audio_category
-    , era
-from tiktok_top
+select *
+from final_cleaned
