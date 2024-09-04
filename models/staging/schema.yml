@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: stg_hacker_news
+    description: This view contains all Hacker News posts (stories), providing key details about each submission.
+
+    columns:
+      - name: id
+        description: Unique identifier for the post.
+        tests:
+          - unique
+          - not_null
+
+      - name: title
+        description: The title of the post. Note Some entries may have null values.
+
+      - name: url
+        description: The URL linking to the post. Note Some entries may have null values.
+
+      - name: by
+        description: The username of the post's creator.
+
+      - name: creation_post_date
+        description: The date and time when the post was created, in timestamp format.
+
+      - name: creation_post_date_unix
+        description: The date and time when the post was created, in Unix time format.
+
+      - name: score
+        description: The score of the post, which represents the number of upvotes or votes for a poll option.
+
+      - name: ranking
+        description: The rank or position of the post on the Hacker News pages.
+
+      - name: comments
+        description: The total number of comments on the post.
+
