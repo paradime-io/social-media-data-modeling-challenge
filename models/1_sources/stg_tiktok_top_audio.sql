@@ -1,8 +1,8 @@
 with source as (
     select
-        CASE WHEN _source LIKE 'https%' THEN
-            DATE_TRUNC('month', STRPTIME(SUBSTRING(_source, INSTR(_source, 'months/') + 7), '%B-%Y'))
-        END as date
+        case when _source like 'https%' then
+            date_trunc('month', strptime(substring(_source, instr(_source, 'months/') + 7), '%B-%Y'))
+        end as date
         , title as track_name
         , artist as track_author
         , rank as rank_by_videos

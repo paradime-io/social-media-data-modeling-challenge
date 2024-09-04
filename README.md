@@ -54,7 +54,7 @@ For avid current and ex-TikTok users, how many of these audios do you remember?
 - *`performance_scores.sql`* macro to handle performance score (success metrics) composition / calculation
 
 ### Other
-- *`add_genre.py`* (deprecated) script to assign genre based on attributes to song tracks missing genre values
+- *`add_genre.py`* (deprecated) python script to assign genre based on attributes to song tracks missing genre values
 
 ### Data Lineage
 

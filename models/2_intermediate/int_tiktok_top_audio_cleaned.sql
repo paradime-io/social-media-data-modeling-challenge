@@ -16,24 +16,24 @@ tiktok_top as (
         strftime('%Y-%m', date) as year_month
         , track_name
         , track_author
-        , RANK() OVER (PARTITION BY year_month ORDER BY viral_video_count DESC) as rank_by_videos
-        , RANK() OVER (PARTITION BY year_month ORDER BY views DESC) as rank_by_views
+        , rank() over (partition by year_month order by viral_video_count desc) as rank_by_videos
+        , rank() over (partition by year_month order by views desc) as rank_by_views
         , views
         , viral_video_count
-        , CASE 
-            WHEN views LIKE '%B%' THEN CAST(REPLACE(views, 'B views', '') AS DECIMAL(10,1)) * 1000000000
-            WHEN views LIKE '%M%' THEN CAST(REPLACE(views, 'M views', '') AS DECIMAL(10,1)) * 1000000
-            ELSE CAST(REPLACE(views, ' views', '') AS DECIMAL(10,0))
-        END AS views_cleaned
-        , CASE 
-            WHEN viral_video_count LIKE '%K%' THEN CAST(REPLACE(viral_video_count, 'K popular videos', '') AS DECIMAL(10,1)) * 1000
-            WHEN viral_video_count LIKE '%k%' THEN CAST(REPLACE(viral_video_count, 'k popular videos', '') AS DECIMAL(10,1)) * 1000
-            ELSE CAST(REPLACE(viral_video_count, ' popular videos', '') AS DECIMAL(10,1))
-        END AS viral_video_count_cleaned
-        , CASE
-            WHEN viral_video_count_cleaned != 0 THEN views_cleaned / viral_video_count_cleaned
-            ELSE 0
-            END AS avg_views_per_viral_video
+        , case 
+            when views like '%B%' then cast(replace(views, 'B views', '') as decimal(10,1)) * 1000000000
+            WHEN views LIKE '%M%' THEN CAST(REPLACE(views, 'M views', '') as decimal(10,1)) * 1000000
+            else cast(REPLACE(views, ' views', '') AS DECIMAL(10,0))
+        end as views_cleaned
+        , case 
+            when viral_video_count like '%K%' then cast(replace(viral_video_count, 'K popular videos', '') as decimal(10,1)) * 1000
+            when viral_video_count like '%k%' then cast(replace(viral_video_count, 'k popular videos', '') as decimal(10,1)) * 1000
+            else cast(replace(viral_video_count, ' popular videos', '') as decimal(10,1))
+        end as viral_video_count_cleaned
+        , case
+            when viral_video_count_cleaned != 0 then views_cleaned / viral_video_count_cleaned
+            else 0
+            end as avg_views_per_viral_video
         , case when lower(track_name) like '%original sound%' then 'original sound'
             when track_name in (select track_name from official) 
                 or track_author in (select distinct track_artist from official)  

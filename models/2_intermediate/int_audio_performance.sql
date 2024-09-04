@@ -1,45 +1,45 @@
-WITH view_aggregates AS (
-    SELECT
+with view_aggregates as (
+    select
         track_name
         , track_author
         , audio_category
         -- by views
-        , SUM(views) AS total_views
-        , COUNT(track_name) AS top100_vw_app
-        , SUM(CASE WHEN rank_by_views <= 10 THEN 1 ELSE 0 END) AS top10_vw_app
-        , AVG(rank_by_views) AS avg_top100_vw_rank
-        , MIN(rank_by_views) AS max_vw_rank
+        , sum(views) as total_views
+        , count(track_name) as top100_vw_app
+        , sum(case when rank_by_views <= 10 then 1 else 0 end) as top10_vw_app
+        , avg(rank_by_views) as avg_top100_vw_rank
+        , min(rank_by_views) as max_vw_rank
         -- by viral videos
-        , SUM(viral_video_count) as total_viral_videos
-        , COUNT(track_name) AS top100_vid_app
-        , SUM(CASE WHEN rank_by_videos <= 10 THEN 1 ELSE 0 END) AS top10_vid_app
-        , AVG(rank_by_videos) AS avg_top100_vid_rank
-        , MIN(rank_by_videos) AS max_vid_rank
+        , sum(viral_video_count) as total_viral_videos
+        , count(track_name) as top100_vid_app
+        , sum(case when rank_by_videos <= 10 then 1 else 0 end) as top10_vid_app
+        , avg(rank_by_videos) as avg_top100_vid_rank
+        , min(rank_by_videos) as max_vid_rank
 
-    FROM
+    from
         {{ ref('int_tiktok_top_audio_cleaned') }}
-    GROUP BY
+    group by
         track_name, track_author, audio_category
 ), 
 
-normalized_factors AS (
-    SELECT
+normalized_factors as (
+    select
         -- by views
-        MAX(total_views) AS max_views, MIN(total_views) AS min_views
-        , MAX(top100_vw_app) AS max_top100, MIN(top100_vw_app) AS min_top100
-        , MAX(top10_vw_app) AS max_top10, MIN(top10_vw_app) AS min_top10
-        , MIN(avg_top100_vw_rank) AS max_avg_top100, MAX(avg_top100_vw_rank) AS min_avg_top100
+        max(total_views) as max_views, min(total_views) as min_views
+        , max(top100_vw_app) as max_top100, min(top100_vw_app) as min_top100
+        , max(top10_vw_app) as max_top10, min(top10_vw_app) as min_top10
+        , min(avg_top100_vw_rank) as max_avg_top100, max(avg_top100_vw_rank) as min_avg_top100
         -- by viral videos
-        , MAX(total_viral_videos) AS max_viral_videos, MIN(total_viral_videos) AS min_viral_videos
-        , MAX(top100_vid_app) AS max_top100_vid, MIN(top100_vid_app) AS min_top100_vid
-        , MAX(top10_vid_app) AS max_top10_vid, MIN(top10_vid_app) AS min_top10_vid
-        , MIN(avg_top100_vid_rank) AS max_avg_top100_vid, MAX(avg_top100_vid_rank) AS min_avg_top100_vid
-        , 1 AS max_rank, 100 AS min_rank
-    FROM view_aggregates
+        , max(total_viral_videos) as max_viral_videos, min(total_viral_videos) as min_viral_videos
+        , max(top100_vid_app) as max_top100_vid, min(top100_vid_app) as min_top100_vid
+        , max(top10_vid_app) as max_top10_vid, min(top10_vid_app) as min_top10_vid
+        , min(avg_top100_vid_rank) as max_avg_top100_vid, max(avg_top100_vid_rank) as min_avg_top100_vid
+        , 1 as max_rank, 100 as min_rank
+    from view_aggregates
 ), 
 
 normalized_view_aggregates as (
-    SELECT
+    select
         track_name
         , track_author
         , audio_category
@@ -49,24 +49,24 @@ normalized_view_aggregates as (
         , top10_vw_app
         , avg_top100_vw_rank
         , max_vw_rank
-        , (v.total_views - nf.min_views) / (nf.max_views - nf.min_views) AS norm_total_views
-        , (v.top100_vw_app - nf.min_top100) / (nf.max_top100 - nf.min_top100) AS norm_top100_app
-        , (v.top10_vw_app - nf.min_top10) / (nf.max_top10 - nf.min_top10) AS norm_top10_app
-        , (nf.min_avg_top100 - v.avg_top100_vw_rank) / (nf.min_avg_top100 - nf.max_avg_top100) AS norm_avg_top100_rank
-        , (nf.min_rank - v.max_vw_rank) / (nf.min_rank - nf.max_rank) AS norm_max_rank
+        , (v.total_views - nf.min_views) / (nf.max_views - nf.min_views) as norm_total_views
+        , (v.top100_vw_app - nf.min_top100) / (nf.max_top100 - nf.min_top100) as norm_top100_app
+        , (v.top10_vw_app - nf.min_top10) / (nf.max_top10 - nf.min_top10) as norm_top10_app
+        , (nf.min_avg_top100 - v.avg_top100_vw_rank) / (nf.min_avg_top100 - nf.max_avg_top100) as norm_avg_top100_rank
+        , (nf.min_rank - v.max_vw_rank) / (nf.min_rank - nf.max_rank) as norm_max_rank
         -- by viral videos
         , total_viral_videos
         , top100_vid_app
         , top10_vid_app
         , avg_top100_vid_rank
         , max_vid_rank
-        , (v.total_viral_videos - nf.min_viral_videos) / (nf.max_viral_videos - nf.min_viral_videos) AS norm_total_videos
-        , (v.top100_vid_app - nf.min_top100_vid) / (nf.max_top100_vid - nf.min_top100_vid) AS norm_top100_app_vid
-        , (v.top10_vid_app - nf.min_top10_vid) / (nf.max_top10_vid - nf.min_top10_vid) AS norm_top10_app_vid
-        , (nf.min_avg_top100_vid - v.avg_top100_vid_rank) / (nf.min_avg_top100_vid - nf.max_avg_top100_vid) AS norm_avg_top100_rank_vid
-        , (nf.min_rank - v.max_vid_rank) / (nf.min_rank - nf.max_rank) AS norm_max_rank_vid
+        , (v.total_viral_videos - nf.min_viral_videos) / (nf.max_viral_videos - nf.min_viral_videos) as norm_total_videos
+        , (v.top100_vid_app - nf.min_top100_vid) / (nf.max_top100_vid - nf.min_top100_vid) as norm_top100_app_vid
+        , (v.top10_vid_app - nf.min_top10_vid) / (nf.max_top10_vid - nf.min_top10_vid) as norm_top10_app_vid
+        , (nf.min_avg_top100_vid - v.avg_top100_vid_rank) / (nf.min_avg_top100_vid - nf.max_avg_top100_vid) as norm_avg_top100_rank_vid
+        , (nf.min_rank - v.max_vid_rank) / (nf.min_rank - nf.max_rank) as norm_max_rank_vid
         , total_views / total_viral_videos as avg_views_per_viral_video
-    FROM
+    from
         view_aggregates v, normalized_factors nf
 ),
 
