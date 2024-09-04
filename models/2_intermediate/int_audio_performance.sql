@@ -129,7 +129,7 @@ select
     , round(b.base_performance_score, 2) as performance_score_by_videos
     , round(b.consistency_score, 2) as consistency_score_by_videos
     , round(b.peak_score, 2) as peak_score_by_videos
-    , round(a.total_views / a.total_viral_videos, 2) as avg_views_per_viral_video,
+    , round(a.total_views / a.total_viral_videos, 0) as avg_views_per_viral_video,
 
 from view_metrics a
 join video_metrics b on a.track_name = b.track_name and a.track_author = b.track_author

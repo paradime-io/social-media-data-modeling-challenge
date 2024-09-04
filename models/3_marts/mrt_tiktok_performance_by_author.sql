@@ -7,9 +7,9 @@ with other_artists as (
 author as (
     select
         track_author
-        , case when track_author in (select distinct track_author from {{ ref('int_audio_performance')}}) then 'official artist'
-        or track_author in (select artist_list from other_artists)
-        else 'other / tiktok user'
+        , case when track_author in (select distinct track_artist from {{ ref('int_combined_song_list')}}) 
+            or track_author in (select artist_list from other_artists) then 'official artist'
+            else 'other / tiktok user'
         end as author_category
         , count(track_name) as audio_count
         -- view metrics
