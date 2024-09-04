@@ -57,3 +57,21 @@ For avid current and ex-TikTok users, how many of these audios do you remember?
 - *`add_genre.py`* (deprecated) script to assign genre based on attributes to song tracks missing genre values
 
 ### Data Lineage
+
+
+# Methodology + Metrics Definitions
+
+### Tools
+- **[Paradime](https://www.paradime.io/)** for SQL, dbt™
+- **[MotherDuck](https://www.motherduck.com/)** for data storage and computing
+- **[Hex](https://hex.tech/)** for analyses and data visualization
+
+### Data Preparation
+This analysis is built off of two datasets: spotify song data from two kaggle sources and tiktok top audio data that I scraped with AI.
+1. For spotify song data, ensured that the data from the two sources did not duplicate *`select distinct`* and removed variants of the 
+same song that had slightly different attributes using window functions: *`row_number()`* (ex: acousticness for variant A: .91, for variant B: .90)
+2. Because the tiktok top audio dataset was scraped, many fields were weirdly formatted. I used string parsing and datetime functions to
+extract the values I needed, in particular the user engagement data (viral videos, views) that are key for this analysis.
+
+### Key Metrics
+The core 
