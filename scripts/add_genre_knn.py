@@ -36,6 +36,7 @@ accuracy = accuracy_score(y_test, y_pred)
 # Print model accuracy
 # print("Accuracy of the model: {:.2f}%".format(accuracy * 100))
 
+# Print comparison of model outputs between train y-values and test y-values
 comparison_df = pd.DataFrame({'Actual': y_test, 'Predicted': y_pred})
 print(comparison_df.head(10))
 
