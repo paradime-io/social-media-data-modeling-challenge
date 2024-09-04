@@ -154,12 +154,12 @@ sources:
               dimension:
                 type: number
           - name: source
-            description: "Dataset source."
+            description: "Dataset source"
             meta:
               dimension:
                 type: string
           - name: year
-            description: "Dataset year."
+            description: "Dataset year"
             meta:
               dimension:
                 type: number
@@ -175,12 +175,12 @@ sources:
               dimension:
                 type: timestamp
           - name: track_name
-            description: "The title of the TikTok video"
+            description: "The title of the TikTok audio"
             meta:
               dimension:
                 type: string
           - name: track_author
-            description: "The artist featured in the video"
+            description: "The artist featured in the audio"
             meta:
               dimension:
                 type: string
