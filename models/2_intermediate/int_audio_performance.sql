@@ -94,41 +94,46 @@ video_metrics as (
                 , 'norm_max_rank_vid'
             ) }}
     from normalized_view_aggregates
-)
+),
 
+final as (
 select
     a.track_name
     , a.track_author
     , a.audio_category
     -- by views
     , a.total_views
-    , a.top100_vw_app
-    , a.top10_vw_app
-    , a.avg_top100_vw_rank
-    , a.max_vw_rank
-    , a.norm_total_views
-    , a.norm_top100_app
-    , a.norm_top10_app
-    , a.norm_avg_top100_rank
-    , a.norm_max_rank
-    , a.base_performance_score as performance_score_by_views
-    , a.consistency_score as consistency_score_by_views
-    , a.peak_score as peak_score_by_views
+    , round(a.top100_vw_app, 2) as top100_vw_app
+    , round(a.top10_vw_app, 2) as top10_vw_app
+    , round(a.avg_top100_vw_rank, 2) as avg_top100_vw_rank
+    , round(a.max_vw_rank, 2) as max_vw_rank
+    , round(a.norm_total_views, 2) as norm_total_views
+    , round(a.norm_top100_app, 2) as norm_top100_app
+    , round(a.norm_top10_app, 2) as norm_top10_app
+    , round(a.norm_avg_top100_rank, 2) as norm_avg_top100_rank
+    , round(a.norm_max_rank, 2) as norm_max_rank
+    , round(a.base_performance_score, 2) as performance_score_by_views
+    , round(a.consistency_score, 2) as consistency_score_by_views
+    , round(a.peak_score, 2) as peak_score_by_views
     -- by viral videos
     , a.total_viral_videos
-    , a.top100_vid_app
-    , a.top10_vid_app
-    , a.avg_top100_vid_rank
-    , a.max_vid_rank
-    , a.norm_total_videos
-    , a.norm_top100_app_vid
-    , a.norm_top10_app_vid
-    , a.norm_avg_top100_rank_vid
-    , a.norm_max_rank_vid
-    , b.base_performance_score as performance_score_by_videos
-    , b.consistency_score as consistency_score_by_videos
-    , b.peak_score as peak_score_by_videos
-    , a.total_views / a.total_viral_videos as avg_views_per_viral_video,
+    , round(a.top100_vid_app, 2) as top100_vid_app
+    , round(a.top10_vid_app, 2) as top10_vid_app
+    , round(a.avg_top100_vid_rank, 2) as avg_top100_vid_rank
+    , round(a.max_vid_rank, 2) as max_vid_rank
+    , round(a.norm_total_videos, 2) as norm_total_videos
+    , round(a.norm_top100_app_vid, 2) as norm_top100_app_vid
+    , round(a.norm_top10_app_vid, 2) as norm_top10_app_vid
+    , round(a.norm_avg_top100_rank_vid, 2) as norm_avg_top100_rank_vid
+    , round(a.norm_max_rank_vid, 2) as norm_max_rank_vid
+    , round(b.base_performance_score, 2) as performance_score_by_videos
+    , round(b.consistency_score, 2) as consistency_score_by_videos
+    , round(b.peak_score, 2) as peak_score_by_videos
+    , round(a.total_views / a.total_viral_videos, 2) as avg_views_per_viral_video,
 
 from view_metrics a
 join video_metrics b on a.track_name = b.track_name and a.track_author = b.track_author
+)
+
+select *
+from final
