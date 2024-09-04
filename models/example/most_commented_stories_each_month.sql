@@ -1,26 +1,26 @@
-WITH ranked_stories AS (
-    SELECT
+with ranked_stories as (
+    select
         title,
-        'https://news.ycombinator.com/item?id=' || id AS hn_url,
-        descendants AS nb_comments,
-        YEAR(timestamp) AS year,
-        MONTH(timestamp) AS month,
-        ROW_NUMBER()
-            OVER (
-                PARTITION BY YEAR(timestamp), MONTH(timestamp) 
-                ORDER BY descendants DESC
+        descendants as nb_comments,
+        'https://news.ycombinator.com/item?id=' || id as hn_url,
+        year(timestamp) as year,
+        month(timestamp) as month,
+        row_number()
+            over (
+                partition by year(timestamp), month(timestamp)
+                order by descendants desc
             )
-        AS rn
-    FROM {{ source('hn', 'hacker_news') }} 
-    WHERE type = 'story'
+            as rn
+    from {{ source('hn', 'hacker_news') }}
+    where type = 'story'
 )
 
-SELECT
+select
     year,
     month,
     title,
     hn_url,
     nb_comments
-FROM ranked_stories
-WHERE rn = 1
-ORDER BY year, month
+from ranked_stories
+where rn = 1
+order by year, month

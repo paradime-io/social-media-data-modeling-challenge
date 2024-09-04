@@ -1,9 +1,9 @@
-SELECT
-    YEAR(timestamp) AS year,
-    MONTH(timestamp) AS month,
-    COUNT(*) AS keyword_mentions
-FROM {{ source('hn', 'hacker_news') }} 
-WHERE
-    (title LIKE '%duckdb%' OR text LIKE '%duckdb%')
-GROUP BY year, month
-ORDER BY year ASC, month ASC
+select
+    year(timestamp) as year,
+    month(timestamp) as month,
+    count(*) as keyword_mentions
+from {{ source('hn', 'hacker_news') }}
+where
+    (title like '%duckdb%' or text like '%duckdb%')
+group by year, month
+order by year asc, month asc

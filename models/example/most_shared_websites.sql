@@ -1,8 +1,8 @@
-SELECT
-    regexp_extract(url, 'http[s]?://([^/]+)/', 1) AS domain,
-    count(*) AS count
+select
+    regexp_extract(url, 'http[s]?://([^/]+)/', 1) as domain,
+    count(*) as count
 
-FROM {{ source('hn', 'hacker_news') }} 
-WHERE url IS NOT NULL AND regexp_extract(url, 'http[s]?://([^/]+)/', 1) != ''
-GROUP BY domain
-ORDER BY count DESC
+from {{ source('hn', 'hacker_news') }}
+where url is not null and regexp_extract(url, 'http[s]?://([^/]+)/', 1) != ''
+group by domain
+order by count desc
