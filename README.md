@@ -15,8 +15,8 @@ Welcome to the [dbt™ Data Modeling Challenge - Social Media Edition](https://w
     - [Key Metrics & Definitions] (#key-metrics)
 4. [Key Insights & Visualizations] (#key-insights--visualizations)
     - [Data Profile]
-    - [2019 - Mid-2021: Audios/Artists That Took Over TikTok]
-    - [The "Best Performing" TikTok Audios - BUT... What Defines "Best Performing"]
+    - [Stat Stuffers of 2019 thru Mid-2021: Audios/Artists That Took Over TikTok]
+    - [The "Best Performing" TikTok Audios - Standardized and Scored]
     - [Predictors of Success: Which Song Attributes Do Well?]
     - [Bonus: The Stats Around These Iconic Audios]
 5. [Summary & Conclusions]
@@ -80,7 +80,7 @@ that are key for this analysis
 ### Key Metrics
 Since the focus of the analysis revolves around tiktok audio performance, I created a composite performance metric to score and compare
 each audio to identify which ones stand out. The composition of this metric is as follows:
-- **Total Views**: these are views amassed across all viral videos associated with an audio across the 30-month period
+- **Total Views**: these are views amassed across all viral videos associated with an audio across the 30-month period - in other words, viral views
 - **Top 100 Appearances**: number of times an audio appeared on any monthly top 100 leaderboard per tokboard.com
 - **Top 10 Appearances**: number of times an audio broke into any top 10 leaderboard by views
 - **Average Ranking**: average leaderboard rank when an audio has appeared on the leaderboard
@@ -103,6 +103,20 @@ performance calculation macro came in handy.
 # Key Insights & Visualizations
 
 ### Data Profile
+To start, let's take a quick look at the attributes of the dataset.
 
-To start, let's take a quick look at the general shape, size, and attributes of the data
-- avg 
+
+Right off the jump, three things stand out:
+- Transient nature of TikTok audio: the average top 100 leaderboard appearance is a mere 1.6, with official songs doing slightly better at 1.92. 
+This suggests that audio virality is short-lived (1-2 months), fads and trends shift rapidly, but also *every* audio has a shot and spot in the limelight.
+- Top performers heavily skew dataset: with viral video and viral view averages that nearly doubling the median, it appears that after a certain range of
+spots on the leaderboard, there is significant dropoff.
+
+
+Looking at the viral view and viral video count averages, 
+
+### Stat Stuffers of 2019 thru Mid-2021: Audios/Artists That Took Over TikTok
+
+### The "Best Performing" TikTok Audios - Standardized and Scored
+
+### Predictors of Success: Which Song Attributes Do Well?
