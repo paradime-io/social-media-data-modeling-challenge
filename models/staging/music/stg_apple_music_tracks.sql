@@ -1,5 +1,6 @@
 with base as (
     select
+        DISTINCT 
         isrc as apple_music_isrc,
         artistName as artist_name,
         name as track_name,

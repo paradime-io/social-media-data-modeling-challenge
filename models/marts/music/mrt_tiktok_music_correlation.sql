@@ -3,19 +3,16 @@
 with base as (
     select
         music_id,
-        track_title,
+        track_name,
         artist_name,
         sum(total_play_count) as total_play_count,
         sum(total_likes_count) as total_likes_count,
         sum(total_shares_count) as total_shares_count,
-        avg(spotify_popularity) as avg_spotify_popularity,
+        avg(popularity) as avg_spotify_popularity,
         sum(total_comment_count) AS total_comment_count
     from 
         {{ ref('int_tiktok_music_joined') }}
-    group by
-        music_id,
-        track_title,
-        artist_name
+    {{ group_by(3) }}
 ),
 
 correlation_matrix as (

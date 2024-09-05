@@ -1,11 +1,13 @@
 with base as (
     select
-       id as track_id, 
-       name as track_name, 
+       track_id, 
+       track_name, 
        popularity, 
-       duration_ms / 1000 as duration_seconds,
-       REPLACE(REPLACE(REPLACE(artists, '[', ''), ']', ''), '''', '') AS artists,
-       REPLACE(REPLACE(REPLACE(id_artists, '[', ''), ']', ''), '''', '') AS id_artists,
+       duration_seconds,
+       --REPLACE(REPLACE(REPLACE(artists, '[', ''), ']', ''), '''', '') AS artists,
+       --REPLACE(REPLACE(REPLACE(id_artists, '[', ''), ']', ''), '''', '') AS id_artists,
+       artists,
+       id_artists,
        release_date, 
        danceability, 
        energy, 
@@ -14,11 +16,11 @@ with base as (
        acousticness, 
        instrumentalness, 
        liveness, 
-       valence as positiveness, 
+       positiveness, 
        tempo, 
-       time_signature as beats_per_bar
+       beats_per_bar
      from 
-        {{ source('raw_data', 'spotify_tracks_2') }} t1 
+        {{ source('raw_data', 'spotify_tracks_data') }} t1 
     
 )
 

@@ -1,5 +1,6 @@
 with base as (
     select
+        DISTINCT 
         id as music_id,
         artist as artist_name,
         title as track_title,

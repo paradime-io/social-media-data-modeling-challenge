@@ -1,5 +1,6 @@
 with base as (
     select
+        DISTINCT 
         id as spotify_track_id,
         name as track_name,
         popularity as spotify_popularity,

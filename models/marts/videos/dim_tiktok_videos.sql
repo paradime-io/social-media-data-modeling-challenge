@@ -1,6 +1,7 @@
 with base as (
     select
         video_id,
+        music_id,
         caption,
         created_at,
         likes_count,
