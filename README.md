@@ -16,18 +16,18 @@ Welcome to the [dbt™ Data Modeling Challenge - Social Media Edition](https://w
 4. [Key Insights & Visualizations] (#key-insights--visualizations)
     - [Data Profile]
     - [2019 - Mid-2021: Audios/Artists That Took Over TikTok]
-    - [The "Best Performing" TikTok Audios - BUT What Defines "Best Performing"]
+    - [The "Best Performing" TikTok Audios - BUT... What Defines "Best Performing"]
     - [Predictors of Success: Which Song Attributes Do Well?]
     - [Bonus: The Stats Around These Iconic Audios]
 5. [Summary & Conclusions]
 6. [Reflection]
 
 # Intro & Objective
-Uncovering insights around tiktok audio popularity across a variety of criteria, specifically during TikTok's early days 
+Uncovering insights around tiktok audio popularity and performance across a variety of criteria, specifically during TikTok's early days 
 thru the first year of COVID (roughly). Across the 30-months this analysis was performed on, we'll be able to find out things like:
 1. In that time, who was the King / Queen of TikTok audio?
-2. What song held the most number 1 monthly leaderboard spots? Most top 10 appearances?
-3. Are official songs or original sounds more likely to go viral? 
+2. What audio held the most number 1 monthly leaderboard spots? Most top 10 appearances?
+3. Are official songs or original sounds more likely to dominate the popularity leaderboards? 
 
 For avid current and ex-TikTok users, how many of these audios do you remember? 
 
@@ -38,6 +38,8 @@ For avid current and ex-TikTok users, how many of these audios do you remember?
 - *`stg_tiktok_songs_on_spotify.sql`* 4 combined spotify datasets of popular tiktok songs between 2019 and 2022
 - *`stg_tiktok_top_audio.sql`* top 100 tiktok audios by month over a 30-month period scraped from tokboard.com (2019 to mid-2021)
 - *`other_artists.csv`* manually populated dataset that identifies official artists not included in the spotify datasets
+
+*Note: all datasets I used were outside of the ones provided.*
 
 ### Intermediate Models
 - *`int_tiktok_top_audio_cleaned.sql`* cleaned version of the scraped top 100 tiktok audio data
@@ -71,19 +73,18 @@ For avid current and ex-TikTok users, how many of these audios do you remember?
 This analysis is built off of two datasets: spotify song data from two kaggle sources and tiktok top audio data that I scraped with AI.
 1. For spotify song data, ensured that the data from the two sources did not duplicate *`select distinct`* and removed variants of the 
 same song that had slightly different attributes using window functions: *`row_number()`* (ex: acousticness for variant A: .91, for variant B: .90)
-2. Because the tiktok top audio dataset was scraped, many fields were weirdly formatted. I used string parsing and datetime functions to
-extract the values I needed, in particular the user engagement data (# of viral videos, # of views) that are key for this analysis
-
-Note: as I do not have access to all tiktok engagement data spanning across every video, I am using leaderboard data as a proxy.
+2. Because the tiktok top audio dataset was scraped, many fields were weirdly formatted (ex: numeric fields stored as '1.6M views'). I used 
+string parsing and datetime functions to extract the values I needed, in particular the user engagement data (# of viral videos, # of views) 
+that are key for this analysis
 
 ### Key Metrics
 Since the focus of the analysis revolves around tiktok audio performance, I created a composite performance metric to score and compare
 each audio to identify which ones stand out. The composition of this metric is as follows:
-- Total Views: these are views amassed across all viral videos associated with an audio across the 30-month period
-- Top 100 Appearances: number of times an audio appeared on any monthly top 100 leaderboard per tokboard.com
-- Top 10 Appearances: number of times an audio broke into any top 10 leaderboard by views
-- Average Ranking: average leaderboard rank when an audio has appeared on the leaderboard
-- Max Ranking: the highest ranking an audio has achieved
+- **Total Views**: these are views amassed across all viral videos associated with an audio across the 30-month period
+- **Top 100 Appearances**: number of times an audio appeared on any monthly top 100 leaderboard per tokboard.com
+- **Top 10 Appearances**: number of times an audio broke into any top 10 leaderboard by views
+- **Average Ranking**: average leaderboard rank when an audio has appeared on the leaderboard
+- **Max Ranking**: the highest ranking an audio has achieved
 
 Because these metrics operate on different scales, they were all normalized to 0-1 before being funneled into the following formula to 
 calculate the composite score. Score weighting was determined based on a subjective interpretation of performance.
@@ -102,3 +103,6 @@ performance calculation macro came in handy.
 # Key Insights & Visualizations
 
 ### Data Profile
+
+To start, let's take a quick look at the general shape, size, and attributes of the data
+- avg 
