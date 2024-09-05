@@ -14,7 +14,7 @@ with final as (
         bio,
         category,
         followers_count,
-        is_business_account,
+        account_type,
         case
             when followers_count <= 1000 then 'Micro (<= 1K)'
             when followers_count <= 10000 then 'Small (1K - 10K)'

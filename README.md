@@ -6,13 +6,22 @@ Project for the dbt™ data modeling challenge, Hosted by Paradime!
 
 ## **Table of Contents**
 1. [Introduction](#introduction)
-2. [Data Sources](#data-sources)
-3. [Methodology](#methodology)
-4. [Insights](#insights)
-5. [Conclusions](#conclusions)
+2. [Data Sources and Data Lineage](#data-sources-and-data-lineage-🕸️)
+   - [Sources and Seeds](#sources-and-seeds)
+   - [Staging Layer](#staging-layer)
+   - [Intermediate Layer](#intermediate-layer)
+   - [Analytics Layer](#analytics-layer)
+   - [Macros](#macros)
+   - [Data Lineage](#data-lineage)
+3. [Methodology](#methodology-🧪)
+   - [Tools Used](#tools-used)
+   - [Data Preparation and Applied Techniques](#data-preparation-and-applied-techniques)
+4. [Visualizations](#visualizations-📊)
+5. [Conclusion](#conclusion-🎬)
 
 ## **Introduction**
-This project focuses on driving Travel related insights from Instagram posts and correlates them to real life tourist activity.
+This project focuses on driving Travel 🧳 related insights from Instagram posts and correlates them to real life tourist activity. ✈️
+ 
 Instagram is chosen for the main social media source as it is one of the biggest platforms for travel bloggers and influencers.
 
 # **Data Sources and Data Lineage 🕸️**
@@ -116,7 +125,7 @@ models and analytics models can consume from anything upstream except the source
 - Since the BI tool, Hex, is a very powerful tool that allows for sql and python transformations, 
 the analytics models are designed be as user friendly as possible without cutting down on flexibility. That is why, the final tables don't contain many
 pre-aggregated columns. This a design choice made specific to the tool stack here and could be adjusted if the BI tool changes.
-
+- Using a color palette for optimum BI experience and visual consistency.
 
 # **Visualizations** 📊
 

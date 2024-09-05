@@ -50,6 +50,10 @@ final as (
         ic.category,
         ic.description,
         ic.comments,
+        case 
+            when ic.is_business_account then 'Business account'
+            else 'Individual account'
+        end as account_type,
 
         -- Numerics
         ic.likes_count,
@@ -60,8 +64,6 @@ final as (
         gt.international_arrivals,
         ic.likes_count + ic.comments_count as total_post_engagement,
 
-        -- Booleans
-        ic.is_business_account,
 
         -- Dates
         ic.post_date
