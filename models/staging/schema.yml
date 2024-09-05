@@ -35,3 +35,14 @@ models:
       - name: comments
         description: The total number of comments on the post.
 
+  - name: stg_slashdot
+    description: This view contains all Hacker News posts (stories), providing key details about each submission.
+
+    columns:
+      - name: id
+        description: Unique identifier for the post.
+        tests:
+          - unique
+          - not_null
+
+

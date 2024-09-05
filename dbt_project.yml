@@ -17,6 +17,8 @@ clean-targets:
 
 models:
   paradime_social_media_challenge:
+    sources:
+      +materialized: table
     staging:
       +materialized: view
     marts:
