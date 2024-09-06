@@ -63,9 +63,11 @@ One can certanly argue that high income increases the purchasing power in genera
 	- It is an easy-to-understand way to compare the cost of living and the value of currencies. It highlights the differences in pricing and economic conditions across countries.
 	- However, it doesn’t account for many factors that influence exchange rates, such as trade policies, market speculation, and economic conditions. The index is based on a single product, which may not represent the overall economy.
 
-- Visualization
+- The highest price for a Big Mac is payed by customers in Switzerland with 8.1 USD. Followed  by Uruguay and Norway with about 7 USD. Taiwan, Indonesia, Egypt and India are at the low end of the scale with 2.3 to 2.7 USD. 
+
 ![alt text](big_mac_price_by_country.png "Big Mac Price by Country (USD)")
-- Analysis
+
+These prices provide us in our scenario a simle way to estimate the living costs and the purchasing power of a countries residents. Following this Switzerland would be the most expensive place wo live where Taiwan would be the cheapest. The question is now how many Big Mac burgers can a resident in these country afford assuming he works as a developer in that country with the countries medium salary?
 
 ### Purchasing Power for Salaries 
 - The Big Mac Salary as a measure for purchasing power:
