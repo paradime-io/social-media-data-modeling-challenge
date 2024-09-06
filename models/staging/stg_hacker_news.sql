@@ -2,7 +2,7 @@ SELECT
     id,
     title,
     url,
-    by,
+    by AS author,
     timestamp AS creation_post_date,
     time AS creation_post_unix,
     score,

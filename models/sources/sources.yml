@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: src_scraper_slashdot
+    database: analytics
+    schema: dbt_social_media_challenge  
+    tables:
+      - name: src_scraper_slashdot
