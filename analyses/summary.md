@@ -57,6 +57,8 @@ One can certanly argue that high income increases the purchasing power in genera
 
 ![alt text](world_salary.png "World Map of Survey Salaries")
 
+Looking at geographical distribution of developer salaries one can identify clusters of high income reagions. 
+Such as north america, europe and oceania. The regions in asia, africa, south america and the middle east show a lower median salary. 
 
 ### Big Mac Price
 - Big Mac price distribution across countries:
@@ -74,6 +76,9 @@ These prices provide us in our scenario a simle way to estimate the living costs
 
 
 ![alt text](world_burger.png "World Map of Big Mac Price Index")
+
+
+In terms of living costs europa shows rather high prices. In asia, africa and the middle east are the lower prices can be found. 
 
 
 ### Purchasing Power for Salaries 
@@ -111,19 +116,24 @@ Taiwan marks an noteable exception with 13.4k burgers/year. Having the lowest co
 
 ![alt text](world_burger_salary.png "World Map of Big Mac Salary")
 
+In terms of purchasing power the reagions norht america, europa and oceania are displaying high values in addition to east asia encompasing countries such as japan and china.
+
 ### Combine Work and Living Considerations
 
-To determine the best combination of working in one country and living in another:
-	- **Work Country Selection**: Identify the country where the **nominal salary** is highest.
-	- **Live Country Selection**: Identify the country where the **Big Mac Price** (cost of living) is lowest.
+To determine the best combination of working in one country and living in another 
+
 
 **Composite Score**:
-	For each pair of work and live countries, calculate the potential purchasing power by considering how much of the work country’s salary could be spent in the living country:
+	For each pair of work and live countries the potential purchasing power by considering how much of the work country’s salary could be spent in the living country:
 	
-  $$
-  \text{Composite Score} = \frac{\text{Survey Salary in Work Country}}{\text{Big Mac Price in Live Country}}
-  $$
+  $$\text{Composite Score} = \frac{\text{Survey Salary in Work Country}}{\text{Big Mac Price in Live Country}}$$
+
   This score indicates how many Big Macs you could buy if you earned a salary in one country and lived in another, giving you a measure of the best work-live combination.
+
+The best compbination for this would be the United States as work country with a median salary of 143k USD and Taiwan the live country with the lowest cost of living measured by the Bif Mac price of 2.3 USD. 
+Thus resulting in a purchasing power of 62k burgers per year, which is 2.5 times higher than in the United States. 
+
+However, apart from the purchasing power other factors play a significant role for quality of live in a live country such as criminal rates, housing etc., which have not been considered in this study.
 
 
 ## Conclusions
