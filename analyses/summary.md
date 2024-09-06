@@ -73,7 +73,7 @@ The highest price for a Big Mac is payed by customers in Switzerland with 8.1 US
 These prices provide us in our scenario a simle way to estimate the living costs and the purchasing power of a countries residents. Following this Switzerland would be the most expensive place wo live where Taiwan would be the cheapest. The question is now how many Big Mac burgers can a resident in these country afford assuming he works as a developer in that country with the countries medium salary?
 
 
-![alt text](world_bigmac.png "World Map of Big Mac Price Index")
+![alt text](world_burger.png "World Map of Big Mac Price Index")
 
 
 ### Purchasing Power for Salaries 
@@ -109,7 +109,7 @@ Developers living and working in Venezuela and Pakistan have the lowest purchasi
 Taiwan marks an noteable exception with 13.4k burgers/year. Having the lowest cost of living for resdent developers with a burger price of 2.3 USD and a median salary of about 30.8k USD/year developers may enjoy the purchasing power on the level of Switzerland. 
 
 
-![alt text](world_bigmac_salary.png "World Map of Big Mac Salary")
+![alt text](world_burger_salary.png "World Map of Big Mac Salary")
 
 ### Combine Work and Living Considerations
 
