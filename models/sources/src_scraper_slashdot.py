@@ -15,7 +15,7 @@ class WebScraper:
             response.raise_for_status()
             return response.content
         except requests.exceptions.RequestException as e:
-            print(f"Failed to fetch {url}: {e}", level='error')
+            print(f"Failed to fetch {url}: {e}")
             return None
 
     def extract_links(self, page_content):
@@ -103,7 +103,7 @@ class WebScraper:
 # DBT model function
 def model(dbt, session):
     base_url = "https://slashdot.org/archive.pl?op=bytime&keyword=&year=2022&page="
-    total_pages = 1
+    total_pages = 29
 
     scraper = WebScraper(base_url, total_pages)
     scraper.run()
