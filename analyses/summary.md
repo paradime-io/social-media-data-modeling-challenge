@@ -47,6 +47,7 @@ Data lineage image:
 
 ### Survey Salary 
 - Salary distribution across countries
+
 Not suprisingly the companies with the highes median paying salary of 143k USD are located in the United States. With some distance followed by Israel and Switzerland with approximately 110k USD.
 At the low end of the scale there are Indonesia, Pakistan and Egypt with 7k to 9k USD per year. 
 
@@ -55,7 +56,13 @@ At the low end of the scale there are Indonesia, Pakistan and Egypt with 7k to 9
 One can certanly argue that high income increases the purchasing power in general.  But what if a high income still only enables a mediocre state of life because of high cost of living. This insight cannot be extracted solely from the salary alone. For that other factors such as a price index has to be taken into account. 
 
 ### Big Mac Price
-- Title
+- Big Mac price distribution across countries:
+
+	- The Big Mac Index is a simple informal way to measure the purchasing power parity (PPP) between different currencies. It was introduced by The Economist in 1986. 
+	-	The Big Mac is chosen because it is a standardized product available in many countries, making it a good benchmark. The price of a Big Mac is compared across different countries. For example, if a Big Mac costs $5 in the US and £4 in the UK, the exchange rate implied by the Big Mac Index would be 1.25 ($5/£4). By comparing the local prices of Big Macs, the index helps to determine whether a currency is undervalued or overvalued relative to the US dollar.
+	- It is an easy-to-understand way to compare the cost of living and the value of currencies. It highlights the differences in pricing and economic conditions across countries.
+	- However, it doesn’t account for many factors that influence exchange rates, such as trade policies, market speculation, and economic conditions. The index is based on a single product, which may not represent the overall economy.
+
 - Visualization
 ![alt text](big_mac_price_by_country.png "Big Mac Price by Country (USD)")
 - Analysis
