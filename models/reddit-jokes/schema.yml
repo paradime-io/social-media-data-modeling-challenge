@@ -1,38 +1,43 @@
 version: 2
 
 models:
-  - name: reddit_sentiment_nsfw
-    description: "Sentiment and NSFW information for Reddit posts"
+  - name: sentiment_nsfw
+    description: 'Table capturing sentiment analysis and NSFW indicators'
     columns:
-      - name: row_id
-        description: "Unique identifier based on the row number of reddit_data"
+      - name: row_number
+        description: 'Row number of the reddit_data'
         tests:
           - unique
           - not_null
       - name: sentiment_tone
-        description: "Tone of the sentiment"
+        description: 'Tone of the sentiment (e.g., humorous)'
       - name: sentiment_magnitude
-        description: "Magnitude of the sentiment"
+        description: 'Magnitude of the sentiment'
       - name: nsfw
-        description: "Whether the content is NSFW"
+        description: 'Indicates if content is NSFW or not'
         tests:
           - accepted_values:
               values: [true, false]
 
-  - name: reddit_topics_nouns_products
-    description: "Topics, nouns, and products mentioned in Reddit posts"
+  - name: topics_nouns_products
+    description: 'Table capturing main topics, important nouns, and products'
     columns:
-      - name: row_id
-        description: "Unique identifier based on the row number of reddit_data"
+      - name: id
+        description: 'Unique identifier for each row'
+        tests:
+          - unique
+          - not_null
+      - name: row_number
+        description: 'Row number of the reddit_data'
         tests:
           - not_null
-      - name: item_type
-        description: "Type of the item (topic, noun, or product)"
+      - name: type
+        description: 'Type of the entry (main_topic, important_noun, or product)'
         tests:
           - accepted_values:
-              values: ['topic', 'noun', 'product','human']
-      - name: item_value
-        description: "The actual topic, noun, or product"
+              values: ['main_topic', 'important_noun', 'product','human']
+      - name: value
+        description: 'The actual topic, noun, or product'
         tests:
           - not_null
 
