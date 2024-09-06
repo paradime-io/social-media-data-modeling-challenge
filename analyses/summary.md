@@ -46,11 +46,13 @@ Data lineage image:
 ## Insights
 
 ### Survey Salary 
-- Salary Distribution across countries
-- Visualization
+- Salary distribution across countries
+Not suprisingly the companies with the highes median paying salary of 143k USD are located in the United States. With some distance followed by Israel and Switzerland with approximately 110k USD.
+At the low end of the scale there are Indonesia, Pakistan and Egypt with 7k to 9k USD per year. 
+
 ![alt text](median_survey_salary_by_country.png "Median Salary by Country (USD)")
-- Analysis
-- Rank the countries based on the adjusted salary to determine where the salary gives the highest purchasing power.
+
+One can certanly argue that high income increases the purchasing power in general.  But what if a high income still only enables a mediocre state of life because of high cost of living. This insight cannot be extracted solely from the salary alone. For that other factors such as a price index has to be taken into account. 
 
 ### Big Mac Price
 - Title
