@@ -73,9 +73,9 @@ These prices provide us in our scenario a simle way to estimate the living costs
 - The Big Mac Salary as a measure for purchasing power:
 The basic idea is to adjust the nominal salary in each country by the Big Mac Index to get a sense of what that salary is really worth in terms of purchasing power.
 
-   $$
+   \[
    \text{Big Mac Salary} = \frac{\text{Survey Salary in USD}}{\text{Big Mac Price in USD}}
-   $$
+   \]
    The **Survey Salary** denotes the median salary for each country from the Stack Overflow survey in USD, that was converted from local currency by the data provider.
     The **Big Mac Price** acts as a measure of how expensive it is to live in each country. It typically provides the cost of a Big Mac converted in USD by the data provider.
    This measurement gives us the number of Big Macs that the nominal salary can buy. The higher this number, the more purchasing power the salary has.
