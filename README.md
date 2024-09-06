@@ -14,11 +14,10 @@ Welcome to the [dbt™ Data Modeling Challenge - Social Media Edition](https://w
     - [Data Preparation] (#data-preparation)
     - [Key Metrics & Definitions] (#key-metrics)
 4. [Key Insights & Visualizations] (#key-insights--visualizations)
-    - [Data Profile]
+    - [Data Profile - What Stands Out]
     - [Stat Stuffers of 2019 thru Mid-2021: Audios/Artists That Took Over TikTok]
     - [The "Best Performing" TikTok Audios - Standardized and Scored]
     - [Predictors of Success: Which Song Attributes Do Well?]
-    - [Bonus: The Stats Around These Iconic Audios]
 5. [Summary & Conclusions]
 6. [Reflection]
 
@@ -28,6 +27,10 @@ thru the first year of COVID (roughly). Across the 30-months this analysis was p
 1. In that time, who was the King / Queen of TikTok audio?
 2. What audio held the most number 1 monthly leaderboard spots? Most top 10 appearances?
 3. Are official songs or original sounds more likely to dominate the popularity leaderboards? 
+
+-- Using leaderboard data as a proxy for a more comprehensive dataset to get an idea of the TikTok landscape across this time period
+-- The two engagement metrics I'm most closely focusing on is viral views and viral video count. A good way to think about these metrics is the 
+-- reach of these audios in the form of viral content created and viral content consumed.
 
 For avid current and ex-TikTok users, how many of these audios do you remember? 
 
@@ -102,21 +105,62 @@ performance calculation macro came in handy.
 
 # Key Insights & Visualizations
 
-### Data Profile
-To start, let's take a quick look at the attributes of the dataset.
+### Data Profile - What Stands Out?
+To start, let's take a quick look at the attributes of the dataset. (See references section for all song YouTube links)
 
 
-Right off the jump, three things stand out:
-- Transient nature of TikTok audio: the average top 100 leaderboard appearance is a mere 1.6, with official songs doing slightly better at 1.92. 
-This suggests that audio virality is short-lived (1-2 months), fads and trends shift rapidly, but also *every* audio has a shot and spot in the limelight.
-- Top performers heavily skew dataset: with viral video and viral view averages that nearly doubling the median, it appears that after a certain range of
+Right off the jump, a couple things stand out:
+1. Transient nature of TikTok audio: the average top 100 leaderboard appearance is a mere 1.6, with official songs doing slightly better at 1.92. 
+This suggests that audio virality is short-lived (1-2 months), fads and trends shift rapidly, but also that *every* audio has a shot and spot in the limelight.
+2. Top performers heavily skew dataset: with viral video and viral view averages nearly doubling the median, it appears that after a certain range of
 spots on the leaderboard, there is significant dropoff.
 
 
-Looking at the viral view and viral video count averages, 
+This chart sheds more light onto our second observation - top 10 audios appear to peak significantly higher than the rest of the top 100. This could be
+due to TikTok's algorithm or a reflection the user base's capacity to push and promote viral trends or something else entirely. This, however it outside the
+scope of this analysis.
 
 ### Stat Stuffers of 2019 thru Mid-2021: Audios/Artists That Took Over TikTok
+Before we dive into the meat of this analysis, let's take a look at the top performing audios and artists by gross stats alone.
+
+Unsurprisingly, 
+
+
+Very clearly, official songs dominate the top 10 leaderboards
+-- total views
+-- total viral videos
+https://www.youtube.com/watch?v=JdOv2Qle4fM (Bagaikan Langit (cover))
+https://www.youtube.com/watch?v=E0gFA08-9xM (Laxed (Siren Beat))
 
 ### The "Best Performing" TikTok Audios - Standardized and Scored
+Moving onto the main course of this analysis, we'll score and rank each audio across this period using a composite performance score weighted comprehensively
+using a combination of gross stats and virality/popularity relative to the competition. See methodology here: 
+
+
+reaffirms the balance of the original performance score
+
+Final jursidiction
+- measure reach in two ways - viral content created and viral content consumed
 
 ### Predictors of Success: Which Song Attributes Do Well?
+-- more likely to be consistent or peak
+-- which variables highly impact performance
+
+### Bonus
+-- Movement of Monkey Spinning Monkeys
+-- Most dominant #1
+-- Final top 10 more representative after late-2019 - skewed by total view count (as TikTok grew) or due to the wild-west nature of early TikTok
+
+-- Lottery (Renegade)
+-- Roxanne
+
+
+# Conclusion
+
+# Reflection
+All things considered the dataset I used was pretty limited, given that I joined the challenge a little over a week before the due date
+- better dataset (more comprehensive, with more attributes, more recent) - more accurate time series analysis
+- Look at things like geography (where are these values coming from)
+- Do a deeper analysis on what drives virality - number of trends/fads associated with each audio (hashtag analysis), accessibility of an audio
+- D)
+- Are there any Christmas songs that can compete with Mariah Carey
