@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: reddit_sentiment_nsfw
+    description: "Sentiment and NSFW information for Reddit posts"
+    columns:
+      - name: row_id
+        description: "Unique identifier based on the row number of reddit_data"
+        tests:
+          - unique
+          - not_null
+      - name: sentiment_tone
+        description: "Tone of the sentiment"
+      - name: sentiment_magnitude
+        description: "Magnitude of the sentiment"
+      - name: nsfw
+        description: "Whether the content is NSFW"
+        tests:
+          - accepted_values:
+              values: [true, false]
+
+  - name: reddit_topics_nouns_products
+    description: "Topics, nouns, and products mentioned in Reddit posts"
+    columns:
+      - name: row_id
+        description: "Unique identifier based on the row number of reddit_data"
+        tests:
+          - not_null
+      - name: item_type
+        description: "Type of the item (topic, noun, or product)"
+        tests:
+          - accepted_values:
+              values: ['topic', 'noun', 'product','human']
+      - name: item_value
+        description: "The actual topic, noun, or product"
+        tests:
+          - not_null
+
+    config:
+      materialized: 'table'

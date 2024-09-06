@@ -1,15 +1,15 @@
-   select
-   type,
+select
+    type,
     id,
-subid,
-subname,
-subnsfw,
-created_utc,
-permalink,
-domain,
-url,
-selftext,
-title,
-score
-   from
-       analytics.reddit_jokes
+    subid,
+    subname,
+    subnsfw,
+    created_utc,
+    permalink,
+    domain,
+    url,
+    selftext,
+    title,
+    score
+from
+    analytics.reddit_jokes
