@@ -19,3 +19,6 @@ models:
   paradime_social_media_challenge:
     example:
       +materialized: view
+  reddit-jokes:
+       jokes:
+         +enabled: true
