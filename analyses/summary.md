@@ -1,4 +1,5 @@
 
+
 # Social Media Data Analysis - dbt™ Modeling Challenge
 
 ## Table of Contents
@@ -30,7 +31,6 @@ Data lineage image:
 - Paradime: SQL and dbt™ development
 - MotherDuck: Data storage and computing
 - Hex: Data visualization
-- ChatGPT: Language style
 
 ### Applied Techniques
 - Data cleansing:
@@ -38,97 +38,74 @@ Data lineage image:
 		- Two columns contain the salary data in the local currency "*CompTotal*" and "*ConvertedCompYearly*" in the dollar currency. The latter column contained empty values declared as "*NA*" that were removed. As statet in the methodology section the salaries from user currencies to USD were converted using the exchange rate on June 11, 2024 [Methodology | 2024 Stack Overflow Developer Survey](https://survey.stackoverflow.co/2024/methodology/#general).
 	- bigmac dataset:
 		- The data provided is cleaned and well formated. The most recent dataset range was selected for further analyses, which is from July 2024.
+	- A total number of 58 countries with at least 20 responses are considered 
+		- Where Guatemala has the lowest number of responses with 21 and the United States the largest numbre with 4,677 developers
 - Key measures: 
-	- In the aggregated data the median was used to compare the measured, because in contrast to the average the median is not sensitive to outliers. 
+	- In the aggregated data the median was used to compare the measured values, because in contrast to the average the median is not sensitive to outliers. 
 
 ## Insights
 
-### Salary Insights
+### Survey Salary 
 - Salary Distribution across countries
 - Visualization
+![alt text](median_survey_salary_by_country.png "Median Salary by Country (USD)")
 - Analysis
+- Rank the countries based on the adjusted salary to determine where the salary gives the highest purchasing power.
 
-### Big Mac Index Insights
+### Big Mac Price
 - Title
 - Visualization
+![alt text](big_mac_price_by_country.png "Big Mac Price by Country (USD)")
 - Analysis
 
-### Purchasing Power for Salaries Insights
-- Title
+### Purchasing Power for Salaries 
+- The Big Mac Salary as a measure for purchasing power:
+The basic idea is to adjust the nominal salary in each country by the Big Mac Index to get a sense of what that salary is really worth in terms of purchasing power.
+
+   $$
+   \text{Big Mac Salary} = \frac{\text{Survey Salary in USD}}{\text{Big Mac Price in USD}}
+   $$
+   The **Survey Salary** denotes the median salary for each country from the Stack Overflow survey in USD, that was converted from local currency by the data provider.
+    The **Big Mac Price** acts as a measure of how expensive it is to live in each country. It typically provides the cost of a Big Mac converted in USD by the data provider.
+   This measurement gives us the number of Big Macs that the nominal salary can buy. The higher this number, the more purchasing power the salary has.
+
+- Example Calculation
+Let’s consider a simplified example to illustrate the process:
+	- *Country A (Switzerland):*
+	  - Survey Salary: $111,417 USD/year
+	  - Big Mac Price: $8.10 USD
+	  - Big Mac Salary: $\frac{111,417}{8.1} = 13,755$ Big Macs/year
+	  
+	- *Country B (Canada):*
+	  - Survey Salary: $87,231 USD/year
+	  - Big Mac Price: $5.50 USD
+	  - Big Mac Salary: $\frac{87,231}{5.5} = 15,860$ Big Macs/year
+
+In this example, even though Switzerland has a higher nominal salary, the adjusted salary indicates that in terms of purchasing power (using the Big Mac as a proxy), Switzerland is not as advantageous as it might seem compared to Canada. This reflects the higher cost of living in Switzerland.
+
+- **Combine Work and Living Considerations**
+To determine the best combination of working in one country and living in another:
+	- **Work Country Selection**: Identify the country where the **nominal salary** is highest.
+	- **Live Country Selection**: Identify the country where the **Big Mac Price** (cost of living) is lowest.
+
+	-	**Composite Score**:
+	For each pair of work and live countries, calculate the potential purchasing power by considering how much of the work country’s salary could be spent in the living country:
+  
+  $$
+  \text{Composite Score} = \frac{\text{Survey Salary in Work Country}}{\text{Big Mac Price in Live Country}}
+  $$
+  This score indicates how many Big Macs you could buy if you earned a salary in one country and lived in another, giving you a measure of the best work-live combination.
+
+
 - Visualization
+![alt text](median_big_mac_salary_by_country.png "Median Big Mac Salary by Country (USD)")
 - Analysis
 
 ## Conclusions
 [Summarize key findings and their implications]
 
-
-### 1. **Calculate the Purchasing Power Parity (PPP) Adjusted Salary**
-
-The basic idea is to adjust the nominal salary in each country by the Big Mac Index to get a sense of what that salary is really worth in terms of purchasing power.
-
-#### Steps:
-
-1. **Nominal Salary**: Start with the nominal (unadjusted) average salary for each country from the Stack Overflow survey.
-
-2. **Big Mac Index**: Use the Big Mac Index as a measure of how expensive it is to live in each country. The Big Mac Index typically provides the cost of a Big Mac in local currency and/or in USD.
-
-3. **Adjustment Formula**:
-   - Convert the Big Mac price in each country to a common currency, typically USD (if it’s not already).
-   - Calculate the **"Salary to Big Mac Ratio"**: This ratio tells you how many Big Macs a person can buy with their salary, giving a direct measure of purchasing power.
-   
-   $$
-   \text{Adjusted Salary} = \frac{\text{Nominal Salary in USD}}{\text{Big Mac Price in USD}}
-   $$
-
-   This gives you the number of Big Macs that the nominal salary can buy. The higher this number, the more purchasing power the salary has.
-
-4. **Comparison Across Countries**:
-   - **Adjusted Salary Comparison**: Compare the adjusted salaries across different countries. A higher adjusted salary means that the nominal salary, when adjusted for cost of living, has more purchasing power.
-   - **Rank Countries**: Rank the countries based on the adjusted salary to determine where the salary gives the highest purchasing power.
-
-### 2. **Example Calculation**
-
-Let’s consider a simplified example to illustrate the process:
-
-- **Country A (Switzerland):**
-  - Nominal Salary: $120,000 USD/year
-  - Big Mac Price: $6.50 USD
-  - Adjusted Salary: $\frac{120,000}{6.5} \approx 18,462$ Big Macs/year
-
-- **Country B (India):**
-  - Nominal Salary: $30,000 USD/year
-  - Big Mac Price: $2.50 USD
-  - Adjusted Salary: $\frac{30,000}{2.5} = 12,000$ Big Macs/year
-
-In this example, even though Switzerland has a higher nominal salary, the adjusted salary indicates that in terms of purchasing power (using the Big Mac as a proxy), Switzerland is not as advantageous as it might seem compared to India. This reflects the higher cost of living in Switzerland.
-
-### 3. **Combine Work and Living Considerations**
-
-To determine the best combination of working in one country and living in another:
-
-- **Work Country Selection**: Identify the country where the **nominal salary** is highest.
-- **Live Country Selection**: Identify the country where the **Big Mac Index** (cost of living) is lowest.
-
-#### Create a Composite Score:
-
-- For each pair of work and live countries, calculate the potential purchasing power by considering how much of the work country’s salary could be spent in the living country:
-  
-  $$
-  \text{Composite Score} = \frac{\text{Nominal Salary in Work Country}}{\text{Big Mac Price in Live Country}}
-  $$
-
-- This score indicates how many Big Macs you could buy if you earned a salary in one country and lived in another, giving you a measure of the best work-live combination.
-
-### 4. **Visualization and Interpretation**
-
-- **Heatmap**: Create a heatmap that visualizes the composite scores for each combination of work and live countries, making it easy to identify the best options.
-  
-- **Bar Charts**: Display adjusted salaries side-by-side for different countries to show the effect of the cost of living.
-
-### 5. **Discussion of Insights**
-
-- **Purchasing Power vs. Nominal Salary**: Explain how nominal salary can be misleading without considering purchasing power. For example, even though salaries in Switzerland are high, the high cost of living reduces the actual value of that salary.
+- **Purchasing Power vs. Survey Salary**: Explain how nominal salary can be misleading without considering purchasing power. For example, even though salaries in Switzerland are high, the high cost of living reduces the actual value of that salary.
   
 - **Best Combinations**: Discuss the optimal combinations of countries for working and living based on the composite score, and the potential trade-offs involved.
 
-By using this method, you can better understand the real value of salaries across different countries and how to maximize your standard of living by considering both where you work and where you live.
+By using this method, you as a digital nomad can better understand the real value of salaries across different countries and how to maximize your standard of living by considering both where you work and where you live.
