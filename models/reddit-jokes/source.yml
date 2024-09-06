@@ -3,10 +3,10 @@ version: 2
 sources:
   - name: reddit_data
     description: 'Reddit posts and comments data'
-    database: your_database_name  # Replace with your actual database name
-    schema: your_schema_name      # Replace with your actual schema name
+    database: analytics  # Replace with your actual database name
+    schema: main      # Replace with your actual schema name
     tables:
-      - name: reddit_posts_comments
+      - name: reddit_jokes
         description: 'Combined table of Reddit posts and comments'
         columns:
           - name: type
