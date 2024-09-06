@@ -120,8 +120,7 @@ In terms of purchasing power the reagions norht america, europa and oceania are 
 
 ### Combine Work and Living Considerations
 
-To determine the best combination of working in one country and living in another 
-
+To determine the best combination of working in one country and living in another the following measure is introduced.
 
 **Composite Score**:
 	For each pair of work and live countries the potential purchasing power by considering how much of the work country’s salary could be spent in the living country:
@@ -130,7 +129,11 @@ To determine the best combination of working in one country and living in anothe
 
   This score indicates how many Big Macs you could buy if you earned a salary in one country and lived in another, giving you a measure of the best work-live combination.
 
-The best compbination for this would be the United States as work country with a median salary of 143k USD and Taiwan the live country with the lowest cost of living measured by the Bif Mac price of 2.3 USD. 
+
+![alt text](big_mac_salary_composite_score.png "Composite Score of Big Mac Salaries")
+
+
+The best combination for this would be the United States as work country with a median salary of 143k USD and Taiwan the live country with the lowest cost of living measured by the Bif Mac price of 2.3 USD. 
 Thus resulting in a purchasing power of 62k burgers per year, which is 2.5 times higher than in the United States. 
 
 However, apart from the purchasing power other factors play a significant role for quality of live in a live country such as criminal rates, housing etc., which have not been considered in this study.
