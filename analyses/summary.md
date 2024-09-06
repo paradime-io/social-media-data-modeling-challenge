@@ -63,7 +63,7 @@ One can certanly argue that high income increases the purchasing power in genera
 	- It is an easy-to-understand way to compare the cost of living and the value of currencies. It highlights the differences in pricing and economic conditions across countries.
 	- However, it doesn’t account for many factors that influence exchange rates, such as trade policies, market speculation, and economic conditions. The index is based on a single product, which may not represent the overall economy.
 
-- The highest price for a Big Mac is payed by customers in Switzerland with 8.1 USD. Followed  by Uruguay and Norway with about 7 USD. Taiwan, Indonesia, Egypt and India are at the low end of the scale with 2.3 to 2.7 USD. 
+The highest price for a Big Mac is payed by customers in Switzerland with 8.1 USD. Followed  by Uruguay and Norway with about 7 USD. Taiwan, Indonesia, Egypt and India are at the low end of the scale with 2.3 to 2.7 USD. 
 
 ![alt text](big_mac_price_by_country.png "Big Mac Price by Country (USD)")
 
@@ -74,7 +74,7 @@ These prices provide us in our scenario a simle way to estimate the living costs
 The basic idea is to adjust the nominal salary in each country by the Big Mac Index to get a sense of what that salary is really worth in terms of purchasing power.
 
    $$\text{Big Mac Salary} = \frac{\text{Survey Salary in USD}}{\text{Big Mac Price in USD}}$$
-   
+
    The **Survey Salary** denotes the median salary for each country from the Stack Overflow survey in USD, that was converted from local currency by the data provider.
     The **Big Mac Price** acts as a measure of how expensive it is to live in each country. It typically provides the cost of a Big Mac converted in USD by the data provider.
    This measurement gives us the number of Big Macs that the nominal salary can buy. The higher this number, the more purchasing power the salary has.
@@ -93,6 +93,15 @@ Let’s consider a simplified example to illustrate the process:
 
 In this example, even though Switzerland has a higher nominal salary, the adjusted salary indicates that in terms of purchasing power (using the Big Mac as a proxy), Switzerland is not as advantageous as it might seem compared to Canada. This reflects the higher cost of living in Switzerland.
 
+![alt text](median_big_mac_salary_by_country.png "Median Big Mac Salary by Country (USD)")
+
+The hightest Big Mac Salaries i.e. number of Big Mac burgers a developer can afford with a median salary in a country are for Israel and the United States with roughly 25k burgers per year. Surprisingly, although Israel has a significantly lower median salaray compared to the US with a difference of about $\Delta$ 30k USD. Israel has also lower cost of living in terms of the Big Mac price of 4.5 USD compared to the US with 5.7 USD.
+Switzerland on the other hand having the highes cost of living, where a resident developer can afford only 13.7k burger/year dispite having the third largest median salary.
+Developers residing in Indonesia and Egypt have the one of the lowest median salaries but also one of the lowest cost of living, resulting in a purchasing power of 2.9k and 3.8k burgers/year, respectively.
+Developers living and working in Venezuela and Pakistan have the lowest purchasing power of 2.1k and 2.2 burgers/year. Venezuela has a rather high Big Mac price of 5 USD, that is higher than tha of Israel. At the same time it has the fourth lowest median salary for developers with about 10.8k USD per year. 
+Taiwan marks an noteable exception with 13.4k burgers/year. Having the lowest cost of living for resdent developers with a burger price of 2.3 USD and a median salary of about 30.8k USD/year developers may enjoy the purchasing power on the level of Switzerland. 
+
+
 - **Combine Work and Living Considerations**
 To determine the best combination of working in one country and living in another:
 	- **Work Country Selection**: Identify the country where the **nominal salary** is highest.
@@ -101,15 +110,9 @@ To determine the best combination of working in one country and living in anothe
 	-	**Composite Score**:
 	For each pair of work and live countries, calculate the potential purchasing power by considering how much of the work country’s salary could be spent in the living country:
   
-  $$
-  \text{Composite Score} = \frac{\text{Survey Salary in Work Country}}{\text{Big Mac Price in Live Country}}
-  $$
+  $$ \text{Composite Score} = \frac{\text{Survey Salary in Work Country}}{\text{Big Mac Price in Live Country}}$$
+  
   This score indicates how many Big Macs you could buy if you earned a salary in one country and lived in another, giving you a measure of the best work-live combination.
-
-
-- Visualization
-![alt text](median_big_mac_salary_by_country.png "Median Big Mac Salary by Country (USD)")
-- Analysis
 
 ## Conclusions
 [Summarize key findings and their implications]
