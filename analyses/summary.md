@@ -96,12 +96,12 @@ Let’s consider a simplified example to illustrate the process:
 	- *Country A (Switzerland):*
 	  - Survey Salary: $111,417 USD/year
 	  - Big Mac Price: $8.10 USD
-	  - Big Mac Salary: $\frac{111,417}{8.1} = 13,755 burgers/year
+	  - Big Mac Salary: $\frac{111,417}{8.1} = 13,755$ burgers/year
 	  
 	- *Country B (Canada):*
 	  - Survey Salary: $87,231 USD/year
 	  - Big Mac Price: $5.50 USD
-	  - Big Mac Salary: $\frac{87,231}{5.5} = 15,860 burgers/year
+	  - Big Mac Salary: $\frac{87,231}{5.5} = 15,860$ burgers/year
 
 In this example, even though Switzerland has a higher nominal salary, the adjusted salary indicates that in terms of purchasing power (using the Big Mac as a proxy), Switzerland is not as advantageous as it might seem compared to Canada. This reflects the higher cost of living in Switzerland.
 
