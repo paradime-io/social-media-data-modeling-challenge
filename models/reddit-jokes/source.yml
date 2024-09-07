@@ -8,3 +8,5 @@ sources:
     schema: main  
     tables:
       - name: reddit_jokes
+      - name: jokes_sn
+      - name: jokes_features

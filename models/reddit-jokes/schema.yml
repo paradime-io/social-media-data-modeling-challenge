@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: reddit_jokes_in_scope
+    description: "This model counts the monthly mentions a the keyword (here duckdb) in the title or text of Hacker News posts, organized by year and month."
+  - name: reddit_jokes_topic_with_sn
+    description: "This model calculates the total number of comments for each story and identifies the most commented story of each month."
+  - name: reddit_jokes_topic_with_sn_agg
+    description: "This model determines the most voted story for each month."

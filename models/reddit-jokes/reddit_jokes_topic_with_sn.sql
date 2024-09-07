@@ -3,5 +3,5 @@ SELECT
     type,
     sentiment_tone, sentiment_magnitude,nsfw
 FROM
-    jokes_features f , jokes_sn sn
+    {{ source('reddit_jokes', 'jokes_features') }}  f , {{ source('reddit_jokes', 'jokes_sn') }}  sn
 where f.id=sn.id
