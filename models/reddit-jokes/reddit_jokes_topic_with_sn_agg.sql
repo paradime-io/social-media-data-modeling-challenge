@@ -5,7 +5,8 @@ SELECT
     COUNT(*) AS occurrence,
     AVG(sentiment_magnitude) AS avg_sentiment
 FROM
-    dbt_tathagatyash.reddit_jokes_topic_with_sn
+   --dbt_tathagatyash.reddit_jokes_topic_with_sn
+    {{ ref('reddit_jokes_topic_with_sn') }}
 GROUP BY
     normalized_value,
     type,
