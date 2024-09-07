@@ -1,4 +1,4 @@
-select
+SELECT
     type,
     id,
     subid,
@@ -11,5 +11,11 @@ select
     selftext,
     title,
     score
-from
+FROM
     analytics.reddit_jokes
+WHERE
+    id IN (
+        SELECT id FROM jokes_features
+        INTERSECT
+        SELECT id FROM jokes_sn
+    )
