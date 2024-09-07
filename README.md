@@ -1,5 +1,8 @@
 # dbt™ Data Modeling Challenge - Social Media Edition
 
+--https://github.com/Daerkns/Correlation-Between-Social-Media-and-Mental-Health?tab=readme-ov-file
+--https://huggingface.co/datasets/sayanroy058/Social_Media_And_Twitter_Mental_Health_Dataset
+
 Welcome to the [dbt™ Data Modeling Challenge - Social Media Edition](https://www.paradime.io/dbt-data-modeling-challenge)! This challenge invites you to showcase your data modeling skills using social media data.
 
 ## 📋 Table of Contents
