@@ -7,6 +7,18 @@ models:
         data_tests:
           - unique
           - not_null
+  - name: dim_dates
+    columns:
+      - name: date_id
+        data_tests:
+          - unique
+          - not_null
+  - name: dim_skibidi_reddit_comments
+    columns:
+      - name: reddit_comment_key
+        data_tests:
+          - unique
+          - not_null
   - name: fact_youtube_videos_events
     columns:
       - name: youtube_video_key
@@ -14,3 +26,27 @@ models:
            - relationships:
               to: ref('dim_country_youtube_videos')
               field: youtube_video_key
+  - name: fact_skibidi_reddit_comments
+    columns:
+      - name: reddit_comment_key
+        data_tests:
+           - relationships:
+              to: ref('dim_skibidi_reddit_comments')
+              field: reddit_comment_key
+      - name: post_date_id
+        data_tests:
+           - relationships:
+              to: ref('dim_dates')
+              field: date_id
+      - name: comment_date_id
+        data_tests:
+           - relationships:
+              to: ref('dim_dates')
+              field: date_id
+  - name: fact_skibidi_timeline
+    columns:
+      - name: date_id
+        data_tests:
+           - relationships:
+              to: ref('dim_dates')
+              field: date_id
