@@ -1,16 +1,3 @@
-
-**Deadline: September 9, 2024**
-
-Follow this step-by-step tutorial to submit your project:
-
-1. Email your submission to Parker Rogers (parker@paradime.io)
-2. Subject: "<first_and_last_name> - dbt Data Modeling Challenge - Social Media Edition"
-3. Include:
-   - GitHub branch link with your dbt™ models
-   - README.md file (use the template below)
-
-
-
 # Social Media Data Analysis - dbt™ Modeling Challenge
 
 ## Table of Contents
@@ -34,7 +21,7 @@ By integrating these datasets, one can calculate how many Big Macs a developer�
 
 ### Data Lineage
 Data lineage image:
-![alt text](lineage.png "Lineage")
+![Lineage](analyses/lineage.png "Lineage")
 
 
 ## Methodology
