@@ -17,7 +17,7 @@ clean-targets:
 
 models:
   reddit-jokes:
-       reddit-jokes:
+       reddit_jokes:
          +enabled: true
        events:
          +materialized: table
