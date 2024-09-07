@@ -12,7 +12,8 @@ SELECT
     title,
     score
 FROM
-    analytics.reddit_jokes
+   -- analytics.reddit_jokes
+    {{ source('reddit_jokes', 'reddit_jokes') }} 
 WHERE
     id IN (
         SELECT id FROM jokes_features

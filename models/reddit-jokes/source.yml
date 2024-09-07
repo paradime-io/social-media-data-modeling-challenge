@@ -1,0 +1,10 @@
+version: 2
+
+# About the dataset: HG datasets/SocialGrep/one-million-reddit-jokes/one-million-reddit-jokes.csv
+
+sources:
+  - name: reddit_jokes
+    database: analytics
+    schema: main  
+    tables:
+      - name: reddit_jokes

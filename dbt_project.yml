@@ -19,3 +19,5 @@ models:
   paradime_social_media_challenge:
       reddit-jokes:
          +materialized: table
+      source-paths: 
+          - /workspace/repository/models/reddit-jokes/source.yml
