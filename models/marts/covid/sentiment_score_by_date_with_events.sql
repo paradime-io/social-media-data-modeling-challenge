@@ -18,9 +18,7 @@ joined as (
     from covid_subreddit_comments_agg
     left join
         covid_key_dates
-        on covid_subreddit_comments_agg.date between covid_key_dates.date and date_add(
-                covid_key_dates.date, interval 1 day
-            )
+            on covid_subreddit_comments_agg.date = covid_key_dates.date
 ),
 
 final as (

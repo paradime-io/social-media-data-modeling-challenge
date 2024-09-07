@@ -12,7 +12,7 @@ models:
           - not_null
 
   - name: sentiment_score_by_date_with_events
-    description: This table shows total sentiment score by date for the comments in covid subreddit with the key events. The key events' effect on the comments are considered as 2 days.
+    description: This table shows total sentiment score by date for the comments in covid subreddit with the key events. It is assumed that the event had a significant influence on the comments made on the same day.
     columns:
       - name: date
         tests:
