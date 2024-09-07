@@ -3,6 +3,13 @@ version: 2
 # About the dataset: https://motherduck.com/docs/getting-started/sample-data-queries/hacker-news/#about-the-dataset
 
 sources:
+  - name: challenge
+    database: dbt_challenge
+    schema: main
+    tables:
+      - name: spotify_top_50_playlists
+      - name: universal_top_spotify_songs
+
   - name: hn
     database: sample_data
     tables:
