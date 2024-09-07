@@ -17,7 +17,7 @@ models:
       - name: url
         description: The URL linking to the post. Note Some entries may have null values.
 
-      - name: by
+      - name: author
         description: The username of the post's creator.
 
       - name: creation_post_date
@@ -36,7 +36,7 @@ models:
         description: The total number of comments on the post.
 
   - name: stg_slashdot
-    description: This view contains all Hacker News posts (stories), providing key details about each submission.
+    description: This view contains all Slashdot posts (stories), providing key details about each submission.
 
     columns:
       - name: id
@@ -44,5 +44,18 @@ models:
         tests:
           - unique
           - not_null
+      - name: title
+        description: The title of the post. Note Some entries may have null values.
+      - name: url
+        description: The URL linking to the post. Note Some entries may have null values.  
+      - name: author
+        description: The username of the post's creator.
+      - name: creation_post_date
+        description: The date and time when the post was created, in timestamp format.
+      - name: comments
+        description: The total number of comments on the post.
+
+      
+
 
 

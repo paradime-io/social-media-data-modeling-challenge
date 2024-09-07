@@ -74,6 +74,13 @@ This code scrapes posts data from Slashdot using **BeautifulSoup**, **requests**
 Finally, the resulting data is saved in **MotherDuck** as a source table (as configured in source.yml) for the staging step.
 
 **- Staging**
+1.   **stg_slashdot**: This stage performs an initial filtering of the data, focusing on records where the `record_type` is "story" (the primary focus for analysis). It also includes basic field standardization.
+    
+2.   **stg_slashdot_cleaning**: The scraped source data contains some unclean elements, such as:
+    
+	    -   **Author**: The author field often includes unnecessary text like tabs, spaces, or the phrase "Posted by" before the username. To clean this, the `REGEXP_REPLACE` function was used to remove "Posted by" and non-alphabetic characters.
+
+	    -   **Publication Date**: The publication date field contains extraneous characters and is not in the correct datetime format. A regex pattern was used to remove any characters that are not part of the date or time, and then the `STRPTIME` function was applied to convert the cleaned string into a proper datetime format.
 
 
 ## Insights
