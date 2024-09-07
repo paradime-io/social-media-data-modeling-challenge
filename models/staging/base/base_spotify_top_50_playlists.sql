@@ -13,7 +13,7 @@ rename as (
         duration_ms,
         album_type,
         total_tracks,
-        release_date,
+        try_cast(release_date as date) as release_date,
         is_explicit,
         album_cover_url,
         split(split(split(filename, '/')[-1], '.')[1], '-')[-1] as country,

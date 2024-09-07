@@ -18,6 +18,7 @@ with source as (
     liveness,
     valence,
     tempo,
+    release_date
 from {{ ref('stg__classify_songs_tsongs') }}
 union
 select 
@@ -39,6 +40,7 @@ select
     liveness,
     valence,
     tempo,
+    release_date
  from {{ ref('stg__classify_songs_t50') }})
 select 
     s.src,
@@ -59,7 +61,8 @@ select
     liveness,
     valence,
     tempo,
+    song.release_date
 from source s
-left join {{ ref('dim_songs') }} song on s.song = song.song and s.artists = song.artists
+left join {{ ref('dim_songs') }} song on s.song = song.song and s.artists = song.artists and s.release_date = song.release_date
 left join {{ ref('dim_artists') }} artists on s.artists = artists.artists 
 left join {{ ref('dim_countries') }} country on s.country_code = country.country_code

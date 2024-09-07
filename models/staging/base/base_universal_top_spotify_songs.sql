@@ -17,7 +17,7 @@ rename as (
         is_explicit,
         duration_ms,
         album_name,
-        album_release_date,
+        try_cast(album_release_date as date) as album_release_date,
         danceability,
         energy,
         key,
