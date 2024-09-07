@@ -16,8 +16,6 @@ clean-targets:
   - "dbt_packages"
 
 models:
-  reddit-jokes:
-       reddit_jokes:
-         +enabled: true
-       events:
+  paradime_social_media_challenge:
+      reddit-jokes:
          +materialized: table
