@@ -56,12 +56,12 @@ Data lineage image:
 Unsurprisingly, companies in the United States offer the highest median salary at $143k USD. Following at a distance are Israel and Switzerland, with median salaries of approximately $110k USD. 
 At the lower end of the scale, Indonesia, Pakistan, and Egypt offer median salaries ranging from $7k to $9k USD per year.
 
-![Median Salary by Country (USD)](median_survey_salary_by_country.png "Median Salary by Country (USD)")
+![Median Salary by Country (USD)](analyses/median_survey_salary_by_country.png "Median Salary by Country (USD)")
 
 One could argue that a high income generally increases purchasing power. However, a high income might still only afford a mediocre standard of living due to high costs of living. 
 This insight cannot be derived from salary data alone; other factors, such as a price index, must be considered.
 
-![World Map of Survey Salaries](world_salary.png "World Map of Survey Salaries")
+![World Map of Survey Salaries](analyses/world_salary.png "World Map of Survey Salaries")
 
 Examining the geographical distribution of developer salaries reveals clusters of high-income regions, such as North America, Europe, and Oceania. In contrast, regions in Asia, Africa, South America, and the Middle East show lower median salaries.
 
@@ -81,12 +81,12 @@ The index is based on a single product, which may not represent the overall econ
 The highest price for a Big Mac is paid by customers in Switzerland at $8.1 USD, followed by Uruguay and Norway at about $7 USD. 
 At the lower end of the scale, Taiwan, Indonesia, Egypt, and India have prices ranging from $2.3 to $2.7 USD.
 
-![Big Mac Price by Country (USD)](big_mac_price_by_country.png "Big Mac Price by Country (USD)")
+![Big Mac Price by Country (USD)](analyses/big_mac_price_by_country.png "Big Mac Price by Country (USD)")
 
 These prices provide a simple way to estimate living costs and the purchasing power of a country's residents. Following this, Switzerland would be the most expensive place to live, 
 while Taiwan would be the cheapest. The question then becomes: how many Big Macs can a resident afford if they work as a developer in that country with the median salary?
 
-![World Map of Big Mac Price Index](world_burger.png "World Map of Big Mac Price Index")
+![World Map of Big Mac Price Index](analyses/world_burger.png "World Map of Big Mac Price Index")
 
 In terms of living costs, Europe shows relatively high prices, while lower prices can be found in Asia, Africa, and the Middle East.
 
@@ -121,7 +121,7 @@ Let’s consider a simplified example to illustrate the process:
 
 In this example, even though Switzerland has a higher nominal salary, the adjusted salary indicates that in terms of purchasing power (using the Big Mac as a proxy), Switzerland is not as advantageous as it might seem compared to Canada. This reflects the higher cost of living in Switzerland.
 
-![Median Big Mac Salary by Country (USD)](median_big_mac_salary_by_country.png "Median Big Mac Salary by Country (USD)")
+![Median Big Mac Salary by Country (USD)](analyses/median_big_mac_salary_by_country.png "Median Big Mac Salary by Country (USD)")
 
 The highest Big Mac Salaries, i.e., the number of Big Mac burgers a developer can afford with a median salary, are found in Israel and the United States, with roughly 25k burgers per year. Surprisingly, although Israel has a significantly lower median salary compared to the US (a difference of about $30k USD), it also has a lower cost of living, with a Big Mac price of $4.5 USD compared to $5.7 USD in the US.
 
@@ -131,7 +131,7 @@ Developers in Venezuela and Pakistan have the lowest purchasing power, with 2.1k
 
 Taiwan is a notable exception with 13.4k burgers/year. With the lowest cost of living for resident developers (a Big Mac price of $2.3 USD) and a median salary of about $30.8k USD/year, developers in Taiwan may enjoy purchasing power comparable to that in Switzerland.
 
-![World Map of Big Mac Salary](world_burger_salary.png "World Map of Big Mac Salary")
+![World Map of Big Mac Salary](analyses/world_burger_salary.png "World Map of Big Mac Salary")
 
 In terms of purchasing power, regions such as North America, Europe, and Oceania display high values, in addition to East Asia, encompassing countries like Japan and China.
 
@@ -148,7 +148,7 @@ To determine the best combination of working in one country and living in anothe
   This score indicates how many Big Macs you could buy if you earned a salary in one country and lived in another, giving you a measure of the best work-live combination.
 
 
-![alt text](big_mac_salary_composite_score.png "Composite Score of Big Mac Salaries")
+![alt text](analyses/big_mac_salary_composite_score.png "Composite Score of Big Mac Salaries")
 
 
 The best combination for this would be the United States as work country with a median salary of 143k USD and Taiwan the live country with the lowest cost of living measured by the Bif Mac price of 2.3 USD. 
