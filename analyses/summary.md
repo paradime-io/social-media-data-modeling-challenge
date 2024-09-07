@@ -133,7 +133,7 @@ Developers in Venezuela and Pakistan have the lowest purchasing power, with 2.1k
 
 Taiwan is a notable exception with 13.4k burgers/year. With the lowest cost of living for resident developers (a Big Mac price of $2.3 USD) and a median salary of about $30.8k USD/year, developers in Taiwan may enjoy purchasing power comparable to that in Switzerland.
 
-![World Map of Big Mac Salary](world_burger_salary.png "World Map of Big Mac Salary")
+![World Map of Big Mac Salary](world_bigmac_salary.png "World Map of Big Mac Salary")
 
 In terms of purchasing power, regions such as North America, Europe, and Oceania display high values, in addition to East Asia, encompassing countries like Japan and China.
 
