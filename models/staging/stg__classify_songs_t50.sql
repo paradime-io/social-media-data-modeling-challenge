@@ -1,6 +1,7 @@
 select
     t50.date as snapshot_date,
-    t50.song,
+    coalesce(t50.song , tsongs.name ) as song,
+    coalesce(t50.artists , tsongs.artists ) as artists,
     t50.artists,
     t50.position,
     t50.popularity,

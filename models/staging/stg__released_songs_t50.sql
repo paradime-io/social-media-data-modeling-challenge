@@ -1,7 +1,7 @@
 select
     tsongs.spotify_id,
-    t50.song,
-    t50.artists,
+    coalesce(t50.song , tsongs.name ) as song,
+    coalesce(t50.artists , tsongs.artists ) as artists,
     t50.release_date as song_release_date,
     tsongs.album_name
 from {{ ref('base_spotify_top_50_playlists') }} as t50

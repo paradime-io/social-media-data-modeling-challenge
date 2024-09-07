@@ -1,6 +1,6 @@
 select
     tsongs.spotify_id,
-    tsongs.name as song ,
+    coalesce( t50.song , tsongs.name ) as song ,
     tsongs.artists,
     tsongs.album_release_date as song_release_date,
     tsongs.album_name,

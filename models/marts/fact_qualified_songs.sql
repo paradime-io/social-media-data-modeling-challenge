@@ -1,5 +1,6 @@
 with source as (
     select 
+    'universal_top_spotify_songs' as src,
     snapshot_date,
     song,
     artists,
@@ -20,6 +21,7 @@ with source as (
 from {{ ref('stg__classify_songs_tsongs') }}
 union
 select 
+    'spotify_top_50_playlists' as src,
     snapshot_date,
     song,
     artists,
@@ -39,6 +41,7 @@ select
     tempo,
  from {{ ref('stg__classify_songs_t50') }})
 select 
+    s.src,
     s.snapshot_date,
     song.song_pk,
     artists.artists_pk,
