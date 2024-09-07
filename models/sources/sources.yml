@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: huggingface
+    database: analytics
+    schema: main
+    tables:
+      - name: social_media_and_twitter_mental_health

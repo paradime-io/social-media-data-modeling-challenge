@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: int_respondent_platforms
+    description: |
+      This model splits the `platforms` column from the `stg_social_media_mental_health` table into individual rows.
+      Each row represents a single platform extracted from a comma-separated list in the `platforms` column.
+      Whitespace around each platform is trimmed for consistency.
+    columns:
+      - name: id
+        description: The unique identifier for the entry in the source table.
+      - name: platform
+        description: The individual platform extracted from the comma-separated list in the `platforms` column.

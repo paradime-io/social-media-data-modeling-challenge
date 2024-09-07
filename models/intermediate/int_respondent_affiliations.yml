@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: split_affiliations
+    description: |
+      This model splits the `affiliations` column from the `stg_social_media_mental_health` table into individual rows.
+      Each row represents a single affiliation extracted from a comma-separated list in the `affiliations` column.
+      Whitespace around each affiliation is trimmed for consistency.
+    columns:
+      - name: id
+        description: The unique identifier for the entry in the source table.
+      - name: affiliation
+        description: The individual affiliation extracted from the comma-separated list in the `affiliations` column.

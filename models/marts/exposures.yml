@@ -1,0 +1,13 @@
+version: 2
+exposures:
+  - name: hex_notebook
+    description: Tables used in the Social Media Hex Notebook
+    depends_on:
+      - ref('social_media_mental_health')
+      - ref('social_media_mental_health_by_affiliation')
+      - ref('social_media_mental_health_by_platform')
+    owner:
+      name: Rasmus
+      email: raso@lunar.app
+    type: dashboard
+    label: Social Media Challenge Hex Notebook!
