@@ -61,7 +61,7 @@ At the lower end of the scale, Indonesia, Pakistan, and Egypt offer median salar
 One could argue that a high income generally increases purchasing power. However, a high income might still only afford a mediocre standard of living due to high costs of living. 
 This insight cannot be derived from salary data alone; other factors, such as a price index, must be considered.
 
-![World Map of Survey Salaries](analyses/world_salary.png "World Map of Survey Salaries")
+![World Map of Survey Salaries](analyses/world_dollar_salary.png "World Map of Survey Salaries")
 
 Examining the geographical distribution of developer salaries reveals clusters of high-income regions, such as North America, Europe, and Oceania. In contrast, regions in Asia, Africa, South America, and the Middle East show lower median salaries.
 
@@ -86,7 +86,7 @@ At the lower end of the scale, Taiwan, Indonesia, Egypt, and India have prices r
 These prices provide a simple way to estimate living costs and the purchasing power of a country's residents. Following this, Switzerland would be the most expensive place to live, 
 while Taiwan would be the cheapest. The question then becomes: how many Big Macs can a resident afford if they work as a developer in that country with the median salary?
 
-![World Map of Big Mac Price Index](analyses/world_burger.png "World Map of Big Mac Price Index")
+![World Map of Big Mac Price Index](analyses/world_bigmac.png "World Map of Big Mac Price Index")
 
 In terms of living costs, Europe shows relatively high prices, while lower prices can be found in Asia, Africa, and the Middle East.
 
