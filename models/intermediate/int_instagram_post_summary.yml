@@ -10,51 +10,54 @@ models:
       - name: sid
         description: |
           The unique identifier for each Instagram post. This allows for linking metrics back to the original post.
-        tests:
+        data_tests:
           - not_null
           - unique
       - name: profile_id
         description: |
           The unique identifier for the Instagram profile that made the post.
-        tests:
+        data_tests:
           - not_null
       - name: post_date
         description: |
           The date when the Instagram post was made.
-        tests:
+        data_tests:
           - not_null          
       - name: post_time
         description: |
           The time when the Instagram post was made.
-        tests:
+        data_tests:
           - not_null          
       - name: post_type
         description: |
           The type of Instagram post (e.g., image, video).
-        tests:
+        data_tests:
           - not_null          
       - name: description
         description: |
           The text description associated with the Instagram post.
-        tests:
+        data_tests:
           - not_null
       - name: description_category
         description: |
           The category assigned to the post description, if applicable.
-        tests:
+        data_tests:
           - not_null
       - name: description_length
         description: |
           The length of the post description in characters. Helps in analysing the verbosity of posts.
-        tests:
+        data_tests:
           - not_null
       - name: post_day_of_week
         description: |
           The day of the week when the post was made, extracted from the post date. Useful for identifying posting patterns.
-        tests:
+        data_tests:
           - not_null
+          - dbt_utils.accepted_range:
+              min_value: 0
+              max_value: 6
       - name: post_hour_of_day
         description: |
           The hour of the day when the post was made, extracted from the post time. Helps in analysing posting times.
-        tests:
+        data_tests:
           - not_null

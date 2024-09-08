@@ -41,12 +41,11 @@ hashtags AS (
     SELECT
         sid,
         hashtag
-    FROM {{ ref('int_instagram_hashtags') }}
+    FROM {{ ref('int_instagram_hashtags') }} AS hashtag
 )
 
 SELECT
     um.profile_id,
-    um.username,
     um.is_business_account,
     um.num_following,
     um.num_followers,
@@ -55,19 +54,18 @@ SELECT
     MAX(pe.total_engagement) AS max_engagement,
     MIN(pe.total_engagement) AS min_engagement,
     AVG(ps.description_length) AS avg_description_length,
-    AVG(ps.post_day_of_week)::int64 AS avg_post_day_of_week,
-    AVG(ps.post_hour_of_day)::int64 AS avg_post_hour_of_day,
+    AVG(ps.post_day_of_week) AS avg_post_day_of_week,
+    AVG(ps.post_hour_of_day) AS avg_post_hour_of_day,
     COUNT(DISTINCT hashtag) AS distinct_hashtag_count
 FROM user_metrics um
 LEFT JOIN post_engagement pe 
-    ON um.profile_id = pe.sid
+    ON um.profile_id = pe.profile_id
 LEFT JOIN post_summary AS ps
     ON pe.sid = ps.sid
 LEFT JOIN hashtags hash 
     ON pe.sid = hash.sid
 GROUP BY 
     um.profile_id,
-    um.username,
     um.is_business_account, 
     um.num_following, 
     um.num_followers, 

@@ -10,28 +10,24 @@ models:
     columns:
       - name: profile_id
         description: Unique identifier for the Instagram user profile.
-        tests:
+        data_tests:
           - unique
-          - not_null
-      - name: username
-        description: Instagram username of the user.
-        tests:
           - not_null
       - name: is_business_account
         description: Indicates whether the user has a business account (True/False).
-        tests:
+        data_tests:
           - not_null
       - name: num_following
         description: Number of accounts the user is following.
-        tests:
+        data_tests:
           - not_null
       - name: num_followers
         description: Number of followers the user has.
-        tests:
+        data_tests:
           - not_null
       - name: num_posts
         description: Number of posts made by the user.
-        tests:
+        data_tests:
           - not_null
       - name: avg_engagement
         description: Average engagement per post for the user.

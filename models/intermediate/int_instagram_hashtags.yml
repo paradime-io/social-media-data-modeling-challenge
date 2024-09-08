@@ -11,10 +11,10 @@ models:
         description: |
           The unique identifier for each Instagram post. This field allows linking the extracted hashtags 
           back to the original post for further analysis.
-        tests:
+        data_tests:
           - not_null
       - name: hashtag
         description: |
           The extracted hashtag from the post description. Only words starting with `#` are considered valid hashtags.
-        tests:
+        data_tests:
           - not_null

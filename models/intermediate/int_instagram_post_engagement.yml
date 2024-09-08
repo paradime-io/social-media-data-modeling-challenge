@@ -10,16 +10,16 @@ models:
     columns:
       - name: sid
         description: Unique identifier for the Instagram post.
-        tests:
+        data_tests:
           - unique
           - not_null
       - name: profile_id
         description: Unique identifier for the user profile.
-        tests:
+        data_tests:
           - not_null
       - name: num_likes
         description: Number of likes the post has received.
-        tests:
+        data_tests:
           - not_null
       - name: num_comments
         description: Number of comments the post has received.
@@ -27,9 +27,9 @@ models:
           - not_null        
       - name: engagement_level
         description: Categorised level of engagement ('High', 'Medium', 'Low') based on the total engagement.
-        tests:
+        data_tests:
           - not_null        
       - name: total_engagement
         description: Sum of likes and comments for the post.
-        tests:
+        data_tests:
           - not_null  
