@@ -99,7 +99,7 @@ UnrealScript
 Pony
 QML
 Bash
-Cap'nProto
+nProto
 WebAssembly
 ClassicASP
 Haskell
@@ -290,7 +290,7 @@ Harbour
 Astro
 Earthly
 HiveQL
-Ren'Py
+RenPy
 ReScript
 PogoScript
 Red
@@ -764,6 +764,7 @@ PEAR
 Phoenix
 PhpCodeGenie
 Play
+Google Play
 Plone
 PopPHP
 PRADO

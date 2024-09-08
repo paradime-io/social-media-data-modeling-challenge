@@ -6,3 +6,36 @@ sources:
     schema: dbt_social_media_challenge  
     tables:
       - name: src_scraper_slashdot
+  - name: hn
+    database: sample_data
+    tables:
+      - name: hacker_news
+        columns:
+          - name: title
+            description: "The title of the Hacker News post or comment"
+          - name: url
+            description: "The URL of the linked content or the post itself"
+          - name: text
+            description: "The text content of the post or comment"
+          - name: dead
+            description: "Indicates whether the post or comment is dead (true/false)"
+          - name: by
+            description: "The username of the author of the post or comment"
+          - name: score
+            description: "The score of the post, indicating its popularity"
+          - name: time
+            description: "The time the post or comment was created, in Unix Time format"
+          - name: timestamp
+            description: "The timestamp of when the data was fetched"
+          - name: type
+            description: "The type of item (e.g., 'story', 'comment')"
+          - name: id
+            description: "The unique identifier for the post or comment"
+          - name: parent
+            description: "The parent ID of the comment or post it is replying to"
+          - name: descendants
+            description: "The number of comments on the post"
+          - name: ranking
+            description: "The rank of the post on the front page"
+          - name: deleted
+            description: "Indicates whether the post or comment has been deleted (true/false)"
