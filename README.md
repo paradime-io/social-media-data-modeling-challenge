@@ -59,7 +59,7 @@ Before starting your project, familiarize yourself with the following key inform
 
 ## 🛠 Building Your Project
 
-**Deadline: September 9, 2024**
+**Deadline: September 9, 2024, at 11:59 PM PT**
 
 ### Step 1: Master the Required Tools
 
@@ -164,9 +164,9 @@ Use Hex to build impactful visualizations that complement your insights.
 
 ## 📤 Submission Guidelines
 
-**Deadline: September 9, 2024**
+**Deadline: September 9, 2024, at 11:59 PM PT**
 
-Follow this step-by-step tutorial to submit your project:
+Follow this [step-by-step tutorial](https://app.arcade.software/share/mpoE0fK5HknHZJ3xLVVs) to submit your project:
 
 1. Email your submission to Parker Rogers (parker@paradime.io)
 2. Subject: "<first_and_last_name> - dbt Data Modeling Challenge - Social Media Edition"
