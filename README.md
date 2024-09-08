@@ -17,9 +17,15 @@
 [Brief project overview and goals]
 
 ## Data Sources 💿
-- Dataset 1: [Name] - [Description]
-- Dataset 2: [Name] - [Description]
-- [Add more as needed]
+- Correlation Between Social Media and Mental Health - The survey dataset based on 481 respondents was created as part of a Statistics course at a university.
+
+### Dataset References
+
+The dataset used for this analysis is available from the following sources:
+
+- [GitHub Repository](https://github.com/Daerkns/Correlation-Between-Social-Media-and-Mental-Health?tab=readme-ov-file)
+- [Hugging Face Dataset](https://huggingface.co/datasets/sayanroy058/Social_Media_And_Twitter_Mental_Health_Dataset)
+
 
 ### Data Lineage 🔗
 ![Data Lineage](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/rasmus-engelbrecht/images/lineage.png)
@@ -103,8 +109,8 @@ In this analysis I chose to focus on how social media usage impacts mental healt
 
 - **Intensity of Social Media Usage:** Spending more time on social media and using multiple platforms are both linked to worse mental health.
 
-- **Model Insights:** The statistical model explains about 20% of the variance in mental health scores, highlighting that while our analysis provides valuable insights, many factors influencing mental health remain unexplored.
+- **Limitations:** The statistical model explains about 20% of the variance in mental health scores, highlighting that while our analysis provides valuable insights, many factors influencing mental health remain unexplored.
 
-Overall, the data highlights significant concerns about social media’s role in mental health, particularly with platforms like TikTok, emphasizing the need for further research and potential interventions.
+Overall, the data highlights significant concerns about social media’s role in mental health, particularly with platforms like TikTok, emphasizing the need for further research. This survey was conducted as part of a university course and I do not have any knowledge of potential biases in the actual methodology used. Hence, in order to validate my findings, I would probably want to conduct my own survey with a wider audience. Nonetheless, this has been a super exciting dataset to explore.
 
 
