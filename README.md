@@ -79,13 +79,18 @@ For the outcome variable, we calculate the aggregate ´mental_health_score´ mea
 
 #### Conclusion
 The analysis of mental health scores reveals several key insights:
-*Age:* The negative coefficient for age indicates that older individuals tend to have lower mental health scores, which means that, in this dataset, older people generally report better mental health. 
-*Daily Time Spent on Platforms:* The positive coefficient for daily time spent on social media platforms means that more time spent online is associated with worse mental health scores.
-*Number of Platforms Used:* A higher count of social media platforms used is associated with worse mental health scores. 
-*Gender and Relationship Status:* Gender and relationship status variables did not show statistically significant effects on mental health scores in this model. Nonetheless, we do find that females spend more time on social media, so some of the effects could be covered by Daily Time Spent.
-*Platform-Specific Effects:* Among different social media platforms, only TikTok showed a significant positive association with worse mental health scores. This might suggest that TikTok's specific content, algorithm, or user interaction patterns could be particularly detrimental to mental health.
 
-Overall Model Performance: The model has an R-squared value of 0.202, indicating that approximately 20% of the variance in mental health scores can be explained by the model. While this provides some insight, a substantial amount of variability remains unexplained, suggesting that other factors not included in this model may also be influencing mental health outcomes.
+**Age:** The negative coefficient for age indicates that older individuals tend to have lower mental health scores, which means that, in this dataset, older people generally report better mental health. 
+
+**Daily Time Spent on Platforms:** The positive coefficient for daily time spent on social media platforms means that more time spent online is associated with worse mental health scores.
+
+**Number of Platforms Used:** A higher count of social media platforms used is associated with worse mental health scores. 
+
+**Gender and Relationship Status:** Gender and relationship status variables did not show statistically significant effects on mental health scores in this model. Nonetheless, we do find that females spend more time on social media, so some of the effects could be covered by Daily Time Spent.
+
+**Platform-Specific Effects:** Among different social media platforms, only TikTok showed a significant positive association with worse mental health scores. This might suggest that TikTok's specific content, algorithm, or user interaction patterns could be particularly detrimental to mental health.
+
+**Overall Model Performance:** The model has an R-squared value of 0.202, indicating that approximately 20% of the variance in mental health scores can be explained by the model. While this provides some insight, a substantial amount of variability remains unexplained, suggesting that other factors not included in this model may also be influencing mental health outcomes.
 
 
 ## Conclusions
