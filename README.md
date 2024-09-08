@@ -1,6 +1,7 @@
-# Social Media Data Analysis - dbt™ Modeling Challenge
+# The Impact of Social Media Usage on Mental Health - dbt™ Modeling Challenge
 
-***Hi ✋, I'm ** [Rasmus Engelbrecht](https://www.linkedin.com/in/rasmusengelbrechtsorensen/)*
+***Hi ✋, I'm [Rasmus Engelbrecht](https://www.linkedin.com/in/rasmusengelbrechtsorensen/)***
+
 
 ## Table of Contents  📝
 1. [Introduction](#introduction)
@@ -10,7 +11,14 @@
 5. [Conclusions](#conclusions)
 
 ## Introduction
-[Brief project overview and goals]
+Welcome to this analysis exploring how social media usage impacts mental health. 
+In this report, I'll dive into survey data that reveals how various social media habits might affect mental well-being. 
+By examining patterns in social media usage, such as time spent online and the number of platforms used, I aim to uncover insights into their effects on mental health. 
+Along the way, we'll look at key variables like purposeless use, distraction frequency, and the influence of specific platforms like TikTok.
+I'll load the dataset from Hugging Face into Motherduck, do some dbt data modeling in Paradime, and finally do visualisations and statistical analysis in Hex.
+
+If you want to go more into depth, you can view the full Hex Notebook [here](https://app.hex.tech/c7e89ceb-cdfb-4937-a7c2-39913a269634/app/37474c32-c68d-4d07-82c9-6ddfb7d622b3/latest).
+
 
 ## Data Sources 💿
 - **Correlation Between Social Media and Mental Health:** The survey dataset based on 481 respondents was created as part of a Statistics course at a university.
