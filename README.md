@@ -37,24 +37,24 @@ The dataset used for this analysis is available from the following sources:
 My data modeling approach follows a layered architecture to ensure clean, modular, and efficient data transformation. As we have a quite simple pipeline here, it might seem superfluous, but it's just to demonstrate to to build it in a scaleable way. 
 The layers are as follows:
 
-### 1. Sources
+#### 1. Sources
 
 - **huggingface.social_media_and_mental_health**: The raw data sourced from Hugging Face, containing the initial survey responses on social media usage and mental health.
 
-### 2. Staging
+#### 2. Staging
 
-- **stg_social_media_mental_health**: This layer performs initial cleaning and structuring of the raw data - Mainly renaming of columns though. 
+**stg_social_media_mental_health**: This layer performs initial cleaning and structuring of the raw data - Mainly renaming of columns though. 
 
-### 3. Intermediate
+#### 3. Intermediate
 
-- **int_respondent_affiliations**: Unnesting the data to have one row per respondent affiliation. (This column is a comme-separated list in the dataset)
-- **int_respondent_platforms**: Unnesting the data to have one row per respondent platform. (This column is a comme-separated list in the dataset)
+**int_respondent_affiliations**: Unnesting the data to have one row per respondent affiliation. (This column is a comme-separated list in the dataset)
+**int_respondent_platforms**: Unnesting the data to have one row per respondent platform. (This column is a comme-separated list in the dataset)
 
-### 4. Marts
+#### 4. Marts
 
-- **social_media_mental_health**: The final, analysis-ready table used for the main analysis and visualizations.
-- **social_media_mental_health_by_platform**: A specialized mart normalising responses at the platform level enabling platform-specific analysis.
-- **social_media_mental_health_by_affilition**: A specialized mart normalising responses at the affiliation level enabling affiliation-specific analysis.
+**social_media_mental_health**: The final, analysis-ready table used for the main analysis and visualizations.
+**social_media_mental_health_by_platform**: A specialized mart normalising responses at the platform level enabling platform-specific analysis.
+**social_media_mental_health_by_affilition**: A specialized mart normalising responses at the affiliation level enabling affiliation-specific analysis.
 
 ## Methodology 🛠️
 ### Tools Used
