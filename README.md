@@ -1,3 +1,5 @@
+<img src="https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/youtube_logo.jpg" alt="Logo" style="float:left; margin-right:10px;"/>
+
 # **_Mastering the Art of YouTube: Roadmap to Building a Successful Video ▶️_**
 Project for the dbt™ data modeling challenge - Social Media Edition
 
