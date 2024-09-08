@@ -13,6 +13,10 @@ models:
         tests:
           - unique
           - not_null
+      - name: profile_id
+        description: Unique identifier for the user profile.
+        tests:
+          - not_null
       - name: num_likes
         description: Number of likes the post has received.
         tests:

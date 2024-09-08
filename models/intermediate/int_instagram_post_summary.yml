@@ -5,7 +5,7 @@ models:
     description: |
       This model calculates additional metrics for Instagram posts including the length of the description, 
       the day of the week the post was made, and the hour of the day the post was made. 
-      These metrics help in analyzing the content and timing of posts.
+      These metrics will be used to help analysing the content and timing of posts.
     columns:
       - name: sid
         description: |
@@ -16,36 +16,45 @@ models:
       - name: profile_id
         description: |
           The unique identifier for the Instagram profile that made the post.
-      - name: username
-        description: |
-          The username associated with the Instagram profile. Useful for identifying the account that made the post.
-      - name: bio
-        description: |
-          The biography of the Instagram profile. This can provide context about the profile making the post.
-      - name: is_business_account
-        description: |
-          Indicates whether the Instagram profile is a business account. Useful for segmenting posts by account type.
+        tests:
+          - not_null
       - name: post_date
         description: |
           The date when the Instagram post was made.
+        tests:
+          - not_null          
       - name: post_time
         description: |
           The time when the Instagram post was made.
+        tests:
+          - not_null          
       - name: post_type
         description: |
           The type of Instagram post (e.g., image, video).
+        tests:
+          - not_null          
       - name: description
         description: |
           The text description associated with the Instagram post.
+        tests:
+          - not_null
       - name: description_category
         description: |
           The category assigned to the post description, if applicable.
+        tests:
+          - not_null
       - name: description_length
         description: |
           The length of the post description in characters. Helps in analysing the verbosity of posts.
+        tests:
+          - not_null
       - name: post_day_of_week
         description: |
           The day of the week when the post was made, extracted from the post date. Useful for identifying posting patterns.
+        tests:
+          - not_null
       - name: post_hour_of_day
         description: |
           The hour of the day when the post was made, extracted from the post time. Helps in analysing posting times.
+        tests:
+          - not_null

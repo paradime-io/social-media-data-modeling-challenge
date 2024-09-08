@@ -1,6 +1,7 @@
 WITH source AS (
     SELECT 
         sid,
+        profile_id,
         post_date,
         post_time,
         post_type,

@@ -1,6 +1,7 @@
 WITH source AS (
     SELECT 
         sid,
+        profile_id,
         num_likes,
         num_comments
     FROM {{ ref('stg_instagram') }}
