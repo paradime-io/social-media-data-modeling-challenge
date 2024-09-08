@@ -73,6 +73,7 @@ These variables help frame the relationship between social media usage patterns 
 
 ### Regression: Determinants of Mental Health
 In this section, I use a statistical model to explore the determinants of mental health scores, examining how various factors, including social media usage and demographic characteristics, influence mental health outcomes.
+While we did oberserve some interesting relationships in the visualisations above, we need a more robust way to understand the significance of the observations.
 For the outcome variable, we calculate the aggregate ´mental_health_score´ measured as the sum of the mental health score components.
 
 ![Determinants of Mental Health](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/rasmus-engelbrecht/images/ols_regression.png)
@@ -94,4 +95,16 @@ The analysis of mental health scores reveals several key insights:
 
 
 ## Conclusions
-[Summarize key findings and their implications]
+In this analysis I chose to focus on how social media usage impacts mental health:
+
+- **Age and Social Media Usage:** Younger individuals tend to spend more time on social media, and this increased usage correlates with poorer mental health scores. Younger respondents also report higher frequencies of distraction, which is 44% greater compared to older age groups.
+
+- **TikTok’s Impact:** The most striking finding is that TikTok users exhibit the worst mental health outcomes among all platforms studied. They report higher levels of depression, restlessness, and health issues, and they engage more in purposeless social media use. This suggests a particularly negative impact of TikTok on mental well-being.
+
+- **Overall Trends:** Spending more time on social media and using multiple platforms are both linked to worse mental health. Although gender and relationship status did not show significant effects in the statistical model, the correlation between increased social media use and poor mental health is clear.
+
+- **Model Insights:** The statistical model explains about 20% of the variance in mental health scores, highlighting that while our analysis provides valuable insights, many factors influencing mental health remain unexplored.
+
+Overall, the data highlights significant concerns about social media’s role in mental health, particularly with platforms like TikTok, emphasizing the need for further research and potential interventions.
+
+
