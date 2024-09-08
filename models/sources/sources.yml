@@ -3,6 +3,19 @@ version: 2
 # About the dataset: https://motherduck.com/docs/getting-started/sample-data-queries/hacker-news/#about-the-dataset
 
 sources:
+  - name: kaggle
+    database: source_data
+    tables:
+      - name: kaggle_mlds_survey_2022
+  - name: so
+    database: source_data
+    tables:
+      - name: stackoverflow_dev_survey_2022
+      - name: stackoverflow_dev_survey_2023
+  - name: hns
+    database: source_data
+    tables:
+      - name: hacker_news_2022_2023
   - name: hn
     database: sample_data
     tables:
