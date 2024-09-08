@@ -59,5 +59,13 @@ These variables help frame the relationship between social media usage patterns 
 ### Age vs Social Media Usage
 ![Age vs Social Media Usage](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/rasmus-engelbrecht/images/age_vs_social_media_use.png)
 
+
+### Social Media Usage vs Mental Health
+![Social Media Usage vs Mental Health](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/rasmus-engelbrecht/images/social_media_use_vs_mental_health.png)
+
+### Tiktok vs Mental Health
+![Social Media Usage vs Mental Health](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/rasmus-engelbrecht/images/tiktok_vs_mental_health.png)
+
+
 ## Conclusions
 [Summarize key findings and their implications]
