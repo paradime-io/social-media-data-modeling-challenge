@@ -15,9 +15,10 @@ Submission by: [Jayeson Gao](https://www.linkedin.com/in/jayesongao)
     - [Key Metrics & Definitions](#key-metrics)
 4. [Key Insights & Visualizations](#📊-key-insights-and-visualizations)
     - [Data Profile - What Stands Out?](#section-00)
-    - [Stat Stuffers of 2019 thru Mid-2021: Audios/Artists That Took Over TikTok]
-    - [The "Best Performing" TikTok Audios - Standardized and Scored]
-    - [Predictors of Success: Which Song Attributes Do Well?]
+    - [Stat Stuffers of 2019 thru Mid-2021: Audios/Artists That Took Over TikTok](#section-01)
+    - [The "Best Performing" TikTok Audios - Standardized and Scored](#section-02)
+    - [Predictors of Success: Which Song Attributes Do Well?](#section-03)
+    - [Bonus 👀](#bonus-section)
 5. [Summary & Conclusions](#📃-summary-and-conclusions)
 6. [Reflection](#🪞-reflection)
 
