@@ -3,7 +3,7 @@ select
     count(Responseid) as Nr_resp,
     median(cast(Comptotal as double)) as Local_salary,
     median(cast(Convertedcompyearly as double)) as Dollar_salary
-from {{ ref('survey_mapping') }}
+from {{ ref('stg_survey_mapping') }}
 where Convertedcompyearly <> 'NA'
 group by mapped_country_name
 having count(Responseid) > 5

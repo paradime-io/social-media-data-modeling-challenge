@@ -23,12 +23,24 @@ By integrating these datasets, one can calculate how many Big Macs a developerâ€
 Data lineage image:
 ![Lineage](analyses/lineage.png "Lineage")
 
+### **Staging Layer**
+- **`stg_survey_mapping`**: Maps country names to the survey data.
+- **`stg_bigmac_mapping`**: Maps country names to the Big Mac data.
+- **`stg_country_mapping`**: Defines mappings of different country names to standard names.
+- **`stg_bigmac_dollar`**: Converts local currency to dollars and filters the most recent time frame.
+- **`stg_survey_cleaned_agg`**: Filters unneeded data and aggregates with median.
+
+### **Mart Layer**
+- **`mrt_bigmac_salary`**: Joins datasets from the Big Mac Index and Survey.
+- **`mrt_bigmac_salary_cross`**: Cross joins datasets from the Big Mac Index and Survey for heatmap visualization.
+
 
 ## Methodology
 ### Tools Used
 - Paradime: SQL and dbtâ„¢ development
 - MotherDuck: Data storage and computing
 - Hex: Data visualization
+- ChatGPT: Text readability
 
 ### Applied Techniques
 
@@ -46,7 +58,7 @@ Data lineage image:
 
 **Key Measures:**
 
-- The median was used to compare values in the aggregated data, as it is less sensitive to outliers compared to the average.
+- Median Salary: The median was used to compare values in the aggregated data, as it is less sensitive to outliers compared to the average.
 
 ## Insights
 
