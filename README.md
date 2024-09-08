@@ -103,16 +103,21 @@ These variables help frame the relationship between social media usage patterns 
 ![Age vs Social Media Usage](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/rasmus-engelbrecht/images/age_vs_social_media_use.png)
 
 
-### Social Media Usage vs Mental Health
-![Social Media Usage vs Mental Health](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/rasmus-engelbrecht/images/social_media_use_vs_mental_health.png)
-
-
 ### Distraction by Age Group
 ![Distraction by Age Group](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/rasmus-engelbrecht/images/distraction_by_age_group.png)
 
 
+### Social Media Usage vs Mental Health
+![Social Media Usage vs Mental Health](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/rasmus-engelbrecht/images/social_media_use_vs_mental_health.png)
+
+
+### Higher Social Media Use = Restlessness ?
+![Higher Social Media Use = Restlessness](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/rasmus-engelbrecht/images/social_media_use_vs_restlessness.png)
+
+
 ### Tiktok vs Mental Health
 ![Social Media Usage vs Mental Health](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/rasmus-engelbrecht/images/tiktok_vs_mental_health.png)
+
 
 ### Regression: Determinants of Mental Health
 In this section, I use a statistical model to explore the determinants of mental health scores, examining how various factors, including social media usage and demographic characteristics, influence mental health outcomes.
