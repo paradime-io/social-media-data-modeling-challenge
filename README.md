@@ -1,27 +1,29 @@
-# dbt™ Data Modeling Challenge - Social Media Edition
+# **dbt™ Data Modeling Challenge - Social Media Edition**
 
-Welcome to the [dbt™ Data Modeling Challenge - Social Media Edition](https://www.paradime.io/dbt-data-modeling-challenge)! This challenge invites you to showcase your data modeling skills using social media data.
+Submission by: [Jayeson Gao](https://www.linkedin.com/in/jayesongao)
 
-## 📋 Table of Contents
+## **📋 Table of Contents**
 
-1. [Intro & Objective] (#intro-&-objective)
-2. [Data Sources & Lineage] (#data-sources-and-lineage)
-    - [Sources] (#sources--seeds)
-    - [Model Layers] (#intermediate-models)
-    - [Data Lineage] (#data-lineage)
-3. [Methodology + Metric Definitions] (#methodology--metrics-definition)
-    - [Tools Used] (#tools)
-    - [Data Preparation] (#data-preparation)
-    - [Key Metrics & Definitions] (#key-metrics)
-4. [Key Insights & Visualizations] (#key-insights--visualizations)
-    - [Data Profile - What Stands Out]
+1. [Intro & Objective](#🎯-introduction-and-objective)
+2. [Data Sources & Lineage](#🕸️-data-sources-and-lineage)
+    - [Sources](#sources-and-seeds)
+    - [Model Layers](#intermediate-models)
+    - [Data Lineage](#data-lineage)
+3. [Methodology & Definitions](#⚒️-methodology-and-definitions)
+    - [Tools Used](#tools)
+    - [Data Preparation](#data-preparation)
+    - [Key Metrics & Definitions](#key-metrics)
+4. [Key Insights & Visualizations](#📊-key-insights-and-visualizations)
+    - [Data Profile - What Stands Out?](#section-00)
     - [Stat Stuffers of 2019 thru Mid-2021: Audios/Artists That Took Over TikTok]
     - [The "Best Performing" TikTok Audios - Standardized and Scored]
     - [Predictors of Success: Which Song Attributes Do Well?]
-5. [Summary & Conclusions]
-6. [Reflection]
+5. [Summary & Conclusions](#📃-summary-and-conclusions)
+6. [Reflection](#🪞-reflection)
 
-# Intro & Objective
+***
+
+## **🎯 Introduction and Objective**
 Uncovering insights around tiktok audio popularity and performance across a variety of criteria, specifically during TikTok's early days 
 thru the first year of COVID (roughly). Across the 30-months this analysis was performed on, we'll be able to find out things like:
 1. In that time, who was the King / Queen of TikTok audio?
@@ -34,9 +36,11 @@ thru the first year of COVID (roughly). Across the 30-months this analysis was p
 
 For avid current and ex-TikTok users, how many of these audios do you remember? 
 
-# Data Sources and Lineage
+***
 
-### Sources / Seeds
+## **🕸️ Data Sources and Lineage**
+
+### **Sources and Seeds**
 - *`stg_spotify_songs.sql`* kaggle spotify dataset of 20k+ popular songs between 2000 and 2020
 - *`stg_tiktok_songs_on_spotify.sql`* 4 combined spotify datasets of popular tiktok songs between 2019 and 2022
 - *`stg_tiktok_top_audio.sql`* top 100 tiktok audios by month over a 30-month period scraped from tokboard.com (2019 to mid-2021)
@@ -44,35 +48,40 @@ For avid current and ex-TikTok users, how many of these audios do you remember?
 
 *Note: all datasets I used were outside of the ones provided.*
 
-### Intermediate Models
+### **Intermediate Models**
 - *`int_tiktok_top_audio_cleaned.sql`* cleaned version of the scraped top 100 tiktok audio data
 - *`int_combined_song_list.sql`* combined spotify dataset of the 20k+ popular songs and tiktok songs
 - *`int_audio_performance.sql`* core metrics table handling all calculations
 
-### Mart Models
+### **Mart Models**
 - *`mrt_tiktok_performance_by_audio.sql`* core metrics associated with each tiktok audio
 - *`mrt_tiktok_performance_by_author.sql`* core metrics associated with each tiktok author / song artist
 - *`mrt_tiktok_top_audio_by_month 1:1`* of cleaned tiktok top 100 audio dataset
 - *`mrt_spotify_song_detail.sql`* 1:1 of combined spotify dataset
 
-### Macros
+### **Macros**
 - *`performance_scores.sql`* macro to handle performance score (success metrics) composition / calculation
 
-### Other
+### **Other**
 - *`add_genre.py`* (deprecated) python script to assign genre based on attributes to song tracks missing genre values
 
-### Data Lineage
-![data lineage] /screenshots/data_lineage.png
+### **Data Lineage**
 
 
-# Methodology + Metrics Definitions
+![data_lineage](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/jayeson-gao/screenshots/data_lineage.png?raw=true)
 
-### Tools
+![data_lineage](/screenshots/data_lineage.png)
+
+***
+
+## **⚒️ Methodology and Definitions**
+
+### **Tools**
 - **[Paradime](https://www.paradime.io/)** for SQL, dbt™
 - **[MotherDuck](https://www.motherduck.com/)** for data storage and computing
 - **[Hex](https://hex.tech/)** for analyses and data visualization
 
-### Data Preparation
+### **Data Preparation**
 This analysis is built off of two datasets: spotify song data from two kaggle sources and tiktok top audio data that I scraped with AI.
 1. For spotify song data, ensured that the data from the two sources did not duplicate *`select distinct`* and removed variants of the 
 same song that had slightly different attributes using window functions: *`row_number()`* (ex: acousticness for variant A: .91, for variant B: .90)
@@ -80,7 +89,7 @@ same song that had slightly different attributes using window functions: *`row_n
 string parsing and datetime functions to extract the values I needed, in particular the user engagement data (# of viral videos, # of views) 
 that are key for this analysis
 
-### Key Metrics
+### **Key Metrics**
 Since the focus of the analysis revolves around tiktok audio performance, I created a composite performance metric to score and compare
 each audio to identify which ones stand out. The composition of this metric is as follows:
 - **Total Views**: these are views amassed across all viral videos associated with an audio across the 30-month period - in other words, viral views
@@ -103,9 +112,15 @@ skewing toward consistency, and the other skewing toward peaks - since I was cur
 And just for fun, I reperformed this analysis on monthly rankings based on number of viral videos instead of number of views. This is where the 
 performance calculation macro came in handy.
 
-# Key Insights & Visualizations
+***
 
-### Data Profile - What Stands Out?
+## **📊 Key Insights and Visualizations**
+
+
+### <sub> Section 00 </sub>
+### **Data Profile - What Stands Out?**
+
+
 To start, let's take a quick look at the attributes of the dataset. (See references section for all song YouTube links)
 
 
@@ -117,10 +132,14 @@ spots on the leaderboard, there is significant dropoff.
 
 
 This chart sheds more light onto our second observation - top 10 audios appear to peak significantly higher than the rest of the top 100. This could be
-due to TikTok's algorithm or a reflection the user base's capacity to push and promote viral trends or something else entirely. This, however it outside the
+due to TikTok's algorithm or a reflection the user base's capacity to push and promote viral trends or something else entirely. This, however, is outside the
 scope of this analysis.
 
-### Stat Stuffers of 2019 thru Mid-2021: Audios/Artists That Took Over TikTok
+&nbsp;
+
+### <sub> Section 01 </sub>
+### **Stat Stuffers of 2019 thru Mid-2021: Audios/Artists That Took Over TikTok**
+
 Before we dive into the meat of this analysis, let's take a look at the top performing audios and artists by gross stats alone.
 
 Unsurprisingly, 
@@ -132,7 +151,10 @@ Very clearly, official songs dominate the top 10 leaderboards
 https://www.youtube.com/watch?v=JdOv2Qle4fM (Bagaikan Langit (cover))
 https://www.youtube.com/watch?v=E0gFA08-9xM (Laxed (Siren Beat))
 
-### The "Best Performing" TikTok Audios - Standardized and Scored
+&nbsp;
+
+### <sub> Section 02 </sub>
+### **The "Best Performing" TikTok Audios - Standardized and Scored**
 Moving onto the main course of this analysis, we'll score and rank each audio across this period using a composite performance score weighted comprehensively
 using a combination of gross stats and virality/popularity relative to the competition. See methodology here: 
 
@@ -142,24 +164,45 @@ reaffirms the balance of the original performance score
 Final jursidiction
 - measure reach in two ways - viral content created and viral content consumed
 
-### Predictors of Success: Which Song Attributes Do Well?
+&nbsp;
+### <sub> Section 03 </sub>
+### **Predictors of Success: Which Song Attributes Do Well?**
 -- more likely to be consistent or peak
 -- which variables highly impact performance
 
-### Bonus
+-- unimpressive .103% R-squared value means that only 8% of variance in the dependent variable is explained by the independent variables
+-- suggests
+    - many paths to popularity - reflection of hhumanity
+    - limited dataset
+    - looking at the wrong attributes
+
+Importance_score vs coefficient_score
+
+&nbsp;
+### <sub> Bonus Section </sub>
+### **Bonus**
 -- Movement of Monkey Spinning Monkeys
 -- Most dominant #1
 -- Final top 10 more representative after late-2019 - skewed by total view count (as TikTok grew) or due to the wild-west nature of early TikTok
 
 -- Lottery (Renegade)
 -- Roxanne
+-- What you know about love
+-- Say So
+-- Tap In
 
+***
 
-# Conclusion
+## **📃 Summary and Conclusions**
 
-# Reflection
+TikTok audio is highly transient
+
+***
+
+## **🪞 Reflection**
 All things considered the dataset I used was pretty limited, given that I joined the challenge a little over a week before the due date
 - better dataset (more comprehensive, with more attributes, more recent) - more accurate time series analysis
+    - skew toward songs in 2020, knowing what I know now, perform analysis on separate years or even half years or quarter of years (transience of tiktok audio)
 - Look at things like geography (where are these values coming from)
 - Do a deeper analysis on what drives virality - number of trends/fads associated with each audio (hashtag analysis), accessibility of an audio
 - D)
