@@ -1,222 +1,177 @@
-# dbt™ Data Modeling Challenge - Social Media Edition
+# **_Mastering the Art of YouTube: Roadmap to Building a Successful Video ▶️_**
+Project for the dbt™ data modeling challenge - Social Media Edition
 
-Welcome to the [dbt™ Data Modeling Challenge - Social Media Edition](https://www.paradime.io/dbt-data-modeling-challenge)! This challenge invites you to showcase your data modeling skills using social media data.
+_Brought to you by **🙋🏻‍♀️ [Hetvi Parekh](https://www.linkedin.com/in/parekh-hetvi/)**_
 
-## 📋 Table of Contents
+## **Table of Contents**
+1. [Introduction](#📣-introduction)
+2. [Key Elements of a Youtube video](#key-elements-of-a-youtube-video-✨)
+3. [Data Sources and Data Lineage](#data-sources-and-data-lineage-🕸️)
+   - [Source](#source)
+   - [Supporting Dataset](#seeds)
+   - [Seeds](#seeds)
+   - [Intermediate Layer](#intermediate-layer)
+   - [Mart Layer](#mart-layer)
+   - [Other Models](#other-models)
+   - [Data Lineage](#data-lineage)
+3. [Methodology](#methodology-🧪)
+   - [Tools Used](#tools-used)
+   - [Data Preparation and Cleaning](#data-preparation-and-cleaning-🧼)
+   - [Calculating Video Success Metrics](#calculating-movie-success-🏅)
+4. [Visualizations](#visualizations-📊)
+   - [Getting to Know the Dataset](#getting-to-know-the-dataset-🔎)
+   - [Ultimate Combined Movie Success](#ultimate-combined-movie-success-🥇)
+   - [Change in Movie Success](#change-in-movie-success-⏳)
+   - [Most Popular Months for Movie Releases](#most-popular-months-for-movie-releases-🗓️)
+5. [Conclusion](#conclusion-🎬)
 
-1. [Getting Started](#-getting-started)
-   - [Registration and Verification](#1-registration-and-verification)
-   - [Account Setup](#2-account-setup)
-   - [Support and FAQs](#3-support-and-faqs)
-2. [Competition Details](#-competition-details)
-3. [Building Your Project](#-building-your-project)
-   - [Master the Required Tools](#step-1-master-the-required-tools)
-     - [Paradime](#paradime)
-     - [MotherDuck](#motherduck)
-     - [Hex](#hex)
-   - [Bringing in New Data](#step-2-bringing-in-new-data)
-   - [Generate Insights](#step-3-generate-insights)
-     - [Need a spark of inspiration?](#need-a-spark-of-inspiration)
-        - [Potential Insight Ideas](#potential-insight-ideas)
-   - [Create Data Visualizations](#step-4-create-data-visualizations)
-4. [Submission Guidelines](#-submission-guidelines)
-5. [Submission Template](#-submission-template)
+## **📣 Introduction**
+This project delves into the dynamics of YouTube's top trending videos, offering a comprehensive exploration of the elements that contribute to viral success. By analysing patterns and key metrics across a wide range of trending content, this analysis aims to uncover actionable insights for creators. Whether you're an aspiring YouTuber or an established content creator, these findings offer a roadmap to mastering the art of trendsetting on the world's most popular video platform.
 
-## 🚀 Getting Started
+## **Key Elements of a YouTube video ✨**  
+   - **_Title_** : The main headline of the video, summarizing its content.  
 
-### 1. Registration and Verification
-- **Submit Your Application**: Fill out the [registration form](https://www.paradime.io/dbt-data-modeling-challenge#div-registration-form)
-- **Verification**: We'll review your application against the [entry requirements](https://www.paradime.io/dbt-data-modeling-challenge#div-eval-criteria-summary)
+   - **_Description_** : A brief text below the video providing additional details.
 
-### 2. Account Setup
-After verification, you'll receive two confirmation emails from Paradime:
-- **Your Credentials for the dbt™ Data Modeling Challenge - Social Media Edition**
-- **[Paradime] Activate your account**
+   - **_Tags_** : Keywords associated with the video for better search visibility.
 
-Follow the instructions in these emails to set up your free accounts for:
-- [MotherDuck](https://hubs.la/Q02HHmK-0)
-- [Paradime](https://www.paradime.io/)
-- [Hex](https://app.hex.tech/signup/social-media-hackathon)
+   - **_Thumbnail_** : The preview image representing the video in search results and recommendations.
 
-### 3. Support and FAQs
-- **Technical Support**: Join Paradime's [#social-media-data-challenge Slack channel](https://paradimers.slack.com/join/shared_invite/zt-1mzax4sb8-jgw~hXRlDHAx~KN0az18bw#/shared-invite/email).
-- **Additional Support**: Check out the [MotherDuck Slack Community](https://join.slack.com/t/motherduckcommunity/shared_invite/zt-2hh1g7kec-Z9q8wLd_~alry9~VbMiVqA).
-- **Troubleshooting Confirmation Emails**: 
-  - Ensure you meet the [entry requirements](https://www.paradime.io/dbt-data-modeling-challenge#div-eval-criteria-summary)
-  - Search for "mail@paradime.retool-email.com" in your registration email account.
-  - If using a personal email to register, check LinkedIn for DMs from Parker Rogers (I ask for business email if applicable). 
-  - Still no luck? DM Parker Rogers via Paradime's Challenge Slack.
+   - **_Views_** : The total number of times the video has been watched.
 
-## 🏆 Competition Details
+   - **_Likes_** : The number of users who clicked the thumbs-up button.
 
-Before starting your project, familiarize yourself with the following key information:
+   - **_Comments_** : User-generated messages and feedback below the video.
 
-- [Entry Requirements](https://www.paradime.io/dbt-data-modeling-challenge#div-eval-criteria-summary)
-- [Challenge Deliverables](https://www.paradime.io/dbt-data-modeling-challenge#div-eval-criteria-summary)
-- [Judging Criteria](https://www.paradime.io/dbt-data-modeling-challenge#div-eval-criteria-summary)
-- [Required Tools](https://www.paradime.io/dbt-data-modeling-challenge#div-who-should-participate)
-- [Prizes](https://www.paradime.io/dbt-data-modeling-challenge#section-challenge-overview)
+   - **_Video Duration_** : The length of the video in hours/minutes and seconds.
+   # **Data Sources 📚 and Data Lineage** 🔗
 
-## 🛠 Building Your Project
+The following datasets fuel my analysis -
 
-**Deadline: September 9, 2024, at 11:59 PM PT**
+### **Source**
+`trending_yt_videos_113_countries`
+   - This dataset is sourced from the open-source platform [Kaggle](https://www.kaggle.com/datasets/asaniczka/trending-youtube-videos-113-countries), special thanks to Asaniczka for making it available! 🙏🏼
+   - It contains   top 50 trending YouTube videos across 113 countries, updated daily (starting from Oct 26, 2023 to Aug 8, 2024).
 
-### Step 1: Master the Required Tools
+### **Supporting Dataset**
+- *`video_details`* - Leveraged the YouTube API to retrieve comprehensive video details for deeper analysis. (Python script - fetching_video_details.py)
+   
+### **Seeds**
+   - *`category_mapping`* -  Maps YouTube video categories to their respective IDs for analysis. [Online reference used](https://mixedanalytics.com/blog/list-of-youtube-video-category-ids/)
+   - *`category_cpm_rates`* - Provides CPM rates for different YouTube categories as of year 2024, useful for revenue estimation. [Online Reference used](https://megadigital.ai/en/blog/youtube-ad-benchmarks/)*
+   - *`country_cpm_rates`* - Lists CPM rates by country as of year 2024, enabling geographical revenue comparisons. [Online Reference used](https://bloggernexus.com/youtube-cpm-and-rpm-rates-by-country/)*
 
-To excel in this challenge, familiarize yourself with these essential tools:
+**Note that for cases where CPM rates were unavailable for certain categories or countries, used ChatGPT to gather estimates from additional online sources.*
 
-#### Paradime
+### **Intermediate Layer**
+- *`int_yt_combined_data`*  - int model that integrates all YouTube data into a unified model.
+- *`int_yt_metric_definition`* - int model that defines and calculates key video success metrics.
 
-[Paradime](https://www.paradime.io/) is required for SQL and dbt™ development. Other Paradime features are optional.
 
-##### Learning Resources:
+### **Mart Layer**
+- *`yt_trending_videos_deduped`* - ensures a unique, deduplicated dataset at the video level.
 
-- [Code IDE Tutorial](https://app.arcade.software/share/7kRyaYbPoGc5ofmJfmvY): Navigate the [code IDE](https://docs.paradime.io/app-help/documentation/code-ide) and master basic features.
-- [Commands Panel Tutorial](https://www.youtube.com/watch?v=wQtIn-tnnbg): Learn valuable Paradime features:
-  - [Integrated Terminal](https://docs.paradime.io/app-help/documentation/code-ide/terminal)
-  - [Data Explorer](https://docs.paradime.io/app-help/documentation/code-ide/command-panel/data-explorer)
-  - [Data Catalog](https://docs.paradime.io/app-help/documentation/code-ide/command-panel/docs-preview)
-  - [Data Lineage](https://docs.paradime.io/app-help/documentation/code-ide/command-panel/lineage-preview)
-- [DinoAI Copilot Tutorial](https://www.youtube.com/watch?v=KqiosgQFsuk): Enhance your SQL and dbt™ development with [DinoAI](https://docs.paradime.io/app-help/documentation/code-ide/dino-ai).
-- [Paradime Documentation](https://docs.paradime.io/app-help): Comprehensive product documentation for additional learning.
+### **Other Models**
+- *`thumbnail_analysis.py`* -  Python script to detect the presence of text and faces in YouTube video thumbnails.
+- *`checking_emoji_presence.py`* - Python script to analyze the presence of emojis in video titles and descriptions.
 
-#### MotherDuck
+### **Data Lineage**
+![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/lineage.png?raw=true)
 
-[MotherDuck](https://motherduck.com/) is required for data storage and compute. Other MotherDuck & DuckDB features are optional.
+# **Methodology ⚙️**
+### **Tools Used  🛠️**
+- **[Paradime](https://www.paradime.io/)** to develop dbt™ models.
+- **[MotherDuck](https://app.motherduck.com/)** for data warehousing and compute.
+- **[Hex](https://app.hex.tech/)** to analyze the datasets and create visualizations.
+- **Python scripts** for pulling additional data via Youtube API and other analysis.
+- **dbt Tests** to ensure data accuracy and consistency throughout the project.
+- **ChatGPT** to assist with enhancements and optimization across various tasks.
+- **Tableau** for additional visualizations (which are not supported in Hex).
+- **GitHub** for version control and project submission.
 
-##### Learning Resources:
 
-- [Getting started tutorial with Motherduck & DuckDB](https://motherduck.com/docs/getting-started/e2e-tutorial/)
-- [Working with dbt and MotherDuck](https://motherduck.com/docs/integrations/transformation/dbt/): understand how to configure your dbt project and more!
-- [How to connect MotherDuck and Hex](https://learn.hex.tech/docs/connect-to-data/data-connections/data-connections-introduction#supported-data-sources)
-- [MotherDuck documentation website](https://motherduck.com/docs)
+### **Data Preparation and Cleaning 🫧**
+The source dataset gives information about top 50 latest trending videos on YouTube across 113 countries updated daily (starting from Oct 26, 2023 to Aug 8, 2024).  
+To analyse the patterns across these videos, following steps were taken -
 
-#### Hex
+- A video can trend across multiple days and countries. To ensure uniqueness at the video level, duplicate entries were removed by:
 
-[Hex](https://hex.tech/) is required for data visualizations and additional analysis. Other Hex features are optional.
+   1. **Country-level deduplication**  
 
-##### Learning Resources:
+      For each video on the same trending date, rank the countries based on the highest view count. This ensures that only the country with the highest views for each trending day is selected.
 
-- [Getting started with Hex](https://learn.hex.tech/docs/getting-started)
-- [Writing SQL in Hex](https://learn.hex.tech/docs/explore-data/cells/sql-cells/sql-cells-introduction)
-- [Hex Use Case Gallery](https://hex.tech/use-cases/) for inspiration and examples
-- [Hex Foundations YouTube course](https://www.youtube.com/playlist?list=PLB_A53wXEFlo-rL8Gbqv387wMjB1K6mkX)
+   2. **First trending instance deduplication**
 
-### Step 2: Bringing in New Data
-You can bring in any data you want as long as it's user-generated social media data or relevant data to supplement the user-generated social media data.
+      After deduping at the country level, rank the videos by their first trending date. This step ensures only the earliest instance of the video appearing on the trending list is kept.
 
-#### How to bring in New Data
+   This method ensures the data is unique at both the video and trending date levels, prioritizing the country with the highest views and the first occurrence of the video on the trending list.
+- Online sources, along with the assistance of ChatGPT, were used to gather CPM rates for various video categories and countries for revenue estimations, as outlined above.
+- Python scripts were used for -
+   - Pulling additional video related details like video duration, category id, caption information, etc. via YouTube API.
+   - To check the presence of emoji in video title and description (using `Emoji` library).
+   - To check the presence of text and faces in video thumbnail. (using `EacyOCR` and `OpenCV(cv2)` libraries).
 
-- Your MotherDuck account includes a sample social media dataset, [hacker_news](https://news.ycombinator.com/), which contains posts and comments. 
-- Your Paradime account links to this GitHub repository, with a pre-configured dbt™ model, stg_hacker_news.sql, which references the hackernews table in MotherDuck. 
+### **Calculating Video Success metrics 🏆**
+Video engagement rate and average View count are crucial for measuring a video's success, making them key metrics in this analysis:
 
-*Important:* These resources are provided merely as a convenience. You are not required to use this in your project. In fact, to excel in this challenge, you must bring in data on your own. 
+1. Engagement Rate – Gauges audience interaction using the formula:  
+`Engagement Rate = (#likes + (2 * #comments)) / #views`  
+Comments are weighted higher as they reflect deeper engagement, while likes are considered a lighter form of interaction.
 
-#### How to bring new data into MotherDuck
-1. Query data directly from your [local machine](https://motherduck.com/docs/key-tasks/loading-data-into-motherduck/loading-data-from-local-machine/) or [an object storage service](https://motherduck.com/docs/key-tasks/loading-data-into-motherduck/loading-data-from-cloud-or-https/) (AWS S3, Azure Blob Storage, Google Cloud Storage).
-2. Query data directly from [Hugging Face](https://duckdb.org/docs/extensions/httpfs/hugging_face), which has countless social media datasets at your disposal.
+2. Average View Count – Represents the average views per segment.  
+   `Average View Count = Total #views / Total #videos`
 
-### Step 3: Generate Insights
-Use Paradime, MotherDuck, and Hex to uncover compelling insights from social media data. Aim for accurate, relevant, and engaging discoveries.
+#### 🚨 **_It's important to note that this analysis focuses exclusively on top trending videos, representing the most successful content on YouTube. While views naturally rise over time, the focus is on trends across video elements rather than absolute numbers. These insights reflect patterns observed in top-performing content, offering valuable guidance for creators looking to craft successful videos by aligning with proven trends._** 🚨
 
-### Need a spark of inspiration?
+# **Insights** 📊
 
-Check out these resources:
-- **[Winning Strategies for Paradime's Movie Data Modeling Challenge](https://www.paradime.io/blog/winning-strategies-movie-challenge):** Learn the strategies, best practices, and insights uncovered from winning participants in previous Data Modeling Challenges.
-- **Explore winning submissions from Paradime's recent Data Modeling Challenges:**
-  - [Nikita Volynets' Submission](https://github.com/nikita-volynets/nba-challenge-dbt-paradime/blob/main/README.md) - 2nd Place winner from Paradime's dbt Data Modeling Challenge - NBA Edition.
-  - [Spence Perry's Submission](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/blob/nba-spence-perry/README.md) - 1st place winner from Paradime's dbt Data Modeling Challenge - NBA Edition.
-  - [Isin Pesch's Submission](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/README.md) - 1st place winner from Paradime's dbt Data Modeling Challenge - Movie Edition.
+### **Note 📝** -
+When analyzing success metrics, the average was used for balanced representation when video counts were nearly equal across segments. Otherwise, the median was applied to minimize the impact of outliers and skewed distributions.
 
-#### Potential Insight Ideas
+### **Familiarizing with the dataset 🔎**
+Here’s an overview of the key values present in the analyzed dataset.
 
-Your primary goal is to use Paradime, MotherDuck, and Hex to unearth compelling insights from social media data. With so many social media platforms, chat forums, and supplementary datasets, the possibilities for discovery are virtually limitless. Aim to generate accurate, relevant, scroll-stopping insights. Here are some ideas:
+![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/dataset_overview.png)
 
-- **COVID-19 Sentiment Analysis**
-   - **Analysis Question:** How has the sentiment around COVID-19 on Reddit changed over time? Why?
-   - **Required Social Media Data**: [Reddit posts and comments related to COVID-19](https://www.kaggle.com/datasets/pavellexyr/the-reddit-covid-dataset), or similar dataset.
-   - **Optional/Supplementary Data**: Key dates, news, events, and/or anything that points to why sentiment has changed over time.
+![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/views_per_video_across_categories.png)
 
-- **Donald Trump Popularity Trends**
-   - **Analysis Question:** How has Donald Trump's popularity changed over time?
-   - **Required Social Media Data**: A sample of Twitter posts, mentions, and engagement, containing the words "Donald Trump" over the last 10 years.
-   - **Optional/Supplementary Data**: Key dates, news, events, and/or anything that points to why popularity has changed over time.
+![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/engagement_rate_across_categories.png)
 
-- **Top YouTube Creators Study**
-   - **Analysis Question:** Who are the biggest YouTube creators, and why?
-   - **Required Social Media Data**: YouTube comments, engagement metrics, etc.
-   - **Optional/Supplementary Data**: [Trending YouTube Video statistics](https://www.kaggle.com/datasets/datasnaek/youtube-new?select=CAvideos.csv), or similar datasets.
+Next, we will explore the success metrics for each key attribute of a YouTube video -
 
-- **2022 NFL Superbowl Commercial Impact**
-   - **Analysis Question:** Which Commercials were most popular during the 2022 NFL Superbowl?
-   - **Required Social Media Data**: Twitter and/or Reddit posts, mentions, and engagement during the 4-hour time block of the NFL Superbowl. Only pull data that contains information about [brands that had Superbowl commercials](https://www.foxsports.com/stories/nfl/super-bowl-commercials-2022).
-   - **Optional/Supplementary Data**:
-     - For public companies that advertised, pull stock market data to see if there's any correlation between Superbowl commercial success and stock price.
-     - Using [Superbowl advertisement cost data](https://money.usnews.com/money/personal-finance/spending/articles/how-much-does-the-average-super-bowl-commercial-cost), identify which brands had the highest social engagement per dollar spent.
+Let's zoom in on video duration to uncover how the length of your content influences viewer engagement and success metrics ⏳
 
-- **Hacker News Trend Analysis**
-   - **Analysis Question:** What are the most discussed topics and popular websites on Hacker News in 2022?
-   - **Required Social Media Data**: [Hacker News dataset sample](https://motherduck.com/docs/getting-started/sample-data-queries/hacker-news/) (January 2022 to November 2022).
-   - **Optional/Supplementary Data**: Tech industry news and events, stock market data for frequently mentioned tech companies.
+![plot](Add image for video duration)
 
-### Step 4: Create Data Visualizations
-Use Hex to build impactful visualizations that complement your insights.
+Shifting focus to captions and exploring how their presence can enhance accessibility and boost audience retention 📝
 
-## 📤 Submission Guidelines
+![plot](Add image for caption)
 
-**Deadline: September 9, 2024, at 11:59 PM PT**
+Let’s examine how video title length influences viewer curiosity and drives engagement ✍️
 
-Follow this [step-by-step tutorial](https://app.arcade.software/share/mpoE0fK5HknHZJ3xLVVs) to submit your project:
+![plot](Add image for title length)
 
-1. Email your submission to Parker Rogers (parker@paradime.io)
-2. Subject: "<first_and_last_name> - dbt Data Modeling Challenge - Social Media Edition"
-3. Include:
-   - GitHub branch link with your dbt™ models
-   - README.md file (use the template below)
+Video descriptions hold valuable clues—let's see how they impact a video's overall performance 📝
 
-## 📝 Submission Template
+![plot](Add image for desc length)
 
-Use this template as a starting point for your submission. Feel free to customize it to best showcase your project:
+Emoji presence in titles and descriptions adds a visual pop—discover how they influence viewer engagement 😊
 
-```markdown
-# Social Media Data Analysis - dbt™ Modeling Challenge
+![plot](Add image for emoji presence in title and desc)
 
-## Table of Contents
-1. [Introduction](#introduction)
-2. [Data Sources](#data-sources)
-3. [Methodology](#methodology)
-4. [Insights](#insights)
-5. [Conclusions](#conclusions)
+Text and faces in thumbnails are attention magnets — explore how they drive views and engagement 🎯
 
-## Introduction
-[Brief project overview and goals]
+![plot](Add image for thumbnail)
 
-## Data Sources
-- Dataset 1: [Name] - [Description]
-- Dataset 2: [Name] - [Description]
-- [Add more as needed]
+Timing is everything—find out which days are prime for publishing to maximize views and engagement 📅
 
-### Data Lineage
-[Insert data lineage image]
+![plot](Add image for 2d engagement rate)
 
-## Methodology
-### Tools Used
-- Paradime: SQL and dbt™ development
-- MotherDuck: Data storage and computing
-- Hex: Data visualization
-- [Other tools]
+Relevant video tags are the hidden power behind discoverability—see how they boost visibility and reach 🔍
 
-### Applied Techniques
-- [List key techniques and practices used]
+![plot](Add image for word clouds)
 
-## Insights
 
-### Insight 1
-- Title
-- Visualization
-- Analysis
 
-[Repeat for additional insights]
+# **Conclusion 🎬**
 
-## Conclusions
-[Summarize key findings and their implications]
