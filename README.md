@@ -29,7 +29,7 @@
 - Paradime: SQL and dbt™ development
 - MotherDuck: Data storage and computing
 - Hex: Data visualization
-- [Other tools]
+- Hugging Face: Data source and loading
 
 ### Applied Techniques
 - [List key techniques and practices used]
