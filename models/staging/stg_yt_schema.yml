@@ -1,0 +1,160 @@
+version: 2
+
+models:
+
+  - name: stg_trending_youtube_videos
+    description: |
+      This staging model features the top 50 trending YouTube videos across 113 countries, 
+      capturing a wide range of data points such as video title, description, likes, comments, views, and more. 
+      It encompasses top 50 trending videos from each country, collected between Oct 23, 2023 and Aug 8, 2024.
+
+    columns:
+    - name: title
+      description: |
+        {{ doc("stg_trending_youtube_videos__title") }}
+
+    - name: trending_date
+      description: |
+        {{ doc("stg_trending_youtube_videos__trending_date") }}        
+      tests:
+        - not_null        
+
+    - name: country
+      description: |
+        {{ doc("stg_trending_youtube_videos__country") }}
+      tests:
+        - not_null        
+
+    - name: view_count
+      description: |
+        {{ doc("stg_trending_youtube_videos__view_count") }}
+
+    - name: like_count
+      description: |
+        {{ doc("stg_trending_youtube_videos__like_count") }}
+
+    - name: comment_count
+      description: |
+        {{ doc("stg_trending_youtube_videos__comment_count") }}
+
+    - name: description
+      description: |
+        {{ doc("stg_trending_youtube_videos__description") }}
+
+    - name: thumbnail_url
+      description: |
+        {{ doc("stg_trending_youtube_videos__thumbnail_url") }}
+
+    - name: video_id
+      description: |
+        {{ doc("stg_trending_youtube_videos__video_id") }}
+      tests:
+        - not_null
+
+    - name: video_tags
+      description: |
+        {{ doc("stg_trending_youtube_videos__video_tags") }}                                                                
+
+    - name: publish_date
+      description: |
+        {{ doc("stg_trending_youtube_videos__publish_date") }}                                                                
+
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - video_id
+            - trending_date
+            - country            
+
+
+  - name: stg_video_details
+    description: |
+      This staging model includes supplementary information about YouTube videos, such as 
+      video duration, caption availability, and the category ID to which each video belongs.
+
+    columns:
+    - name: video_id
+      description: |
+        {{ doc("stg_trending_youtube_videos__video_id") }}
+      tests:
+        - unique
+        - not_null 
+
+    - name: total_minutes
+      description: |
+        {{ doc("stg_video_details__total_minutes") }}        
+
+    - name: category_id
+      description: |
+        {{ doc("stg_video_details__category_id") }}
+
+    - name: caption
+      description: |
+        {{ doc("stg_trending_youtube_videos__caption") }}
+
+
+
+  - name: stg_thumbnail_analysis
+    description: |
+      This staging model provides additional details about the thumbnails of YouTube videos,
+      analyzing the presence of text and faces.
+
+    columns:
+    - name: thumbnail_url
+      description: |
+        {{ doc("stg_trending_youtube_videos__thumbnail_url") }}
+      tests:
+        - unique
+        - not_null 
+
+    - name: text_present_flag
+      description: |
+        {{ doc("stg_thumbnail_analysis__text_present_flag") }}        
+
+    - name: face_present_flag
+      description: |
+        {{ doc("stg_thumbnail_analysis__face_present_flag") }}
+
+
+
+  - name: stg_title_description_emoji_presence
+    description: |
+      This staging model offers insights into the presence of emojis in the titles and descriptions of YouTube videos.
+
+    columns:
+    - name: video_id
+      description: |
+        {{ doc("stg_trending_youtube_videos__video_id") }}
+      tests:
+        - not_null
+
+    - name: title
+      description: |
+        {{ doc("stg_trending_youtube_videos__title") }}
+
+    - name: description
+      description: |
+        {{ doc("stg_trending_youtube_videos__description") }}                
+
+    - name: title_emoji_flag
+      description: |
+        {{ doc("stg_title_description_emoji_presence__title_emoji_flag") }}        
+
+    - name: description_emoji_flag
+      description: |
+        {{ doc("stg_title_description_emoji_presence__description_emoji_flag") }}        
+
+    - name: title_excluding_emoji
+      description: |
+        {{ doc("stg_title_description_emoji_presence__title_excluding_emoji") }}        
+
+    - name: description_excluding_emoji
+      description: |
+        {{ doc("stg_title_description_emoji_presence__description_excluding_emoji") }} 
+
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - video_id
+            - title
+            - description                    

@@ -1,26 +1,15 @@
 version: 2
 
-# About the dataset: https://motherduck.com/docs/getting-started/sample-data-queries/hacker-news/#about-the-dataset
-
 sources:
-  - name: main
-    database: analytics
-    tables:
-      - name: BR_youtube_trending_data
-      - name: CA_youtube_trending_data
-      - name: DE_youtube_trending_data
-      - name: FR_youtube_trending_data
-      - name: GB_youtube_trending_data
-      - name: IN_youtube_trending_data
-      - name: JP_youtube_trending_data
-      - name: KR_youtube_trending_data
-      - name: MX_youtube_trending_data
-      - name: RU_youtube_trending_data
-      - name: US_youtube_trending_data
     
   - name: source
     database: analytics
     tables:
-      - name: trending_yt_videos_113_countries    
+      - name: trending_yt_videos_113_countries
+
+  - name: supporting_data
+    database: analytics
+    tables:
       - name: video_details
-      - name: category_mapping
+      - name: title_description_emoji_presence
+      - name: thumbnail_analysis
