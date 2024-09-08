@@ -1,10 +1,6 @@
-# dbt™ Data Modeling Challenge - Social Media Edition
-
---https://github.com/Daerkns/Correlation-Between-Social-Media-and-Mental-Health?tab=readme-ov-file
-
---https://huggingface.co/datasets/sayanroy058/Social_Media_And_Twitter_Mental_Health_Dataset
-
 # Social Media Data Analysis - dbt™ Modeling Challenge
+
+*Hi ✋, I'm ** [Rasmus Engelbrecht](https://www.linkedin.com/in/rasmusengelbrechtsorensen/)***
 
 ## Table of Contents  📝
 1. [Introduction](#introduction)
@@ -17,7 +13,7 @@
 [Brief project overview and goals]
 
 ## Data Sources 💿
-- Correlation Between Social Media and Mental Health - The survey dataset based on 481 respondents was created as part of a Statistics course at a university.
+- **Correlation Between Social Media and Mental Health:** The survey dataset based on 481 respondents was created as part of a Statistics course at a university.
 
 ### Dataset References
 
@@ -32,10 +28,14 @@ The dataset used for this analysis is available from the following sources:
 
 ## Methodology 🛠️
 ### Tools Used
-- Paradime: SQL and dbt™ development
-- MotherDuck: Data storage and computing
-- Hex: Data visualization
-- Hugging Face: Data source and loading
+
+- **[Paradime](https://www.paradime.io/)** for SQL and dbt™ development.
+- **[MotherDuck](https://motherduck.com/)** for data storage and computing.
+- **[Hex](https://hex.tech/)** for data visualization.
+- **[Github](https://www.github.com/)** for version control.
+- **[Hugging Face](https://huggingface.co/)** Data source and loading.
+- **[ChatGPT](https://chatgpt.com/)** assistance for writing findings more clean and grammar/spelling checks.
+
 
 ### Applied Techniques
 - [List key techniques and practices used]
