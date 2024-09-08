@@ -1,0 +1,49 @@
+version: 2
+
+models:
+  - name: instagram_aggregated_user_metrics
+    description: >
+      Aggregates Instagram user metrics and post engagement data to provide a comprehensive 
+      view of user profiles and their engagement statistics. Includes average, maximum, 
+      and minimum engagement metrics, as well as summary statistics for posts and hashtag usage. 
+      Grain is a single user per row.
+    columns:
+      - name: profile_id
+        description: Unique identifier for the Instagram user profile.
+        tests:
+          - unique
+          - not_null
+      - name: username
+        description: Instagram username of the user.
+        tests:
+          - not_null
+      - name: is_business_account
+        description: Indicates whether the user has a business account (True/False).
+        tests:
+          - not_null
+      - name: num_following
+        description: Number of accounts the user is following.
+        tests:
+          - not_null
+      - name: num_followers
+        description: Number of followers the user has.
+        tests:
+          - not_null
+      - name: num_posts
+        description: Number of posts made by the user.
+        tests:
+          - not_null
+      - name: avg_engagement
+        description: Average engagement per post for the user.
+      - name: max_engagement
+        description: Maximum engagement recorded for the user's posts.
+      - name: min_engagement
+        description: Minimum engagement recorded for the user's posts.
+      - name: avg_description_length
+        description: Average length of post descriptions.
+      - name: avg_post_day_of_week
+        description: Average day of the week on which posts are made, represented as an integer (0=Sunday, 6=Saturday).
+      - name: avg_post_hour_of_day
+        description: Average hour of the day at which posts are made.
+      - name: distinct_hashtag_count
+        description: Number of distinct hashtags used by the user in their posts.

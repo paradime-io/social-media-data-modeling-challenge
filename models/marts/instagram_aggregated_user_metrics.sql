@@ -1,3 +1,7 @@
+{{ config(
+    materialized='table'
+) }}
+
 WITH user_metrics AS (
     SELECT
         profile_id,
@@ -51,8 +55,8 @@ SELECT
     MAX(pe.total_engagement) AS max_engagement,
     MIN(pe.total_engagement) AS min_engagement,
     AVG(ps.description_length) AS avg_description_length,
-    AVG(ps.post_day_of_week) AS avg_post_day_of_week,
-    AVG(ps.post_hour_of_day) AS avg_post_hour_of_day,
+    AVG(ps.post_day_of_week)::int64 AS avg_post_day_of_week,
+    AVG(ps.post_hour_of_day)::int64 AS avg_post_hour_of_day,
     COUNT(DISTINCT hashtag) AS distinct_hashtag_count
 FROM user_metrics um
 LEFT JOIN post_engagement pe 
