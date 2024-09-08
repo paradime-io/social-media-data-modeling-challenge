@@ -117,7 +117,7 @@ These variables help frame the relationship between social media usage patterns 
 ### Regression: Determinants of Mental Health
 In this section, I use a statistical model to explore the determinants of mental health scores, examining how various factors, including social media usage and demographic characteristics, influence mental health outcomes.
 While we did oberserve some interesting relationships in the visualisations above, we need a more robust way to understand the significance of the observations.
-For the outcome variable, we calculate the aggregate ´mental_health_score´ measured as the sum of the mental health score components.
+For the outcome variable, we calculate the aggregate `mental_health_score` measured as the sum of the mental health score components.
 
 ![Determinants of Mental Health](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/rasmus-engelbrecht/images/ols_regression.png)
 
