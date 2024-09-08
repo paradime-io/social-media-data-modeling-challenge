@@ -1,6 +1,6 @@
 # Social Media Data Analysis - dbt™ Modeling Challenge
 
-**Hi ✋, I'm ** [Rasmus Engelbrecht](https://www.linkedin.com/in/rasmusengelbrechtsorensen/)*
+***Hi ✋, I'm ** [Rasmus Engelbrecht](https://www.linkedin.com/in/rasmusengelbrechtsorensen/)*
 
 ## Table of Contents  📝
 1. [Introduction](#introduction)
