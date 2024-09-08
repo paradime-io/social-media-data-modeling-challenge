@@ -17,7 +17,7 @@ By examining patterns in social media usage, such as time spent online and the n
 Along the way, we'll look at key variables like purposeless use, distraction frequency, and the influence of specific platforms like TikTok.
 I'll load the dataset from Hugging Face into Motherduck, do some dbt data modeling in Paradime, and finally do visualisations and statistical analysis in Hex.
 
-If you want to go more into depth, you can view the full Hex Notebook [here](https://app.hex.tech/c7e89ceb-cdfb-4937-a7c2-39913a269634/app/37474c32-c68d-4d07-82c9-6ddfb7d622b3/latest).
+***If you want to go more into depth, you can view the full Hex Notebook [here](https://app.hex.tech/c7e89ceb-cdfb-4937-a7c2-39913a269634/app/37474c32-c68d-4d07-82c9-6ddfb7d622b3/latest).***
 
 
 ## Data Sources 💿
@@ -46,7 +46,11 @@ The dataset used for this analysis is available from the following sources:
 
 
 ### Applied Techniques
-- [List key techniques and practices used]
+- **Data Modeling**: Engaged in data modeling, including creating new tables using Motherduck's unnesting function to refine the dataset and support deeper analysis.
+- **Visualization**: Utilized various types of bar charts (normal, stacked, and grouped) and heatmaps to represent the data visually and uncover patterns.
+- **Correlation Analysis**: Examined the relationships between different variables to identify correlations using a Heatmap.
+- **OLS Regression**: Applied Ordinary Least Squares (OLS) regression to explore the determinants of mental health scores and assess the influence of different factors.
+
 
 ## Insights
 
