@@ -9,6 +9,10 @@ seeds:
         tests:
           - not_null
       - name: EventTitle
-        description: Short description of the importan event.
+        description: The title of the important event.
+        tests:
+          - not_null
+      - name: Description
+        description: Short description of the important event.
         tests:
           - not_null

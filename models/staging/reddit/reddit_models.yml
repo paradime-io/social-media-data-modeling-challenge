@@ -3,34 +3,50 @@ models:
     description: This table shows all the reddit comments posted during COVID period.
     columns:
       - name: comment_id
+        description: Unique Base-36 ID of the comment.
         tests:
           - not_null
           - unique
       - name: created_at
+        description: The timestamp when the comment is made.
       - name: created_date
+        description: The date when the comment is made.
       - name: type
+        description: Type of the datapoint.
         tests:
           - accepted_values:
               values:
                 - comment
       - name: subreddit_id
+        description: Unique Base-36 ID of the comment's subreddit.
       - name: subreddit_name
+        description: Human-readable name of the comment's subreddit.
       - name: subreddit_nsfw
+        description: Is the comment's subreddit NSFW?
       - name: permalink
+        description: Permalink to the comment on Reddit.
       - name: body
+        description: Comment's body text.
       - name: sentiment
+        description: Analyzed sentiment for the comment, a score between -1 and 1.
       - name: score
+        description: Comment's score, upvotes minus downvotes.
 
   - name: stg_reddit__covid_comments_in_covid_subreddit
     description: This table shows all the comments under coravirus subreddit.
     columns:
       - name: comment_id
+        description: Unique Base-36 ID of the comment.
         tests:
           - not_null
           - unique
       - name: created_date
+        description: The date when the comment is made.
       - name: body
+        description: Comment's body text.
       - name: sentiment
+        description: Analyzed sentiment for the comment, a score between -1 and 1.
       - name: score
+        description: Comment's score, upvotes minus downvotes.
         tests:
           - not_null

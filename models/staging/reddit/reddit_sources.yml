@@ -13,48 +13,48 @@ sources:
           - name: type
             description: Type of the datapoint.
           - name: id
-            description: "Unique Base-36 ID of the comment."
+            description: Unique Base-36 ID of the comment.
           - name: subreddit.id
-            description: "Unique Base-36 ID of the comment's subreddit."
+            description: Unique Base-36 ID of the comment's subreddit.
           - name: subreddit.name
-            description: "Human-readable name of the comment's subreddit."
+            description: Human-readable name of the comment's subreddit.
           - name: subreddit.nsfw
-            description: "Is the comment's subreddit NSFW?"
+            description: Is the comment's subreddit NSFW?
           - name: created_utc
-            description: "Timestamp of the comment's creation."
+            description: Timestamp of the comment's creation.
           - name: permalink
-            description: "Permalink to the comment on Reddit."
+            description: Permalink to the comment on Reddit.
           - name: body
-            description: "Comment's body text."
+            description: Comment's body text.
           - name: sentiment
-            description: "Analyzed sentiment for the comment."
+            description: Analyzed sentiment for the comment, a score between -1 and 1.
           - name: score
-            description: "Comment's score."
+            description: Comment's score, upvotes minus downvotes.
 
       - name: posts
         description: This dataset contains a comprehensive collection of posts mentioning COVID in their title.
         columns:
           - name: type
-            description: "Type of the datapoint."
+            description: Type of the datapoint.
           - name: id
-            description: "Unique Base-36 ID of the post."
+            description: Unique Base-36 ID of the post.
           - name: subreddit.id
-            description: "Unique Base-36 ID of the post's subreddit."
+            description: Unique Base-36 ID of the post's subreddit.
           - name: subreddit.name
-            description: "Human-readable name of the post's subreddit."
+            description: Human-readable name of the post's subreddit.
           - name: subreddit.nsfw
-            description: "Is the post's subreddit NSFW?"
+            description: Is the post's subreddit NSFW?
           - name: created_utc
-            description: "Timestamp of the post's creation."
+            description: Timestamp of the post's creation.
           - name: permalink
-            description: "Permalink to the post on Reddit."
+            description: Permalink to the post on Reddit.
           - name: domain
-            description: "Domain of the post's link."
+            description: Domain of the post's link.
           - name: url
-            description: "Post's link, if any."
+            description: Post's link, if any.
           - name: selftext
-            description: "Post's selftext, if any."
+            description: Post's selftext, if any.
           - name: title
-            description: "Post's title."
+            description: Post's title.
           - name: score
-            description: "Post's score."
+            description: Post's score, upvotes minus downvotes.
