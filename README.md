@@ -101,7 +101,7 @@ In this analysis I chose to focus on how social media usage impacts mental healt
 
 - **TikTok’s Impact:** The most striking finding is that TikTok users exhibit the worst mental health outcomes among all platforms studied. They report higher levels of depression, restlessness, and health issues, and they engage more in purposeless social media use. This suggests a particularly negative impact of TikTok on mental well-being.
 
-- **Overall Trends:** Spending more time on social media and using multiple platforms are both linked to worse mental health. Although gender and relationship status did not show significant effects in the statistical model, the correlation between increased social media use and poor mental health is clear.
+- **Intensity of Social Media Usage:** Spending more time on social media and using multiple platforms are both linked to worse mental health.
 
 - **Model Insights:** The statistical model explains about 20% of the variance in mental health scores, highlighting that while our analysis provides valuable insights, many factors influencing mental health remain unexplored.
 
