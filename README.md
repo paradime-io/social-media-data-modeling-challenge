@@ -64,7 +64,7 @@ The layers are as follows:
 
 - **[Paradime](https://www.paradime.io/)** for SQL and dbt™ development.
 - **[MotherDuck](https://motherduck.com/)** for data storage and computing.
-- **[Hex](https://hex.tech/)** for data visualization.
+- **[Hex](https://hex.tech/)** for data visualization, statistics, and Python analysis.
 - **[Github](https://www.github.com/)** for version control.
 - **[Hugging Face](https://huggingface.co/)** Data source and loading.
 - **[ChatGPT](https://chatgpt.com/)** assistance for writing findings more clean and grammar/spelling checks.
