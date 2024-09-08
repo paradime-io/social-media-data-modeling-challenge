@@ -18,6 +18,8 @@
 ### Data Lineage
 [Insert data lineage image]
 
+![Stack Overflow Lineage](images/so_lineage.png)
+
 ## Methodology
 ### Tools Used
 - Paradime: SQL and dbt™ development
