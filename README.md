@@ -1,5 +1,3 @@
-<img src="https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/youtube_logo.jpg" alt="Logo" style="float:left; margin-right:10px;"/>
-
 # **_Mastering the Art of YouTube: Roadmap to Building a Successful Video ▶️_**
 Project for the dbt™ data modeling challenge - Social Media Edition
 
@@ -8,22 +6,22 @@ _Brought to you by **🙋🏻‍♀️ [Hetvi Parekh](https://www.linkedin.com/i
 ## **Table of Contents**
 1. [Introduction](#📣-introduction)
 2. [Key Elements of a Youtube video](#key-elements-of-a-youtube-video-✨)
-3. [Data Sources and Data Lineage](#data-sources-and-data-lineage-🕸️)
+3. [Data Sources and Data Lineage](#data-sources-📚-and-data-lineage-🔗)
    - [Source](#source)
-   - [Supporting Dataset](#seeds)
+   - [Supporting Dataset](#supporting-dataset)
    - [Seeds](#seeds)
    - [Intermediate Layer](#intermediate-layer)
    - [Mart Layer](#mart-layer)
    - [Other Models](#other-models)
    - [Data Lineage](#data-lineage)
-3. [Methodology](#methodology-🧪)
-   - [Tools Used](#tools-used)
-   - [Data Preparation and Cleaning](#data-preparation-and-cleaning-🧼)
-   - [Calculating Video Success Metrics](#calculating-movie-success-🏅)
-4. [Insights](#visualizations-📊)
-   - [Getting to Know the Dataset](#getting-to-know-the-dataset-🔎)
-   - [Ultimate Combined Movie Success](#ultimate-combined-movie-success-🥇)
-5. [Conclusion](#conclusion-🎬)
+3. [Methodology](#methodology-⚙️)
+   - [Tools Used](#tools-used-🛠️)
+   - [Data Preparation and Cleaning](#data-preparation-and-cleaning-🫧)
+   - [Calculating Video Success Metrics](#calculating-video-success-metrics-🏆)
+4. [Insights](#insights-📊)
+   - [Familiarizing with the dataset](#familiarizing-with-the-dataset-🔎)
+   - [Exploring Success Metrics Across Key Video Attributes](#exploring-success-metrics-across-key-video-attributes-💡)
+5. [Conclusion](#conclusion-🏁)
 
 ## **📣 Introduction**
 This project delves into the dynamics of YouTube's top trending videos, offering a comprehensive exploration of the elements that contribute to viral success. By analysing patterns and key metrics across a wide range of trending content, this analysis aims to uncover actionable insights for creators. Whether you're an aspiring YouTuber or an established content creator, these findings offer a roadmap to mastering the art of trendsetting on the world's most popular video platform.
@@ -49,7 +47,7 @@ This project delves into the dynamics of YouTube's top trending videos, offering
    - **_Video Duration_** : The length of the video in hours/minutes and seconds.
 
 
-# **Data Sources 📚 and Data Lineage** 🔗
+# **Data Sources 📚 and Data Lineage 🔗** 
 
 The following datasets fuel my analysis -
 
@@ -128,7 +126,7 @@ Comments are weighted higher as they reflect deeper engagement, while likes are 
 
 #### 🚨 **_It's important to note that this analysis focuses exclusively on top trending videos, representing the most successful content on YouTube. While views naturally rise over time, the focus is on trends across video elements rather than absolute numbers. These insights reflect patterns observed in top-performing content, offering valuable guidance for creators looking to craft successful videos by aligning with proven trends._** 🚨
 
-# **Insights** 📊
+# **Insights 📊**
 
 ### **Note 📝** -
 When analyzing success metrics, average was used for balanced representation when video counts were nearly equal across segments. Otherwise, the median was applied to minimize the impact of outliers and skewed distributions.
@@ -142,7 +140,7 @@ Here’s an overview of the key values present in the analyzed dataset.
 
 ![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/engagement_rate_across_categories.png)
 
-Next, we will explore the success metrics for each key attribute of a YouTube video -
+### **Exploring Success Metrics Across Key Video Attributes 💡**
 
 Let's zoom in on video duration to uncover how the length of your content influences viewer engagement and success metrics ⏳
 
