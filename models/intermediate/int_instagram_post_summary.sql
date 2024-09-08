@@ -1,10 +1,6 @@
 WITH source AS (
     SELECT 
         sid,
-        profile_id,
-        username,
-        bio,
-        is_business_account,
         post_date,
         post_time,
         post_type,

@@ -5,7 +5,7 @@ models:
     description: |
       This model extracts hashtags from Instagram post descriptions and retains the `sid` (post ID).
       The hashtags are filtered to ensure they start with `#`, and the results include the post ID for 
-      potential future reference to the original posts.
+      potential future reference to the original posts. The grain of the model is a single hashtag per post.
     columns:
       - name: sid
         description: |

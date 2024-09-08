@@ -1,41 +1,31 @@
 version: 2
 
 models:
-  - name: int_instagram_profile_engagement
-    description: |
-      This model calculates the engagement level for Instagram profiles based on the number of likes and comments.
-      The engagement level is categorised into 'High', 'Medium', or 'Low' based on the total number of likes and comments.
+  - name: int_instagram_post_engagement
+    description: >
+      This model categorises Instagram posts based on their engagement levels. 
+      Engagement is determined by the sum of likes and comments, which is used to classify 
+      posts into 'High', 'Medium', or 'Low' engagement levels. Additionally, it calculates 
+      the total engagement for each post.
     columns:
-      - name: profile_id
-        description: |
-          The unique identifier for each Instagram profile. This field helps in identifying and linking the engagement data 
-          to specific profiles.
+      - name: sid
+        description: Unique identifier for the Instagram post.
         tests:
-          - not_null
           - unique
-      - name: username
-        description: |
-          The username associated with the Instagram profile.
-        tests:
           - not_null
       - name: num_likes
-        description: |
-          The total number of likes received by the Instagram profile. This metric helps in assessing the profile's engagement.
-      - name: num_comments
-        description: |
-          The total number of comments received by the Instagram profile. This metric, along with likes, is used to evaluate engagement.
-      - name: num_following
-        description: |
-          The number of accounts that the Instagram profile follows. This helps to understand the profile's activity level and network size.
-      - name: num_followers
-        description: |
-          The number of followers of the Instagram profile. This metric indicates the profile's reach and popularity.
-      - name: num_posts
-        description: |
-          The total number of posts made by the Instagram profile. This provides context on the profile's content output.
-      - name: engagement_level
-        description: |
-          The calculated engagement level of the Instagram profile based on the sum of likes and comments. 
-          Categorised as 'High', 'Medium', or 'Low' based on the total number of likes and comments.
+        description: Number of likes the post has received.
         tests:
           - not_null
+      - name: num_comments
+        description: Number of comments the post has received.
+        tests:
+          - not_null        
+      - name: engagement_level
+        description: Categorised level of engagement ('High', 'Medium', 'Low') based on the total engagement.
+        tests:
+          - not_null        
+      - name: total_engagement
+        description: Sum of likes and comments for the post.
+        tests:
+          - not_null  
