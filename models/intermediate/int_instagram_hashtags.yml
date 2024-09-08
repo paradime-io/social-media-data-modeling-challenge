@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: int_instagram_hashtags
+    description: |
+      This model extracts hashtags from Instagram post descriptions and retains the `sid` (post ID).
+      The hashtags are filtered to ensure they start with `#`, and the results include the post ID for 
+      potential future reference to the original posts.
+    columns:
+      - name: sid
+        description: |
+          The unique identifier for each Instagram post. This field allows linking the extracted hashtags 
+          back to the original post for further analysis.
+        tests:
+          - not_null
+          - unique
+      - name: hashtag
+        description: |
+          The extracted hashtag from the post description. Only words starting with `#` are considered valid hashtags.
+        tests:
+          - not_null

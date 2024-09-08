@@ -1,4 +1,6 @@
 sources:
   - name: main
     tables:
-      - name: reddit_jokes
+      - name: instagram_posts
+        description: |
+          Dataset containing 600,000 Instagram posts between 2012 and 2019. Source: https://huggingface.co/datasets/vargr/main_instagram?row=73
