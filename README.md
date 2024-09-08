@@ -1,222 +1,175 @@
-# dbt™ Data Modeling Challenge - Social Media Edition
+<div align="center">
+<img src="images/challenge.png" alt="drawing" width="600"/> <br />
 
-Welcome to the [dbt™ Data Modeling Challenge - Social Media Edition](https://www.paradime.io/dbt-data-modeling-challenge)! This challenge invites you to showcase your data modeling skills using social media data.
 
-## 📋 Table of Contents
+# Covid-19 Sentiment Analysis 
 
-1. [Getting Started](#-getting-started)
-   - [Registration and Verification](#1-registration-and-verification)
-   - [Account Setup](#2-account-setup)
-   - [Support and FAQs](#3-support-and-faqs)
-2. [Competition Details](#-competition-details)
-3. [Building Your Project](#-building-your-project)
-   - [Master the Required Tools](#step-1-master-the-required-tools)
-     - [Paradime](#paradime)
-     - [MotherDuck](#motherduck)
-     - [Hex](#hex)
-   - [Bringing in New Data](#step-2-bringing-in-new-data)
-   - [Generate Insights](#step-3-generate-insights)
-     - [Need a spark of inspiration?](#need-a-spark-of-inspiration)
-        - [Potential Insight Ideas](#potential-insight-ideas)
-   - [Create Data Visualizations](#step-4-create-data-visualizations)
-4. [Submission Guidelines](#-submission-guidelines)
-5. [Submission Template](#-submission-template)
 
-## 🚀 Getting Started
+![Badge](https://img.shields.io/badge/paradime.io%20-5d50fc)
+![Badge](https://img.shields.io/badge/MotherDuck%20-ffa500)
+![Badge](https://img.shields.io/badge/HEX%20-f5c0c0)
+![Badge](https://img.shields.io/badge/ChatGPT%20-75ac9d)
 
-### 1. Registration and Verification
-- **Submit Your Application**: Fill out the [registration form](https://www.paradime.io/dbt-data-modeling-challenge#div-registration-form)
-- **Verification**: We'll review your application against the [entry requirements](https://www.paradime.io/dbt-data-modeling-challenge#div-eval-criteria-summary)
+</div>
 
-### 2. Account Setup
-After verification, you'll receive two confirmation emails from Paradime:
-- **Your Credentials for the dbt™ Data Modeling Challenge - Social Media Edition**
-- **[Paradime] Activate your account**
+## :bookmark_tabs: Menu
 
-Follow the instructions in these emails to set up your free accounts for:
-- [MotherDuck](https://hubs.la/Q02HHmK-0)
-- [Paradime](https://www.paradime.io/)
-- [Hex](https://app.hex.tech/signup/social-media-hackathon)
-
-### 3. Support and FAQs
-- **Technical Support**: Join Paradime's [#social-media-data-challenge Slack channel](https://paradimers.slack.com/join/shared_invite/zt-1mzax4sb8-jgw~hXRlDHAx~KN0az18bw#/shared-invite/email).
-- **Additional Support**: Check out the [MotherDuck Slack Community](https://join.slack.com/t/motherduckcommunity/shared_invite/zt-2hh1g7kec-Z9q8wLd_~alry9~VbMiVqA).
-- **Troubleshooting Confirmation Emails**: 
-  - Ensure you meet the [entry requirements](https://www.paradime.io/dbt-data-modeling-challenge#div-eval-criteria-summary)
-  - Search for "mail@paradime.retool-email.com" in your registration email account.
-  - If using a personal email to register, check LinkedIn for DMs from Parker Rogers (I ask for business email if applicable). 
-  - Still no luck? DM Parker Rogers via Paradime's Challenge Slack.
-
-## 🏆 Competition Details
-
-Before starting your project, familiarize yourself with the following key information:
-
-- [Entry Requirements](https://www.paradime.io/dbt-data-modeling-challenge#div-eval-criteria-summary)
-- [Challenge Deliverables](https://www.paradime.io/dbt-data-modeling-challenge#div-eval-criteria-summary)
-- [Judging Criteria](https://www.paradime.io/dbt-data-modeling-challenge#div-eval-criteria-summary)
-- [Required Tools](https://www.paradime.io/dbt-data-modeling-challenge#div-who-should-participate)
-- [Prizes](https://www.paradime.io/dbt-data-modeling-challenge#section-challenge-overview)
-
-## 🛠 Building Your Project
-
-**Deadline: September 9, 2024, at 11:59 PM PT**
-
-### Step 1: Master the Required Tools
-
-To excel in this challenge, familiarize yourself with these essential tools:
-
-#### Paradime
-
-[Paradime](https://www.paradime.io/) is required for SQL and dbt™ development. Other Paradime features are optional.
-
-##### Learning Resources:
-
-- [Code IDE Tutorial](https://app.arcade.software/share/7kRyaYbPoGc5ofmJfmvY): Navigate the [code IDE](https://docs.paradime.io/app-help/documentation/code-ide) and master basic features.
-- [Commands Panel Tutorial](https://www.youtube.com/watch?v=wQtIn-tnnbg): Learn valuable Paradime features:
-  - [Integrated Terminal](https://docs.paradime.io/app-help/documentation/code-ide/terminal)
-  - [Data Explorer](https://docs.paradime.io/app-help/documentation/code-ide/command-panel/data-explorer)
-  - [Data Catalog](https://docs.paradime.io/app-help/documentation/code-ide/command-panel/docs-preview)
-  - [Data Lineage](https://docs.paradime.io/app-help/documentation/code-ide/command-panel/lineage-preview)
-- [DinoAI Copilot Tutorial](https://www.youtube.com/watch?v=KqiosgQFsuk): Enhance your SQL and dbt™ development with [DinoAI](https://docs.paradime.io/app-help/documentation/code-ide/dino-ai).
-- [Paradime Documentation](https://docs.paradime.io/app-help): Comprehensive product documentation for additional learning.
-
-#### MotherDuck
-
-[MotherDuck](https://motherduck.com/) is required for data storage and compute. Other MotherDuck & DuckDB features are optional.
-
-##### Learning Resources:
-
-- [Getting started tutorial with Motherduck & DuckDB](https://motherduck.com/docs/getting-started/e2e-tutorial/)
-- [Working with dbt and MotherDuck](https://motherduck.com/docs/integrations/transformation/dbt/): understand how to configure your dbt project and more!
-- [How to connect MotherDuck and Hex](https://learn.hex.tech/docs/connect-to-data/data-connections/data-connections-introduction#supported-data-sources)
-- [MotherDuck documentation website](https://motherduck.com/docs)
-
-#### Hex
-
-[Hex](https://hex.tech/) is required for data visualizations and additional analysis. Other Hex features are optional.
-
-##### Learning Resources:
-
-- [Getting started with Hex](https://learn.hex.tech/docs/getting-started)
-- [Writing SQL in Hex](https://learn.hex.tech/docs/explore-data/cells/sql-cells/sql-cells-introduction)
-- [Hex Use Case Gallery](https://hex.tech/use-cases/) for inspiration and examples
-- [Hex Foundations YouTube course](https://www.youtube.com/playlist?list=PLB_A53wXEFlo-rL8Gbqv387wMjB1K6mkX)
-
-### Step 2: Bringing in New Data
-You can bring in any data you want as long as it's user-generated social media data or relevant data to supplement the user-generated social media data.
-
-#### How to bring in New Data
-
-- Your MotherDuck account includes a sample social media dataset, [hacker_news](https://news.ycombinator.com/), which contains posts and comments. 
-- Your Paradime account links to this GitHub repository, with a pre-configured dbt™ model, stg_hacker_news.sql, which references the hackernews table in MotherDuck. 
-
-*Important:* These resources are provided merely as a convenience. You are not required to use this in your project. In fact, to excel in this challenge, you must bring in data on your own. 
-
-#### How to bring new data into MotherDuck
-1. Query data directly from your [local machine](https://motherduck.com/docs/key-tasks/loading-data-into-motherduck/loading-data-from-local-machine/) or [an object storage service](https://motherduck.com/docs/key-tasks/loading-data-into-motherduck/loading-data-from-cloud-or-https/) (AWS S3, Azure Blob Storage, Google Cloud Storage).
-2. Query data directly from [Hugging Face](https://duckdb.org/docs/extensions/httpfs/hugging_face), which has countless social media datasets at your disposal.
-
-### Step 3: Generate Insights
-Use Paradime, MotherDuck, and Hex to uncover compelling insights from social media data. Aim for accurate, relevant, and engaging discoveries.
-
-### Need a spark of inspiration?
-
-Check out these resources:
-- **[Winning Strategies for Paradime's Movie Data Modeling Challenge](https://www.paradime.io/blog/winning-strategies-movie-challenge):** Learn the strategies, best practices, and insights uncovered from winning participants in previous Data Modeling Challenges.
-- **Explore winning submissions from Paradime's recent Data Modeling Challenges:**
-  - [Nikita Volynets' Submission](https://github.com/nikita-volynets/nba-challenge-dbt-paradime/blob/main/README.md) - 2nd Place winner from Paradime's dbt Data Modeling Challenge - NBA Edition.
-  - [Spence Perry's Submission](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/blob/nba-spence-perry/README.md) - 1st place winner from Paradime's dbt Data Modeling Challenge - NBA Edition.
-  - [Isin Pesch's Submission](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/README.md) - 1st place winner from Paradime's dbt Data Modeling Challenge - Movie Edition.
-
-#### Potential Insight Ideas
-
-Your primary goal is to use Paradime, MotherDuck, and Hex to unearth compelling insights from social media data. With so many social media platforms, chat forums, and supplementary datasets, the possibilities for discovery are virtually limitless. Aim to generate accurate, relevant, scroll-stopping insights. Here are some ideas:
-
-- **COVID-19 Sentiment Analysis**
-   - **Analysis Question:** How has the sentiment around COVID-19 on Reddit changed over time? Why?
-   - **Required Social Media Data**: [Reddit posts and comments related to COVID-19](https://www.kaggle.com/datasets/pavellexyr/the-reddit-covid-dataset), or similar dataset.
-   - **Optional/Supplementary Data**: Key dates, news, events, and/or anything that points to why sentiment has changed over time.
-
-- **Donald Trump Popularity Trends**
-   - **Analysis Question:** How has Donald Trump's popularity changed over time?
-   - **Required Social Media Data**: A sample of Twitter posts, mentions, and engagement, containing the words "Donald Trump" over the last 10 years.
-   - **Optional/Supplementary Data**: Key dates, news, events, and/or anything that points to why popularity has changed over time.
-
-- **Top YouTube Creators Study**
-   - **Analysis Question:** Who are the biggest YouTube creators, and why?
-   - **Required Social Media Data**: YouTube comments, engagement metrics, etc.
-   - **Optional/Supplementary Data**: [Trending YouTube Video statistics](https://www.kaggle.com/datasets/datasnaek/youtube-new?select=CAvideos.csv), or similar datasets.
-
-- **2022 NFL Superbowl Commercial Impact**
-   - **Analysis Question:** Which Commercials were most popular during the 2022 NFL Superbowl?
-   - **Required Social Media Data**: Twitter and/or Reddit posts, mentions, and engagement during the 4-hour time block of the NFL Superbowl. Only pull data that contains information about [brands that had Superbowl commercials](https://www.foxsports.com/stories/nfl/super-bowl-commercials-2022).
-   - **Optional/Supplementary Data**:
-     - For public companies that advertised, pull stock market data to see if there's any correlation between Superbowl commercial success and stock price.
-     - Using [Superbowl advertisement cost data](https://money.usnews.com/money/personal-finance/spending/articles/how-much-does-the-average-super-bowl-commercial-cost), identify which brands had the highest social engagement per dollar spent.
-
-- **Hacker News Trend Analysis**
-   - **Analysis Question:** What are the most discussed topics and popular websites on Hacker News in 2022?
-   - **Required Social Media Data**: [Hacker News dataset sample](https://motherduck.com/docs/getting-started/sample-data-queries/hacker-news/) (January 2022 to November 2022).
-   - **Optional/Supplementary Data**: Tech industry news and events, stock market data for frequently mentioned tech companies.
-
-### Step 4: Create Data Visualizations
-Use Hex to build impactful visualizations that complement your insights.
-
-## 📤 Submission Guidelines
-
-**Deadline: September 9, 2024, at 11:59 PM PT**
-
-Follow this [step-by-step tutorial](https://app.arcade.software/share/mpoE0fK5HknHZJ3xLVVs) to submit your project:
-
-1. Email your submission to Parker Rogers (parker@paradime.io)
-2. Subject: "<first_and_last_name> - dbt Data Modeling Challenge - Social Media Edition"
-3. Include:
-   - GitHub branch link with your dbt™ models
-   - README.md file (use the template below)
-
-## 📝 Submission Template
-
-Use this template as a starting point for your submission. Feel free to customize it to best showcase your project:
-
-```markdown
-# Social Media Data Analysis - dbt™ Modeling Challenge
-
-## Table of Contents
-1. [Introduction](#introduction)
-2. [Data Sources](#data-sources)
-3. [Methodology](#methodology)
-4. [Insights](#insights)
-5. [Conclusions](#conclusions)
+- [Introduction](#Introduction)
+- [Data Sources](#Data-Sources)
+- [Data Lineage](#Data-Lineage)
+- [Methodology](#Methodology)
+- [Insights](#Insights)
+- [Author](#Author)
 
 ## Introduction
-[Brief project overview and goals]
+TLDR -> Check this [HEX app](https://app.hex.tech/0f966a2f-3837-4926-8b38-07e7463ef805/app/4d121eb8-af7d-4dbd-b82c-f62436acb541/latest).  <br /><br />
+Reddit, a popular social media platform, hosts a variety of user-generated content across numerous forums, where individuals discuss topics ranging from everyday life to global events. In this project we explore how sentiment on Reddit has evolved over time during pandemic and discover underlying reasons of sentiment score changes using cutting edge tools suchs as paradime.io for data transformation, MotherDuck for datawarehousing and HEX for analysis and visualization. Also, a public dataset containing a comprehensive collection comments mentioning COVID in their body text is used. Some terms that are good to know:
+
+- Subreddit is a specific forum or community within Reddit dedicated to a particular topic, interest, or theme.
+- Comment is user-generated response to a post or another comment within a subreddit.
+- Sentiment Score: A sentiment score is a numerical measure of the emotional tone in text, ranging from -1 for negative sentiment to +1 for positive, with 0 indicating neutrality.
+- Upvotes are positive votes that users to express approval or agreement with a post or comment.
+- Downvotes are negative votes that users to express disapproval or disagreement.
 
 ## Data Sources
-- Dataset 1: [Name] - [Description]
-- Dataset 2: [Name] - [Description]
-- [Add more as needed]
+**The Reddit COVID dataset**: The dataset contains a comprehensive collection of comments mentioning COVID in their body text respectively. The data consist of **17.7 million rows** and has a size of 6GB. You can find detailed information about the dataset [here](https://www.kaggle.com/datasets/pavellexyr/the-reddit-covid-dataset).
 
-### Data Lineage
-[Insert data lineage image]
+**Key events during covid**: A ChatGPT generated csv file that shows the important events with thier date and description.
 
-## Methodology
+## Data Lineage 
+#### most_upvoted_comments
+<div align="center">
+<img src="images/data-lineage.png" alt="drawing" width="800"/> <br />
+</div>
+
+#### sentiment_score_by_date_with_events
+<div align="center">
+<img src="images/data-lineage2.png" alt="drawing" width="800"/> <br />
+</div>
+
+## Methodology 
+The Reddit COVID dataset is uploaded to MotherDuck and then cleaned and transformed by using paradime.io to make it ready for analysis or visualization. On the otherhand, key events during covid dataset is generated by ChatGPT in CSV format with a prompt and it's created as a table in MotherDuck using dbt seed function in paradime.io. A final notebook is created in HEX for the analysis and visulaziton of the data and finally, a public HEX app is built from the notebook to present insights. 
 ### Tools Used
 - Paradime: SQL and dbt™ development
 - MotherDuck: Data storage and computing
 - Hex: Data visualization
-- [Other tools]
-
-### Applied Techniques
-- [List key techniques and practices used]
+- ChatGPT
 
 ## Insights
+### Popular Subredits
+<div align="center">
+<img src="images/insight1.png" alt="drawing" width="800"/> <br />
+</div>
 
-### Insight 1
-- Title
-- Visualization
-- Analysis
+➡️During pandemic, Reddit users commented in many subreddits and shared their thoughts and experience. The subreddits **coronavirus**, **politics**, and **AskReddit** received the highest number of comments mentioning "covid" during the pandemic because they are directly related to COVID-19 updates, political discourse, and general community discussions, making them central hubs for pandemic-related conversations. The remaining subreddits, which are more niche or focused on specific topics, saw significantly fewer comments, indicating less overall engagement with COVID-19 discussions.
 
-[Repeat for additional insights]
+---
+### Top 3 Comments - What people commented and others upvoted?
+#### Comment 1
+<div align="center">
+
+*"I just had to attend my own father's funeral via livestream 2 days ago.* <br>
+*I’m 9 months pregnant and couldn’t take the risk.* <br>
+*It’s hard and upsetting but my dad told me multiple times not to get sick before his passing.* <br>
+*I try to see it as honoring his wishes."*
+
+</div>
+
+➡️This comment captures the heartbreaking reality of losing a loved one during the pandemic, where **difficult choices had to be made to keep everyone safe**. Despite the pain of not being there in person, the writer finds comfort in fulfilling her father's last wishes, showing how love and resilience can shine through even the darkest times.
+
+---
+#### Comment 2
+<div align="center">
+
+*"As of today my wife is still sedated and on the ventilator with no signs of improving. <br>
+There were a couple times were they tried to start weaning her off the ventilator but as soon as they've done that her oxygen level dropped <br> and they had to put her back on the ventilator full time. <br>
+My wife has been sick before in the past quite a few times and she always fought through to get better but now after 3 weeks. <br>
+I have come to accept that my wife may pass away and the peace I have about it is that I know without a shadow of a doubt that she will be going home to be with the Lord but I also do believe in miracles and I'm holding on to the chance that she may get healed but if not I am thankful for her I know we've been married for 8 years. <br>
+So think about what I wrote and think about if this thing is a fake crisis."*
+
+</div>
+
+➡️This comment shows the heartbreaking struggle of a person watching their wife fight for her life on a ventilator, torn between hope for her recovery and the painful reality that she might not make it. Despite the fear and sadness, they find some comfort in their faith and the love they've shared, reminding others to **take the situation seriously** and not think of it as something fake.
+
+---
+#### Comment 3
+<div align="center" >
+
+*"Peter told the college students that they were no longer able to stay with the family as originally planned <br> because he couldn’t risk Matt’s grandparents getting exposed to COVID-19 or any other potential germs the group may have encountered. <br> 
+He gets his COVID-19 information right. It's a correct decision."*
+
+</div>
+➡️This comment reflects a difficult decision to prioritize the health of loved ones over previous plans, showing a strong sense of responsibility to protect vulnerable family members. It highlights the importance of making informed choices during the pandemic, even when they’re tough, and commends Peter for doing the right thing to keep everyone safe.
+
+---
+### Sentiment Score Evolution During Covid
+<div align="center">
+<img src="images/insight3.png" alt="drawing" width="800"/> <br />
+</div>
+<br /><br />
+This visual captures the rollercoaster of emotions experienced by users discussing COVID-19 on the "coronavirus" subreddit from March 2020 to October 2021. The sentiment score, calculated based on comments containing the keyword "covid," provides a fascinating glimpse into the collective mood and mindset of the online community during this unprecedented period.
+
+#### A Journey Through the Pandemic:
+
+1. **March to May 2020: The Height of Uncertainty and Fear**
+   - During the initial outbreak of COVID-19, the sentiment score plummets deeply into the negative. This is reflected in the sharp drop, particularly in April and May, where the score falls below -400. The bright red and orange bars suggest a period of intense fear, uncertainty, and negativity as the world grappled with the sudden onset of the pandemic and its implications.
+   
+2. **June to December 2020: A Gradual Adaptation**
+   - As the pandemic progresses into mid-2020, the sentiment score begins to show signs of stabilization, although still largely negative. The less intense yellow and light green bars indicate a shift from panic to a more measured response. People were starting to adapt to the "new normal," though challenges and negative sentiment persisted, perhaps due to the ongoing effects of lockdowns and rising case numbers.
+
+3. **January to May 2021: Hope on the Horizon**
+   - The new year brings a shift in sentiment. The bars gradually move closer to the zero line, and we even see positive scores starting to emerge. This period likely reflects growing optimism fueled by vaccine rollouts and a sense of hope that the end of the pandemic might be in sight. Comments during this time likely discussed the potential for recovery and a return to normalcy.
+
+4. **June to October 2021: Mixed Emotions Amidst Recovery**
+   - As we move into mid-2021, the sentiment becomes more balanced with frequent fluctuations between slightly positive and slightly negative scores. The green and blue bars indicate a community that is cautiously optimistic but still navigating the complexities of an ongoing global health crisis. Topics such as vaccine hesitancy, new variants, and reopening plans likely contributed to the mixed sentiments observed during this period.
+
+#### Reflecting on the Community’s Experience:
+
+This visual clearly shows how the sentiment of the "coronavirus" subreddit evolved in response to the different phases of the pandemic. From initial shock and fear to cautious optimism and ongoing challenges, this chart encapsulates the emotional journey of a global community navigating an unprecedented event. As we continue to adapt and move forward, understanding these sentiment shifts can provide valuable insights into public perception and the overall impact of COVID-19 on mental and emotional well-being.
+
+---
+
+### How did important events influence sentiment scores during COVID?
+To answer this question, a key events table generated by Chat-GPT4 shown below is mapped with the comments based on their dates. 
+
+#### Key events
+<div align="center">
+<img src="images/key-events.png" alt="drawing" width="800"/> <br />
+</div>
+
+---
+
+#### Influence of Key Events on Sentiment Scores
+
+<div align="center">
+<img src="images/insight4.png" alt="drawing" width="800"/> <br />
+</div>
+<br /><br />
+
+At the onset of COVID-19, one significant event that heavily impacted global sentiment was the World Health Organization (WHO) officially declaring COVID-19 a pandemic. This announcement triggered widespread panic and led to stricter regulations worldwide. The situation worsened when global cases surpassed 1 million, causing a major wave of fear and anxiety in Reddit community. 
+
+However, a pivotal event that shifted overall sentiment from negative to positive occurred when Pfizer announced its vaccine was over 90% effective, igniting hope and sparking widespread discussions about vaccination. By the end of 2021, the U.S. FDA fully approved the Pfizer-BioNTech vaccine, marking a moment of significant optimism—the date recorded as having the highest positive sentiment during the pandemic in many online communities.
+
+---
+
+#### Top negative events
+
+<div align="center">
+<img src="images/insight5.png" alt="drawing" width="800"/> <br />
+</div>
+
+---
+
+#### Top negative events
+
+<div align="center">
+<img src="images/insight6.png" alt="drawing" width="800"/> <br />
+</div>
+<br /><br />
 
 ## Conclusions
-[Summarize key findings and their implications]
+The analysis of Reddit comments during the COVID-19 pandemic reveals a fluctuating pattern of sentiment, closely aligned with key events and societal responses. Initially, sentiments were overwhelmingly negative, marked by fear and uncertainty, especially around the declaration of the pandemic and rising global cases. As time progressed and vaccines became available, there was a notable shift towards optimism, particularly following announcements of successful vaccine trials. However, challenges such as lockdowns, new variants, and vaccine hesitancy led to a mix of emotions throughout 2021. These sentiment shifts highlight the pandemic's profound impact on public mood, reflecting the balance between hope for recovery and ongoing anxieties. Understanding these emotional trends can offer valuable insights for addressing public concerns in future crises.
+
+## Author
+
+- [@ufukceyhanli](https://github.com/ufukceyhanli)
