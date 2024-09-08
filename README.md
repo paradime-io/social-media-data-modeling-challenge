@@ -18,20 +18,21 @@ _Brought to you by **🙋🏻‍♀️ [Hetvi Parekh](https://www.linkedin.com/i
    - [Tools Used](#tools-used)
    - [Data Preparation and Cleaning](#data-preparation-and-cleaning-🧼)
    - [Calculating Video Success Metrics](#calculating-movie-success-🏅)
-4. [Visualizations](#visualizations-📊)
+4. [Insights](#visualizations-📊)
    - [Getting to Know the Dataset](#getting-to-know-the-dataset-🔎)
    - [Ultimate Combined Movie Success](#ultimate-combined-movie-success-🥇)
-   - [Change in Movie Success](#change-in-movie-success-⏳)
-   - [Most Popular Months for Movie Releases](#most-popular-months-for-movie-releases-🗓️)
 5. [Conclusion](#conclusion-🎬)
 
 ## **📣 Introduction**
 This project delves into the dynamics of YouTube's top trending videos, offering a comprehensive exploration of the elements that contribute to viral success. By analysing patterns and key metrics across a wide range of trending content, this analysis aims to uncover actionable insights for creators. Whether you're an aspiring YouTuber or an established content creator, these findings offer a roadmap to mastering the art of trendsetting on the world's most popular video platform.
 
-## **Key Elements of a YouTube video ✨**  
+## **Key Elements of a YouTube video ✨** 
+
    - **_Title_** : The main headline of the video, summarizing its content.  
 
    - **_Description_** : A brief text below the video providing additional details.
+
+   - **_Caption_** : A written text overlay that transcribes spoken words, enhancing accessibility and understanding for viewers.
 
    - **_Tags_** : Keywords associated with the video for better search visibility.
 
@@ -44,12 +45,14 @@ This project delves into the dynamics of YouTube's top trending videos, offering
    - **_Comments_** : User-generated messages and feedback below the video.
 
    - **_Video Duration_** : The length of the video in hours/minutes and seconds.
-   # **Data Sources 📚 and Data Lineage** 🔗
+
+
+# **Data Sources 📚 and Data Lineage** 🔗
 
 The following datasets fuel my analysis -
 
 ### **Source**
-`trending_yt_videos_113_countries`
+`trending_yt_videos`
    - This dataset is sourced from the open-source platform [Kaggle](https://www.kaggle.com/datasets/asaniczka/trending-youtube-videos-113-countries), special thanks to Asaniczka for making it available! 🙏🏼
    - It contains   top 50 trending YouTube videos across 113 countries, updated daily (starting from Oct 26, 2023 to Aug 8, 2024).
 
@@ -64,16 +67,16 @@ The following datasets fuel my analysis -
 **Note that for cases where CPM rates were unavailable for certain categories or countries, used ChatGPT to gather estimates from additional online sources.*
 
 ### **Intermediate Layer**
-- *`int_yt_combined_data`*  - int model that integrates all YouTube data into a unified model.
-- *`int_yt_metric_definition`* - int model that defines and calculates key video success metrics.
+- *`int_yt_combined_data`*  - int model that integrates all YouTube data into a unified model and creates metrics.
 
 
 ### **Mart Layer**
-- *`yt_trending_videos_deduped`* - ensures a unique, deduplicated dataset at the video level.
+- *`yt_trending_videos`* - ensures a unique, deduplicated dataset at the video level.
 
 ### **Other Models**
 - *`thumbnail_analysis.py`* -  Python script to detect the presence of text and faces in YouTube video thumbnails.
 - *`checking_emoji_presence.py`* - Python script to analyze the presence of emojis in video titles and descriptions.
+- *`video_tag_word_clouds.py`* - Python script to generate word clouds from the most frequently used video tags.
 
 ### **Data Lineage**
 ![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/data_lineage.png)
@@ -126,7 +129,7 @@ Comments are weighted higher as they reflect deeper engagement, while likes are 
 # **Insights** 📊
 
 ### **Note 📝** -
-When analyzing success metrics, the average was used for balanced representation when video counts were nearly equal across segments. Otherwise, the median was applied to minimize the impact of outliers and skewed distributions.
+When analyzing success metrics, average was used for balanced representation when video counts were nearly equal across segments. Otherwise, the median was applied to minimize the impact of outliers and skewed distributions.
 
 ### **Familiarizing with the dataset 🔎**
 Here’s an overview of the key values present in the analyzed dataset.
@@ -179,5 +182,23 @@ A Revenue Perspective : Correlation Between Estimated RPM and Video Views 💰
 
 
 # **Conclusion 🏁**
-1.
 
+For this analysis, we examined the success metrics across various YouTube video features, concluding that—
+
+1. ⏳ For **video duration**, keeping videos **under 15 minutes** tends to offer the best balance, achieving both higher engagement rates and broader viewership.
+
+2. 🎥📄 **Including captions** in your videos boosts engagement and increases accessibility, allowing your content to reach a broader audience. 
+
+3. ✏️ For optimal engagement and views, keeping **video titles concise with fewer than 7 words** tends to deliver the best results.
+
+4. 📜 **Video Descriptions under 300 characters** tend to drive higher views, while longer ones offer more engagement and provide room for detailed context, which can benefit searchability and clarity.
+
+5. 🤔 **Incorporating emojis in both the title and description** consistently drives higher engagement and views, making them an essential element for maximizing audience interaction.
+
+6. **Using both text 🔠 and expressive faces 😵‍💫 in thumbnails** significantly boosts visibility, capturing attention and driving video engagement.
+
+7. 📅 **Publishing videos on Fridays and Thursdays** yields the highest engagement rates, making them the prime days to maximize video performance.
+
+8. When it comes to **video tags**, it's the **quality 🌟 that matters**, not the quantity, as relevant tags drive more engagement than just adding many. (Refer here for top tags used in trending videos)
+
+9. 💸 Since **Revenue** is directly tied to views, **focusing on maximizing video views** should be a top priority to boost earnings.

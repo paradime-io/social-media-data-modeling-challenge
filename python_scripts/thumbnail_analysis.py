@@ -13,7 +13,7 @@ import duckdb # For inserting data in motherduck warehouse
 
 # Connect to MotherDuck
 con = duckdb.connect('md:analytics?motherduck_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhldHZpcGFyZWtoQGJpdGdvLmNvbSIsInNlc3Npb24iOiJoZXR2aXBhcmVraC5iaXRnby5jb20iLCJwYXQiOiJpN01mTk4wNGt6clFKaEoxMXd5UW1Wa2lnakhtLXdnWmxJYzdRYjRraElJIiwidXNlcklkIjoiZTI1ZmUyN2QtZDU5ZS00YzkwLTlmNjQtZWIyOTJlYWM0YjRkIiwiaXNzIjoibWRfcGF0IiwiaWF0IjoxNzIyNzM5MDIxfQ.IveaSQdeSlIKSNFmskPUetgwUbn6TonMM__ogQuXu9o')
-query = "select distinct thumbnail_url from source.trending_yt_videos_113_countries where thumbnail_url is not null"
+query = "select distinct thumbnail_url from source.trending_yt_videos where thumbnail_url is not null"
 
 # Execute the query to get the result set
 df = con.execute(query).fetchdf()
@@ -54,8 +54,8 @@ df['text_present_flag'] = process_thumbnails(df['thumbnail_url'])
 # -------------------------- Checking the presence of faces in a thumbnail URL ------------------------------ #
 
 # Load the pre-trained models for face detection
-modelFile = "./inputs/pre_trained_models/res10_300x300_ssd_iter_140000.caffemodel"
-configFile = "./inputs/pre_trained_models/deploy.prototxt"
+modelFile = "./pre_trained_models/res10_300x300_ssd_iter_140000.caffemodel"
+configFile = "./pre_trained_models/deploy.prototxt"
 net = cv2.dnn.readNetFromCaffe(configFile, modelFile)
 
 # Set up a requests session with retries
@@ -128,7 +128,7 @@ CREATE TABLE IF NOT EXISTS supporting_data.thumbnail_analysis (
 """)
 
 # Insert data from DataFrame into the table
-con.execute("INSERT INTO supporting_data.thumbnail_analysis SELECT * FROM df_result")
+con.execute("INSERT INTO supporting_data.thumbnail_analysis SELECT * FROM df")
 
 # Close the connection
 con.close()

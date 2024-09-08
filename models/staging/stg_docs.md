@@ -1,46 +1,46 @@
 # stg_trending_youtube_videos
 
-{% docs stg_trending_youtube_videos__title %}
+{% docs stg_trending_yt_videos__title %}
 Title of the video.
 {% enddocs %}
 
-{% docs stg_trending_youtube_videos__trending_date %}
+{% docs stg_trending_yt_videos__trending_date %}
 Date of data collection (Date when the video was in top 50 of trending list for that country).
 {% enddocs %}
 
-{% docs stg_trending_youtube_videos__country %}
+{% docs stg_trending_yt_videos__country_id %}
 Country for which the trending videos are recorded.
 {% enddocs %}
 
-{% docs stg_trending_youtube_videos__view_count %}
+{% docs stg_trending_yt_videos__view_count %}
 Number of views for the video (as of that trending date).
 {% enddocs %}
 
-{% docs stg_trending_youtube_videos__like_count %}
+{% docs stg_trending_yt_videos__like_count %}
 Number of likes for the video (as of that trending date).
 {% enddocs %}
 
-{% docs stg_trending_youtube_videos__comment_count %}
+{% docs stg_trending_yt_videos__comment_count %}
 Number of comments for the video (as of that trending date).
 {% enddocs %}
 
-{% docs stg_trending_youtube_videos__description %}
+{% docs stg_trending_yt_videos__description %}
 Description of the video.
 {% enddocs %}
 
-{% docs stg_trending_youtube_videos__thumbnail_url %}
+{% docs stg_trending_yt_videos__thumbnail_url %}
 URL of the video thumbnail image.
 {% enddocs %}
 
-{% docs stg_trending_youtube_videos__video_id %}
+{% docs stg_trending_yt_videos__video_id %}
 ID of the video.
 {% enddocs %}
 
-{% docs stg_trending_youtube_videos__video_tags %}
+{% docs stg_trending_yt_videos__video_tags %}
 Tags associated with the video.
 {% enddocs %}
 
-{% docs stg_trending_youtube_videos__publish_date %}
+{% docs stg_trending_yt_videos__publish_date %}
 Date when the video was published.
 {% enddocs %}
 

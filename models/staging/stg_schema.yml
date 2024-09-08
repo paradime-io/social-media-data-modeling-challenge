@@ -2,7 +2,7 @@ version: 2
 
 models:
 
-  - name: stg_trending_youtube_videos
+  - name: stg_trending_yt_videos
     description: |
       This staging model features the top 50 trending YouTube videos across 113 countries, 
       capturing a wide range of data points such as video title, description, likes, comments, views, and more. 
@@ -11,60 +11,60 @@ models:
     columns:
     - name: title
       description: |
-        {{ doc("stg_trending_youtube_videos__title") }}
+        {{ doc("stg_trending_yt_videos__title") }}
 
     - name: trending_date
       description: |
-        {{ doc("stg_trending_youtube_videos__trending_date") }}        
+        {{ doc("stg_trending_yt_videos__trending_date") }}        
       tests:
         - not_null        
 
     - name: country
       description: |
-        {{ doc("stg_trending_youtube_videos__country") }}
+        {{ doc("stg_trending_yt_videos__country_id") }}
       tests:
         - not_null        
 
     - name: view_count
       description: |
-        {{ doc("stg_trending_youtube_videos__view_count") }}
+        {{ doc("stg_trending_yt_videos__view_count") }}
 
     - name: like_count
       description: |
-        {{ doc("stg_trending_youtube_videos__like_count") }}
+        {{ doc("stg_trending_yt_videos__like_count") }}
 
     - name: comment_count
       description: |
-        {{ doc("stg_trending_youtube_videos__comment_count") }}
+        {{ doc("stg_trending_yt_videos__comment_count") }}
 
     - name: description
       description: |
-        {{ doc("stg_trending_youtube_videos__description") }}
+        {{ doc("stg_trending_yt_videos__description") }}
 
     - name: thumbnail_url
       description: |
-        {{ doc("stg_trending_youtube_videos__thumbnail_url") }}
+        {{ doc("stg_trending_yt_videos__thumbnail_url") }}
 
     - name: video_id
       description: |
-        {{ doc("stg_trending_youtube_videos__video_id") }}
+        {{ doc("stg_trending_yt_videos__video_id") }}
       tests:
         - not_null
 
     - name: video_tags
       description: |
-        {{ doc("stg_trending_youtube_videos__video_tags") }}                                                                
+        {{ doc("stg_trending_yt_videos__video_tags") }}                                                                
 
     - name: publish_date
       description: |
-        {{ doc("stg_trending_youtube_videos__publish_date") }}                                                                
+        {{ doc("stg_trending_yt_videos__publish_date") }}                                                                
 
     tests:
       - dbt_utils.unique_combination_of_columns:
           combination_of_columns:
             - video_id
             - trending_date
-            - country            
+            - country_id
 
 
   - name: stg_video_details
@@ -75,7 +75,7 @@ models:
     columns:
     - name: video_id
       description: |
-        {{ doc("stg_trending_youtube_videos__video_id") }}
+        {{ doc("stg_trending_yt_videos__video_id") }}
       tests:
         - unique
         - not_null 
@@ -90,7 +90,7 @@ models:
 
     - name: caption
       description: |
-        {{ doc("stg_trending_youtube_videos__caption") }}
+        {{ doc("stg_video_details__caption") }}
 
 
 
@@ -102,7 +102,7 @@ models:
     columns:
     - name: thumbnail_url
       description: |
-        {{ doc("stg_trending_youtube_videos__thumbnail_url") }}
+        {{ doc("stg_trending_yt_videos__thumbnail_url") }}
       tests:
         - unique
         - not_null 
@@ -124,17 +124,17 @@ models:
     columns:
     - name: video_id
       description: |
-        {{ doc("stg_trending_youtube_videos__video_id") }}
+        {{ doc("stg_trending_yt_videos__video_id") }}
       tests:
         - not_null
 
     - name: title
       description: |
-        {{ doc("stg_trending_youtube_videos__title") }}
+        {{ doc("stg_trending_yt_videos__title") }}
 
     - name: description
       description: |
-        {{ doc("stg_trending_youtube_videos__description") }}                
+        {{ doc("stg_trending_yt_videos__description") }}                
 
     - name: title_emoji_flag
       description: |

@@ -5,7 +5,7 @@ sources:
   - name: source
     database: analytics
     tables:
-      - name: trending_yt_videos_113_countries
+      - name: trending_yt_videos
 
   - name: supporting_data
     database: analytics

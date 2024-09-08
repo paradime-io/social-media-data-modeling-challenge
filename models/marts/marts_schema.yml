@@ -2,57 +2,57 @@ version: 2
 
 models:
 
-  - name: yt_trending_videos_deduped
+  - name: yt_trending_videos
     description: |
       Final deduplicated dataset structured to extract comprehensive data at the video ID level.
 
     columns:
     - name: title
       description: |
-        {{ doc("stg_trending_youtube_videos__title") }}
+        {{ doc("stg_trending_yt_videos__title") }}
 
     - name: trending_date
       description: |
-        {{ doc("stg_trending_youtube_videos__trending_date") }}        
+        {{ doc("stg_trending_yt_videos__trending_date") }}        
 
     - name: country
       description: |
-        {{ doc("stg_trending_youtube_videos__country") }}
+        {{ doc("stg_trending_yt_videos__country_id") }}
 
     - name: view_count
       description: |
-        {{ doc("stg_trending_youtube_videos__view_count") }}
+        {{ doc("stg_trending_yt_videos__view_count") }}
 
     - name: like_count
       description: |
-        {{ doc("stg_trending_youtube_videos__like_count") }}
+        {{ doc("stg_trending_yt_videos__like_count") }}
 
     - name: comment_count
       description: |
-        {{ doc("stg_trending_youtube_videos__comment_count") }}
+        {{ doc("stg_trending_yt_videos__comment_count") }}
 
     - name: description
       description: |
-        {{ doc("stg_trending_youtube_videos__description") }}
+        {{ doc("stg_trending_yt_videos__description") }}
 
     - name: thumbnail_url
       description: |
-        {{ doc("stg_trending_youtube_videos__thumbnail_url") }}
+        {{ doc("stg_trending_yt_videos__thumbnail_url") }}
 
     - name: video_id
       description: |
-        {{ doc("stg_trending_youtube_videos__video_id") }}
+        {{ doc("stg_trending_yt_videos__video_id") }}
       tests:
         - not_null
         - unique
 
     - name: video_tags
       description: |
-        {{ doc("stg_trending_youtube_videos__video_tags") }}                                                                
+        {{ doc("stg_trending_yt_videos__video_tags") }}                                                                
 
     - name: publish_date
       description: |
-        {{ doc("stg_trending_youtube_videos__publish_date") }}
+        {{ doc("stg_trending_yt_videos__publish_date") }}
 
     - name: total_minutes
       description: |
@@ -100,51 +100,51 @@ models:
 
     - name: publish_day
       description: |
-        {{ doc("int_yt_metric_definition__publish_day") }}
+        {{ doc("int_yt_combined_data__publish_day") }}
 
     - name: trending_day
       description: |
-        {{ doc("int_yt_metric_definition__trending_day") }}                
+        {{ doc("int_yt_combined_data__trending_day") }}                
 
     - name: days_to_trend
       description: |
-        {{ doc("int_yt_metric_definition__days_to_trend") }}
+        {{ doc("int_yt_combined_data__days_to_trend") }}
 
     - name: engagement_rate
       description: |
-        {{ doc("int_yt_metric_definition__engagement_rate") }}
+        {{ doc("int_yt_combined_data__engagement_rate") }}
 
     - name: title_word_count
       description: |
-        {{ doc("int_yt_metric_definition__title_word_count") }}
+        {{ doc("int_yt_combined_data__title_word_count") }}
 
     - name: video_tags_word_count
       description: |
-        {{ doc("int_yt_metric_definition__video_tags_word_count") }}
+        {{ doc("int_yt_combined_data__video_tags_word_count") }}
 
     - name: description_length
       description: |
-        {{ doc("int_yt_metric_definition__description_length") }}
+        {{ doc("int_yt_combined_data__description_length") }}
 
     - name: country_cpm_revenue
       description: |
-        {{ doc("int_yt_metric_definition__country_cpm_revenue") }}
+        {{ doc("int_yt_combined_data__country_cpm_revenue") }}
 
     - name: category_cpm_revenue
       description: |
-        {{ doc("int_yt_metric_definition__category_cpm_revenue") }}                                                                
+        {{ doc("int_yt_combined_data__category_cpm_revenue") }}                                                                
 
     - name: estimated_revenue
       description: |
-        {{ doc("int_yt_metric_definition__estimated_revenue") }}                                                                
+        {{ doc("int_yt_combined_data__estimated_revenue") }}                                                                
 
     - name: estimated_rpm
       description: |
-        {{ doc("int_yt_metric_definition__estimated_rpm") }}
+        {{ doc("int_yt_combined_data__estimated_rpm") }}
 
     - name: estimated_rpm_per_minute
       description: |
-        {{ doc("int_yt_metric_definition__estimated_rpm_per_minute") }}                                                                                        
+        {{ doc("int_yt_combined_data__estimated_rpm_per_minute") }}                                                                                        
 
     - name: category_name_sorting_purpose
       description: |

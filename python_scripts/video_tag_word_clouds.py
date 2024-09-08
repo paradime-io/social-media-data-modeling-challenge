@@ -12,7 +12,7 @@ con = duckdb.connect('md:analytics?motherduck_token=eyJhbGciOiJIUzI1NiIsInR5cCI6
 query = """
 with split_data as (
 select video_id, category_name, string_split(video_tags, ', ') as tag
-from analytics.dbt_hetviparekh.yt_trending_videos_deduped
+from analytics.dbt_hetviparekh.yt_trending_videos
 where video_tags is not null
 and category_name is not null)
 
