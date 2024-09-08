@@ -76,7 +76,7 @@ The following datasets fuel my analysis -
 - *`checking_emoji_presence.py`* - Python script to analyze the presence of emojis in video titles and descriptions.
 
 ### **Data Lineage**
-![plot](Add data lineage here)
+![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/data_lineage.png)
 
 # **Methodology ⚙️**
 ### **Tools Used  🛠️**
@@ -94,22 +94,22 @@ The following datasets fuel my analysis -
 The source dataset gives information about top 50 latest trending videos on YouTube across 113 countries updated daily (starting from Oct 26, 2023 to Aug 8, 2024).  
 To analyse the patterns across these videos, following steps were taken -
 
-- A video can trend across multiple days and countries. To ensure uniqueness at the video level, duplicate entries were removed by:
+- A video can trend on multiple days and in multiple countries. To make the data unique at the video level, duplicates were removed by:
 
-   1. **Country-level deduplication**  
+1. **Country-level deduplication**:  
+For each video trending on the same day, the country with the highest view count was kept.
 
-      For each video on the same trending date, rank the countries based on the highest view count. This ensures that only the country with the highest views for each trending day is selected.
+2. **First trending instance deduplication**:  
+After the country-level cleanup, only the earliest date the video trended was kept.
 
-   2. **First trending instance deduplication**
+   This ensures the data is unique by video and trending date, prioritizing the country with the highest views and the first time the video trended.
 
-      After deduping at the country level, rank the videos by their first trending date. This step ensures only the earliest instance of the video appearing on the trending list is kept.
-
-   This method ensures the data is unique at both the video and trending date levels, prioritizing the country with the highest views and the first occurrence of the video on the trending list.
-- Online sources, along with the assistance of ChatGPT, were used to gather CPM rates for various video categories and countries for revenue estimations, as outlined above.
 - Python scripts were used for -
    - Pulling additional video related details like video duration, category id, caption information, etc. via YouTube API.
    - To check the presence of emoji in video title and description (using `Emoji` library).
    - To check the presence of text and faces in video thumbnail. (using `EacyOCR` and `OpenCV(cv2)` libraries).
+
+- Online sources, along with the assistance of ChatGPT, were used to gather CPM rates for various video categories and countries for revenue estimations, as outlined above.
 
 ### **Calculating Video Success metrics 🏆**
 Video engagement rate and average View count are crucial for measuring a video's success, making them key metrics in this analysis:
@@ -167,10 +167,17 @@ Timing is everything—find out which days are prime for publishing to maximize 
 
 ![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/two_day_engagement_rate.png)
 
-Relevant video tags are the hidden power behind discoverability—see how they boost visibility and reach 🔍
+Relevant video tags are the hidden power behind discoverability — include these in your video to boost visibility and reach 🔍
 
-![plot](Add image for word clouds)
+![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/success_metrics_across_video_tags.png)
+
+![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/word_clouds_for_video_tags.png)
+
+A Revenue Perspective : Correlation Between Estimated RPM and Video Views 💰
+
+![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/revenue_estimation.png)
 
 
+# **Conclusion 🏁**
+1.
 
-# **Conclusion 🎬**

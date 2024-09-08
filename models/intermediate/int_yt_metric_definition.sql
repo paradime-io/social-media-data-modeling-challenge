@@ -32,7 +32,7 @@ select *,
 
        ((country_cpm_revenue + category_cpm_revenue)/2) * 0.55 as estimated_revenue_for_youtuber,
 
-       (estimated_revenue * 1000)/view_count as estimated_rpm,
+       (estimated_revenue_for_youtuber * 1000)/view_count as estimated_rpm,
        
         estimated_rpm/total_minutes as estimated_rpm_per_minute
 from
