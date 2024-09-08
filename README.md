@@ -76,7 +76,7 @@ The following datasets fuel my analysis -
 - *`checking_emoji_presence.py`* - Python script to analyze the presence of emojis in video titles and descriptions.
 
 ### **Data Lineage**
-![plot](https://github.com/paradime-io/paradime-dbt-movie-challenge/blob/movie-isin-pesch-deel-com/images/lineage.png?raw=true)
+![plot](Add data lineage here)
 
 # **Methodology ⚙️**
 ### **Tools Used  🛠️**
@@ -141,31 +141,31 @@ Next, we will explore the success metrics for each key attribute of a YouTube vi
 
 Let's zoom in on video duration to uncover how the length of your content influences viewer engagement and success metrics ⏳
 
-![plot](Add image for video duration)
+![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/success_metrics_across_video_duration.png)
 
 Shifting focus to captions and exploring how their presence can enhance accessibility and boost audience retention 📝
 
-![plot](Add image for caption)
+![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/success_metrics_across_caption.png)
 
 Let’s examine how video title length influences viewer curiosity and drives engagement ✍️
 
-![plot](Add image for title length)
+![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/success_metrics_across_title_length.png)
 
 Video descriptions hold valuable clues—let's see how they impact a video's overall performance 📝
 
-![plot](Add image for desc length)
+![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/success_metrics_across_description_length.png)
 
 Emoji presence in titles and descriptions adds a visual pop—discover how they influence viewer engagement 😊
 
-![plot](Add image for emoji presence in title and desc)
+![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/success_metrics_across_emoji_presence.png)
 
 Text and faces in thumbnails are attention magnets — explore how they drive views and engagement 🎯
 
-![plot](Add image for thumbnail)
+![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/thumbnail_analysis.png)
 
 Timing is everything—find out which days are prime for publishing to maximize views and engagement 📅
 
-![plot](Add image for 2d engagement rate)
+![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/two_day_engagement_rate.png)
 
 Relevant video tags are the hidden power behind discoverability—see how they boost visibility and reach 🔍
 
@@ -174,4 +174,3 @@ Relevant video tags are the hidden power behind discoverability—see how they b
 
 
 # **Conclusion 🎬**
-
