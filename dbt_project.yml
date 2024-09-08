@@ -19,7 +19,12 @@ models:
   paradime_social_media_challenge:
     staging:
       +materialized: table
+      +schema: staging
       base:
         +materialized: ephemeral
     marts: 
       +materialized: table
+      +schema: marts
+    insights:
+      +materialized: table
+      +schema: insights
