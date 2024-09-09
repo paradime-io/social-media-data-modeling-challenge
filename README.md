@@ -179,47 +179,65 @@ Here’s an overview of the key values present in the analyzed dataset.
 
 ![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/views_per_video_across_categories.png)
 
-![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/engagement_rate_across_categories.png)
+![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/engagement_rate_across_categories.png)  
 
 ### **Exploring Success Metrics Across Key Video Attributes 💡**
 
-Let's zoom in on video duration to uncover how the length of your content influences viewer engagement and success metrics ⏳
+Let's zoom in on **video duration** to uncover how the length of your content influences viewer engagement and success metrics ⏳
 
 ![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/success_metrics_across_video_duration.png)
 
-Shifting focus to captions and exploring how their presence can enhance accessibility and boost audience engagement 📝
+<br>
+
+Shifting focus to **captions** and exploring how their presence can enhance accessibility and boost audience engagement 📝
 
 ![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/success_metrics_across_caption.png)
 
-Let’s examine how video title length influences viewer curiosity and drives engagement ✍️
+<br>
+
+Let’s examine how video **title length** influences viewer curiosity and drives engagement ✍️
 
 ![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/success_metrics_across_title_length.png)
 
-Video descriptions hold valuable clues — let's see how they impact a video's overall performance 📝
+<br>
+
+**Video descriptions** hold valuable clues — let's see how they impact a video's overall performance 📝
 
 ![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/success_metrics_across_description_length.png)
 
-Emoji presence in titles and descriptions adds a visual pop — discover how they influence viewer engagement 😊
+<br>
+
+**Emoji presence in titles and descriptions** adds a visual pop — discover how they influence viewer engagement 😊
 
 ![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/success_metrics_across_emoji_presence.png)
 
-Text and faces in thumbnails are attention magnets — explore how they drive views and engagement 🎯
+<br>
+
+**Text and faces in thumbnails** are attention magnets — explore how they drive views and engagement 🎯
 
 ![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/thumbnail_analysis.png)
 
-Timing is everything—find out which days are prime for publishing to maximize views and engagement 📅
+<br>
+
+Timing is everything—find out **which days are prime for publishing** to maximize views and engagement 📅
 
 ![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/two_day_engagement_rate.png)
 
-Relevant video tags are the hidden power behind discoverability - include these in your video to boost visibility and reach 🔍
+<br>
+
+**Relevant video tags** are the hidden power behind discoverability - include these in your video to boost visibility and reach 🔍
 
 ![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/success_metrics_across_video_tags.png)
 
-Since the quality of tags is more impactful than the quantity, let's explore the most frequently used tags from the six most popular video categories (based on the number of trending videos). These can serve as a valuable reference when selecting tags for your own videos -
+<br>
+
+Since the **quality of tags** is more impactful than the quantity, let's explore the most frequently used tags from the six most popular video categories (based on the number of trending videos). These can serve as a valuable reference when selecting tags for your own videos -
 
 ![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/word_clouds_for_video_tags.png)
 
-A Revenue Perspective : Correlation Between Estimated RPM and Video Views 💰
+<br>
+
+A **Revenue Perspective** : Correlation Between Estimated RPM and Video Views 💰
 
 ![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/revenue_estimation.png)
 
