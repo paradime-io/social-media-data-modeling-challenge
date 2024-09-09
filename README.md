@@ -4,9 +4,9 @@ Project for the dbt™ data modeling challenge - Social Media Edition
 _Brought to you by **🙋🏻‍♀️ [Hetvi Parekh](https://www.linkedin.com/in/parekh-hetvi/)**_
 
 ## **Table of Contents**
-1. [Introduction](#introduction)
-2. [Key Elements of a Youtube video](#key-elements-of-a-youtube-video-✨)
-3. [Data Sources and Data Lineage](#data-sources-📚-and-data-lineage-🔗)
+1. [Introduction](#-introduction)
+2. [Key Elements of a Youtube video](#key-elements-of-a-youtube-video-)
+3. [Data Sources and Data Lineage](#data-sources--and-data-lineage-)
    - [Source](#source)
    - [Supporting Dataset](#supporting-dataset)
    - [Seeds](#seeds)
@@ -14,14 +14,14 @@ _Brought to you by **🙋🏻‍♀️ [Hetvi Parekh](https://www.linkedin.com/i
    - [Mart Layer](#mart-layer)
    - [Other Models](#other-models)
    - [Data Lineage](#data-lineage)
-3. [Methodology](#methodology-⚙️)
-   - [Tools Used](#tools-used-🛠️)
-   - [Data Preparation and Cleaning](#data-preparation-and-cleaning-🫧)
-   - [Calculating Video Success Metrics](#calculating-video-success-metrics-🏆)
-4. [Insights](#insights)
-   - [Familiarizing with the dataset](#familiarizing-with-the-dataset-🔎)
-   - [Exploring Success Metrics Across Key Video Attributes](#exploring-success-metrics-across-key-video-attributes-💡)
-5. [Conclusion](#conclusion-🏁)
+3. [Methodology](#methodology-)
+   - [Tools Used](#tools-used-)
+   - [Data Preparation and Cleaning](#data-preparation-and-cleaning-)
+   - [Calculating Video Success Metrics](#calculating-video-success-metrics-)
+4. [Insights](#insights-)
+   - [Familiarizing with the dataset](#familiarizing-with-the-dataset-)
+   - [Exploring Success Metrics Across Key Video Attributes](#exploring-success-metrics-across-key-video-attributes-)
+5. [Conclusion](#conclusion-)
 
 ## **📣 Introduction**
 This project delves into the dynamics of YouTube's top trending videos, offering a comprehensive exploration of the elements that contribute to viral success. By analysing patterns and key metrics across a wide range of trending content, this analysis aims to uncover actionable insights for creators. Whether you're an aspiring YouTuber or an established content creator, these findings offer a roadmap to mastering the art of trendsetting on the world's most popular video platform.
