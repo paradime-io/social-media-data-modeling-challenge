@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: dim_sports
+    description: "Dimension table for sports, including the unique identifier and name of each sport."
+    columns:
+      - name: id
+        description: "Unique identifier for each sport."
+        tests:
+          - not_null
+          - unique
+      - name: name
+        description: "The name of the sport."

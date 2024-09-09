@@ -1,0 +1,26 @@
+version: 2
+
+exposures:
+
+  - name: social_media_olympics_2024
+    type: dashboard
+    maturity: high
+    url: https://app.hex.tech/97a2cfe2-8e02-474f-98d0-92397730cd27/app/f33cabdf-9c89-47e7-be9c-0ccb5df7c3e6/latest
+    description: >
+      Visualizations for the dbt Data Modeling Challenge - Social Media Edition
+
+    depends_on:
+      - ref('fct_google_trends')
+      - ref('fct_instagram_metrics')
+      - ref('fct_reddit_posts_and_comments')
+      - ref('fct_tiktok_metrics')
+      - ref('fct_tweets')
+      - ref('fct_twitter_metrics')
+      - ref('fct_youtube_metrics')
+      - ref('dim_athletes')
+      - ref('dim_countries')
+      - ref('dim_sports')
+
+    owner:
+      name: Bruno Souza de Lima
+      email: bruno.szdl@gmail.com

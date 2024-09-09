@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: stg_web_scraping__reddit_posts_and_comments
+    description: "Model extracting and transforming Reddit posts and comments data obtained through web scraping."
+    columns:
+      - name: id
+        description: "Unique identifier for the Reddit post or comment."
+        tests:
+          - not_null
+          - unique
+      - name: subreddit
+        description: "The subreddit where the post or comment was made."
+      - name: type
+        description: "Indicates whether the record is a post or a comment."
+      - name: text
+        description: "The text content of the Reddit post or comment, converted to lowercase."
+      - name: sentiment
+        description: "The sentiment score associated with the Reddit post or comment."

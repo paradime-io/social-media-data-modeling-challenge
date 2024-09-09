@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: olympics_api
+    database: analytics  
+    schema: raw  
+    tables:
+
+      - name: athletes_bio
+        description: "JSON containing bio information of athletes, including personal details, participation, and results."
+        columns:
+          - name: persons
+            description: "A JSON array containing detailed biographical data for athletes, including personal information, disciplines, registered events, and more."
+
+      - name: sports
+        description: "JSON containing a list of disciplines with their codes, descriptions and sport status."
+        columns:
+          - name: disciplines
+            description: "A JSON array containing discipline details including code, description, isSport flag, and scheduled status."

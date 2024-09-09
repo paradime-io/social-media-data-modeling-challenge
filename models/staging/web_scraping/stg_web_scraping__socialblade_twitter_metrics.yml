@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: stg_web_scraping__socialblade_twitter_metrics
+    description: "Model extracting and transforming Twitter metrics data from SocialBlade, with numeric values converted from abbreviated formats."
+    columns:
+      - name: athlete_id
+        description: "Unique identifier for the athlete."
+        tests:
+          - not_null
+          - unique
+      - name: username
+        description: "The Twitter handle of the athlete."
+      - name: followers
+        description: "The total number of followers on Twitter, converted from abbreviated format."
+      - name: tweets
+        description: "The total number of tweets, converted from abbreviated format."
+      - name: followers_30_days
+        description: "The number of followers gained in the last 30 days, converted from abbreviated format."
+      - name: tweets_30_days
+        description: "The number of tweets made in the last 30 days, converted from abbreviated format."

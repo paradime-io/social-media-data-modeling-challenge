@@ -1,0 +1,188 @@
+version: 2
+
+sources:
+  - name: web_scraping
+    database: analytics
+    schema: raw  
+    tables:
+      - name: google_trends_sports_normalized
+        description: "Normalized Google Trends data for different sports."
+        columns:
+          - name: date
+            description: "The date when the trends were recorded."
+          - name: sport
+            description: "The sport or event for which the trends data is collected."
+          - name: trends
+            description: >
+              The Google Trends score for the sport on the given date, normalized.
+              100 is the value for the term 'Olympics'.
+
+      - name: instagram_metrics
+        description: "Instagram metrics data for users."
+        columns:
+          - name: error
+            description: "Indicates if there was an error in data retrieval."
+          - name: errorDescription
+            description: "Detailed description of the error if any."
+          - name: followersCount
+            description: "The number of followers the user has."
+          - name: followsCount
+            description: "The number of users this account follows."
+          - name: profilePic
+            description: "URL of the user's profile picture."
+          - name: timestamp
+            description: "Timestamp of when the data was retrieved."
+          - name: url
+            description: "URL of the Instagram profile."
+          - name: userFullName
+            description: "Full name of the Instagram user."
+          - name: userId
+            description: "Unique identifier of the Instagram user."
+          - name: userName
+            description: "Username of the Instagram user."
+          - name: userUrl
+            description: "URL to the user's Instagram profile."
+          - name: username
+            description: "Username of the Instagram user (duplicate column)."
+
+      - name: reddit_posts_and_comments
+        description: "Reddit posts and comments related to the Olympics."
+        columns:
+          - name: id
+            description: "Unique identifier for the Reddit post or comment."
+          - name: __type
+            description: "Type of the entry, either 'post' or 'comment'."
+          - name: title
+            description: "Title of the Reddit post (if applicable)."
+          - name: body
+            description: "Body content of the comment (if applicable)."
+          - name: parent_id
+            description: "Identifier for the parent post or comment."
+          - name: subreddit
+            description: "Subreddit where the post or comment was made."
+
+      - name: socialblade_tiktok_metrics
+        description: "TikTok metrics collected from SocialBlade."
+        columns:
+          - name: code
+            description: "Code of the athlete."
+          - name: username
+            description: "TikTok username."
+          - name: followers
+            description: "Number of followers the user has."
+          - name: likes
+            description: "Total number of likes on the user's videos."
+          - name: uploads
+            description: "Total number of videos uploaded by the user."
+          - name: followers_30_days
+            description: "Change in follower count over the last 30 days."
+          - name: likes_30_days
+            description: "Change in likes count over the last 30 days."
+          - name: uploads_30_days
+            description: "Number of videos uploaded in the last 30 days."
+
+      - name: socialblade_twitter_metrics
+        description: "Twitter metrics collected from SocialBlade."
+        columns:
+          - name: code
+            description: "Code of the athlete."
+          - name: twitter_handle
+            description: "Twitter handle of the user."
+          - name: followers
+            description: "Number of followers the user has."
+          - name: tweets
+            description: "Total number of tweets made by the user."
+          - name: followers_30_days
+            description: "Change in follower count over the last 30 days."
+          - name: tweets_30_days
+            description: "Number of tweets made in the last 30 days."
+
+      - name: socialblade_youtube_metrics
+        description: "YouTube metrics collected from SocialBlade."
+        columns:
+          - name: code
+            description: "Code of the athlete."
+          - name: channel
+            description: "Name of the YouTube channel."
+          - name: subscribers
+            description: "Number of subscribers the channel has."
+          - name: video_views
+            description: "Total number of views on the channel's videos."
+          - name: uploads
+            description: "Total number of videos uploaded by the channel."
+          - name: subscribers_30_days
+            description: "Change in subscriber count over the last 30 days."
+          - name: video_views_30_days
+            description: "Change in video views over the last 30 days."
+
+      - name: tiktok_metrics
+        description: "Table containing TikTok profile metrics and related information."
+        columns:
+          - name: image
+            description: "URL to the TikTok profile image."
+          - name: url
+            description: "URL to the TikTok profile."
+          - name: username
+            description: "The TikTok username of the profile."
+          - name: public_profile
+            description: "Indicates whether the TikTok profile is public."
+          - name: tagline
+            description: "The tagline or short description used on the TikTok profile."
+          - name: following.raw
+            description: "Raw count of the profiles this user is following."
+          - name: followers.raw
+            description: "Raw count of the followers of this TikTok profile."
+          - name: likes.raw
+            description: "Raw count of likes received by this profile."
+          - name: videos.raw
+            description: "Raw count of videos uploaded by this profile."
+          - name: bio
+            description: "Biography or additional information on the TikTok profile."
+          - name: link
+            description: "External link provided on the TikTok profile."
+          - name: requestUrl
+            description: "URL from which the TikTok profile data was fetched."
+
+      - name: tweets
+        description: "Table containing details and metrics of tweets."
+        columns:
+          - name: url
+            description: "URL to the tweet."
+          - name: twitterUrl
+            description: "URL to the Twitter profile that posted the tweet."
+          - name: id
+            description: "Unique identifier for the tweet."
+          - name: text
+            description: "Text content of the tweet."
+          - name: retweetCount
+            description: "Number of times the tweet has been retweeted."
+          - name: replyCount
+            description: "Number of replies to the tweet."
+          - name: likeCount
+            description: "Number of likes on the tweet."
+          - name: quoteCount
+            description: "Number of quote tweets."
+          - name: createdAt
+            description: "Timestamp when the tweet was created."
+          - name: bookmarkCount
+            description: "Number of times the tweet has been bookmarked."
+          - name: isRetweet
+            description: "Indicates whether the tweet is a retweet."
+          - name: isQuote
+            description: "Indicates whether the tweet is a quote tweet."
+
+      - name: youtube_metrics
+        description: "Table containing YouTube channel metrics and related information."
+        columns:
+          - name: channel_urls
+            description: "URL to the YouTube channel."
+          - name: channel_id
+            description: "Unique identifier for the YouTube channel."
+          - name: channel_name
+            description: "Name of the YouTube channel."
+          - name: view_count
+            description: "Total number of views across all videos on the channel."
+          - name: subscriber_count
+            description: "Number of subscribers to the channel."
+          - name: video_count
+            description: "Number of videos uploaded to the channel."

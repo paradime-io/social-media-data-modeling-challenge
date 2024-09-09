@@ -17,5 +17,15 @@ clean-targets:
 
 models:
   paradime_social_media_challenge:
-    example:
+    staging:
       +materialized: view
+      +schema: 'staging'
+    intermediate:
+      +materialized: ephemeral
+      +schema: 'intermediate'
+    marts:
+      +materialized: table
+      +schema: 'marts'
+
+seeds:
+  +schema: 'seeds'

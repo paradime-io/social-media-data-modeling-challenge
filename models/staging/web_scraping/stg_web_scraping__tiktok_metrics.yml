@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: stg_web_scraping__tiktok_metrics
+    description: "Model extracting and transforming raw TikTok metrics data obtained through web scraping."
+    columns:
+      - name: username
+        description: "The TikTok username associated with the metrics."
+        tests:
+          - not_null
+          - unique
+      - name: followers
+        description: "The raw count of followers for the TikTok profile."
+      - name: likes
+        description: "The raw count of likes received by the TikTok profile."
+      - name: uploads
+        description: "The raw count of videos uploaded by the TikTok profile."

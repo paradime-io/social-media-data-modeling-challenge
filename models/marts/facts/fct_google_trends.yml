@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: fct_google_trends
+    description: "Fact table for Google Trends data related to Olympic sports, including trend metrics by sport and date."
+    columns:
+      - name: sport_id
+        description: "Unique identifier for each sport, derived from the `dim_sports` dimension."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_sports')
+              field: id
+      - name: date
+        description: "The date of the trend data."
+        tests:
+          - not_null
+      - name: trend
+        description: "The Google Trends normalized value for the sport on the given date."
+        tests:
+          - not_null

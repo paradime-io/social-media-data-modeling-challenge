@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: stg_web_scraping__socialblade_tiktok_metrics
+    description: "Model extracting and transforming TikTok metrics data from SocialBlade, with numeric values converted from abbreviated formats."
+    columns:
+      - name: athlete_id
+        description: "Unique identifier for the athlete."
+        tests:
+          - not_null
+          - unique
+      - name: username
+        description: "The TikTok username of the athlete."
+      - name: followers
+        description: "The total number of followers on TikTok, converted from abbreviated format."
+      - name: likes
+        description: "The total number of likes on TikTok, converted from abbreviated format."
+      - name: uploads
+        description: "The total number of uploads on TikTok, converted from abbreviated format."
+      - name: followers_30_days
+        description: "The number of followers gained in the last 30 days, converted from abbreviated format."
+      - name: likes_30_days
+        description: "The number of likes gained in the last 30 days, converted from abbreviated format."
+      - name: uploads_30_days
+        description: "The number of uploads made in the last 30 days, converted from abbreviated format."

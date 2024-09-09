@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: fct_instagram_metrics
+    description: "Fact table for Instagram metrics related to athletes, including follower counts."
+    columns:
+      - name: athlete_id
+        description: "Unique identifier for each athlete, derived from the `dim_athletes` dimension."
+        tests:
+          - not_null
+          - unique
+          - relationships:
+              to: ref('dim_athletes')
+              field: id
+      - name: account
+        description: "The Instagram account username of the athlete."
+      - name: followers
+        description: "The number of Instagram followers the athlete has."
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0

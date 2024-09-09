@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: stg_olympics_api__athletes_bio
+    description: "Model extracting and transforming athlete bio information from the olympics API."
+    columns:
+      - name: id
+        description: "Unique identifier for the athlete."
+        tests:
+          - not_null
+          - unique
+      - name: given_name
+        description: "The given name of the athlete."
+      - name: family_name
+        description: "The family name of the athlete."
+      - name: gender
+        description: "The gender of the athlete."
+      - name: nationality
+        description: "The nationality code of the athlete."
+      - name: country_of_birth
+        description: "The country code where the athlete was born."
+      - name: country_of_residence
+        description: "The country code where the athlete currently resides."
+      - name: disciplines
+        description: "A list of disciplines the athlete participates in."
+      - name: num_of_events
+        description: "The calculated number of events the Athlete participated in"
+      - name: birth_date
+        description: "The birth date of the athlete."
+      - name: medals
+        description: "A list of medals won by the athlete."
+      - name: extended_bios
+        description: "Extended biographical information such as social media links."

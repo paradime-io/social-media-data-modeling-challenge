@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: dim_countries
+    description: "Dimension table for countries, including basic information such as name, official name, continent, and flag."
+    columns:
+      - name: id
+        description: "Unique identifier for each country."
+        tests:
+          - not_null
+          - unique
+      - name: name
+        description: "The commonly used name of the country."
+      - name: official_name
+        description: "The official name of the country."
+      - name: continent_code
+        description: "The code representing the continent where the country is located."
+      - name: continent_name
+        description: "The name of the continent where the country is located."
+      - name: flag
+        description: "The emoji representation of the country's flag."

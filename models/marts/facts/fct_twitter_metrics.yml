@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: fct_twitter_metrics
+    description: "Fact table for Twitter metrics related to athletes, including followers and tweet counts."
+    columns:
+      - name: athlete_id
+        description: "Unique identifier for each athlete, derived from the `dim_athletes` dimension."
+        tests:
+          - not_null
+          - unique
+          - relationships:
+              to: ref('dim_athletes')
+              field: id
+      - name: account
+        description: "The Twitter account username of the athlete."
+      - name: followers
+        description: "The number of Twitter followers the athlete has."
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+      - name: tweets
+        description: "The total number of tweets posted by the athlete."
+      - name: followers_30_days
+        description: "The number of followers gained in the last 30 days."
+      - name: tweets_30_days
+        description: "The number of tweets posted in the last 30 days."
+      - name: followers_30_days_percentage
+        description: "The percentage increase in followers over the last 30 days."
+      - name: tweets_30_days_percentage
+        description: "The percentage increase in tweets over the last 30 days."

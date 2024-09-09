@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: fct_tiktok_metrics
+    description: "Fact table for TikTok metrics related to athletes, including followers, likes, and uploads."
+    columns:
+      - name: athlete_id
+        description: "Unique identifier for each athlete, derived from the `dim_athletes` dimension."
+        tests:
+          - not_null
+          - unique
+          - relationships:
+              to: ref('dim_athletes')
+              field: id
+      - name: account
+        description: "The TikTok account username of the athlete."
+      - name: followers
+        description: "The number of TikTok followers the athlete has."
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+      - name: likes
+        description: "The total number of likes the athlete's TikTok videos have received."
+      - name: uploads
+        description: "The total number of videos uploaded by the athlete on TikTok."
+      - name: followers_30_days
+        description: "The number of followers gained in the last 30 days."
+      - name: likes_30_days
+        description: "The number of likes received in the last 30 days."
+      - name: uploads_30_days
+        description: "The number of videos uploaded in the last 30 days."
+      - name: followers_30_days_percentage
+        description: "The percentage increase in followers over the last 30 days."
+      - name: likes_30_days_percentage
+        description: "The percentage increase in likes over the last 30 days."
+      - name: uploads_30_days_percentage
+        description: "The percentage increase in uploads over the last 30 days."

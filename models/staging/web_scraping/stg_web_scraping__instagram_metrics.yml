@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: stg_web_scraping__instagram_metrics
+    description: "Model extracting and transforming Instagram metrics data obtained through web scraping."
+    columns:
+      - name: username
+        description: "The Instagram username of the profile."
+        tests:
+          - not_null
+          - unique
+      - name: followers
+        description: "The number of followers for the Instagram profile."
+

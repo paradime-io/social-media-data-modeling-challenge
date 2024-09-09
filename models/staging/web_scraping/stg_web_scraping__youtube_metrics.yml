@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: stg_web_scraping__youtube_metrics
+    description: "Model extracting and transforming YouTube metrics data obtained through web scraping, with numeric values converted from abbreviated formats."
+    columns:
+      - name: channel_id
+        description: "Unique identifier for the YouTube channel."
+        tests:
+          - not_null
+          - unique
+      - name: channel_url
+        description: "The URL of the YouTube channel."
+      - name: subscribers
+        description: "The total number of subscribers to the YouTube channel, converted from abbreviated format."
+      - name: video_views
+        description: "The total number of video views on the YouTube channel, converted from abbreviated format."
+      - name: uploads
+        description: "The total number of video uploads to the YouTube channel, converted from abbreviated format."

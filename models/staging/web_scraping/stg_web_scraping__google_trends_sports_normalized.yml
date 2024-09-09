@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: stg_web_scraping__google_trends_sports_normalized
+    description: "Model normalizing Google Trends data for various sports obtained through web scraping."
+    columns:
+      - name: date
+        description: "The date when the Google Trends data was recorded."
+        tests:
+          - not_null
+      - name: sport_name
+        description: "The name of the sport associated with the trend data."
+        tests:
+          - not_null
+      - name: trend
+        description: "The Google Trends score for the sport on the given date."

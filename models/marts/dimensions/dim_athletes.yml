@@ -1,0 +1,49 @@
+version: 2
+
+models:
+  - name: dim_athletes
+    description: "Dimension table for athletes, including personal information, medals, and sports participation."
+    columns:
+      - name: id
+        description: "Unique identifier for each athlete."
+        tests:
+          - not_null
+          - unique
+      - name: given_name
+        description: "The given name (first name) of the athlete."
+      - name: family_name
+        description: "The family name (last name) of the athlete."
+      - name: full_name
+        description: "The full name of the athlete, combining given name and family name."
+      - name: gender
+        description: "The gender of the athlete."
+      - name: age
+        description: "The calculated age of the athlete based on their birth date."
+      - name: num_of_events
+        description: "The number of events the Athlete participated in"
+      - name: gold_medals
+        description: "Number of gold medals won by the athlete."
+      - name: silver_medals
+        description: "Number of silver medals won by the athlete."
+      - name: bronze_medals
+        description: "Number of bronze medals won by the athlete."
+      - name: total_medals
+        description: "Total number of medals won by the athlete."
+      - name: is_gold_medalist
+        description: "Boolean indicating whether the athlete has won a gold medal."
+      - name: is_silver_medalist
+        description: "Boolean indicating whether the athlete has won a silver medal."
+      - name: is_bronze_medalist
+        description: "Boolean indicating whether the athlete has won a bronze medal."
+      - name: is_medalist
+        description: "Boolean indicating whether the athlete has won any medal."
+      - name: main_sport_id
+        description: "The ID of the athlete's primary sport."
+      - name: secondary_sport_id
+        description: "The ID of the athlete's secondary sport, if applicable."
+      - name: nationality_id
+        description: "The ID of the athlete's nationality."
+      - name: country_of_birth_id
+        description: "The ID of the country where the athlete was born."
+      - name: country_of_residence_id
+        description: "The ID of the country where the athlete currently resides."

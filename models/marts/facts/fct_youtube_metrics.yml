@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: fct_youtube_metrics
+    description: "Fact table for YouTube metrics related to athletes, including subscribers, video views, and uploads."
+    columns:
+      - name: athlete_id
+        description: "Unique identifier for each athlete, derived from the `dim_athletes` dimension."
+        tests:
+          - not_null
+          - unique
+          - relationships:
+              to: ref('dim_athletes')
+              field: id
+      - name: account
+        description: "The YouTube account username of the athlete."
+      - name: subscribers
+        description: "The number of YouTube subscribers the athlete's channel has."
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+      - name: video_views
+        description: "The total number of views the athlete's YouTube videos have received."
+      - name: uploads
+        description: "The total number of videos uploaded by the athlete on YouTube."
+      - name: subscribers_30_days
+        description: "The number of subscribers gained in the last 30 days."
+      - name: video_views_30_days
+        description: "The number of video views in the last 30 days."
+      - name: subscribers_30_days_percentage
+        description: "The percentage increase in subscribers over the last 30 days."
+      - name: video_views_30_days_percentage
+        description: "The percentage increase in video views over the last 30 days."

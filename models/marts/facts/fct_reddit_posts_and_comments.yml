@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: fct_reddit_posts_and_comments
+    description: "Fact table for Reddit posts and comments related to athletes, sports, and countries, including sentiment analysis."
+    columns:
+      - name: id
+        description: "Unique identifier for each Reddit post or comment."
+        tests:
+          - not_null
+      - name: type
+        description: "The type of content (post or comment)."
+      - name: text
+        description: "The text content of the Reddit post or comment."
+      - name: sentiment
+        description: "Sentiment score of the Reddit text."
+      - name: athlete_id
+        description: "Unique identifier for the athlete mentioned in the Reddit post or comment, derived from the `dim_athletes` dimension."
+        tests:
+          - relationships:
+              to: ref('dim_athletes')
+              field: id
+      - name: sport_i

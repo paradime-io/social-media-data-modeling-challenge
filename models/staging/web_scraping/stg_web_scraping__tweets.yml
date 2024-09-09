@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: stg_web_scraping__tweets
+    description: "Model extracting and transforming tweet data obtained through web scraping."
+    columns:
+      - name: url
+        description: "The URL of the tweet."
+      - name: id
+        description: "Unique identifier for the tweet."
+        tests:
+          - not_null
+          - unique
+      - name: text
+        description: "The text content of the tweet, converted to lowercase."
+      - name: sentiment
+        description: "The sentiment score associated with the tweet."

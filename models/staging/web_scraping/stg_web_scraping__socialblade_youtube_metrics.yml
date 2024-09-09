@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: stg_web_scraping__socialblade_youtube_metrics
+    description: "Model extracting and transforming YouTube metrics data from SocialBlade, with numeric values converted from abbreviated formats."
+    columns:
+      - name: athlete_id
+        description: "Unique identifier for the athlete."
+        tests:
+          - not_null
+          - unique
+      - name: channel
+        description: "The YouTube channel name associated with the athlete."
+      - name: subscribers
+        description: "The total number of subscribers on YouTube, converted from abbreviated format."
+      - name: video_views
+        description: "The total number of video views on YouTube, converted from abbreviated format."
+      - name: uploads
+        description: "The total number of video uploads on YouTube, converted from abbreviated format."
+      - name: subscribers_30_days
+        description: "The number of subscribers gained in the last 30 days, converted from abbreviated format."
+      - name: video_views_30_days
+        description: "The number of video views gained in the last 30 days, converted from abbreviated format."
