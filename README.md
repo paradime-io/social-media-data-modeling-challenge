@@ -30,7 +30,8 @@ Dataset containing 600,000 Instagram posts between 2012 and 2019 from HuggingFac
 ### Mart 🛒
 - `instagram_aggregated_user_metrics` aggregates Instagram user metrics and post engagement data to provide a comprehensive view of user profiles and their engagement statistics. Includes average, maximum, and minimum engagement metrics, as well as summary statistics for posts and hashtag usage. Grain is a single user per row.
 - `instagram_post_summary` post-level metrics combining engagement, summary, and hashtag data for each Instagram post.
-
+- `instagram_hashtag_summary` post-hashtag level model that support hashtag analysis.
+ 
 ### Macros 🪛
 - `extract_hashtags` uses REGEX to extract hashtags from the post captions.
 - `group_follower_counts` to help writing DRY code for follower groupings.
@@ -92,6 +93,10 @@ When categorising users by their follower count, we observe that the majority fa
 ![Dashboard5](dashboard5.png)
 - Most posts are shared in the evening hours, with a steady increase in posting activity starting from 8 AM and peaking at 8 PM.
 - The busiest days for posting are Sunday (0) and Monday, with Wednesday being the least popular day for posts.
+
+![Dashboard7](dashboard7.png)
+![Dashboard8](dashboard8.png)
+- There seems to be a small plateu when analysing the relationship between the lenght of the description and the total engagement received on the post.
 
 ## Conclusions
 [Summarise key findings and their implications]

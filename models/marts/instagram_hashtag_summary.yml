@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: instagram_hashtag_summary
+    description: |
+      Post and hashtag level model. One model can have multiple hashtags, therefore might repeat in the dataset.
+    columns:
+      - name: sid
+        description: |
+          The unique identifier for each Instagram post. This field allows linking the extracted hashtags 
+          back to the original post for further analysis.
+        data_tests:
+          - not_null
+      - name: hashtag
+        description: |
+          The extracted hashtag from the post description. Only words starting with `#` are considered valid hashtags.
+        data_tests:
+          - not_null
