@@ -23,5 +23,6 @@ themes_by_media AS (
 )
 SELECT 
     *,
-    
+    ( ocurrences / qtt_posts ) AS percent_ocurrences_total
 FROM themes_by_media
+
