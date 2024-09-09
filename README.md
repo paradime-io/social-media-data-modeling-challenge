@@ -172,7 +172,7 @@ Timing is everything—find out which days are prime for publishing to maximize 
 
 ![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/two_day_engagement_rate.png)
 
-Relevant video tags are the hidden power behind discoverability - include these in your video to boost visibility and reach 🔍
+#### Relevant video tags are the hidden power behind discoverability - include these in your video to boost visibility and reach 🔍
 
 ![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/success_metrics_across_video_tags.png)
 
