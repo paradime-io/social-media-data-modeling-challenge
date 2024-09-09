@@ -317,9 +317,9 @@ increase performance score by 0.0089 (~0.01), which was nearly the difference be
 
 Lastly, I took a look at if there were characteristics of TikTok songs that made them different from other songs. Using logistic regression on the same set of song attributes to calculate coefficient scores, 
 it seems that TikTok songs tend to be more speechier and more danceable but lower in energy. Reminder that the Spotify API docs cite death metal as an example of high energy. Without knowing what this attribute 
-actually means and looks like across different genres, it’s hard to draw a conclusion.
+actually means and looks like across different genres, it’s hard to draw definitive conclusions.
 
-The insights in this section were not super compelling. In a future analysis, I would curate a more expansive set of attributes including categorical ones (recency/date release, geographic origins, 
+The insights in this section were not exactly groundbreaking. In a future analysis, I would curate a more expansive set of attributes including categorical ones (recency/date release, geographic origins, 
 genre of artists/authors, etc).
 
 &nbsp;
@@ -341,9 +341,9 @@ What stands out? Here are some fascinating highlights:
 consistency and iconic melody, it definitely deserves its spot
 2. **Unparalleled continuity** - Monkeys Spinning Monkeys may have stolen the show, but Surrender by Natalie Taylor (teal; chart 1) never dipped below any top 100 spot for a span of 13 consecutive months! 
 3. **Impressive dominance & resurgence** - Kina’s Can We Kiss Forever? (green; chart 2) captured four top 10 spots in a 5-month span, then came back to claim a top 20 and top 50 spot in back-to-back months.
-4. **Slipping into first is not an accident** - In terms of being used in viral content, there’s none that can top Kevin MacLeod’s Monkeys Spinning Monkeys (blue; chart 2). Five top 10 appearances, 
+4. **Slipping into first is not an accident** - In terms of viral spread, there’s none that can top Kevin MacLeod’s Monkeys Spinning Monkeys (blue; chart 2). Five top 10 appearances, 
 three top spot titles - two in back-to-back months - and the reasons behind its massive performance score based on viral video count.
-5. **Spongebob** - In case you were wondering how the Spongebob rankings looked, it’s the purple line in chart 1.
+5. **Spongebob** - In case you were wondering how the Spongebob audio rankings looked, it’s the purple line in chart 1.
 
 ***
 
