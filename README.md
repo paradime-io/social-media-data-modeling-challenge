@@ -100,6 +100,7 @@ The [Olympics subreddit](https://reddit.com/r/Olympics) was scraped to collect p
 - `dbt_bsouzadelima_seeds.youtube_channels`: A `.csv` file matching athletes' codes with channel ids/names.
 
 ## 🔗 Data Lineage
+![image](images/lineage.png)
 
 The project structure followed the [dbt Labs' best practices](https://docs.getdbt.com/best-practices/how-we-structure/1-guide-overview).
 ### Staging Layer
