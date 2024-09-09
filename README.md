@@ -11,7 +11,7 @@ _Brought to you by **🙋🏻‍♀️ [Hetvi Parekh](https://www.linkedin.com/i
    - [Supporting Dataset](#supporting-dataset)
    - [Seeds](#seeds)
    - [Intermediate Layer](#intermediate-layer)
-   - [Mart Layer](#mart-layer)
+   - [Marts Layer](#marts-layer)
    - [Other Models](#other-models)
    - [Data Lineage](#data-lineage)
 3. [Methodology](#methodology-)
