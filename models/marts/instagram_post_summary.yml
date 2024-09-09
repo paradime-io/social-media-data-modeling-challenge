@@ -1,0 +1,55 @@
+version: 2
+
+models:
+  - name: instagram_post_summary
+    description: "Post-level metrics combining engagement, summary, and hashtag data for each Instagram post."
+    columns:
+      - name: sid
+        description: "Unique identifier for each post."
+        data_tests:
+            - unique
+            - not_null
+      - name: num_likes
+        description: "Number of likes on the post."
+        data_tests:
+            - not_null        
+      - name: num_comments
+        description: "Number of comments on the post."
+        data_tests:
+            - not_null
+      - name: engagement_level
+        description: "Engagement level of the post, categorized as 'High', 'Medium', or 'Low' based on total engagement."
+        data_tests:
+            - not_null
+      - name: total_engagement
+        description: "Total engagement, calculated as the sum of likes and comments."
+        data_tests:
+            - not_null
+      - name: post_date
+        description: "Date when the post was published."
+        data_tests:
+            - not_null
+      - name: post_time
+        description: "Time when the post was published."
+        data_tests:
+            - not_null
+      - name: description_length
+        description: "The length of the post description in characters."
+        data_tests:
+            - not_null
+      - name: description_category
+        description: "Category of the post description (if available)."
+        data_tests:
+            - not_null
+      - name: post_day_of_week
+        description: "Day of the week when the post was published (0 = Sunday, 1 = Monday, etc.)."
+        data_tests:
+            - not_null
+      - name: post_hour_of_day
+        description: "Hour of the day when the post was published."
+        data_tests:
+            - not_null
+      - name: distinct_hashtag_count
+        description: "Count of distinct hashtags used in the post."
+        data_tests:
+            - not_null

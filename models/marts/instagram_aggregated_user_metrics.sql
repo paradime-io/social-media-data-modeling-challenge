@@ -50,12 +50,12 @@ SELECT
     um.num_following,
     um.num_followers,
     um.num_posts,
-    AVG(pe.total_engagement) AS avg_engagement,
+    SUM(pe.total_engagement) / COUNT(DISTINCT pe.sid) AS avg_engagement,
     MAX(pe.total_engagement) AS max_engagement,
     MIN(pe.total_engagement) AS min_engagement,
-    AVG(ps.description_length) AS avg_description_length,
-    AVG(ps.post_day_of_week) AS avg_post_day_of_week,
-    AVG(ps.post_hour_of_day) AS avg_post_hour_of_day,
+    ROUND(AVG(ps.description_length),2) AS avg_description_length,
+    ROUND(AVG(ps.post_day_of_week),2) AS avg_post_day_of_week,
+    ROUND(AVG(ps.post_hour_of_day),2) AS avg_post_hour_of_day,
     COUNT(DISTINCT hashtag) AS distinct_hashtag_count
 FROM user_metrics um
 LEFT JOIN post_engagement pe 
