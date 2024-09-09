@@ -68,14 +68,26 @@ The final dataset was imported into Hex for visualisation. Interactive dashboard
 [**Dashboard Link**](https://app.hex.tech/52941720-d1c9-44bf-a2ec-e05eec443937/hex/fe651505-5b5f-40de-a909-2d06c74fd07c/draft/logic?view=app&dialog=preview)
 
 ### User-Level Metrics Summary:
-Our dataset consists of 485,125 distinct users, with an average of 595.72 posts per user. On average, each user generates 699 engagements per post, which includes likes and comments. Additionally, users utilise an average of 4.49 distinct hashtags in their posts, highlighting a moderate level of hashtag diversity.
+Our dataset consists of 485,125 distinct users, with an average of 595.72 and a median of 243 posts per user. On average, each user generates 699 engagements per post, which includes likes and comments. Additionally, users utilise an average of 4.49 distinct hashtags in their posts, highlighting a moderate level of hashtag diversity.
 
 #### Business Accounts
 In terms of business versus non-business accounts, 35% of the profiles analysed are business accounts, with the majority (65%) being personal profiles. This distinction could play a significant role in understanding posting behaviour and engagement differences.
 
 #### Follower Count Distribution
 When categorising users by their follower count, we observe that the majority fall within the 100-499 followers range, followed by 500-999 and 1,000-4,999 followers. This suggests that most users have modest-sized followings, with fewer users having larger audiences. Interestingly, very few users exceed 50K followers, which points to a minority of high-profile accounts in the dataset.
+
 ![Dashboard1](dashboard1.png)
+
+![Dashboard2](dashboard2.png)
+
+![Dashboard3](dashboard3.png)
+
+![Dashboard4](dashboard4.png)
+
+![Dashboard5](dashboard5.png)
+
+-  There's a strong concentration of users in the lower bands, with majority of users sitting between having 100-5k followers  and following between 100-5k followers.
+There are very few influencers, i.e. where the number of followers is over 50k and these users will also have a lower numbr of users they follow.
 
 ## Conclusions
 [Summarise key findings and their implications]
