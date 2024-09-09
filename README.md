@@ -67,7 +67,7 @@ The final dataset was imported into Hex for visualisation. Interactive dashboard
 ## Insights
 [**Dashboard Link**](https://app.hex.tech/52941720-d1c9-44bf-a2ec-e05eec443937/hex/fe651505-5b5f-40de-a909-2d06c74fd07c/draft/logic?view=app&dialog=preview)
 
-### User-Level Metrics Summary:
+#### User-Level Metrics Summary:
 Our dataset consists of 485,125 distinct users, with an average of 595.72 and a median of 243 posts per user. On average, each user generates 699 engagements per post, which includes likes and comments. Additionally, users utilise an average of 4.49 distinct hashtags in their posts, highlighting a moderate level of hashtag diversity.
 
 #### Business Accounts
@@ -78,16 +78,20 @@ When categorising users by their follower count, we observe that the majority fa
 
 ![Dashboard1](dashboard1.png)
 
+#### Number of Followers and Engegament (and business accounts)
 ![Dashboard2](dashboard2.png)
-
 ![Dashboard3](dashboard3.png)
+- It doesn't seem surprising that as the number of followers increase, so does engagement. Non-business account with high follower count (over 100k) tend to have slightly lower engagement compared to non-business accounts, however these findigs are skewed since the data contains more non-business users.
 
+#### Number of Followers and Users Followed
 ![Dashboard4](dashboard4.png)
+- There's a strong concentration of users in the lower bands, with majority of users sitting between having 100-5k followers  and following between 100-5k followers.
+- There are very few influencers, i.e. where the number of followers is over 50k and these users will also have a lower numbr of users they follow.
 
+![Dashboard6](dashboard6.png)
 ![Dashboard5](dashboard5.png)
-
--  There's a strong concentration of users in the lower bands, with majority of users sitting between having 100-5k followers  and following between 100-5k followers.
-There are very few influencers, i.e. where the number of followers is over 50k and these users will also have a lower numbr of users they follow.
+- Most posts are shared in the evening hours, with a steady increase in posting activity starting from 8 AM and peaking at 8 PM.
+- The busiest days for posting are Sunday (0) and Monday, with Wednesday being the least popular day for posts.
 
 ## Conclusions
 [Summarise key findings and their implications]
