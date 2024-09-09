@@ -97,7 +97,10 @@ The data sources were remodeled into two major layers: INTERMEDIATE AND CORE
 
 ### Data Lineage
 
-Listed below is the data lineage for some of the models:
+Listed below is the data lineage for the models:
+
+P.S. It was divided into two different images to improve visibility.
+However, this didn't affect a display of their relationships as each images showed a full display of all tables involved in the relationships.
 
 ![alt text](images/model1.png)
 
