@@ -37,7 +37,7 @@ Dataset containing 600,000 Instagram posts between 2012 and 2019 from HuggingFac
 - `group_follower_counts` to help writing DRY code for follower groupings.
 
 ### Lineage ⛓️
-![Lineage](lineage1.png)
+![Lineage](images/lineage1.png)
 
 ## Methodology 📐
 ### Tools Used
@@ -77,29 +77,29 @@ In terms of business versus non-business accounts, 35% of the profiles analysed 
 #### Follower Count Distribution
 When categorising users by their follower count, we observe that the majority fall within the 100-499 followers range, followed by 500-999 and 1,000-4,999 followers. This suggests that most users have modest-sized followings, with fewer users having larger audiences. Interestingly, very few users exceed 50K followers, which points to a minority of high-profile accounts in the dataset.
 
-![Dashboard1](dashboard1.png)
+![Dashboard1](images/dashboard1.png)
 
 #### Number of Followers and Engegament (and business accounts)
-![Dashboard2](dashboard2.png)
-![Dashboard3](dashboard3.png)
+![Dashboard2](images/dashboard2.png)
+![Dashboard3](images/dashboard3.png)
 - It doesn't seem surprising that as the number of followers increase, so does engagement. Non-business account with high follower count (over 100k) tend to have slightly lower engagement compared to non-business accounts, however these findigs are skewed since the data contains more non-business users.
 
 #### Number of Followers and Users Followed
-![Dashboard4](dashboard4.png)
+![Dashboard4](images/dashboard4.png)
 - There's a strong concentration of users in the lower bands, with majority of users sitting between having 100-5k followers  and following between 100-5k followers.
 - There are very few influencers, i.e. where the number of followers is over 50k and these users will also have a lower numbr of users they follow.
 
-![Dashboard6](dashboard6.png)
-![Dashboard5](dashboard5.png)
+![Dashboard6](images/dashboard6.png)
+![Dashboard5](images/dashboard5.png)
 - Most posts are shared in the evening hours, with a steady increase in posting activity starting from 8 AM and peaking at 8 PM.
 - The busiest days for posting are Sunday (0) and Monday, with Wednesday being the least popular day for posts.
 
-![Dashboard7](dashboard7.png)
-![Dashboard8](dashboard8.png)
+![Dashboard7](images/dashboard7.png)
+![Dashboard8](images/dashboard8.png)
 - There seems to be a small plateu when analysing the relationship between the lenght of the description and the total engagement received on the post.
 
 #### Top Hashtags in the dataset
-![Dashboard9](dashboard9.png)
+![Dashboard9](images/dashboard9.png)
 - The most popular hashtag in the dataset during the analysed period was #love, followed by #nyc and travel.
 
 ## Conclusions
