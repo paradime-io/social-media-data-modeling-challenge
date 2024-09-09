@@ -104,11 +104,18 @@ When categorising users by their follower count, we observe that the majority fa
 
 ## Conclusions
 The analysis of the Instagram dataset offers a thorough overview of user behaviours, content trends, and engagement patterns. With a focus on 485,125 distinct users, we've observed that the average user posts around 595 times and generates substantial engagement per post, with an average of 699 engagements. The moderate use of hashtags (4.49 per post) reflects a diverse yet controlled approach to content categorisation.
+
 The distinction between business and personal accounts reveals that while 35% of profiles are business-related, the majority are personal accounts. This distinction is crucial for understanding variations in posting behaviour and engagement metrics.
+
 Follower count distribution indicates that most users have modest followings, with a significant drop-off in users with larger audiences. This highlights a generally balanced user base, with only a few high-profile accounts standing out. Notably, as follower counts increase, so does engagement, though non-business accounts with very high follower counts exhibit slightly lower engagement levels, likely due to the skewed distribution of non-business users in the data.
+
 The analysis also shows that most users are concentrated in the lower bands for both followers and following counts, with very few influencers (users with over 50k followers). Influencers tend to follow fewer accounts, indicating a more selective approach to their network.
+
 Posting patterns reveal that evening hours, particularly around 8 PM, are the most active times for users, with a notable peak in posting activity. Sundays and Mondays are the busiest days for posts, while Wednesdays are less popular.
+
 In terms of content length, there is a slight plateau in engagement relative to the length of post descriptions, suggesting that extremely long or short descriptions do not significantly impact overall engagement.
+
 Finally, hashtag analysis shows that #love, #nyc, and #travel are the most popular hashtags, reflecting common themes and interests within the dataset.
+
 Overall, these insights provide some guidance for optimising content strategies and understanding user dynamics on Instagram.
 
