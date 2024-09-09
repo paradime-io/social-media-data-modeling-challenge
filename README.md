@@ -16,7 +16,7 @@ The project involves building a series of data models using dbt, integrating use
 ## Data Source & Data Lineage 📈
 
 ### Data Source 🍯
-Dataset containing 600,000 Instagram posts between 2012 and 2019. [Source](https://huggingface.co/datasets/vargr/main_instagram)
+Dataset containing 600,000 Instagram posts between 2012 and 2019 from HuggingFace. [Source](https://huggingface.co/datasets/vargr/main_instagram)
 
 ### Staging 🎭
 - `stg_instagram` where basic column transformations are applied to prepare data for downstream modelling.
@@ -49,27 +49,33 @@ Dataset containing 600,000 Instagram posts between 2012 and 2019. [Source](https
 
 ### Applied Techniques 👩‍🍳
 #### Data Sourcing
-Sourcing relevant data was by far the most challenging aspect of this project. Social media platforms are notoriously difficult to scrape due to strict API limits and data access restrictions. Fortunately, HuggingFace's vast collection of pre-sourced social media datasets came to the rescue. While these datasets provided a helpful starting point, they had limitations—particularly around the unpredictability of content and the sample size needed to extract actionable insights. Despite these hurdles, we made careful selections to align the data with the project goals.
+Sourcing relevant data was by far the most challenging aspect of this project. Social media platforms are notoriously difficult to scrape due to strict API limits and data access restrictions. Fortunately, HuggingFace's vast collection of pre-sourced social media datasets came to the rescue. While these datasets provided a helpful starting point, they had limitations—particularly around the unpredictability of content and the sample size needed to extract actionable insights. Despite these hurdles, I made careful selections to align the data with the project goals.
 
 #### Data Preparation 🪄
-Since the sourced data was already in relatively good shape, only minor transformations were required at the staging layer. These transformations were aimed at standardising fields and preparing the dataset for more advanced analysis. To enhance the dataset, we engineered new features that could surface meaningful trends and provide deeper insights in the later stages.
+Since the sourced data was already in relatively good shape, only minor transformations were required at the staging layer. These transformations were aimed at standardising fields and preparing the dataset for more advanced analysis. To enhance the dataset, new features were engineered that could surface meaningful trends and provide deeper insights in the later stages.
 
 To keep things structured, models were layered on top of the staging data. This approach allowed for a clear separation between key features (such as engagement metrics) and computed metrics, ensuring modularity and flexibility throughout the project.
 
 #### Feature Engineering & Final Model Creation 🎉
-At the later stages, we focused on building additional models that could provide deeper insights into user and post-level behaviors. For the user-level analysis, we aggregated metrics such as follower count, engagement rates, and posting habits, creating an enriched profile for each user. This model was instrumental in understanding broader patterns and trends within our dataset.
+At the later stages, I focused on building additional models that could provide deeper insights into user and post-level behaviors. For the user-level analysis, metrics were aggregated such as follower count, engagement rates, and posting habits, creating an enriched profile for each user. This model was instrumental in understanding broader patterns and trends within our dataset.
 
-For *post-level analysis*, we created a separate final model that zeroed in on individual posts, analysing content types, hashtags, and engagement metrics. This model helped us compare how different content formats (like images vs. videos) performed across the platform.
+For *post-level analysis*, a separate final model was created that zeroed in on individual posts, analysing content types, hashtags, and engagement metrics. This model helped us compare how different content formats (like images vs. videos) performed across the platform.
 
 #### Visualisation & Insights 📊
 The final dataset was imported into Hex for visualisation. Interactive dashboards were built to allow exploration of key metrics, such as average engagement by post type, most frequent posting times, and hashtag trends. These visualisations provided valuable insights into the factors driving engagement on social media, with clear takeaways about optimal content strategies.
 
 ## Insights
+[**Dashboard Link**](https://app.hex.tech/52941720-d1c9-44bf-a2ec-e05eec443937/hex/fe651505-5b5f-40de-a909-2d06c74fd07c/draft/logic?view=app&dialog=preview)
 
-### Insight 1
-- Title
-- Visualisation
-- Analysis
+### User-Level Metrics Summary:
+Our dataset consists of 485,125 distinct users, with an average of 595.72 posts per user. On average, each user generates 699 engagements per post, which includes likes and comments. Additionally, users utilise an average of 4.49 distinct hashtags in their posts, highlighting a moderate level of hashtag diversity.
+
+#### Business Accounts
+In terms of business versus non-business accounts, 35% of the profiles analysed are business accounts, with the majority (65%) being personal profiles. This distinction could play a significant role in understanding posting behaviour and engagement differences.
+
+#### Follower Count Distribution
+When categorising users by their follower count, we observe that the majority fall within the 100-499 followers range, followed by 500-999 and 1,000-4,999 followers. This suggests that most users have modest-sized followings, with fewer users having larger audiences. Interestingly, very few users exceed 50K followers, which points to a minority of high-profile accounts in the dataset.
+![Dashboard1](dashboard1.png)
 
 ## Conclusions
 [Summarise key findings and their implications]
