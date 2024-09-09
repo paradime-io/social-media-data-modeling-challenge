@@ -99,13 +99,9 @@ The data sources were remodeled into two major layers: INTERMEDIATE AND CORE
 
 Listed below is the data lineage for some of the models:
 
-P.S. I couldn't get a full view of the lineage of all the models in my dbt project all on one screen.
-
 ![alt text](images/model1.png)
 
 ![alt text](images/model2.png)
-
-![alt text](images/model3.png)
 
 ## Methodology
 
