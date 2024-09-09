@@ -77,14 +77,18 @@ The following datasets fuel my analysis -
 
 ### **Other Models**
 - *`thumbnail_analysis.py`* -  Python script to detect the presence of text and faces in YouTube video thumbnails.
+
 - *`checking_emoji_presence.py`* - Python script to analyze the presence of emojis in video titles and descriptions.
+
 - *`video_tag_word_clouds.py`* - Python script to generate word clouds from the most frequently used video tags.
 
 ### **Data Lineage**
 ![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/data_lineage.png)
 
 # **Methodology ⚙️**
+
 ### **Tools Used 🛠️**
+
 - **[Paradime](https://www.paradime.io/)** to develop dbt™ models.
 - **[MotherDuck](https://app.motherduck.com/)** for data warehousing and compute.
 - **[Hex](https://app.hex.tech/)** to analyze the datasets and create visualizations.
@@ -172,7 +176,7 @@ Timing is everything—find out which days are prime for publishing to maximize 
 
 ![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/two_day_engagement_rate.png)
 
-#### Relevant video tags are the hidden power behind discoverability - include these in your video to boost visibility and reach 🔍
+Relevant video tags are the hidden power behind discoverability - include these in your video to boost visibility and reach 🔍
 
 ![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/success_metrics_across_video_tags.png)
 
