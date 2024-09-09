@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: all_story_management
+    config:
+      tags: "mart"
+  - name: outlier_story_engagement
+    config:
+      tags: "mart"

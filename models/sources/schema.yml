@@ -1,3 +1,5 @@
+version: 2
+
 models:
   - name: stg_hn__stories
   - name: stg_hn__comments
