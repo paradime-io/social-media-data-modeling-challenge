@@ -1,4 +1,4 @@
-# Social Media Olympics 2024 - dbt™ Data Modeling Challenge
+# 🥇🥈🥉 Social Media Olympics 2024 🥇🥈🥉 - dbt™ Data Modeling Challenge
 
 Project for the dbt™ Data Modeling Challenge - Social Media Edition, Hosted by Paradime!
 
