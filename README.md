@@ -19,7 +19,7 @@ _Brought to you by **🙋🏻‍♀️ [Hetvi Parekh](https://www.linkedin.com/i
    - [Data Preparation and Cleaning](#data-preparation-and-cleaning-)
    - [Calculating Video Success Metrics](#calculating-video-success-metrics-)
 4. [Insights](#insights-)
-   - [Executive Summary ⛳️](#executive-summary)
+   - [Executive Summary ⛳️](#executive-summary-)
    - [Detailed Analysis](#detailed-analysis-)
       - [Familiarizing with the dataset](#familiarizing-with-the-dataset-)
       - [Exploring Success Metrics Across Key Video Attributes](#exploring-success-metrics-across-key-video-attributes-)
@@ -143,6 +143,7 @@ Comments are weighted higher as they reflect deeper engagement, while likes are 
 
 # **Insights 📊**
 
+<a name="executive-summary-"></a>
 ## **Executive Summary ⛳️**
 
 This analysis focuses exclusively on trending YouTube videos, excluding non-trending content.  
@@ -231,6 +232,6 @@ For this analysis, we examined the success metrics across various YouTube video 
 
 7. 📅 **Publishing videos on Fridays and Thursdays** yields the highest engagement rates, making them the prime days to maximize video performance.
 
-8. When it comes to **video tags**, it's the **quality 🌟 that matters**, not the quantity, as relevant tags drive more engagement than just adding many. (Refer [here](#relevant-video-tags-are-the-hidden-power-behind-discoverability—--include-these-in-your-video-to-boost-visibility-and-reach-) for top tags used in trending videos)
+8. When it comes to **video tags**, it's the **quality 🌟 that matters**, not the quantity, as relevant tags drive more engagement than just adding many.
 
 9. 💸 Since **Revenue** is directly tied to views, **focusing on maximizing video views** should be a top priority to boost earnings.
