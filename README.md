@@ -19,9 +19,10 @@ _Brought to you by **🙋🏻‍♀️ [Hetvi Parekh](https://www.linkedin.com/i
    - [Data Preparation and Cleaning](#data-preparation-and-cleaning-)
    - [Calculating Video Success Metrics](#calculating-video-success-metrics-)
 4. [Insights](#insights-)
-   - [Executive Summary](#executive-summary-)
-   - [Familiarizing with the dataset](#familiarizing-with-the-dataset-)
-   - [Exploring Success Metrics Across Key Video Attributes](#exploring-success-metrics-across-key-video-attributes-)
+   - [Executive Summary ⛳️](#executive-summary-)
+   - [Detailed Analysis](#detailed-analysis-)
+      - [Familiarizing with the dataset](#familiarizing-with-the-dataset-)
+      - [Exploring Success Metrics Across Key Video Attributes](#exploring-success-metrics-across-key-video-attributes-)
 5. [Conclusion](#conclusion-)
 
 ## **📣 Introduction**
@@ -144,8 +145,19 @@ Comments are weighted higher as they reflect deeper engagement, while likes are 
 
 ## **Executive Summary ⛳️**
 
-This analysis focuses exclusively on trending YouTube videos, excluding non-trending content. Among trending videos, creators can **boost engagement rates by 2x** by keeping videos under 15 minutes, using captions for accessibility, crafting concise titles with fewer than 7 words, and optimizing descriptions under 300 characters. Including emojis in titles and descriptions, using expressive faces and text in thumbnails, and publishing on Fridays and Thursdays further enhance engagement. Focus should be on adding quality video tags, quantity does not matter.
-Lastly, as engagement increases, it leads to a substantial rise in video views, directly impacting revenue. 
+This analysis focuses exclusively on trending YouTube videos, excluding non-trending content. Among trending videos, creators can **boost engagement rates by 2x** by -  
+ - ⏳ Keeping videos under 15 minutes.
+ - 🎥📄 Using captions for accessibility.
+ - ✏️ Crafting concise titles with fewer than 7 words.
+ - 📜 Optimizing descriptions under 300 characters.
+ - 🤔 Including emojis in titles and descriptions.
+ - Using expressive faces 😄 and text 🔠 in thumbnails.
+ - 📅 Publishing videos on Fridays and Thursdays further enhance engagement. 
+ - Focus should be on adding quality video tags 🌟, quantity does not matter.
+
+Lastly, as engagement increases, it leads to a substantial rise in video views, directly impacting revenue. 💸 
+
+## **Detailed Analysis 🔦**
 
 ### **Note 📝** -
 While analyzing success metrics, the average was used for balanced representation when video counts were nearly equal across segments. In cases of uneven distribution, the median was applied to reduce the impact of outliers and skewed data.
