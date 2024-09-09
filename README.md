@@ -124,6 +124,8 @@ In this section, I use a statistical model to explore the determinants of mental
 While we did oberserve some interesting relationships in the visualisations above, we need a more robust way to understand the significance of the observations.
 For the outcome variable, we calculate the aggregate `mental_health_score` measured as the sum of the mental health score components.
 
+The correlation between variables was visualised using a Heatmap, if interested you can view that in the full Hex Notebook [here](https://app.hex.tech/c7e89ceb-cdfb-4937-a7c2-39913a269634/app/37474c32-c68d-4d07-82c9-6ddfb7d622b3/latest).
+
 ![Determinants of Mental Health](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/rasmus-engelbrecht/images/ols_regression.png)
 
 #### Conclusion
