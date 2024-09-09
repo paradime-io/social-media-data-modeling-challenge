@@ -207,7 +207,7 @@ With that said, what stands out?
 value of 0, meaning that it has no top 10 appearances on any monthly viral views leaderboard. However, it boasts a strong norm_top100_app score of 0.86, second to only the 
 top spot which is a testament to its consistency.
 2. **The “best performers” all have high peaks** - 9 of 10 audios have norm_max_rank scores between 0.9 - 1 (Monkeys Spinning Monkeys at 0.89 🥲) indicating they have all 
-peaked on a monthly leaderboard at some point. 6 of the 10 audios have max the norm_top10_app scores indicating multiple months where they have broken into the top 10. 
+peaked on a monthly leaderboard at some point. 6 of the 10 audios have the max norm_top10_app scores indicating multiple months where they have broken into the top 10. 
 3. **[Surrender](https://www.youtube.com/watch?v=caoP4dj2oro) by Natalie Taylor: the hallmark of consistency** - Interestingly enough, the top spot doesn’t boast the greatest peak metrics, but is instead carried by its 
 consistency and totals. With a norm_top100_app score of 1, the song has made the most number of top 100 monthly viral views leaderboards. 
 
