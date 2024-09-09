@@ -24,7 +24,7 @@ _Brought to you by **🙋🏻‍♀️ [Hetvi Parekh](https://www.linkedin.com/i
 5. [Conclusion](#conclusion-)
 
 ## **📣 Introduction**
-This project delves into the dynamics of YouTube's top trending videos, offering a comprehensive exploration of the elements that contribute to viral success. By analysing patterns and key metrics across a wide range of trending content, this analysis aims to uncover actionable insights for creators. Whether you're an aspiring YouTuber or an established content creator, these findings offer a roadmap to mastering the art of trendsetting on the world's most popular video platform.
+This project explores the dynamics of YouTube's top trending videos, analyzing key features that drive viral success. By examining patterns and metrics from trending content, it offers actionable insights to help creators optimize their video features and master the art of trendsetting on the platform.
 
 ## **Key Elements of a YouTube video ✨** 
 
@@ -57,11 +57,13 @@ The following datasets fuel my analysis -
    - It contains   top 50 trending YouTube videos across 113 countries, updated daily (starting from Oct 26, 2023 to Aug 8, 2024).
 
 ### **Supporting Dataset**
-- *`video_details`* - Leveraged the YouTube API to retrieve comprehensive video details for deeper analysis. (Python script - fetching_video_details.py)
+- *`video_details`* - Leveraged the YouTube API to retrieve comprehensive video details for deeper analysis. (Python script - `fetching_video_details.py`)
    
 ### **Seeds**
    - *`category_mapping`* -  Maps YouTube video categories to their respective IDs for analysis. [Online reference used](https://mixedanalytics.com/blog/list-of-youtube-video-category-ids/)
+
    - *`category_cpm_rates`* - Provides CPM rates for different YouTube categories as of year 2024, useful for revenue estimation. [Online Reference used](https://megadigital.ai/en/blog/youtube-ad-benchmarks/)*
+
    - *`country_cpm_rates`* - Lists CPM rates by country as of year 2024, enabling geographical revenue comparisons. [Online Reference used](https://bloggernexus.com/youtube-cpm-and-rpm-rates-by-country/)*
 
 **Note that for cases where CPM rates were unavailable for certain categories or countries, used ChatGPT to gather estimates from additional online sources.*
@@ -146,7 +148,7 @@ Let's zoom in on video duration to uncover how the length of your content influe
 
 ![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/success_metrics_across_video_duration.png)
 
-Shifting focus to captions and exploring how their presence can enhance accessibility and boost audience retention 📝
+Shifting focus to captions and exploring how their presence can enhance accessibility and boost audience engagement 📝
 
 ![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/success_metrics_across_caption.png)
 
@@ -154,11 +156,11 @@ Let’s examine how video title length influences viewer curiosity and drives en
 
 ![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/success_metrics_across_title_length.png)
 
-Video descriptions hold valuable clues—let's see how they impact a video's overall performance 📝
+Video descriptions hold valuable clues — let's see how they impact a video's overall performance 📝
 
 ![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/success_metrics_across_description_length.png)
 
-Emoji presence in titles and descriptions adds a visual pop—discover how they influence viewer engagement 😊
+Emoji presence in titles and descriptions adds a visual pop — discover how they influence viewer engagement 😊
 
 ![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/success_metrics_across_emoji_presence.png)
 
@@ -170,7 +172,7 @@ Timing is everything—find out which days are prime for publishing to maximize 
 
 ![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/two_day_engagement_rate.png)
 
-Relevant video tags are the hidden power behind discoverability — include these in your video to boost visibility and reach 🔍
+Relevant video tags are the hidden power behind discoverability - include these in your video to boost visibility and reach 🔍
 
 ![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/success_metrics_across_video_tags.png)
 
@@ -199,6 +201,6 @@ For this analysis, we examined the success metrics across various YouTube video 
 
 7. 📅 **Publishing videos on Fridays and Thursdays** yields the highest engagement rates, making them the prime days to maximize video performance.
 
-8. When it comes to **video tags**, it's the **quality 🌟 that matters**, not the quantity, as relevant tags drive more engagement than just adding many. (Refer here for top tags used in trending videos)
+8. When it comes to **video tags**, it's the **quality 🌟 that matters**, not the quantity, as relevant tags drive more engagement than just adding many. (Refer [here](#relevant-video-tags-are-the-hidden-power-behind-discoverability—--include-these-in-your-video-to-boost-visibility-and-reach-) for top tags used in trending videos)
 
 9. 💸 Since **Revenue** is directly tied to views, **focusing on maximizing video views** should be a top priority to boost earnings.
