@@ -224,7 +224,7 @@ When we skew for consistency, what we find is that…
 1. **Consistency is rare** - [Surrender](https://www.youtube.com/watch?v=caoP4dj2oro) is undisputedly the most consistent “best performer”, with a commanding edge over the rest of the top 10. Are we surprised by 
 this after seeing the previous charts and tables?
 2. **This [Spongebob](https://www.youtube.com/watch?v=4qXVIbs4CR0) audio remix is the lone representative of non-official song audio** - Or is it? While the sound that trends on TikTok is a remix, it is technically based off of an 
-officially produced sound. Regardless, it cracks the top 5 here as a - in Gen Z terms - [certified hood classic](https://www.urbandictionary.com/define.php?term=certified%20hood%20classic).
+officially produced sound. Regardless, it cracks the top 5 here as a - in Gen Z terms - [certified hood classic 😉](https://www.urbandictionary.com/define.php?term=certified%20hood%20classic).
 
 ![best_performing_peak](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/jayeson-gao/screenshots/best_performing_peak.png?raw=true)
 
@@ -330,6 +330,7 @@ What stands out? Here are some fascinating highlights:
 1. **Christmas consistency** - Mariah Carey’s [All I want for Christmas Is You](https://www.youtube.com/watch?v=RmUWWVZw28E) (orange; both charts) is the only holiday music represented in the final top 10. With an unmatched winter holiday 
 performance consistency and iconic melody, it definitely deserves its spot.
 2. **Unparalleled continuity** - Monkeys Spinning Monkeys may have stolen the show, but [Surrender](https://www.youtube.com/watch?v=caoP4dj2oro) by Natalie Taylor (teal; chart 1) never dipped below any top 100 spot for a span of 13 consecutive months! 
+Widespread COVID-19 melancholy 🤔?
 3. **Impressive dominance & resurgence** - Kina’s [Can We Kiss Forever?](https://www.youtube.com/watch?v=DKbfBSrjVHA) (green; chart 2) captured four top 10 spots in a 5-month span, then came back to claim a top 20 and top 50 spot in back-to-back months.
 4. **Slipping into first is not an accident** - In terms of viral spread, there’s none that can top Kevin MacLeod’s [Monkeys Spinning Monkeys](https://www.youtube.com/watch?v=NPdgPZ0u3zQ) (blue; chart 2). Five top 10 appearances, 
 three top spot titles - two in back-to-back months - are the reasons behind its massive video-based performance score.
