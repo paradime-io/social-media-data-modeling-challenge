@@ -95,10 +95,17 @@ I use dbt tests to maintain data accuracy and quality:
 
 ### Tools and Technologies 🛠️
 - **AWS Lambda**: For daily API requests and storing data in Parquet format.
-- **DuckDB**: For quick, in-memory processing of API data.
+- **DuckDB** **MotherDuck**: For quick, in-memory processing of API data.
 - **dbt (Data Build Tool)**: For building, transforming, and maintaining the data pipeline.
 - **GitLab CI/CD**: To manage the deployment of dbt transformations, following dbt best practices for incremental and full refresh models.
 - **Kimball Methodology**: Provides the foundation for designing the data warehouse with dimension and fact tables, ensuring scalability and performance.
+- 
+
+### Analysis
+
+I ran some reprts and alaysis on my mart dataset built with dbt
+Available on my Hex app: https://app.hex.tech/92a8cf44-5935-4d57-b4e3-5a40bc84dd78/app/27cc3cc8-a396-4ab1-8e8f-568c0bc4145d/latest
+
 
 ## Conclusion
 This project demonstrates the effective use of dbt to process and analyze YouTube trending data at scale. With incremental models, SCD Type 2 snapshots, and automated data ingestion through AWS Lambda, I ensure that both historical and current data are accurately tracked and efficiently transformed for high-quality insights into YouTube trends.
@@ -106,4 +113,3 @@ This project demonstrates the effective use of dbt to process and analyze YouTub
 ## Full lineage
 
 ![image](https://github.com/user-attachments/assets/b213aeae-c9ed-4c47-97b2-718d5334a21f)
-
