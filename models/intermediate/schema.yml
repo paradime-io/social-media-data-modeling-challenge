@@ -1,0 +1,4 @@
+models:
+  - name: int_hn__comments_enriched
+  - name: int_hn__top_level_comments
+  - name: int_hn__top_level_comments_enriched

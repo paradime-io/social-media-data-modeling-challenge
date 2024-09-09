@@ -1,0 +1,7 @@
+sources:
+  - name: raw_data
+    database: analytics
+    tables:
+      - name: stories
+      - name: comments
+      - name: entity_text

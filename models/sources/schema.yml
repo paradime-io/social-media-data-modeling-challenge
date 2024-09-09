@@ -1,0 +1,4 @@
+models:
+  - name: stg_hn__stories
+  - name: stg_hn__comments
+  - name: stg_hn__entity_text
