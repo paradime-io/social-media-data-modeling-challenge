@@ -14,25 +14,26 @@ This project focuses on analysing user engagement metrics on Instagram using a d
 The project involves building a series of data models using dbt, integrating user and post-level data, and visualising key engagement trends. The final analysis provides a comprehensive overview of user behaviour, post characteristics, and engagement patterns.
 
 ## Data Source & Data Lineage
+
 ### Data Source:
 Dataset containing 600,000 Instagram posts between 2012 and 2019. [Source](https://huggingface.co/datasets/vargr/main_instagram?row=73)
 
-###Staging
+### Staging
 `stg_instagram` where basic column transformations are applied to prepare data for downstream modelling.
 
-###Intermediate
+### Intermediate
 `int_instagram_hashtags` model prepared for hashtag analysis and also the stage where hashtags are extacted from the post descrption.
 `int_instagram_latest_user_metrics` user specific columns are selected and using QUALIFY taking the latest snapshot of profile metrics (by post date).
 `int_instagram_post_engagement` post specific engagement metrics selected to prepare for final model, further features are added to enhance analysis at later steps.
 `int_instagram_post_summary` post specific features (not related to engagement) such as date and time of posting etc.
 
-###Mart
+### Mart
 `instagram_aggregated_user_metrics`       Aggregates Instagram user metrics and post engagement data to provide a comprehensive view of user profiles and their engagement statistics. Includes average, maximum, and minimum engagement metrics, as well as summary statistics for posts and hashtag usage. Grain is a single user per row.
 `instagram_post summary` Aggregates Instagram user metrics and post engagement data to provide a comprehensive view of user profiles and their engagement statistics. Includes average, maximum, and minimum engagement metrics, as well as summary statistics for posts and hashtag usage. Grain is a single user per row.
 
 
 
-###Lineage
+### Lineage
 ![Lineage](lineage.png)
 
 ## Methodology 
