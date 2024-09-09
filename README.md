@@ -14,12 +14,12 @@ _Brought to you by **🙋🏻‍♀️ [Hetvi Parekh](https://www.linkedin.com/i
    - [Mart Layer](#mart-layer)
    - [Other Models](#other-models)
    - [Data Lineage](#data-lineage)
-3. [Methodology](#methodology-)
-   - [Tools Used](#tools-used-)
+3. [Methodology](#methodology)
+   - [Tools Used](#tools-used)
    - [Data Preparation and Cleaning](#data-preparation-and-cleaning-)
    - [Calculating Video Success Metrics](#calculating-video-success-metrics-)
 4. [Insights](#insights-)
-   - [Executive Summary ⛳️](#executive-summary-)
+   - [Executive Summary ⛳️](#executive-summary)
    - [Detailed Analysis](#detailed-analysis-)
       - [Familiarizing with the dataset](#familiarizing-with-the-dataset-)
       - [Exploring Success Metrics Across Key Video Attributes](#exploring-success-metrics-across-key-video-attributes-)
@@ -145,7 +145,8 @@ Comments are weighted higher as they reflect deeper engagement, while likes are 
 
 ## **Executive Summary ⛳️**
 
-This analysis focuses exclusively on trending YouTube videos, excluding non-trending content. Among trending videos, creators can **boost engagement rates by 2x** by -  
+This analysis focuses exclusively on trending YouTube videos, excluding non-trending content.  
+Among trending videos, creators can **boost engagement rates by 2x** by -  
  - ⏳ Keeping videos under 15 minutes.
  - 🎥📄 Using captions for accessibility.
  - ✏️ Crafting concise titles with fewer than 7 words.
