@@ -179,8 +179,7 @@ We also make the following observations:
 Shifting over to gross stats by audio author/artists, we observe the following:
 
 1. **Queens of TikTok** - Can’t talk TikTok without bringing up Doja Cat and Megan Thee Stallion. With iconic songs like Say So, Kiss Me More, Savage, and Body, it’s not a surprise that the gross stats back it up.
-2. **One hit wonders: all it takes is one** - Light purple represents artists with only 1 audio that has made any top 100 list over this time period. Here are the songs associated with these artists: Jawsh 685 ([Laxed](https://www.youtube.com/watch?v=E0gFA08-9xM))
-, Kreepa ([Oh No](https://www.youtube.com/watch?v=R75Xcfqy-2I)), K CAMP ([Lottery](https://www.youtube.com/watch?v=mn4xwao3G5k)), and KRYPTO9095 ([Woah](https://www.youtube.com/watch?v=afRki2_aNKg)), StaySolidRocky ([Party Girl](https://www.youtube.com/watch?v=0liraNXoK4U)).
+2. **One hit wonders: all it takes is one** - Light purple represents artists with only 1 audio that has made any top 100 list over this time period. Here are the songs associated with these artists: Jawsh 685 ([Laxed](https://www.youtube.com/watch?v=E0gFA08-9xM)), Kreepa ([Oh No](https://www.youtube.com/watch?v=R75Xcfqy-2I)), K CAMP ([Lottery](https://www.youtube.com/watch?v=mn4xwao3G5k)), and KRYPTO9095 ([Woah](https://www.youtube.com/watch?v=afRki2_aNKg)), StaySolidRocky ([Party Girl](https://www.youtube.com/watch?v=0liraNXoK4U)).
 
 &nbsp;
 
