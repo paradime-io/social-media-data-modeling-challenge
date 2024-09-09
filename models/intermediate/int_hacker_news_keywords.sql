@@ -1,20 +1,23 @@
-WITH keywords_occurences AS (
-    SELECT 
-        UPPER(technologyKeys) AS technologyKeys,
-        title
-    FROM {{ ref('stg_hacker_news') }}
-    CROSS JOIN {{ ref('technologyKeywords') }}
-    WHERE UPPER(title) LIKE CONCAT('% ', UPPER(technologyKeys), ' %')
+with keywords_occurences as (
+    select
+        title,
+        upper(technologykeys) as technologykeys,
+        COUNT(title) OVER () AS qtt_posts
+    from {{ ref('stg_hacker_news') }}
+    cross join {{ ref('technologyKeywords') }}
+    where upper(title) like concat('% ', upper(technologykeys), ' %')
 ),
-total_keywords AS (
-    SELECT 
-        technologyKeys,
-        COUNT(*) AS ocurrences
-    FROM keywords_occurences
-    GROUP BY technologyKeys
-    ORDER BY ocurrences
+
+total_keywords as (
+    select
+        technologykeys,
+        count(*) as ocurrences,
+        qtt_posts
+    from keywords_occurences
+    group by technologykeys, qtt_posts
+    order by ocurrences
 )
-SELECT 
-    *
-FROM total_keywords
-ORDER BY ocurrences DESC
+
+select *
+from total_keywords
+order by ocurrences desc
