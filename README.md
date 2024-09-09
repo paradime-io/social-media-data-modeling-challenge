@@ -162,20 +162,133 @@ Before we dive into the meat of this analysis, let's take a look at the top perf
 
 ![top_10_gross_audio](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/jayeson-gao/screenshots/top_10_gross_audio.png?raw=true)
 
+Here we look at the top 10 by gross stats ranked by total number of viral views and number of viral videos. Interestingly enough, the top 2 on both leaderboards are occupied by Laxed (Siren Beat) 
+by Jawsh 685 - the sound behind Savage Love with Jason Derulo - and Banana (feat. Shaggy) by Conkarah, with Monkeys Spinning Monkeys by Kevin MacLeod, Savage by Megan Thee Stallion, Oh No by Kreepa, 
+and Surrender by Natalie Taylor rounding out the top 6 on both charts.
+
+We also make the following observations:
+
+1. **Renegade and the influence of Charli D’Amelio** - if you were wondering what the ‘Renegade’ song was, it’s Lottery by K CAMP, which unsurprisingly makes a cameo at 9th on the viral views leaderboard.
+2. **Steph Curry from way downtown** - 🎵I’m Steph Curry when I hit the 3 I hit the whoa 🎵 Well, not exactly Steph Curry, but KRYPTO9095’s song Woah cracks in at the 10th spot by total viral views. 
+3. **Official songs dominate in gross stats at the top** - even the original of the Bagaikan Langit (cover) seems to be an official Indonesian song.
+
+![top_10_gross_author](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/jayeson-gao/screenshots/top_10_gross_author.png?raw=true)
+
+![top_10_gross_author_table](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/jayeson-gao/screenshots/top_10_gross_author_table.png?raw=true)
+
+Shifting over to gross stats by audio author/artists, we observe the following:
+
+1. **Queens of TikTok** - Can’t talk TikTok without bringing up Doja Cat and Megan Thee Stallion. With iconic songs like Say So, Kiss Me More, Savage, and Body, it’s not a surprise that the gross stats back it up.
+2. **One hit wonders: all it takes is one** - Light purple represents artists with only 1 audio that has made any top 100 list over this time period. Here are the songs associated with these artists: Jawsh 685 (Laxed), Kreepa (Oh No), K CAMP (Lottery), and KRYPTO9095 (Woah), StaySolidRocky (Party Girl).
+
 &nbsp;
 
 ### <sub> Section 02 </sub>
 ### **The "Best Performing" TikTok Audios - Standardized and Scored**
-Moving onto the main course of this analysis, we'll score and rank each audio across this period using a composite performance score weighted comprehensively
-using a combination of gross stats and virality/popularity relative to the competition. See methodology here: 
+Moving onto the main course of this analysis, we'll score and rank each audio across this period using a composite performance score
+using a combination of gross stats and ranking stats (see methodology). 
+
+The initial approach I took to calculating performance score is off of viral views. 
+
+![top_10_best_performing](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/jayeson-gao/screenshots/top_10_best_performing.png?raw=true)
+
+- **COVID-19 blues?** - After computing all the normalized scores based on viral view count and viral view rankings, it appears that Surrender by Natalie Taylor 
+has claimed the title of “best performing”, but let’s take a closer look at the component scores.
+
+![top_10_best_performing_normalized](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/jayeson-gao/screenshots/top_10_best_performing_normalized.png?raw=true)
+
+To recap, total views (norm_total_views) represents viral reach. Number of top 100 appearances (norm_top100_app) and average top 100 rank (norm_avg_top100_rank) measure the 
+consistency of performance while number of top 10 appearances (norm_top10_app) and max rank (norm_max_rank) evaluate peak success.
+
+With that said, what stands out?
+
+1. **Funny business or monkey business?** - Monkeys Spinning Monkeys breaks into the top 10 “best performing” and claims the number 7 spot with a norm_top10_app (green bar) 
+value of 0, meaning that it has no top 10 appearances on any monthly viral views leaderboard. However, it boasts a strong norm_top100_app score of 0.86, second to only the 
+top spot which is a testament to its consistency.
+2. **The “best performers” all have high peaks** - 9 of 10 audios have norm_max_rank scores between 0.9 - 1 (Monkeys Spinning Monkeys at 0.89 🥲) indicating they have all 
+peaked on a monthly leaderboard at some point. 6 of the 10 audios have max the norm_top10_app scores indicating multiple months where they have broken into the top 10. 
+3. **Surrender by Natalie Taylor: the hallmark of consistency** - Interestingly enough, the top spot doesn’t boast the greatest peak metrics, but is instead carried by its 
+consistency and totals. With a norm_top100_app score of 1, the song has made the most number of top 100 monthly viral views leaderboards. 
+
+A more detailed looks at what those normalized scores correspond to:
+
+![top_10_best_performing_table](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/jayeson-gao/screenshots/top_10_best_performing_table_appendix.png?raw=true)
+
+Now what happens when we reallocate the weights to reward either consistent performance or peak performance?
+
+![best_performing_consistency](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/jayeson-gao/screenshots/best_performing_consistency.png?raw=true)
+
+When we skew for consistency, what we find is that…
+
+1. **Consistency is rare** - Surrender by Natalie Taylor is undisputedly the most consistent “best performer”, with a commanding edge over the rest of the top 10. Are we surprised by 
+this after seeing the previous charts and tables?
+2. **This Spongebob audio remix is the lone representative of non-official song audio** - Or is it? While the sound that trends on TikTok is a remix, it is technically based off of an 
+officially produced sound. Regardless, it cracks the top 5 here as a - in Gen Z terms - certified hood classic.
+
+![best_performing_peak](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/jayeson-gao/screenshots/best_performing_peak.png?raw=true)
+
+When we skew for peak, we find that…
+
+1. **Audios take turns in the spotlight** - There is little separating the “best performers”. Two audios are tied for first, and all top 10 audios are separated by a score difference of 0.04. 
+In fact, there is not a major drop-off in performance score until rank 16. With so many audios laying claim to “best performer” when we skew for peak, it reinforces one of our initial 
+observations: virality is short-lived and many audios can enjoy the limelight though at different times.
+
+2. **Official songs reign supreme** - While we see 4 non-official audios/songs represented in this group, Spongebob and Hot Headzz Ya Ya are based on officially produced sounds and created by 
+smaller artists (not picked up in the data cleaning process) respectively. Even Patatak, which is tied for 10th, is derived from a Dominican Republic song.
+
+.
+
+.
+
+.
+
+This leads us to the conclusion of this section: 
+
+**Which song truly deserves the title of “best performing” audio?**
+
+Since viral views only measure reach in one dimension, I calculated a second performance score off of metrics and rankings based on viral video count.
+
+Using the methodology here, swapped out total views for total videos and rankings based on views for rankings based on videos. Then, created a **final performance score that 
+takes the average of the view-based performance score and video-based performance score**.
 
 
-reaffirms the balance of the original performance score
-
-Final jursidiction
-- measure reach in two ways - viral content created and viral content consumed
+*`final_performance_score`* = 0.5x *`performance_score_by_views`* + 0.5x *`performance_score_by_videos`*
 
 &nbsp;
+
+So then... (drum roll please)
+
+## 🥁 
+
+## 🥁 
+
+## 🥁 
+
+## 🥁 
+
+## 🥁
+
+Our final winner is…
+
+![final_performance_scatter_plot_table](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/jayeson-gao/screenshots/final_performance_scatter_plot_table.png?raw=true)
+
+## ✨ **Monkeys Spinning Monkeys** by **Kevin MacLeod**! ✨ 
+
+Thanks to its massive viral video-based performance score, it slips past Surrender for sole possession of number 1. 
+
+&nbsp;
+
+For those interested, below is a closer look at the top 10 scored by viral video metrics. 
+
+![top_10_best_performing_normalized_viral_video](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/jayeson-gao/screenshots/top_10_best_performing_normalized_viral_video.png?raw=true)
+
+Absolute dominance by Monkeys Spinning Monkeys in every category.
+
+![top_10_best_performing_table_appendix_viral_video](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/jayeson-gao/screenshots/top_10_best_performing_table_appendix_viral_video.png?raw=true)
+
+
+&nbsp;
+
 ### <sub> Section 03 </sub>
 ### **Predictors of Success: Which Song Attributes Do Well?**
 -- more likely to be consistent or peak
