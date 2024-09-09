@@ -265,7 +265,7 @@ Our final winner is…
 
 ### ✨ **[Monkeys Spinning Monkeys](https://www.youtube.com/watch?v=NPdgPZ0u3zQ)** by **Kevin MacLeod**! ✨ 
 
-Thanks to its massive viral video-based performance score, it slips past Surrender for sole possession of number 1. 
+Thanks to its modestly strong viral depth (score_by_views) and massively impressive viral spread (score_by_depth), it slips past Surrender for sole possession of number 1. 
 
 &nbsp;
 
