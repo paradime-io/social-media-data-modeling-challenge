@@ -59,7 +59,7 @@ Goal of this analysis is to **uncover insights around TikTok audio virality and 
 ### **Mart Models**
 - *`mrt_tiktok_performance_by_audio.sql`* core metrics summarized by TikTok audio
 - *`mrt_tiktok_performance_by_author.sql`* core metrics summarized by TikTok author / song artist
-- *`mrt_tiktok_top_audio_by_month 1:1`* of cleaned TikTok top 100 audio dataset
+- *`mrt_tiktok_top_audio_by_month`* 1:1 of cleaned TikTok top 100 audio dataset
 - *`mrt_spotify_song_detail.sql`* 1:1 of combined Spotify dataset
 
 ### **Macros**
