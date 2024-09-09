@@ -14,7 +14,7 @@ Submission by: [Jayeson Gao](https://www.linkedin.com/in/jayesongao)
 3. [Methodology & Definitions](#⚒️-methodology-and-definitions)
     - [Tools Used](#tools)
     - [Data Preparation](#data-preparation)
-    - [Key Metrics & Methodology](#key-metrics)
+    - [Key Metrics & Methodology](#key-metrics-and-methodology)
 4. [Key Insights & Visualizations](#📊-key-insights-and-visualizations)
     - [Data Profile - What Stands Out?](#section-00)
     - [Stat Stuffers of 2019 thru Mid-2021: Audios/Artists That Took Over TikTok](#section-01)
@@ -53,7 +53,7 @@ Goal of this analysis is to uncover insights around TikTok audio virality and pe
 
 ### **Intermediate Models**
 - *`int_tiktok_top_audio_cleaned.sql`* cleaned version of the scraped top 100 TikTok audio data
-- *`int_combined_song_list.sql`* combined spotify dataset of the 20k+ popular songs and TikTok songs
+- *`int_combined_song_list.sql`* combined Spotify dataset of the 20k+ popular songs and TikTok songs
 - *`int_audio_performance.sql`* core metrics table handling all metric and scoring calculations
 
 ### **Mart Models**
@@ -92,7 +92,7 @@ datetime functions, data type conversions to extract the values I needed, in par
 that were key for this analysis.
 
 
-### **Key Metrics**
+### **Key Metrics and Methodology**
 The two engagement metrics at the center of this analysis are the following: viral views and viral video count.
 
 1. **Viral views** measure the total number of views accumulated across all videos that have gone viral. This highlights the ***depth of engagement***, showing the extent of consumption.
@@ -162,15 +162,15 @@ Before we dive into the meat of this analysis, let's take a look at the top perf
 
 ![top_10_gross_audio](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/jayeson-gao/screenshots/top_10_gross_audio.png?raw=true)
 
-Here we look at the top 10 by gross stats ranked by total number of viral views and number of viral videos. Interestingly enough, the top 2 on both leaderboards are occupied by Laxed (Siren Beat) 
-by Jawsh 685 - the sound behind Savage Love with Jason Derulo - and Banana (feat. Shaggy) by Conkarah, with Monkeys Spinning Monkeys by Kevin MacLeod, Savage by Megan Thee Stallion, Oh No by Kreepa, 
-and Surrender by Natalie Taylor rounding out the top 6 on both charts.
+Here we look at the top 10 by gross stats ranked by total number of viral views and number of viral videos. Interestingly enough, the top 2 on both leaderboards are occupied by [Laxed (Siren Beat)](https://www.youtube.com/watch?v=E0gFA08-9xM) 
+by Jawsh 685 - the sound behind Savage Love with Jason Derulo - and [Banana (feat. Shaggy)](https://www.youtube.com/watch?v=eEYviw35to0) by Conkarah, with [Monkeys Spinning Monkeys](https://www.youtube.com/watch?v=NPdgPZ0u3zQ) by Kevin MacLeod, 
+[Savage](https://www.youtube.com/watch?v=eJEKHdvntPI) by Megan Thee Stallion, [Oh No](https://www.youtube.com/watch?v=R75Xcfqy-2I) by Kreepa, and [Surrender](https://www.youtube.com/watch?v=caoP4dj2oro) by Natalie Taylor rounding out the top 6 on both charts.
 
 We also make the following observations:
 
-1. **Renegade and the influence of Charli D’Amelio** - if you were wondering what the ‘Renegade’ song was, it’s Lottery by K CAMP, which unsurprisingly makes a cameo at 9th on the viral views leaderboard.
-2. **Steph Curry from way downtown** - 🎵I’m Steph Curry when I hit the 3 I hit the whoa 🎵 Well, not exactly Steph Curry, but KRYPTO9095’s song Woah cracks in at the 10th spot by total viral views. 
-3. **Official songs dominate in gross stats at the top** - even the original of the Bagaikan Langit (cover) seems to be an official Indonesian song.
+1. **Renegade and the influence of Charli D’Amelio** - if you were wondering what the ‘Renegade’ song was, it’s [Lottery](https://www.youtube.com/watch?v=mn4xwao3G5k) by K CAMP, which unsurprisingly makes a cameo at 9th on the viral views leaderboard.
+2. **Steph Curry from way downtown** - 🎵I’m Steph Curry when I hit the 3 I hit the whoa 🎵 Well, not exactly Steph Curry, but KRYPTO9095’s song [Woah](https://www.youtube.com/watch?v=afRki2_aNKg) shoots in at the 10th spot by total viral views. 
+3. **Official songs dominate in gross stats at the top** - even the original of the [Bagaikan Langit (cover)](https://www.youtube.com/watch?v=JdOv2Qle4fM) seems to be an official Indonesian song.
 
 ![top_10_gross_author](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/jayeson-gao/screenshots/top_10_gross_author.png?raw=true)
 
@@ -179,20 +179,21 @@ We also make the following observations:
 Shifting over to gross stats by audio author/artists, we observe the following:
 
 1. **Queens of TikTok** - Can’t talk TikTok without bringing up Doja Cat and Megan Thee Stallion. With iconic songs like Say So, Kiss Me More, Savage, and Body, it’s not a surprise that the gross stats back it up.
-2. **One hit wonders: all it takes is one** - Light purple represents artists with only 1 audio that has made any top 100 list over this time period. Here are the songs associated with these artists: Jawsh 685 (Laxed), Kreepa (Oh No), K CAMP (Lottery), and KRYPTO9095 (Woah), StaySolidRocky (Party Girl).
+2. **One hit wonders: all it takes is one** - Light purple represents artists with only 1 audio that has made any top 100 list over this time period. Here are the songs associated with these artists: Jawsh 685 (Laxed)
+, Kreepa ([Oh No](https://www.youtube.com/watch?v=R75Xcfqy-2I)), K CAMP ([Lottery](https://www.youtube.com/watch?v=mn4xwao3G5k)), and KRYPTO9095 ([Woah](https://www.youtube.com/watch?v=afRki2_aNKg)), StaySolidRocky ([Party Girl](https://www.youtube.com/watch?v=0liraNXoK4U)).
 
 &nbsp;
 
 ### <sub> Section 02 </sub>
 ### **The "Best Performing" TikTok Audios - Standardized and Scored**
 Moving onto the main course of this analysis, we'll score and rank each audio across this period using a composite performance score
-using a combination of gross stats and ranking stats (see methodology). 
+using a combination of gross stats and ranking stats ([see methodology](#key-metrics-and-methodology)). 
 
 The initial approach I took to calculating performance score is off of viral views. 
 
 ![top_10_best_performing](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/jayeson-gao/screenshots/top_10_best_performing.png?raw=true)
 
-- **COVID-19 blues?** - After computing all the normalized scores based on viral view count and viral view rankings, it appears that Surrender by Natalie Taylor 
+- **COVID-19 blues?** - After computing all the normalized scores based on viral view count and viral view rankings, it appears that [Surrender](https://www.youtube.com/watch?v=caoP4dj2oro) by Natalie Taylor 
 has claimed the title of “best performing”, but let’s take a closer look at the component scores.
 
 ![top_10_best_performing_normalized](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/jayeson-gao/screenshots/top_10_best_performing_normalized.png?raw=true)
@@ -202,12 +203,12 @@ consistency of performance while number of top 10 appearances (norm_top10_app) a
 
 With that said, what stands out?
 
-1. **Funny business or monkey business?** - Monkeys Spinning Monkeys breaks into the top 10 “best performing” and claims the number 7 spot with a norm_top10_app (green bar) 
+1. **Funny business or monkey business?** - [Monkeys Spinning Monkeys](https://www.youtube.com/watch?v=NPdgPZ0u3zQ) breaks into the top 10 “best performing” and claims the number 7 spot with a norm_top10_app (green bar) 
 value of 0, meaning that it has no top 10 appearances on any monthly viral views leaderboard. However, it boasts a strong norm_top100_app score of 0.86, second to only the 
 top spot which is a testament to its consistency.
 2. **The “best performers” all have high peaks** - 9 of 10 audios have norm_max_rank scores between 0.9 - 1 (Monkeys Spinning Monkeys at 0.89 🥲) indicating they have all 
 peaked on a monthly leaderboard at some point. 6 of the 10 audios have max the norm_top10_app scores indicating multiple months where they have broken into the top 10. 
-3. **Surrender by Natalie Taylor: the hallmark of consistency** - Interestingly enough, the top spot doesn’t boast the greatest peak metrics, but is instead carried by its 
+3. **[Surrender](https://www.youtube.com/watch?v=caoP4dj2oro) by Natalie Taylor: the hallmark of consistency** - Interestingly enough, the top spot doesn’t boast the greatest peak metrics, but is instead carried by its 
 consistency and totals. With a norm_top100_app score of 1, the song has made the most number of top 100 monthly viral views leaderboards. 
 
 A more detailed looks at what those normalized scores correspond to:
@@ -220,9 +221,9 @@ Now what happens when we reallocate the weights to reward either consistent perf
 
 When we skew for consistency, what we find is that…
 
-1. **Consistency is rare** - Surrender by Natalie Taylor is undisputedly the most consistent “best performer”, with a commanding edge over the rest of the top 10. Are we surprised by 
+1. **Consistency is rare** - [Surrender](https://www.youtube.com/watch?v=caoP4dj2oro) is undisputedly the most consistent “best performer”, with a commanding edge over the rest of the top 10. Are we surprised by 
 this after seeing the previous charts and tables?
-2. **This Spongebob audio remix is the lone representative of non-official song audio** - Or is it? While the sound that trends on TikTok is a remix, it is technically based off of an 
+2. **This [Spongebob](https://www.youtube.com/watch?v=4qXVIbs4CR0) audio remix is the lone representative of non-official song audio** - Or is it? While the sound that trends on TikTok is a remix, it is technically based off of an 
 officially produced sound. Regardless, it cracks the top 5 here as a - in Gen Z terms - certified hood classic.
 
 ![best_performing_peak](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/jayeson-gao/screenshots/best_performing_peak.png?raw=true)
@@ -233,8 +234,8 @@ When we skew for peak, we find that…
 In fact, there is not a major drop-off in performance score until rank 16. With so many audios laying claim to “best performer” when we skew for peak, it reinforces one of our initial 
 observations: virality is short-lived and many audios can enjoy the limelight though at different times.
 
-2. **Official songs reign supreme** - While we see 4 non-official audios/songs represented in this group, Spongebob and Hot Headzz Ya Ya are based on officially produced sounds and created by 
-smaller artists (not picked up in the data cleaning process) respectively. Even Patatak, which is tied for 10th, is derived from a Dominican Republic song.
+2. **Official songs reign supreme** - While we see 4 non-official audios/songs represented in this group, [Spongebob](https://www.youtube.com/watch?v=4qXVIbs4CR0) and [Hot Headzz Ya Ya](https://www.tiktok.com/music/Hott-Headzz-Ya-Ya-Ya-6833427876558293766?lang=en)  are based on officially produced sounds and created by 
+smaller artists (not picked up in the data cleaning process) respectively. Even [Patatak](https://www.youtube.com/watch?v=EPrIMUo68g4), which is tied for 10th, is derived from a [Dominican Republic song](https://www.youtube.com/watch?v=bokSLKeWVyE).
 
 .
 
@@ -248,7 +249,7 @@ This leads us to the conclusion of this section:
 
 Since viral views only measure reach in one dimension, I calculated a second performance score off of metrics and rankings based on viral video count.
 
-Using the methodology here, swapped out total views for total videos and rankings based on views for rankings based on videos. Then, created a **final performance score that 
+Using [the methodology here](#key-metrics-and-methodology), swapped out total views for total videos and rankings based on views for rankings based on videos. Then, created a **final performance score that 
 takes the average of the view-based performance score and video-based performance score**.
 
 
@@ -337,13 +338,13 @@ perform this analysis again, I would’ve created separate winners by year, “e
 
 What stands out? Here are some fascinating highlights:
 
-1. **Christmas consistency** - Mariah Carey’s All I want for Christmas Is You (orange; both charts) is the only holiday music represented in the final top 10. With an unmatched winter holiday 
+1. **Christmas consistency** - Mariah Carey’s [All I want for Christmas Is You](https://www.youtube.com/watch?v=RmUWWVZw28E) (orange; both charts) is the only holiday music represented in the final top 10. With an unmatched winter holiday 
 consistency and iconic melody, it definitely deserves its spot
-2. **Unparalleled continuity** - Monkeys Spinning Monkeys may have stolen the show, but Surrender by Natalie Taylor (teal; chart 1) never dipped below any top 100 spot for a span of 13 consecutive months! 
-3. **Impressive dominance & resurgence** - Kina’s Can We Kiss Forever? (green; chart 2) captured four top 10 spots in a 5-month span, then came back to claim a top 20 and top 50 spot in back-to-back months.
-4. **Slipping into first is not an accident** - In terms of viral spread, there’s none that can top Kevin MacLeod’s Monkeys Spinning Monkeys (blue; chart 2). Five top 10 appearances, 
+2. **Unparalleled continuity** - Monkeys Spinning Monkeys may have stolen the show, but [Surrender](https://www.youtube.com/watch?v=caoP4dj2oro) by Natalie Taylor (teal; chart 1) never dipped below any top 100 spot for a span of 13 consecutive months! 
+3. **Impressive dominance & resurgence** - Kina’s [Can We Kiss Forever?](https://www.youtube.com/watch?v=DKbfBSrjVHA) (green; chart 2) captured four top 10 spots in a 5-month span, then came back to claim a top 20 and top 50 spot in back-to-back months.
+4. **Slipping into first is not an accident** - In terms of viral spread, there’s none that can top Kevin MacLeod’s [Monkeys Spinning Monkeys](https://www.youtube.com/watch?v=NPdgPZ0u3zQ) (blue; chart 2). Five top 10 appearances, 
 three top spot titles - two in back-to-back months - and the reasons behind its massive performance score based on viral video count.
-5. **Spongebob** - In case you were wondering how the Spongebob audio rankings looked, it’s the purple line in chart 1.
+5. **Spongebob** - In case you were wondering how the [Spongebob](https://www.youtube.com/watch?v=4qXVIbs4CR0) audio rankings looked, it’s the purple line in chart 1.
 
 ***
 
@@ -359,7 +360,7 @@ Spongebob, and Oh No are iconic comedic sounds that consistently placed well thr
 **👑 The Queen of Christmas** - this analysis also inadvertently identified possibly the strongest performing Christmas sound with possibly the most unique path to the final top 10: 
 consistent Christmas peaks. Whether or not Mariah Carey is still the face of Christmas TikTok sound today would be an interesting question to answer with more recent data.
 
-**🇰🇷 K-POP appreciation** - quick shoutout to BLACKPINK’s How You Like That? for repeated cameos across several “best performing” lists.
+**🇰🇷 K-POP appreciation** - quick shoutout to BLACKPINK’s [How You Like That](https://www.youtube.com/watch?v=aHnHwrJjR3U) for repeated cameos across several “best performing” lists.
 
 ***
 
