@@ -66,7 +66,7 @@ Goal of this analysis is to **uncover insights around TikTok audio virality and 
 - *`performance_scores.sql`* macro to handle performance score (success metric) composition / calculation
 
 ### **Other**
-- *`add_genre.py`* (deprecated) python script to assign genre based on attributes to song tracks missing genre values
+- *`add_genre.py`* (deprecated because genre data is complex, one song can belong to many genres and it’s ambiguous if those genres truly apply) python script to assign genre based on attributes to song tracks missing genre values
 
 ### **Data Lineage**
 
