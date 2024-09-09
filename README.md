@@ -181,6 +181,8 @@ Here’s an overview of the key values present in the analyzed dataset.
 
 ![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/engagement_rate_across_categories.png)  
 
+<br>
+
 ### **Exploring Success Metrics Across Key Video Attributes 💡**
 
 Let's zoom in on **video duration** to uncover how the length of your content influences viewer engagement and success metrics ⏳
