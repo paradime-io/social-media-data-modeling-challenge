@@ -27,7 +27,7 @@ Submission by: [Jayeson Gao](https://www.linkedin.com/in/jayesongao)
 ***
 
 ## **🎯 Introduction and Objective**
-Goal of this analysis is to uncover insights around TikTok audio virality and performance, specifically during TikTok's early days thru the first year of COVID (2019 thru mid-2021). Across the 30-months this analysis was performed on, we'll be able to find out things like:
+Goal of this analysis is to **uncover insights around TikTok audio virality and success**, specifically during TikTok's early days thru the first year of COVID (2019 thru mid-2021). Across the 30-months this analysis was performed on, we'll be able to find out things like:
 
 1. Typically, how long does a TikTok sound’s virality last?
 2. In that time frame, who was the King / Queen of TikTok audio by raw stats?
@@ -37,7 +37,7 @@ Goal of this analysis is to uncover insights around TikTok audio virality and pe
 
 &nbsp;
 
-*Note: all song urls are linked in the [appendix.md file](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/jayeson-gao/APPENDIX.md). For avid current and ex-TikTok users, how many of these audios do you remember 🙂?* 
+*Note: all song urls are linked in the [appendix.md file](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/jayeson-gao/APPENDIX.md). For avid current and ex-TikTok users, how many of these audios do you remember* 🙂 *?* 
 
 ***
 
@@ -112,12 +112,12 @@ determined based on a subjective interpretation of performance.
 - *`performance_score`* = 0.3x `total` + 0.2x `top100_count` + 0.2x `top10_count` + 0.15x `avg_top100_rank` + 0.15x `max_rank`
 
 As the definition of performance is highly variable depending on criteria, I shifted the weights around to create two performance score variants - one skewing toward consistency, and the other 
-skewing toward peaks - since I was curious how that would impact results.
+skewing toward peaks - since I was curious how that would affect results.
 
 - *`consistency_score`* = 0.1x `total` + 0.5x `top100_count` + 0.1x `top10_count` + 0.2x `avg_top100_rank` + 0.1x `max_rank`
 - *`peak_score`* = 0.1x `total` + 0.1x `top100_count` + 0.35x top10_count + 0.1x `avg_top100_rank` + 0.35x `max_rank`
 
-**I performed this calculation twice, once on totals and monthly rankings based on the number of viral views and a second time based on the number of viral videos.** Because viral views and 
+**I performed the *`performance_score`* calculation twice, once on totals and monthly rankings based on the number of viral views and a second time based on the number of viral videos.** Because viral views and 
 viral video count measure reach in different ways, I was interested in understanding how this would impact the results. This is where the performance calculation macro came in handy.
 
 The idea behind this scoring method is that measuring performance requires context beyond gross stats and using leaderboard rankings help account for other factors like competitive dynamics.
@@ -189,7 +189,7 @@ Shifting over to gross stats by audio author/artists, we observe the following:
 Moving onto the main course of this analysis, we'll score and rank each audio across this period using a composite performance score
 using a combination of gross stats and ranking stats ([see methodology](#key-metrics-and-methodology)). 
 
-The initial approach I took to calculating performance score is off of viral views. 
+The initial approach I took to calculating performance score is off of viral view data. 
 
 ![top_10_best_performing](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/jayeson-gao/screenshots/top_10_best_performing.png?raw=true)
 
@@ -224,7 +224,7 @@ When we skew for consistency, what we find is that…
 1. **Consistency is rare** - [Surrender](https://www.youtube.com/watch?v=caoP4dj2oro) is undisputedly the most consistent “best performer”, with a commanding edge over the rest of the top 10. Are we surprised by 
 this after seeing the previous charts and tables?
 2. **This [Spongebob](https://www.youtube.com/watch?v=4qXVIbs4CR0) audio remix is the lone representative of non-official song audio** - Or is it? While the sound that trends on TikTok is a remix, it is technically based off of an 
-officially produced sound. Regardless, it cracks the top 5 here as a - in Gen Z terms - certified hood classic.
+officially produced sound. Regardless, it cracks the top 5 here as a - in Gen Z terms - [certified hood classic](https://www.urbandictionary.com/define.php?term=certified%20hood%20classic).
 
 ![best_performing_peak](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/jayeson-gao/screenshots/best_performing_peak.png?raw=true)
 
@@ -232,8 +232,7 @@ When we skew for peak, we find that…
 
 1. **Audios take turns in the spotlight** - There is little separating the “best performers”. Two audios are tied for first, and all top 10 audios are separated by a score difference of 0.04. 
 In fact, there is not a major drop-off in performance score until rank 16. With so many audios laying claim to “best performer” when we skew for peak, it reinforces one of our initial 
-observations: virality is short-lived and many audios can enjoy the limelight though at different times.
-
+observations: virality is short-lived and many audios can enjoy the viral limelight though at different times.
 2. **Official songs reign supreme** - While we see 4 non-official audios/songs represented in this group, [Spongebob](https://www.youtube.com/watch?v=4qXVIbs4CR0) and [Hot Headzz Ya Ya](https://www.tiktok.com/music/Hott-Headzz-Ya-Ya-Ya-6833427876558293766?lang=en)  are based on officially produced sounds and created by 
 smaller artists (not picked up in the data cleaning process) respectively. Even [Patatak](https://www.youtube.com/watch?v=EPrIMUo68g4), which is tied for 10th, is derived from a [Dominican Republic song](https://www.youtube.com/watch?v=bokSLKeWVyE).
 
@@ -292,7 +291,7 @@ Absolute dominance by Monkeys Spinning Monkeys in every category.
 ### <sub> Section 03 </sub>
 ### **Predictors of Success: Which Song Attributes Do Well?**
 This last section leverages the song attributes from the combined spotify dataset to identify which song attributes are the strongest predictors of TikTok success based on the score we computed 
-in the previous section. Here are the attributes and definition per Spotify API docs:
+in the previous section. Here are the attributes and definition per [Spotify API docs](https://developer.spotify.com/documentation/web-api/reference/get-audio-features):
 
 - **Valence** - A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track
 - **Tempo** - The overall estimated tempo of a track in beats per minute (BPM)
@@ -309,7 +308,7 @@ in the previous section. Here are the attributes and definition per Spotify API 
 ![attributes_of_top_performing_audios](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/jayeson-gao/screenshots/attributes_of_top_performing_audios.png?raw=true)
 
 1. **Which features most consistently impact performance score?** Using random forest to calculate importance scores, it appears most features have a similar impact on performance with valence 
-contributing slightly more than the rest. Valence is defined as “the musical positiveness conveyed by a track”. (Spotify attribute details)
+contributing slightly more than the rest. 
 2. **Which features have the strongest magnitude of effect on performance score?** Using linear regression to calculate coefficient scores, valence and energy have the most sizable impact on performance 
 score, though in different directions. An increase of 1 in valence increases performance score by 0.089, but since valence maxes out at 1, another way to look at this is an increase of 0.1 in valence 
 increase performance score by 0.0089 (~0.01), which was nearly the difference between first and second place. 
@@ -339,11 +338,11 @@ perform this analysis again, I would’ve created separate winners by year, “e
 What stands out? Here are some fascinating highlights:
 
 1. **Christmas consistency** - Mariah Carey’s [All I want for Christmas Is You](https://www.youtube.com/watch?v=RmUWWVZw28E) (orange; both charts) is the only holiday music represented in the final top 10. With an unmatched winter holiday 
-consistency and iconic melody, it definitely deserves its spot
+performance consistency and iconic melody, it definitely deserves its spot.
 2. **Unparalleled continuity** - Monkeys Spinning Monkeys may have stolen the show, but [Surrender](https://www.youtube.com/watch?v=caoP4dj2oro) by Natalie Taylor (teal; chart 1) never dipped below any top 100 spot for a span of 13 consecutive months! 
 3. **Impressive dominance & resurgence** - Kina’s [Can We Kiss Forever?](https://www.youtube.com/watch?v=DKbfBSrjVHA) (green; chart 2) captured four top 10 spots in a 5-month span, then came back to claim a top 20 and top 50 spot in back-to-back months.
 4. **Slipping into first is not an accident** - In terms of viral spread, there’s none that can top Kevin MacLeod’s [Monkeys Spinning Monkeys](https://www.youtube.com/watch?v=NPdgPZ0u3zQ) (blue; chart 2). Five top 10 appearances, 
-three top spot titles - two in back-to-back months - and the reasons behind its massive performance score based on viral video count.
+three top spot titles - two in back-to-back months - are the reasons behind its massive video-based performance score.
 5. **Spongebob** - In case you were wondering how the [Spongebob](https://www.youtube.com/watch?v=4qXVIbs4CR0) audio rankings looked, it’s the purple line in chart 1.
 
 ***
@@ -357,7 +356,7 @@ In this analysis, we learned that consistency is rare among TikTok sounds and tr
 **🤪 Goofiness: a common denominator of success** - some of the best performing audios - by consistency, peak, and overall - including our winner, are meme tracks. Monkeys Spinning Monkeys, 
 Spongebob, and Oh No are iconic comedic sounds that consistently placed well throughout the analysis and also take up way too much real-estate in my Gen Z brain (and likely the brains of millions of others).
 
-**👑 The Queen of Christmas** - this analysis also inadvertently identified possibly the strongest performing Christmas sound with possibly the most unique path to the final top 10: 
+**👑 The Queen of Christmas** - this analysis also inadvertently identified possibly the strongest performing Christmas sound with the most unique path to the final top 10: 
 consistent Christmas peaks. Whether or not Mariah Carey is still the face of Christmas TikTok sound today would be an interesting question to answer with more recent data.
 
 **🇰🇷 K-POP appreciation** - quick shoutout to BLACKPINK’s [How You Like That](https://www.youtube.com/watch?v=aHnHwrJjR3U) for repeated cameos across several “best performing” lists.
