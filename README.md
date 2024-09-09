@@ -19,6 +19,7 @@ _Brought to you by **🙋🏻‍♀️ [Hetvi Parekh](https://www.linkedin.com/i
    - [Data Preparation and Cleaning](#data-preparation-and-cleaning-)
    - [Calculating Video Success Metrics](#calculating-video-success-metrics-)
 4. [Insights](#insights-)
+   - [Executive Summary](#executive-summary-)
    - [Familiarizing with the dataset](#familiarizing-with-the-dataset-)
    - [Exploring Success Metrics Across Key Video Attributes](#exploring-success-metrics-across-key-video-attributes-)
 5. [Conclusion](#conclusion-)
@@ -45,6 +46,12 @@ This project explores the dynamics of YouTube's top trending videos, analyzing k
    - **_Comments_** : User-generated messages and feedback below the video.
 
    - **_Video Duration_** : The length of the video in hours/minutes and seconds.
+
+  Revenue model - 
+
+   - **_CPM (Cost Per Mille)_**: The amount advertisers pay per 1,000 ad impressions on a video, making it one of the primary revenue models for YouTube creators based on ad views.
+
+   - **_RPM (Revenue Per Mille)_**: The revenue earned by the creator per 1,000 views after YouTube’s share is deducted
 
 
 # **Data Sources 📚 and Data Lineage 🔗** 
@@ -135,8 +142,13 @@ Comments are weighted higher as they reflect deeper engagement, while likes are 
 
 # **Insights 📊**
 
+## **Excecutive Summary ⛳️**
+
+This analysis focuses exclusively on trending YouTube videos, excluding non-trending content. Among trending videos, creators can boost engagement rates by keeping videos under 15 minutes, using captions for accessibility, crafting concise titles with fewer than 7 words, and optimizing descriptions under 300 characters. Including emojis in titles and descriptions, using expressive faces and text in thumbnails, and publishing on Fridays and Thursdays further enhance engagement. Focus should be on adding quality video tags, quantity does not matter.
+Lastly, as engagement increases, it leads to a substantial rise in video views, directly impacting revenue. 
+
 ### **Note 📝** -
-When analyzing success metrics, average was used for balanced representation when video counts were nearly equal across segments. Otherwise, the median was applied to minimize the impact of outliers and skewed distributions.
+While analyzing success metrics, the average was used for balanced representation when video counts were nearly equal across segments. In cases of uneven distribution, the median was applied to reduce the impact of outliers and skewed data.
 
 ### **Familiarizing with the dataset 🔎**
 Here’s an overview of the key values present in the analyzed dataset.
