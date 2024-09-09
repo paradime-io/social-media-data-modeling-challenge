@@ -142,7 +142,7 @@ Comments are weighted higher as they reflect deeper engagement, while likes are 
 
 # **Insights 📊**
 
-## **Excecutive Summary ⛳️**
+## **Executive Summary ⛳️**
 
 This analysis focuses exclusively on trending YouTube videos, excluding non-trending content. Among trending videos, creators can boost engagement rates by keeping videos under 15 minutes, using captions for accessibility, crafting concise titles with fewer than 7 words, and optimizing descriptions under 300 characters. Including emojis in titles and descriptions, using expressive faces and text in thumbnails, and publishing on Fridays and Thursdays further enhance engagement. Focus should be on adding quality video tags, quantity does not matter.
 Lastly, as engagement increases, it leads to a substantial rise in video views, directly impacting revenue. 
