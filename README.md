@@ -14,8 +14,8 @@ _Brought to you by **🙋🏻‍♀️ [Hetvi Parekh](https://www.linkedin.com/i
    - [Mart Layer](#mart-layer)
    - [Other Models](#other-models)
    - [Data Lineage](#data-lineage)
-3. [Methodology](#methodology)
-   - [Tools Used](#tools-used)
+3. [Methodology](#methodology-)
+   - [Tools Used](#tools-used-)
    - [Data Preparation and Cleaning](#data-preparation-and-cleaning-)
    - [Calculating Video Success Metrics](#calculating-video-success-metrics-)
 4. [Insights](#insights-)
@@ -79,8 +79,7 @@ The following datasets fuel my analysis -
 ### **Intermediate Layer**
 - *`int_yt_combined_data`*  - int model that integrates all YouTube data into a unified model and creates metrics.
 
-
-### **Mart Layer**
+### **Marts Layer**
 - *`yt_trending_videos`* - ensures a unique, deduplicated dataset at the video level.
 
 ### **Other Models**
@@ -93,17 +92,26 @@ The following datasets fuel my analysis -
 ### **Data Lineage**
 ![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/data_lineage.png)
 
+<a name="methodology-"></a>
 # **Methodology ⚙️**
 
+<a name="tools-used-"></a>
 ### **Tools Used 🛠️**
 
 - **[Paradime](https://www.paradime.io/)** to develop dbt™ models.
+
 - **[MotherDuck](https://app.motherduck.com/)** for data warehousing and compute.
+
 - **[Hex](https://app.hex.tech/)** to analyze the datasets and create visualizations.
+
 - **Python scripts** for pulling additional data via Youtube API and other analysis.
+
 - **dbt Tests** to ensure data accuracy and consistency throughout the project.
+
 - **ChatGPT** to assist with enhancements and optimization across various tasks.
+
 - **Tableau** for additional visualizations (which are not supported in Hex).
+
 - **GitHub** for version control and project submission.
 
 
