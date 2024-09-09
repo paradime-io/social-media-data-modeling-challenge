@@ -37,7 +37,9 @@ Goal of this analysis is to **uncover insights around TikTok audio virality and 
 
 &nbsp;
 
-*Note: **all song urls are linked in the [appendix.md file](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/jayeson-gao/APPENDIX.md)**. For avid current and ex-TikTok users, how many of these audios do you remember* 🙂 *?* 
+*Note: **all song urls are linked in the [appendix.md file](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/jayeson-gao/APPENDIX.md)**. Pop open this file on a second monitor and get ready to jam* 🎵🎧🎸🎹🥁 *!* 
+
+*For avid current and ex-TikTok users, how many of these audios do you remember* 🙂 *?* 
 
 ***
 
