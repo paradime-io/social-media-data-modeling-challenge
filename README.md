@@ -50,6 +50,51 @@ Additional Data Sources:
 
 - [Python Reddit API Wrapper](https://praw.readthedocs.io/en/stable/) where reddit data was extracted using my python script. This python script also did some sentiment analysis on the comments and posts extracted based on my specific keyword.
 
+The data sources were remodeled into two major layers: INTERMEDIATE AND CORE
+
+### INTERMEDIATE
+
+- stg_argentina_youtube
+- stg_australia_youtube
+- stg_bolivia_youtube
+- stg_chile_youtube
+- stg_comment_sentiments
+- stg_country_skibidi_popularity
+- stg_ecuador_youtube
+- stg_guatemala_youtube
+- stg_hacker_news_url_count
+- stg_honduras_youtube
+- stg_indonesia_youtube
+- stg_malaysia_youtube
+- stg_mexico_youtube
+- stg_mongolia_youtube
+- stg_multi_timeline
+- stg_myanmar_youtube
+- stg_new_zealand_youtube
+- stg_nicaragua_youtube
+- stg_panama_youtube
+- stg_paraguay_youtube
+- stg_peru_youtube
+- stg_philippines_youtube
+- stg_reddit_comments
+- stg_trending_topics
+
+### CORE
+
+- dim_country_youtube_videos
+- dim_dates
+- dim_skibidi_playlist_comments
+- dim_skibidi_reddit_comments
+- fact_country_skibidi_popularity
+- fact_google_trends_queries
+- fact_hackernews_url_count
+- fact_skibidi_reddit_comments
+- fact_skibidi_timeline
+- fact_term_popularity
+- fact_youtube_google_trends_timeline
+- fact_youtube_skibidi_topics
+- fact_youtube_videos_events
+
 ### Data Lineage
 
 Listed below is the data lineage for some of the models:

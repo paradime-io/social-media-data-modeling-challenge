@@ -1,1 +1,1 @@
-SELECT * FROM {{ ref ('stg_country_skibidi_popularity') }}
+select * from {{ ref ('stg_country_skibidi_popularity') }}
