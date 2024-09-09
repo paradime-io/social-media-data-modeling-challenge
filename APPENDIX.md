@@ -49,7 +49,7 @@
 4. [Woah](https://www.youtube.com/watch?v=afRki2_aNKg)
 5. [Spongebob](https://www.youtube.com/watch?v=4qXVIbs4CR0)
 6. [Lalala](https://www.youtube.com/watch?v=FZZogxdiJMA)
-7. [Blue Blood](https://www.youtube.com/watch?v=FZZogxdiJMA)
+7. [Blue Blood](https://www.youtube.com/watch?v=kmYZK9ZWjeA)
 8. [Oh No](https://www.youtube.com/watch?v=R75Xcfqy-2I)
 9. [Steven Universe](https://www.youtube.com/watch?v=7_RVoLCx7MU)
 10. [How You Like That](https://www.youtube.com/watch?v=aHnHwrJjR3U)
