@@ -4,7 +4,7 @@ Project for the dbt™ data modeling challenge - Social Media Edition
 _Brought to you by **🙋🏻‍♀️ [Hetvi Parekh](https://www.linkedin.com/in/parekh-hetvi/)**_
 
 ## **Table of Contents**
-1. [Introduction](#📣-introduction)
+1. [Introduction](#introduction)
 2. [Key Elements of a Youtube video](#key-elements-of-a-youtube-video-✨)
 3. [Data Sources and Data Lineage](#data-sources-📚-and-data-lineage-🔗)
    - [Source](#source)
@@ -18,7 +18,7 @@ _Brought to you by **🙋🏻‍♀️ [Hetvi Parekh](https://www.linkedin.com/i
    - [Tools Used](#tools-used-🛠️)
    - [Data Preparation and Cleaning](#data-preparation-and-cleaning-🫧)
    - [Calculating Video Success Metrics](#calculating-video-success-metrics-🏆)
-4. [Insights](#insights-📊)
+4. [Insights](#insights)
    - [Familiarizing with the dataset](#familiarizing-with-the-dataset-🔎)
    - [Exploring Success Metrics Across Key Video Attributes](#exploring-success-metrics-across-key-video-attributes-💡)
 5. [Conclusion](#conclusion-🏁)
