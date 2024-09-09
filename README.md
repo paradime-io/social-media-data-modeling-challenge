@@ -258,21 +258,21 @@ takes the average of the view-based performance score and video-based performanc
 
 So then... (drum roll please)
 
-## 🥁 
+🥁 
 
-## 🥁 
+🥁 
 
-## 🥁 
+🥁 
 
-## 🥁 
+🥁 
 
-## 🥁
+🥁
 
 Our final winner is…
 
 ![final_performance_scatter_plot_table](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/jayeson-gao/screenshots/final_performance_scatter_plot_table.png?raw=true)
 
-## ✨ **Monkeys Spinning Monkeys** by **Kevin MacLeod**! ✨ 
+### ✨ **Monkeys Spinning Monkeys** by **Kevin MacLeod**! ✨ 
 
 Thanks to its massive viral video-based performance score, it slips past Surrender for sole possession of number 1. 
 
