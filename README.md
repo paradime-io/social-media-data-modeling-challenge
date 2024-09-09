@@ -286,48 +286,86 @@ Absolute dominance by Monkeys Spinning Monkeys in every category.
 
 ![top_10_best_performing_table_appendix_viral_video](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/jayeson-gao/screenshots/top_10_best_performing_table_appendix_viral_video.png?raw=true)
 
-
 &nbsp;
 
 ### <sub> Section 03 </sub>
 ### **Predictors of Success: Which Song Attributes Do Well?**
--- more likely to be consistent or peak
--- which variables highly impact performance
+This last section leverages the song attributes from the combined spotify dataset to identify which song attributes are the strongest predictors of TikTok success based on the score we computed 
+in the previous section. Here are the attributes and definition per Spotify API docs:
 
--- unimpressive .103% R-squared value means that only 8% of variance in the dependent variable is explained by the independent variables
--- suggests
-    - many paths to popularity - reflection of hhumanity
-    - limited dataset
-    - looking at the wrong attributes
+- **Valence** - A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track
+- **Tempo** - The overall estimated tempo of a track in beats per minute (BPM)
+- **Energy** - Energy is a measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity. For example, death metal has high energy, while a Bach prelude scores low on the scale
+- **Key** - The key the track is in. Integers map to pitches using standard Pitch Class notation.
+- **Acousticness** - A confidence measure from 0.0 to 1.0 of whether the track is acoustic
+- **Loudness** - The overall loudness of a track in decibels (dB). Values range between -60 and 0
+- **Danceability** - Danceability describes how suitable a track is for dancing. A value of 0.0 is least danceable and 1.0 is most danceable
+- **Speechiness** - Speechiness detects the presence of spoken words in a track. The more exclusively speech-like the recording (e.g. talk show, audio book, poetry), the closer to 1.0 the attribute value
+- **Mode** - Mode indicates the modality (major or minor) of a track. Major is represented by 1 and minor is 0
 
-Importance_score vs coefficient_score
+*Note: this analysis only looks at available TikTok songs on Spotify and not original sounds*
+
+![attributes_of_top_performing_audios](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/jayeson-gao/screenshots/attributes_of_top_performing_audios.png?raw=true)
+
+1. **Which features most consistently impact performance score?** Using random forest to calculate importance scores, it appears most features have a similar impact on performance with valence 
+contributing slightly more than the rest. Valence is defined as “the musical positiveness conveyed by a track”. (Spotify attribute details)
+2. **Which features have the strongest magnitude of effect on performance score?** Using linear regression to calculate coefficient scores, valence and energy have the most sizable impact on performance 
+score, though in different directions. An increase of 1 in valence increases performance score by 0.089, but since valence maxes out at 1, another way to look at this is an increase of 0.1 in valence 
+increase performance score by 0.0089 (~0.01), which was nearly the difference between first and second place. 
+
+![tiktok_audio_characteristics](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/jayeson-gao/screenshots/tiktok_audio_characteristics.png?raw=true)
+
+Lastly, I took a look at if there were characteristics of TikTok songs that made them different from other songs. Using logistic regression on the same set of song attributes to calculate coefficient scores, 
+it seems that TikTok songs tend to be more speechier and more danceable but lower in energy. Reminder that the Spotify API docs cite death metal as an example of high energy. Without knowing what this attribute 
+actually means and looks like across different genres, it’s hard to draw a conclusion.
+
+The insights in this section were not super compelling. In a future analysis, I would curate a more expansive set of attributes including categorical ones (recency/date release, geographic origins, 
+genre of artists/authors, etc).
 
 &nbsp;
-### <sub> Bonus Section </sub>
-### **Bonus**
--- Movement of Monkey Spinning Monkeys
--- Most dominant #1
--- Final top 10 more representative after late-2019 - skewed by total view count (as TikTok grew) or due to the wild-west nature of early TikTok
 
--- Lottery (Renegade)
--- Roxanne
--- What you know about love
--- Say So
--- Tap In
+### <sub> Bonus Section </sub>
+### **Bonus - MoM Rankings of the Final “Best Performers”**
+If you felt that the top 10 final “best performers” deserved more visualizations, I definitely agree. Below are the MoM rank movements by number of viral views and viral videos. 
+
+*Note: At first glance, the final top 10 skew towards audio appearing in late 2019 and early 2020, partially because early TikTok days were a wild “wild-west” of content, audio-included. At the same time, if I were to 
+perform this analysis again, I would’ve created separate winners by year, “eras”, or shorter time periods.*
+
+![bonus_top_10_mom_by_views](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/jayeson-gao/screenshots/bonus_top_10_mom_by_views.png?raw=true)
+
+![bonus_top_10_mom_by_videos](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/jayeson-gao/screenshots/bonus_top_10_mom_by_videos.png?raw=true)
+
+What stands out? Here are some fascinating highlights:
+
+1. **Christmas consistency** - Mariah Carey’s All I want for Christmas Is You (orange; both charts) is the only holiday music represented in the final top 10. With an unmatched winter holiday 
+consistency and iconic melody, it definitely deserves its spot
+2. **Unparalleled continuity** - Monkeys Spinning Monkeys may have stolen the show, but Surrender by Natalie Taylor (teal; chart 1) never dipped below any top 100 spot for a span of 13 consecutive months! 
+3. **Impressive dominance & resurgence** - Kina’s Can We Kiss Forever? (green; chart 2) captured four top 10 spots in a 5-month span, then came back to claim a top 20 and top 50 spot in back-to-back months.
+4. **Slipping into first is not an accident** - In terms of being used in viral content, there’s none that can top Kevin MacLeod’s Monkeys Spinning Monkeys (blue; chart 2). Five top 10 appearances, 
+three top spot titles - two in back-to-back months - and the reasons behind its massive performance score based on viral video count.
+5. **Spongebob** - In case you were wondering how the Spongebob rankings looked, it’s the purple line in chart 1.
 
 ***
 
 ## **📃 Summary and Conclusions**
 
-TikTok audio is highly transient
+In this analysis, we learned that consistency is rare among TikTok sounds and trends are constantly evolving which give a variety of different audios time to shine in the spotlight. 
+
+**🥇 All it takes is one** - because trends are so short-lived, an audio that is pushed and circulated at the right time and place has an opportunity to blow up in viral reach. 
+
+**🤪 Goofiness: a common denominator of success** - some of the best performing audios - by consistency, peak, and overall - including our winner, are meme tracks. Monkeys Spinning Monkeys, 
+Spongebob, and Oh No are iconic comedic sounds that consistently placed well throughout the analysis and also take up way too much real-estate in my Gen Z brain (and likely the brains of millions of others).
+
+**👑 The Queen of Christmas** - this analysis also inadvertently identified possibly the strongest performing Christmas sound with possibly the most unique path to the final top 10: 
+consistent Christmas peaks. Whether or not Mariah Carey is still the face of Christmas TikTok sound today would be an interesting question to answer with more recent data.
+
+**🇰🇷 K-POP appreciation** - quick shoutout to BLACKPINK’s How You Like That? for repeated cameos across several “best performing” lists.
 
 ***
 
 ## **🪞 Reflection**
-All things considered the dataset I used was pretty limited, given that I joined the challenge a little over a week before the due date
-- better dataset (more comprehensive, with more attributes, more recent) - more accurate time series analysis
-    - skew toward songs in 2020, knowing what I know now, perform analysis on separate years or even half years or quarter of years (transience of tiktok audio)
-- Look at things like geography (where are these values coming from)
-- Do a deeper analysis on what drives virality - number of trends/fads associated with each audio (hashtag analysis), accessibility of an audio
-- D)
-- Are there any Christmas songs that can compete with Mariah Carey
+I definitely see many opportunities to expand on this analysis! As I joined a little over a week out from the submission date, had I had more time I would have looked at ways to obtain a much more 
+comprehensive dataset with more attributes and for a more recent time period. It would be really cool to dive deeper and look at aspects like geographical breakdown of how audio is being used, hashtags 
+to determine what types of content were created using these audios, audio performance by genre, etc.
+
+Overall, **the tools provided were incredibly intuitive, fun to use, and made this analysis an enjoyable process**. Thank you to Paradime, Hex, and MotherDuck for setting up this challenge! 
