@@ -1,3 +1,10 @@
+{{ config
+    ({
+    "post-hook": "{{ missing_member_column(primary_key = 'dim_yt_channel_sk') }}"
+    })
+}}
+
+
 WITH prep_yt_channel AS (
     SELECT
     *

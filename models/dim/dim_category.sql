@@ -1,3 +1,9 @@
+{{ config
+    ({ 
+    "post-hook": "{{ missing_member_column(primary_key = 'dim_yt_category_sk') }}"
+    })
+}}
+
 WITH prep_yt_category AS (
     SELECT 
     *

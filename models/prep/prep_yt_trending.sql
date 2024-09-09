@@ -2,6 +2,8 @@ WITH stg_yt_trending AS (
     SELECT
     *
     FROM {{ref('stg_yt_trending')}}
+     WHERE trending_date >= current_date - {{ var('days_to_load', 5) }}
+
 ), dim_date AS (
     SELECT
     *
@@ -17,8 +19,8 @@ WITH stg_yt_trending AS (
         channelTitle AS channel_title,
         categoryId AS category_id,
         country AS country_code,
-        CAST(trending_date AS DATE) as trending_date,
-        CAST(dim_date.dim_date_sk  AS INT) AS trending_snapshot_date_sk,
+        trending_date,
+        coalesce(dim_date.dim_date_sk, 19000101) AS trending_snapshot_date_sk,
         tags as video_tags,
         view_count,
         likes,

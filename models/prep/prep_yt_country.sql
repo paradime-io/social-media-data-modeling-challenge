@@ -2,6 +2,7 @@ WITH distinct_yt_country AS (
     SELECT DISTINCT
         country
     FROM {{ ref('stg_yt_trending') }} 
+    WHERE trending_date >= current_date - {{ var('days_to_load', 5) }}
 )
 , country_code_mapping AS (
     SELECT

@@ -5,6 +5,11 @@ models:
   - name: dim_category
     description: category on Youtube
     columns:
+      - name: dim_yt_category_sk
+        description: unique surrogate key
+        data_tests:
+          - unique
+          - not_null
       - name: category_id
         description: category identifier
       - name: category_title
@@ -13,6 +18,10 @@ models:
   - name: dim_country
     description: distinct country from youtube country
     columns:
+      - name: dim_yt_country_sk
+        data_tests:
+          - unique
+          - not_null
       - name: country_code
         description: 2 letters country_code
       - name: country_desc
@@ -21,6 +30,11 @@ models:
   - name: dim_current_channel
     description: trending channel on Youtube, all channel from 2020 with channel_id, title and date granurality
     columns:
+      - name: dim_yt_channel_sk
+        description: unique surrogate key for current channel
+        data_tests:
+          - unique
+          - not_null
       - name: channel_id
         description: channel identifier
       - name: channel_title
@@ -31,5 +45,8 @@ models:
     columns:
       - name: dim_yt_thumbnail_sk
         description: dim thumbnail surrogate key
+        data_tests:
+          - unique
+          - not_null
       - name: thumbnail_link
         description: youtube thumbnail link

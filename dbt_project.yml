@@ -32,3 +32,6 @@ models:
     fct:
       +materialized: table
       +tags: "after_snapshot"
+    mart:
+      +materialized: table
+      +tags: "after_snapshot"

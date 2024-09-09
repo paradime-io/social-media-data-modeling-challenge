@@ -1,0 +1,119 @@
+version: 2
+
+models:
+  - name: mart_youtube_trending
+    description: "Combines trending video data with enriched dimensions like category, channel, country, and date."
+    columns:
+      - name: fct_yt_trending_sk
+        data_tests:
+          - unique
+          - not_null
+      - name: video_id
+        description: "The YouTube video ID. Natural key."
+        data_tests:
+          - not_null
+          
+      - name: channel_id
+        description: "The historical YouTube channel ID. Natural key."
+        data_tests:
+          - not_null
+          
+      - name: video_title
+        description: "Title of the trending video."
+
+      - name: category_title
+        description: "Title of the video category."
+        data_tests:
+          - not_null
+          
+      - name: histo_channel_title
+        description: "Historical title of the YouTube channel."
+
+      - name: current_channel
+        description: "Current title of the YouTube channel."
+
+      - name: country_code
+        description: "Code of the country where the video is trending."
+        data_tests:
+          - not_null
+
+      - name: country_desc
+        description: "Description of the country where the video is trending."
+
+      - name: thumbnail_link
+        description: "URL of the video thumbnail."
+
+      - name: trending_date
+        description: "Date when the video started trending."
+        data_tests:
+          - not_null
+
+      - name: video_publication_timestamp
+        description: "Timestamp when the video was published."
+
+      - name: month_number
+        description: "Month number of the trending date."
+
+      - name: date_month
+        description: "Month portion of the trending date."
+
+      - name: date_quarter
+        description: "Quarter portion of the trending date."
+
+      - name: date_year
+        description: "Year portion of the trending date."
+
+      - name: is_weekend
+        description: "Flag indicating if the trending date falls on a weekend."
+
+      - name: video_tags
+        description: "Tags associated with the video."
+
+      - name: video_description
+        description: "Description of the video."
+
+      - name: view_count
+        description: "Number of views for the video."
+        data_tests:
+          - not_null
+
+      - name: likes
+        description: "Number of likes for the video."
+        data_tests:
+          - not_null
+
+      - name: comment_count
+        description: "Number of comments on the video."
+
+      - name: comments_disabled
+        description: "Flag indicating if comments are disabled on the video."
+
+      - name: ratings_disabled
+        description: "Flag indicating if ratings are disabled on the video."
+
+      - name: category_assigned
+        description: "Flag indicating if a category is assigned to the video."
+        data_tests:
+          - not_null
+
+sources:
+  - name: fct_yt_trending
+    description: "Fact table containing the trending YouTube video data."
+  
+  - name: dim_category
+    description: "Dimension table for YouTube categories."
+  
+  - name: category_snapshot
+    description: "SCD2 snapshot table for YouTube category changes over time."
+  
+  - name: channel_snapshot
+    description: "SCD2 snapshot table for historical changes in YouTube channel names."
+  
+  - name: dim_current_channel
+    description: "Dimension table for current YouTube channel data."
+  
+  - name: dim_country
+    description: "Dimension table for country details."
+  
+  - name: dim_date
+    description: "Dimension table for date-related information."
