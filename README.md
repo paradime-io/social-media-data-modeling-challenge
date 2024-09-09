@@ -12,7 +12,7 @@ Submission by: [Jayeson Gao](https://www.linkedin.com/in/jayesongao)
 3. [Methodology & Definitions](#⚒️-methodology-and-definitions)
     - [Tools Used](#tools)
     - [Data Preparation](#data-preparation)
-    - [Key Metrics & Definitions](#key-metrics)
+    - [Key Metrics & Methodology](#key-metrics)
 4. [Key Insights & Visualizations](#📊-key-insights-and-visualizations)
     - [Data Profile - What Stands Out?](#section-00)
     - [Stat Stuffers of 2019 thru Mid-2021: Audios/Artists That Took Over TikTok](#section-01)
@@ -25,17 +25,15 @@ Submission by: [Jayeson Gao](https://www.linkedin.com/in/jayesongao)
 ***
 
 ## **🎯 Introduction and Objective**
-Uncovering insights around tiktok audio popularity and performance across a variety of criteria, specifically during TikTok's early days 
-thru the first year of COVID (roughly). Across the 30-months this analysis was performed on, we'll be able to find out things like:
-1. In that time, who was the King / Queen of TikTok audio?
-2. What audio held the most number 1 monthly leaderboard spots? Most top 10 appearances?
-3. Are official songs or original sounds more likely to dominate the popularity leaderboards? 
+Goal of this analysis is to uncover insights around TikTok audio virality and performance, specifically during TikTok's early days thru the first year of COVID (2019 thru mid-2021). Across the 30-months this analysis was performed on, we'll be able to find out things like:
 
--- Using leaderboard data as a proxy for a more comprehensive dataset to get an idea of the TikTok landscape across this time period
--- The two engagement metrics I'm most closely focusing on is viral views and viral video count. A good way to think about these metrics is the 
--- reach of these audios in the form of viral content created and viral content consumed.
+1. Typically, how long does a TikTok sound’s virality last?
+2. In that time frame, who was the King / Queen of TikTok audio by raw stats?
+3. What audio was “best performing” overall? What about most consistent? Highest peaking?
 
-For avid current and ex-TikTok users, how many of these audios do you remember? 
+… and more!
+
+*Note: all song urls are linked in the appendix section. For avid current and ex-TikTok users, how many of these audios do you remember 🙂?* 
 
 ***
 
