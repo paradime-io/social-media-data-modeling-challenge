@@ -1,12 +1,12 @@
 WITH hacker_news_themes AS (
     SELECT 
-        'hacker_news' AS media,
+        'Hacker News' AS media,
         *
     FROM {{ ref('int_hacker_news_keywords') }}
 ),
 slashdot_themes AS (
     SELECT 
-        'slashdot' AS media,
+        'Slashdot' AS media,
         *
     FROM {{ ref('int_slashdot_keywords') }}
 ),
