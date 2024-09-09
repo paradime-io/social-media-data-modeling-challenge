@@ -1,5 +1,5 @@
 # dbt™ Data Modeling Challenge - Social Media Edition
-# How to become an influencer on Instagram?
+# Instagram Post Engegament Analysis
 Created by [Alex Vajda](https://www.linkedin.com/in/alexandra-vajda)
 
 ## Table of Contents
