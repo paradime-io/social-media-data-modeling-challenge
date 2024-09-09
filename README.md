@@ -95,8 +95,8 @@ that were key for this analysis.
 ### **Key Metrics and Methodology**
 The two engagement metrics at the center of this analysis are the following: viral views and viral video count.
 
-1. **Viral views** measure the total number of views accumulated across all videos that have gone viral. This highlights the ***depth of engagement***, showing the extent of consumption.
-2. **Viral video count** is the count of videos that have achieved viral status by rapidly amassing hundreds of thousands of views. This highlights the ***spread of virality*** and how many pieces of content are able to achieve significant traction.
+1. **👀 Viral views** measure the total number of views accumulated across all videos that have gone viral. This highlights the ***depth of engagement***, showing the extent of consumption.
+2. **▶️ Viral video count** is the count of videos that have achieved viral status by rapidly amassing hundreds of thousands of views. This highlights the ***spread of virality*** and how many pieces of content are able to achieve significant traction.
 
 Since the focus of the analysis revolves around TikTok audio performance, I created a composite performance metric to score and compare each audio to identify which ones stand above the rest. The composition of this metric is as follows:
 
@@ -236,11 +236,7 @@ observations: virality is short-lived and many audios can enjoy the viral limeli
 2. **Official songs reign supreme** - While we see 4 non-official audios/songs represented in this group, [Spongebob](https://www.youtube.com/watch?v=4qXVIbs4CR0) and [Hot Headzz Ya Ya](https://www.tiktok.com/music/Hott-Headzz-Ya-Ya-Ya-6833427876558293766?lang=en)  are based on officially produced sounds and created by 
 smaller artists (not picked up in the data cleaning process) respectively. Even [Patatak](https://www.youtube.com/watch?v=EPrIMUo68g4), which is tied for 10th, is derived from a [Dominican Republic song](https://www.youtube.com/watch?v=bokSLKeWVyE).
 
-.
-
-.
-
-.
+&nbsp;
 
 This leads us to the conclusion of this section: 
 
@@ -256,17 +252,11 @@ takes the average of the view-based performance score and video-based performanc
 
 &nbsp;
 
-So then... (drum roll please)
+So then... 🥁 🥁 🥁 🥁 🥁 🥁 🥁 🥁 
 
-🥁 
 
-🥁 
 
-🥁 
 
-🥁 
-
-🥁
 
 Our final winner is…
 
