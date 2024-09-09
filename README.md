@@ -159,6 +159,5 @@ In this project, we went through the Instagram posts to uncover the **most Insta
 🌍 **The most Instagrammable destinations** mostly match with **international arrival** patterns of the world countries, indicating that Instagram is indeed an important part of travel these days.
 
 
-
 # **Potential Future Exploration 🔮**
 
