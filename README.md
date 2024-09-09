@@ -215,6 +215,8 @@ Relevant video tags are the hidden power behind discoverability - include these 
 
 ![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/success_metrics_across_video_tags.png)
 
+Since the quality of tags is more impactful than the quantity, let's explore the most frequently used tags from the six most popular video categories (based on the number of trending videos). These can serve as a valuable reference when selecting tags for your own videos -
+
 ![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/word_clouds_for_video_tags.png)
 
 A Revenue Perspective : Correlation Between Estimated RPM and Video Views 💰
