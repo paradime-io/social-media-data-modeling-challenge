@@ -4,7 +4,7 @@ models:
 
   - name: int_yt_combined_data
     description: |
-      This intermediate dataset consolidates all data by combining information from the joined staging tables.
+      This intermediate dataset consolidates all data by combining information from all staging tables and computes all metrics.
 
     columns:
     - name: title
@@ -67,7 +67,7 @@ models:
 
     - name: category_name
       description: |
-        Category names associated with the category IDs of YouTube videos.
+        {{ doc("stg_category_mapping__category_name") }}
 
     - name: title_emoji_flag
       description: |
@@ -129,6 +129,10 @@ models:
       description: |
         {{ doc("int_yt_combined_data__description_length") }}
 
+    - name: monetized_views
+      description: |
+        {{ doc("int_yt_combined_data__monetized_views") }}         
+
     - name: country_cpm_revenue
       description: |
         {{ doc("int_yt_combined_data__country_cpm_revenue") }}
@@ -137,13 +141,13 @@ models:
       description: |
         {{ doc("int_yt_combined_data__category_cpm_revenue") }}                                                                
 
-    - name: estimated_revenue
+    - name: estimated_revenue_for_youtuber
       description: |
-        {{ doc("int_yt_combined_data__estimated_revenue") }}                                                                
+        {{ doc("int_yt_combined_data__estimated_revenue_for_youtuber") }}                                                                
 
-    - name: estimated_rpm
+    - name: estimated_rpm_for_youtuber
       description: |
-        {{ doc("int_yt_combined_data__estimated_rpm") }}
+        {{ doc("int_yt_combined_data__estimated_rpm_for_youtuber") }}
 
     - name: estimated_rpm_per_minute
       description: |

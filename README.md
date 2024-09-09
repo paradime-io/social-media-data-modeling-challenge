@@ -57,7 +57,7 @@ The following datasets fuel my analysis -
    - It contains   top 50 trending YouTube videos across 113 countries, updated daily (starting from Oct 26, 2023 to Aug 8, 2024).
 
 ### **Supporting Dataset**
-- *`video_details`* - Leveraged the YouTube API to retrieve comprehensive video details for deeper analysis. (Python script - `fetching_video_details.py`)
+- *`video_details`* - Leveraged the YouTube API to retrieve comprehensive video details like video duration, caption availability, and the category ID to which each video belongs for deeper analysis. (Python script - `fetching_video_details.py`)
    
 ### **Seeds**
    - *`category_mapping`* -  Maps YouTube video categories to their respective IDs for analysis. [Online reference used](https://mixedanalytics.com/blog/list-of-youtube-video-category-ids/)
@@ -202,7 +202,7 @@ For this analysis, we examined the success metrics across various YouTube video 
 
 5. 🤔 **Incorporating emojis in both the title and description** consistently drives higher engagement and views, making them an essential element for maximizing audience interaction.
 
-6. **Using both text 🔠 and expressive faces 😵‍💫 in thumbnails** significantly boosts visibility, capturing attention and driving video engagement.
+6. **Using both text 🔠 and expressive faces 😄 in thumbnails** significantly boosts visibility, capturing attention and driving video engagement.
 
 7. 📅 **Publishing videos on Fridays and Thursdays** yields the highest engagement rates, making them the prime days to maximize video performance.
 

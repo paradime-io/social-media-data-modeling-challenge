@@ -6,7 +6,7 @@ models:
     description: |
       This staging model features the top 50 trending YouTube videos across 113 countries, 
       capturing a wide range of data points such as video title, description, likes, comments, views, and more. 
-      It encompasses top 50 trending videos from each country, collected between Oct 23, 2023 and Aug 8, 2024.
+      It encompasses top 50 trending videos from each country, collected between Oct 26, 2023 and Aug 8, 2024.
 
     columns:
     - name: title
@@ -19,7 +19,7 @@ models:
       tests:
         - not_null        
 
-    - name: country
+    - name: country_id
       description: |
         {{ doc("stg_trending_yt_videos__country_id") }}
       tests:

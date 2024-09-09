@@ -15,7 +15,7 @@ models:
       description: |
         {{ doc("stg_trending_yt_videos__trending_date") }}        
 
-    - name: country
+    - name: country_id
       description: |
         {{ doc("stg_trending_yt_videos__country_id") }}
 
@@ -134,13 +134,17 @@ models:
       description: |
         {{ doc("int_yt_combined_data__category_cpm_revenue") }}                                                                
 
-    - name: estimated_revenue
+    - name: monetized_views
       description: |
-        {{ doc("int_yt_combined_data__estimated_revenue") }}                                                                
+        {{ doc("int_yt_combined_data__monetized_views") }} 
 
-    - name: estimated_rpm
+    - name: estimated_revenue_for_youtuber
       description: |
-        {{ doc("int_yt_combined_data__estimated_rpm") }}
+        {{ doc("int_yt_combined_data__estimated_revenue_for_youtuber") }}                                                                
+
+    - name: estimated_rpm_for_youtuber
+      description: |
+        {{ doc("int_yt_combined_data__estimated_rpm_for_youtuber") }}
 
     - name: estimated_rpm_per_minute
       description: |
