@@ -295,13 +295,13 @@ in the previous section. Here are the attributes and definition per [Spotify API
 
 - **Valence** - A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track
 - **Tempo** - The overall estimated tempo of a track in beats per minute (BPM)
-- **Energy** - Energy is a measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity. For example, death metal has high energy, while a Bach prelude scores low on the scale
+- **Energy** - A measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity. For example, death metal has high energy, while a Bach prelude scores low on the scale
 - **Key** - The key the track is in. Integers map to pitches using standard Pitch Class notation.
 - **Acousticness** - A confidence measure from 0.0 to 1.0 of whether the track is acoustic
 - **Loudness** - The overall loudness of a track in decibels (dB). Values range between -60 and 0
-- **Danceability** - Danceability describes how suitable a track is for dancing. A value of 0.0 is least danceable and 1.0 is most danceable
-- **Speechiness** - Speechiness detects the presence of spoken words in a track. The more exclusively speech-like the recording (e.g. talk show, audio book, poetry), the closer to 1.0 the attribute value
-- **Mode** - Mode indicates the modality (major or minor) of a track. Major is represented by 1 and minor is 0
+- **Danceability** - Describes how suitable a track is for dancing. A value of 0.0 is least danceable and 1.0 is most danceable
+- **Speechiness** - Detects the presence of spoken words in a track. The more exclusively speech-like the recording (e.g. talk show, audio book, poetry), the closer to 1.0 the attribute value
+- **Mode** - Indicates the modality (major or minor) of a track. Major is represented by 1 and minor is 0
 
 *Note: this analysis only looks at available TikTok songs on Spotify and not original sounds*
 
