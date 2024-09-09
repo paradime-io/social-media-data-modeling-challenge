@@ -7,6 +7,8 @@ with base as (
     from {{ ref('int_yt_combined_data') }}
 ),
 
+-- Deduping at video_id & trending date level first.
+
 country_dedupe as (
 
     select
@@ -19,6 +21,8 @@ country_dedupe as (
             as country_dedupe
     from base
 ),
+
+-- Deduping at trending_date level next.
 
 first_trending_date_dedupe as (
 
@@ -34,6 +38,8 @@ first_trending_date_dedupe as (
 
 select
     * exclude (first_trending_date_dedupe),
+    -- Field created to sort data by the number of videos in each category, in descending order. 
+    -- This field is intended for visualizations, as Hex lacks the capability to sort data in combined charts.    
     (case when category_name = 'Entertainment' then 'a. Entertainment'
         when category_name = 'People & Blogs' then 'b. People & Blogs'
         when category_name = 'Sports' then 'c. Sports'
@@ -50,7 +56,7 @@ select
         when category_name = 'Pets & Animals' then 'n. Pets & Animals'
         when category_name = 'Nonprofits & Activism' then 'o. Nonprofits & Activism'
         else 'p. Others'
-    end) as category_name_sorting_purpose
+    end) as category_name_sorting_purpose 
 from
     first_trending_date_dedupe
 where first_trending_date_dedupe = 1
