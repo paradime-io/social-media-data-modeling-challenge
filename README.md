@@ -241,7 +241,7 @@ smaller artists (not picked up in the data cleaning process) respectively. Even 
 
 This leads us to the conclusion of this section: 
 
-**Which song truly deserves the title of “best performing” audio?**
+- **Which song truly deserves the title of “best performing” audio?**
 
 Since viral views only measure reach in one dimension, I calculated a second performance score off of metrics and rankings based on viral video count.
 
@@ -249,7 +249,7 @@ Using [the methodology here](#key-metrics-and-methodology), swapped out total vi
 takes the average of the view-based performance score and video-based performance score**.
 
 
-*`final_performance_score`* = 0.5x *`performance_score_by_views`* + 0.5x *`performance_score_by_videos`*
+- *`final_performance_score`* = 0.5x *`performance_score_by_views`* + 0.5x *`performance_score_by_videos`*
 
 &nbsp;
 
