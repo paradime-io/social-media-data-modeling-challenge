@@ -280,7 +280,7 @@ Absolute dominance by Monkeys Spinning Monkeys in every category.
 
 ### <sub> Section 03 </sub>
 ### **Predictors of Success: Which Song Attributes Do Well?**
-This last section leverages the song attributes from the combined spotify dataset to identify which song attributes are the strongest predictors of TikTok success based on the score we computed 
+This last section leverages the song attributes from the combined Spotify dataset to identify which song attributes are the strongest predictors of TikTok success based on the score we computed 
 in the previous section. Here are the attributes and definition per [Spotify API docs](https://developer.spotify.com/documentation/web-api/reference/get-audio-features):
 
 - **Valence** - A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track
