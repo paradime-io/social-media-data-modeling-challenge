@@ -82,7 +82,7 @@ The following datasets fuel my analysis -
 ![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/hetvi-parekh/images/data_lineage.png)
 
 # **Methodology ⚙️**
-### **Tools Used  🛠️**
+### **Tools Used 🛠️**
 - **[Paradime](https://www.paradime.io/)** to develop dbt™ models.
 - **[MotherDuck](https://app.motherduck.com/)** for data warehousing and compute.
 - **[Hex](https://app.hex.tech/)** to analyze the datasets and create visualizations.
