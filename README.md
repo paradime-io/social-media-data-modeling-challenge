@@ -235,6 +235,10 @@ Thanks for going through these analyses with me! Now we have the fun part!
 #### Medal Table
 ![image](images/14.png)
 ![image](images/15.png)
+<p align="center">
+   <img src="images/simone.png" width="200">
+</p>
+
 #### Instagram Events 📷
 ![image](images/16.png)
 #### Tiktok Events 🎶
