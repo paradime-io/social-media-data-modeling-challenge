@@ -117,6 +117,7 @@ After the country-level cleanup, only the earliest date the video trended was ke
    - Pulling additional video related details like video duration, category id, caption information, etc. via YouTube API.
    - To check the presence of emoji in video title and description (using `Emoji` library).
    - To check the presence of text and faces in video thumbnail. (using `EacyOCR` and `OpenCV(cv2)` libraries).
+   - To generate word clouds from the most frequently used video tags. (using `Wordcloud `, `nltk`, `matplotlib` libraries).
 
 - Online sources, along with the assistance of ChatGPT, were used to gather CPM rates for various video categories and countries for revenue estimations, as outlined above.
 
