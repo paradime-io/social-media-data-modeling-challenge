@@ -1,5 +1,6 @@
 
 
+
 # dbt™ Data Modeling Challenge - Social Media Edition
 
 [dbt™ Data Modeling Challenge - Social Media Edition](https://www.paradime.io/dbt-data-modeling-challenge)! This challenge invites you to showcase your data modeling skills using social media data.
@@ -112,14 +113,39 @@ Finally, the resulting data is saved in **MotherDuck** as a source table (as con
 ## Insights
 
 ### Total Posts
-- 
-- Visualization
-- Analysis
+
+![total_posts](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/demik_freitas/analyses/images/total_posts_by_media_.png?raw=true)
+Analyzing the total number of posts on Hacker News and Slashdot reveals a significant discrepancy, with Hacker News hosting a much larger volume of posts. This suggests that Hacker News has a broader reach and higher activity levels. However, this does not diminish the relevance of Slashdot; it may simply cater to a more specialized or niche audience.
 
 ### User Comparision by each Social Media
 
-Looking the data we see that the Slashdot has just 5 users authors while the Hacker News have more than ten thousand posting all day
+![total_posts](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/demik_freitas/analyses/images/different_authors_by_media.png?raw=true)
+Looking at the data, we see that Slashdot has only 5 active authors, while Hacker News has over ten thousand users posting daily. This indicates with a small group of individuals responsible for generating posts and only the wider audience to comment. In contrast, Hacker News functions more like an open forum, with a much larger and more diverse group of users contributing posts regularly.
 
+![total_posts](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/demik_freitas/analyses/images/top_media_authors.png?raw=true)
+Despite Hacker News having over 40,000 more posts than Slashdot, the graph of the top 10 most active users shows that two authors from Slashdot appear among the top posters. This highlights that Slashdot has a core group of specialized contributors responsible for writing and assigning content to the site, whereas Hacker News fosters more distributed participation.
 
+### Comments by Posts
+
+![total_posts](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/demik_freitas/analyses/images/comments_by_posts.png?raw=true)
+Despite Hacker News having a larger number of posts and contributors, this analysis reveals that Slashdot has a more engaged community. On average, each post on Slashdot receives 72 comments, which is 80% higher than the average of 13 comments per post on Hacker News. This indicates that while Hacker News has broader participation, Slashdot posts generate significantly more engagement from its audience.
+
+### Technology Topics Covered
+
+For the analysis, the percentage of occurrences of each technology-related topic was calculated based on the total number of technology-related mentions. This approach helps identify the most discussed topics across the media platforms.
+
+The analysis was conducted separately for each platform:
+
+-   **Slashdot**: On Slashdot, **36%** of the mentions are related to operating systems, indicating a strong focus on this topic. The remaining mentions are distributed across various other technology subjects.
+
+![total_posts](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/demik_freitas/analyses/images/themes_slashdot.png?raw=true)
+-   **Hacker News**: In contrast, while operating systems do appear among the top 10 most discussed topics, they do not dominate the top ranks. Instead, Hacker News features a broader mix of topics, including tools, programming languages, and other technology themes, reflecting a more diverse range of interests.
+
+![total_posts](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/demik_freitas/analyses/images/themes_hacker_news.png?raw=true)
 ## Conclusions
-[Summarize key findings and their implications]
+
+Esta análise mostra que o Hacker News tem um volume significativamente maior de postagens em comparação ao Slashdot, refletindo seus modelos distintos: o Hacker News opera com uma abordagem mais aberta, permitindo que uma ampla gama de usuários contribua com postagens, enquanto o Slashdot tem um modelo mais fechado, com conteúdo gerado principalmente por um grupo específico de usuários.
+
+Apesar do menor volume de postagens, o Slashdot exibe um engajamento muito maior. Isso o torna uma plataforma valiosa para obter opiniões e experiências detalhadas, principalmente sobre produtos e redes sociais. A análise de 2022 indica que as discussões em redes sociais são notavelmente prevalentes no Slashdot, tornando-o uma plataforma relevante para insights detalhados nesta área.
+
+Por outro lado, o Hacker News oferece mais liberdade para discutir e escrever sobre produtos, anúncios ou campanhas devido ao seu maior volume de postagens e maior visibilidade. Seu alcance mais amplo pode fornecer maior exposição para o conteúdo.
