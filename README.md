@@ -84,11 +84,15 @@ Finally, the resulting data is saved in **MotherDuck** as a source table (as con
 	    -   **Publication Date**: The publication date field contains extraneous characters and is not in the correct datetime format. A regex pattern was used to remove any characters that are not part of the date or time, and then the `STRPTIME` function was applied to convert the cleaned string into a proper datetime format.
 
 **- Intermediate Layer**
-A dataset with numerous technology-related keywords was obtained to help compare which themes, considered important to us, are most frequently discussed across various social media platforms. An intermediate layer was created to link these themes to post titles and count how often each keyword appears in the posts. Below are the techniques used:
+1. **int_all_post**: This step involves a straightforward union of the two staging datasets (Hacker News and Slashdot) into a single base. This combined dataset makes it easier and more efficient to  create the final data marts.
 
-For each staging dataset (Hacker News and Slashdot), a **cross join** was used to link every post with the list of technology-related keywords. The records were then filtered to retain only those where the keyword appears in the post title. Next, the data was grouped by keyword, and the **COUNT** function was applied to determine how many times each keyword appeared across the posts.
+2. **int_hacker_news_keywords and int_slashdot_keywords**: A dataset with numerous technology-related keywords was obtained to help compare which themes, considered important to us, are most frequently discussed across various social media platforms. An intermediate layer was created to link these themes to post titles and count how often each keyword appears in the posts. Below are the techniques used:
 
-**Note**: Since the dataset contains a limited number of keywords, the resulting data will not represent the entire breadth of themes discussed across these platforms.
+	For each staging dataset (Hacker News and Slashdot), a **cross join** was used to link every post with the list of technology-related keywords. The records were then filtered to retain only those where the keyword appears in the post title. Next, the data was grouped by keyword, and the **COUNT** function was applied to determine how many times each keyword appeared across the posts.
+
+	**Note**: Since the dataset contains a limited number of keywords, the resulting data will not represent the entire breadth of themes discussed across these platforms.
+
+**- Marts**
 
 
 ## Insights
