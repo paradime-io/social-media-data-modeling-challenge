@@ -248,20 +248,24 @@ A **Revenue Perspective** : Correlation Between Estimated RPM and Video Views �
 
 For this analysis, we examined the success metrics across various YouTube video features, concluding that—
 
-1. ⏳ For **video duration**, keeping videos **under 15 minutes** tends to offer the best balance, achieving both higher engagement rates and broader viewership.
+   1. ⏳ For **video duration**, keeping videos **under 15 minutes** tends to offer the best balance, achieving both higher engagement rates and broader viewership.
 
-2. 🎥📄 **Including captions** in your videos boosts engagement and increases accessibility, allowing your content to reach a broader audience. 
+   2. 🎥📄 **Including captions** in your videos boosts engagement and increases accessibility, allowing your content to reach a broader audience. 
 
-3. ✏️ For optimal engagement and views, keeping **video titles concise with fewer than 7 words** tends to deliver the best results.
+   3. ✏️ For optimal engagement and views, keeping **video titles concise with fewer than 7 words** tends to deliver the best results.
 
-4. 📜 **Video Descriptions under 300 characters** tend to drive higher views, while longer ones offer more engagement and provide room for detailed context, which can benefit searchability and clarity.
+   4. 📜 **Video Descriptions under 300 characters** tend to drive higher views, while longer ones offer more engagement and provide room for detailed context, which can benefit searchability and clarity.
 
-5. 🤔 **Incorporating emojis in both the title and description** consistently drives higher engagement and views, making them an essential element for maximizing audience interaction.
+   5. 🤔 **Incorporating emojis in both the title and description** consistently drives higher engagement and views, making them an essential element for maximizing audience interaction.
 
-6. **Using both text 🔠 and expressive faces 😄 in thumbnails** significantly boosts visibility, capturing attention and driving video engagement.
+   6. **Using both text 🔠 and expressive faces 😄 in thumbnails** significantly boosts visibility, capturing attention and driving video engagement.
 
-7. 📅 **Publishing videos on Fridays and Thursdays** yields the highest engagement rates, making them the prime days to maximize video performance.
+   7. 📅 **Publishing videos on Fridays and Thursdays** yields the highest engagement rates, making them the prime days to maximize video performance.
 
-8. When it comes to **video tags**, it's the **quality 🌟 that matters**, not the quantity, as relevant tags drive more engagement than just adding many.
+   8. When it comes to **video tags**, it's the **quality 🌟 that matters**, not the quantity, as relevant tags drive more engagement than just adding many.
 
-9. 💸 Since **Revenue** is directly tied to views, **focusing on maximizing video views** should be a top priority to boost earnings.
+   9. 💸 Since **Revenue** is directly tied to views, **focusing on maximizing video views** should be a top priority to boost earnings.
+
+<br>
+
+**_For your reference, [here](https://app.hex.tech/42dc2781-240d-43d3-9d2e-f03e9bbc93c7/app/25917aed-bc8c-41e7-be0a-25048bcaedb1/latest) is the link to the published app on Hex!_**
