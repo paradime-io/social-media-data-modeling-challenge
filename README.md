@@ -132,30 +132,34 @@ Overall, it seems that most trending traffic overall is related to **sports** (e
 
 The usefulness of measuring topics for trend analysis can be seen by diving into a more specific category. For example, filtering for `general_category = computers-electronics` and `search_type = news-search`, we can see that the `topics` related trend type acts as a sort of aggregation for individual `queries`: the top queries (`blue screen, ブルー スクリーン, bsod, crowdstrike bsod`) can all by grouped to the `Blue Screen of Death` topic.
 
-In addition to general trend information, the Google Trends UI allows users to look up related searches/topics associated with a given keyword search. Using this tool, I generated a dataset for terms and topics related to the Crowdstrike incident, which can be explored below. Comparing a non-technical trend name, like "outage", to a technical topic, like "safe-mode" yields the expected results: **the related search queries and topics for less technical trends are also less technical**. It is important to note that not all related terms will correlate to the Crowdstrike incident: for example, Scotiabank had an unrelated outage event in the same time period as the Crowdstrike incident.
+In addition to general trend information, the Google Trends UI allows users to look up related searches/topics associated with a given keyword search. Using this tool, I generated a dataset for terms and topics related to the Crowdstrike incident, which can be explored below.
 
 ![](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/261543e6a1c23508393df6dbc5686028587319f1/images/gt_safe_mode_topics.png?raw=true)
 
+Comparing a non-technical trend name, like "outage", to a technical topic, like "safe-mode" yields the expected results: **the related search queries and topics for less technical trends are also less technical**. It is important to note that not all related terms will correlate to the Crowdstrike incident: for example, Scotiabank had an unrelated outage event in the same time period as the Crowdstrike incident.
+
 After selecting the popular search terms and topics (which can be reviewed in the Appendix), I grouped them into four categories: `celebrity-news`, `sports-news`, `tech-news`, and `us-political-news`, as well as sub-categories (e.g. `Microsoft` for all Microsoft-related terms). I used the `outage`, `downtime`, and `downdetector` topics and terms to supplement the data with websites, apps, and services that were affected by the Crowdstrike incident. Searching the 1,000,000+ row `entity_text` was lighting fast ⚡ with MotherDuck's full-text search capabilities!
+
+![](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/261543e6a1c23508393df6dbc5686028587319f1/images/hn_topics_over_time.png?raw=true)
 
 As we would suspect, the `tech-news` topic trends above all other topics, even before the Crowdstrike incident, which occurred at 04:09 UTC on July 19th. We can see the `tech-news` topic spike very soon afterwards, with a **485% increase** in story hits and a **900% increase** in comment volume between 0:00-06:00 UTC and 06:00-12:00 UTC on July 19th.
 
 Interestingly, we can see that there is a discrepancy between the peak story volume and peak comment volume for the `us-political-news` category: the story volume peaked on July 17th, while the comment volume peaked on July 21st. This is due to massive comment volume on the post announcing [Joe Biden's withdrawal from the presidential election](https://news.ycombinator.com/item?id=41026741). Note that each term is only counted once per comment, which biases this metric towards comment volume rather than term frequency.
 
-![](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/261543e6a1c23508393df6dbc5686028587319f1/images/hn_topics_over_time.png?raw=true)
-
 Let's investigate the individual terms within each topic and subtopic.
+
+![](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/261543e6a1c23508393df6dbc5686028587319f1/images/hn_terms_non_tech.png?raw=true)
 
 Looking at the non-technical topic groups, we can observe the following:
 - Hacker News users don't post or comment about celebrities much! Compared to the interest / growth shown by Google trends (2000% for Shannen Doherty), there was only a single post about her passing on Hacker News.
 - Olympics over Copa: The Olympics dominated the sports category posts, with only a few posts and comments mentioning the Copa America. Since both are international events, the country hits could have been in reference to either event — or neither!
 - As usual, Trump generates engagement. He is the most posted and commented on American political figure in this dataset. However, as described above, Biden's withdrawal started a large buzz on the forum.
 
-![](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/261543e6a1c23508393df6dbc5686028587319f1/images/hn_terms_non_tech.png?raw=true)
-
-As expected, the Hacker News comment section contains a mixture of technical terms(`page_fault`, `bitlocker`) along with non-technical terms. However, one key difference from the Google Trends dataset is the frequency of terms referring to app or cloud service outages. Although the Microsoft and airline outages are mentioned frequently, many others are mentioned sparingly: `Coles` was only mentioned seven times despite being one of the largest grocers in Australia, while other widely used apps and services like `TD Bank`, `EFTPOS`, `Grindr`, and the `UK National Lottery` were not mentioned at all. I believe that this discrepancy is worth investigating further, as it may point to a demographic difference between Hacker News users and general Internet users.
+Comparing to the tech-news topic:
 
 ![](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/261543e6a1c23508393df6dbc5686028587319f1/images/hn_terms_tech.png?raw=true)
+
+As expected, the Hacker News comment section contains a mixture of technical terms(`page_fault`, `bitlocker`) along with non-technical terms. However, one key difference from the Google Trends dataset is the frequency of terms referring to app or cloud service outages. Although the Microsoft and airline outages are mentioned frequently, many others are mentioned sparingly: `Coles` was only mentioned seven times despite being one of the largest grocers in Australia, while other widely used apps and services like `TD Bank`, `EFTPOS`, `Grindr`, and the `UK National Lottery` were not mentioned at all. I believe that this discrepancy is worth investigating further, as it may point to a demographic difference between Hacker News users and general Internet users.
 
 ## Conclusions
 - There's not one measure of social media engagement to rule them all. It's important to evaluate all measures available in your dataset, and generate or normalize new measures (possibly incorporating other data!) if those aren't sufficient.
@@ -170,8 +174,8 @@ As expected, the Hacker News comment section contains a mixture of technical ter
 - Deeper dives: Since we know that certain Hacker News stories follow specific paradigms, it would be interesting to explore and cluster a specific subset of posts further. For example, would it be possible to predict the popularity of an `Ask HN` post based on its title alone?
 - Network visualization! I downloaded trend data for this project manually since the Google Trends API is not public. If I automated this process, I could gather enough data to generate visualizations between trending terms. It would also be possible to mirror that network visualization with the Hacker News data since Full-Text Search can enforce that all terms in a subgraph appear in a search query.
 - Finally, I am intrigued by the disparity in app / service outage mentions between Hacker News and Google Trends. Finding latent variables that underlie demographic data is always difficult, but it sounds like an amazing challenge. One place to start would be to estimate the distribution of users within each timezone ([inspiration analysis](https://distributionofthings.com/world-population-by-time-zone/)) based on post/comment activity.
+
 ## Appendix
 ### Table 1: Key terms used in full-text search of Hacker News dataset
+Please go to the Hex App for the full list of key terms!
 ![](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/261543e6a1c23508393df6dbc5686028587319f1/images/appendix.png?raw=true)
-
-
