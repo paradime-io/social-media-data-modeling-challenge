@@ -68,6 +68,7 @@ Finally, I used DuckDB to write the data into the Parquet file format for local 
 #### Dataset 2: Google Trends
 After manually downloading the data from the Google Trends UI, I used `polars` to clean the downloaded CSVs and extract only the 'rising' trends from the raw data. After minor data cleaning to transform the percentage strings (e.g. '+300%') into numerical values, I used DuckDB to write the data remotely to MotherDuck.
 
+## Insights
 ### Insight 1: How do we measure user engagement on Hacker News?
 To acquaint myself with the Hacker News dataset, I decided to perform some exploratory data analysis on user engagement. Activity within internet communities generally follows the [1% Rule](https://en.wikipedia.org/wiki/1%25_rule), which states the majority of a website's users exclusively consume content rather than participate in the community. I created three engagement measures to evaluate the level of activity on the Hacker News website:
 - `points`: the aggregate sum of upvotes and downvotes on a given Hacker News story.
