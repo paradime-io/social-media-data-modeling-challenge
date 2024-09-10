@@ -56,28 +56,40 @@ In this project, I will be investigating the importance of timing and music char
 - **Correlation Analysis**  
   - Created correlation matrices to measure the relationships between engagement metrics (likes, plays, comments) and music features. This helped in identifying key factors that influence user interaction.
 
-### Applied Techniques
-- Dbt modelling using custom macros, CTEs, window functions and other aggregations on differen granularity.
-- Outlier removal using the Interquartile range.
-- Visualization using Python and Hex's native visualization tool.  
 
 ## Insights
 
 <img width="1384" alt="image" src="https://github.com/user-attachments/assets/2b641ba5-34ac-4fab-ab3b-3f8c5561371a">
 <img width="1353" alt="image" src="https://github.com/user-attachments/assets/56cd5b61-81c0-41d2-bdde-19c91ae52daf">
 <img width="1367" alt="image" src="https://github.com/user-attachments/assets/1e2cf651-8984-4bf3-b2ac-c3242a624c67">
+[Engagement by timeslot source code](Analysis/f/tiktok_engagement_by_timeslot_ratio.sql)
+
 <img width="1368" alt="image" src="https://github.com/user-attachments/assets/d5f8ab98-310b-4bde-87cc-387a80bc84aa">
 <img width="1372" alt="image" src="https://github.com/user-attachments/assets/f391af48-7463-40db-b96e-f7ca523a7271">
+[Engagement by timeslot (heatmap) source code](Analysis/heatmap_engagement_by_timeslot.py)
+
 <img width="1149" alt="image" src="https://github.com/user-attachments/assets/4e033c0c-0fda-49e4-8766-e7afed086eea">
 
 <img width="1372" alt="image" src="https://github.com/user-attachments/assets/60b42c59-5b5a-4dc5-9b68-285abab6d50e">
+[Engagement by music features (heatmap) source code](Analysis/heatmap_engagement_by_music_characteristic.py)
+
 <img width="1316" alt="image" src="https://github.com/user-attachments/assets/0bf64b13-a96a-4260-9a37-55f4a6e08bf3">
+[Engagement by music features (heatmap) source code](Analysis/tiktok_engagement_by_genres_ratio.py)
+
 <img width="1322" alt="image" src="https://github.com/user-attachments/assets/1d62e360-a045-4113-9692-d60ab7bfddc1">
 <img width="1339" alt="image" src="https://github.com/user-attachments/assets/d81cdf4d-e2a9-4906-912c-35d8c3fbebd8">
+[Engagement by Popularity (Scatter) source code](Analysis/trendline_scatter_popularity_vs_engagement.py)
+
 <img width="1353" alt="image" src="https://github.com/user-attachments/assets/7beb378f-13fe-4868-b8a7-69facb421d6b">
+[Engagement by Popularity source code](Analysis/tiktok_engagement_by_popularity_ratio.sql)
 
 
 <img width="1309" alt="image" src="https://github.com/user-attachments/assets/3fa61129-f03b-40d8-bc89-49b6c94034c2">
+[Engagement by Rhythm (Scatter) source code](Analysis/trendline_scatter_rhythm_vs_engagement.py)
+
 <img width="1388" alt="image" src="https://github.com/user-attachments/assets/a074e973-ac80-4996-a8cc-0e767d354e9c">
+[Engagement by Rhythm source code](Analysis/tiktok_engagement_by_rhythm_ratio.sql)
+
+
 <img width="1433" alt="image" src="https://github.com/user-attachments/assets/d2f204af-8ad6-4dc9-9041-dfe2916b1398">
 
