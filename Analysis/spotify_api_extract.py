@@ -33,6 +33,7 @@ except Exception as e:
     logging.error(f"Failed to initialize Spotify client: {e}")
     raise
 
+#Only including track_id's that exists in the original dataset 
 file_path = 'paradimeExport.csv' 
 try:
     df = pd.read_csv(file_path)
