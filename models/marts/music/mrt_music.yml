@@ -3,7 +3,7 @@ version: 2
 models:
   - name: dim_tracks
     description: >
-      This model aggregates track data including music IDs, artist names, popularity, and genre information from TikTok and Spotify to create a detailed view of tracks for further analysis.
+      This model includes all music related data. 
     
     columns:
       - name: track_id
