@@ -59,3 +59,25 @@ models:
         description: "Whether the event occurred in a public repository"
       - name: org_login
         description: "GitHub organization associated with the event (if applicable)"
+
+  - name: fct_github_repository_activity
+    description: "Fact table containing daily aggregated activity per repository"
+    columns:
+      - name: event_date
+        description: "Date of the event"
+      - name: repo_name
+        description: "Name of the repository"
+      - name: push_events
+        description: "Number of PushEvent activities"
+      - name: pr_events
+        description: "Number of PullRequestEvent activities"
+      - name: issue_events
+        description: "Number of IssuesEvent activities"
+      - name: watch_events
+        description: "Number of WatchEvent activities"
+      - name: fork_events
+        description: "Number of ForkEvent activities"
+      - name: total_events
+        description: "Total number of events for the repository"
+      - name: total_unique_actors
+        description: "Total number of unique actors contributing to events for the repository"
