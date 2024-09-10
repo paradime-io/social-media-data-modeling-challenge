@@ -345,7 +345,7 @@ In this analysis, we learned that consistency is rare among TikTok sounds and tr
 
 **🔝 Viral spread vs viral depth** - In my analysis, I aimed to find the "best performing" TikTok sound using these two dimensions. A song like [Lalala](https://www.youtube.com/watch?v=FZZogxdiJMA) was a top 10 performer based on viral depth (views) 
 but not based on viral spread (videos). On the flipside, audios like [Steven Universe](https://www.youtube.com/watch?v=7_RVoLCx7MU), [Play Date](https://www.youtube.com/watch?v=rODr5Zfj8RA), [Savage](https://www.youtube.com/watch?v=eJEKHdvntPI) were 
-top 10 performers based on viral spread (videos) and not depth.
+top 10 performers based on viral spread and not depth.
 
 - ❓ *Question for the reader - While I weighed both dimensions equally in the final scoring, what dimension do you think is a better, stronger, or more important measure of virality?*
 
