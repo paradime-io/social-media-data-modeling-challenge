@@ -1,5 +1,5 @@
 WITH preprocessed_genres AS (
-    SELECT
+    SELECT 
         track_id,
         track_name,
         artist_name,
@@ -55,10 +55,11 @@ preprocess_genre AS (
 ),
 
 prepreprocesses_genre AS (
-    SELECT  
+    SELECT   
+        DISTINCT 
         track_id,
         track_name,
-        genre_string,
+        artist_name,
         CASE 
             WHEN artist_name = 'James Arthur' THEN 'Pop'
             WHEN artist_name = 'Dua Lipa' THEN 'Pop'
@@ -131,7 +132,7 @@ prepreprocesses_genre AS (
             WHEN artist_name = 'Stef Bos' THEN 'Pop'
             WHEN artist_name = 'Lady Gaga' THEN 'Pop'
             ELSE generalized_genre
-        END AS genres
+        END AS genres,
     FROM preprocess_genre
 )
 

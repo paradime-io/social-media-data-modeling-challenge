@@ -1,49 +1,124 @@
 version: 2
+
 models:
   - name: int_spotify_full_tracks
-    description: "This model joins Spotify track data with artist details and genre information to provide a full overview of track metadata for further analysis."
+    description: >
+      This model joins Spotify track data with artist details and genre information to provide a full overview of track metadata for further analysis.
+    
     columns:
       - name: track_id
-        description: "Unique identifier for the track."
+        description:  Unique identifier for the track. 
+        data_tests:
+          - not_null
+
       - name: track_name
-        description: "The name of the track."
+        description:  The name of the track. 
+        data_tests:
+          - not_null
+
       - name: artist_name
-        description: "The name of the artist associated with the track."
+        description:  The name of the artist associated with the track. 
+        data_tests:
+          - not_null
+
       - name: genres
-        description: "Generalized genre of the track based on the artist's genre."
+        description:  Generalized genre of the track based on the artist's genre. 
+
       - name: popularity
-        description: "Track's popularity score on Spotify."
+        description:  Track's popularity score on Spotify. 
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0  # (Optional)
+              max_value: 10
+
       - name: danceability
-        description: "Measure of how suitable the track is for dancing."
+        description:  Measure of how suitable the track is for dancing. 
+        data_tests:
+          -  dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 1
+
       - name: energy
-        description: "Energy level of the track."
+        description:  Energy level of the track. 
+        data_tests:
+          -  dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 1
+
       - name: loudness
-        description: "Overall loudness of the track in decibels."
+        description:  Overall loudness of the track in decibels. 
+        data_tests:
+          -  dbt_expectations.expect_column_values_to_be_between:
+              min_value: -60
+              max_value: 0
+
       - name: speechiness
-        description: "Measure of the presence of spoken words in the track."
+        description:  Measure of the presence of spoken words in the track. 
+        data_tests:
+          -  dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 1
+
       - name: acousticness
-        description: "Measure of how acoustic the track is."
+        description:  Measure of how acoustic the track is. 
+        data_tests:
+          -  dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 1
+
       - name: instrumentalness
-        description: "Predicts the presence of vocals in the track."
+        description:  Predicts the presence of vocals in the track. 
+        data_tests:
+          -  dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 1
+
       - name: liveness
-        description: "Detects the presence of an audience in the track."
+        description:  Detects the presence of an audience in the track. 
+        data_tests:
+          -  dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 1
+
       - name: positiveness
-        description: "Measure of the track's musical positivity."
+        description:  Measure of the track's musical positivity. 
+        data_tests:
+          -  dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 1
+
       - name: tempo
-        description: "The overall tempo of the track in beats per minute."
+        description:  The overall tempo of the track in beats per minute. 
+
       - name: beats_per_bar
-        description: "Time signature of the track, indicating beats per measure."
+        description:  Time signature of the track, indicating beats per measure. 
+        data_tests:
+          -  dbt_expectations.expect_column_values_to_be_between:
+              min_value: 1
+              max_value: 12
 
   - name: int_genres_generalised
-    description: "This model generalizes track genres into broader categories for a simplified analysis, based on Spotify track and artist data."
+    description: >
+      This model generalizes track genres into broader categories for a simplified analysis, based on Spotify track and artist data.
+    
     columns:
       - name: track_id
-        description: "Unique identifier for the track."
+        description:  Unique identifier for the track. 
+        data_tests:
+          - not_null
+          - unique
+
       - name: track_name
-        description: "The name of the track."
+        description:  The name of the track. 
+        data_tests:
+          - not_null
+
       - name: artist_name
-        description: "The name of the artist associated with the track."
+        description:  The name of the artist associated with the track. 
+
       - name: genres
-        description: "Generalized genre of the track derived from detailed Spotify genre classifications."
+        description:  Generalized genre of the track derived from detailed Spotify genre classifications. 
+        data_tests:
+          - not_null
+
       - name: genre_string
-        description: "Original genre string for the track from Spotify data."

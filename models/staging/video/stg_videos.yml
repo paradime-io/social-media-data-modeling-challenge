@@ -1,0 +1,108 @@
+version: 2
+
+models:
+  - name: stg_tiktok_videos
+    description: |
+      This model processes TikTok video data, including engagement metrics and metadata about the videos and their authors.
+      columns:
+        - name: video_id
+          description: Unique identifier for the TikTok video.
+          data_tests:
+            - not_null
+            - unique
+
+        - name: caption
+          description: Text description or caption for the video.
+
+        - name: created_at
+          description: Timestamp for when the video was created.
+
+        - name: web_video_url
+          description: URL to the video on the web.
+
+        - name: video_url
+          description: URL to the video.
+
+        - name: video_url_no_watermark
+          description: URL to the video without a watermark.
+
+        - name: likes_count
+          description: Number of likes the video received.
+
+        - name: shares_count
+          description: Number of shares the video received.
+
+        - name: play_count
+          description: Number of times the video was played.
+
+        - name: comment_count
+          description: Number of comments the video received.
+
+        - name: is_downloaded
+          description: Boolean indicating if the video was downloaded.
+
+        - name: author_id
+          description: Unique identifier for the video’s author.
+
+        - name: author_sec_uid
+          description: Secondary unique identifier for the video’s author.
+
+        - name: author_name
+          description: Name of the video’s author.
+
+        - name: author_nickname
+          description: Nickname of the video’s author.
+
+        - name: author_verified
+          description: Boolean indicating if the author is verified.
+
+        - name: author_signature
+          description: Signature or bio of the author.
+
+        - name: author_avatar_url
+          description: URL to the author’s avatar image.
+
+        - name: music_id
+          description: Unique identifier for the music used in the video.
+          data_tests:
+            - not_null 
+            - unique
+
+        - name: music_name
+          description: Name of the music track used in the video.
+
+        - name: music_author
+          description: Author or artist of the music track.
+
+        - name: is_music_original
+          description: Boolean indicating if the music is original.
+
+        - name: music_play_url
+          description: URL to play the music track.
+
+        - name: music_cover_thumb_url
+          description: URL to the thumbnail of the music cover.
+
+        - name: music_cover_medium_url
+          description: URL to the medium-sized music cover.
+
+        - name: music_cover_large_url
+          description: URL to the large-sized music cover.
+
+        - name: cover_default_url
+          description: URL to the default video cover image.
+
+        - name: cover_origin_url
+          description: URL to the original video cover image.
+
+        - name: cover_dynamic_url
+          description: URL to the dynamic video cover image.
+
+        - name: video_height
+          description: Height of the video in pixels.
+
+        - name: video_width
+          description: Width of the video in pixels.
+
+        - name: video_duration
+          description: Duration of the video in seconds.

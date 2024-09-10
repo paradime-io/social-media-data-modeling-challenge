@@ -1,5 +1,6 @@
 WITH spotify_tracks AS (
     SELECT 
+        DISTINCT
         track_id,
         track_name,
         id_artists,
@@ -40,7 +41,7 @@ final AS (
     SELECT 
         track.track_id,
         track.track_name,
-        COALESCE(artist_ori.artist_name, artist.name) AS artist_name,
+        COALESCE(artist_ori.artist_name, artist.name, track.artists) AS artist_name,
         artist.genres,
         track.popularity, 
         track.danceability, 
@@ -65,7 +66,6 @@ final AS (
         OR LOWER(artist.name) = LOWER(track.artists)
         OR artist.name ilike '%' || track.artists || '%'
 )
-
 SELECT   
     track_id,
     track_name,

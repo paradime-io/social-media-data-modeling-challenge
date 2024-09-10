@@ -1,0 +1,142 @@
+version: 2
+
+models:
+  - name: stg_music_tracks
+    description: |
+      This model processes and refines the raw data for music tracks, including details like artist, album, and release information.
+    columns:
+      - name: music_id
+        description: Unique identifier for the music track.
+        data_tests: 
+          - not_null
+          - unique
+              
+      - name: artist_name
+        description: Name of the artist who performed the track.
+
+      - name: track_title
+        description: Title of the music track.
+
+      - name: album_name
+        description: Name of the album the track is part of.
+
+      - name: release_date
+        description: Date when the track was released.
+
+      - name: record_label
+        description: Label responsible for releasing the track.
+
+      - name: music_length
+        description: Duration of the track in seconds.
+
+      - name: song_link
+        description: Direct link to the song.
+
+      - name: apple_music_isrc
+        description: ISRC (International Standard Recording Code) for the track in Apple Music.
+
+      - name: spotify_track_id
+        description: Unique identifier for the track on Spotify.
+
+  - name: stg_spotify_artists_original
+    description: |
+      This model structures the raw data for Spotify artists, including key details like artist name and external links.
+    columns:
+      - name: spotify_artist_id
+        description: Unique identifier for the artist on Spotify.
+        data_tests:
+          - not_null
+          - unique 
+
+      - name: artist_name
+        description: Name of the Spotify artist.
+
+      - name: spotify_artist_uri
+        description: URI to access the artist on Spotify.
+
+      - name: spotify_artist_href
+        description: Web link to access artist information.
+
+      - name: spotify_artist_url
+        description: External URLs related to the artist.
+
+  - name: stg_spotify_artists
+    description: |
+      This model consolidates additional artist data, including follower counts, genres, and popularity.
+    columns:
+      - name: id
+        description: Unique identifier for the artist.
+        data_tests:
+          - not_null
+          - unique
+
+      - name: followers
+        description: Number of followers the artist has on Spotify.
+
+      - name: genres
+        description: Genres the artist is associated with.
+
+      - name: name
+        description: Name of the artist.
+
+      - name: popularity
+        description: Popularity score of the artist on Spotify.
+
+  - name: stg_spotify_tracks
+    description: |
+      This model curates track data from Spotify, including musical features and track popularity.
+    columns:
+      - name: track_id
+        description: Unique identifier for the track on Spotify.
+        data_tests:
+          - not_null 
+          - unique 
+
+      - name: track_name
+        description: Name of the track.
+
+      - name: popularity
+        description: Popularity score of the track on Spotify.
+
+      - name: duration_seconds
+        description: Duration of the track in seconds.
+
+      - name: artists
+        description: Artists involved in the track.
+
+      - name: id_artists
+        description: List of artist IDs associated with the track.
+
+      - name: release_date
+        description: Date the track was released.
+
+      - name: danceability
+        description: Measure of how suitable a track is for dancing based on tempo, rhythm stability, and beat strength.
+
+      - name: energy
+        description: Measure of intensity and activity in the track.
+
+      - name: loudness
+        description: Overall loudness of the track in decibels.
+
+      - name: speechiness
+        description: Measure of spoken word content in the track.
+
+      - name: acousticness
+        description: Degree of acoustic sound present in the track.
+
+      - name: instrumentalness
+        description: Measure of instrumental sound within the track.
+
+      - name: liveness
+        description: Measure of how live or recorded the track sounds.
+
+      - name: positiveness
+        description: Overall positivity of the track's mood.
+
+      - name: tempo
+        description: Speed of the track in beats per minute.
+
+      - name: beats_per_bar
+        description: Number of beats per bar or measure in the track.
+
