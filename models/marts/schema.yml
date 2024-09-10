@@ -1,0 +1,17 @@
+version: 2
+models:
+  - name: dim_artists
+    description: "Artists from top spotify's songs"
+    columns: 
+      - name: artists_pk
+        description: "UniqueID for artists"
+      - name: artists
+        description : "Artists Name"
+  - name: dim_countries
+    description: "Countries by iso code"
+  - name: dim_songs
+    description: "Songs from top spotify's songs"
+  - name: fact_qualified_songs
+    description: "Facts for songs and their position in differents countries"
+  - name: obt_fact_and_dim
+    description: "Big Table for all the fact_qualified_songs"

@@ -82,9 +82,10 @@
 - Olds songs more than 25 years old on more than 15 countries 's top playlists are essentially on Christmas Period :
 ![alt text](img/insight5.png)
 - Christmas implied in all countries a big increased of retro's populars christmas's songs 
-- Here I used two kpi_facts, 1 to get olds songs and the other focusing on which songs is popular in more than 1 country
+__Here I used two kpi_facts, 1 to get olds songs and the other focusing on which songs is popular in more than 1 country__
+![alt text](img/insight51.png)
 
 ## Conclusions
-- By lack of time, I choose this simple example. 
-- I focused on old songs.
+
 - On spotify API, we can see that we can classify music with more attributes (loudness, instrumental, etc...). From theses attributes, maybe we can find some keys characteristics. Much more analyses can be done.
+- Maybe there are some correlations between some songs that stay more than 6 months on top playlist's spotify. Who knows, maybe a next time quick use of theses datasets 

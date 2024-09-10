@@ -1,0 +1,12 @@
+version: 2
+models:
+  - name: artists_top10_in_more_than_one_country_by_snapshot_date
+    description: "artists that are in top 10 in more than one country by snapshot date"
+  - name: more_than_five_year_old_songs_in_top10_by_country_by_snapshot_date
+    description: "songs that are more than 5 years old always in top 10 by country and snapshot date"
+  - name: songs_stayed_in_top10_6month_or_more
+    description: "songs that stayed in top 10 for 6 or more months"
+  - name: songs_top10_by_country_by_snapshot_date
+    description: "top 10 songs by country and snapshot date"
+  - name: songs_top10_in_more_than_two_countries_by_snapshot_date
+    description: "top 10 songs that are in two ore more countries by snapshot date"
