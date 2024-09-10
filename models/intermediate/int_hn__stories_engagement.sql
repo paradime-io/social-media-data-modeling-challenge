@@ -21,8 +21,6 @@ select
     coalesce(comment_count.num_comments, 0) as num_comments,
     coalesce(top_level_comment_count.num_children, 0)
         as max_comment_depth,
-    --  max_comment_depth
-    --  / (case when num_comments > 0 then num_comments else 1 end) as stir_score,
     dense_rank()
         over (order by stories.points desc, stories.id desc)
         as rank_points,

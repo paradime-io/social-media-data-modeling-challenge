@@ -14,8 +14,3 @@ snapshot-paths: ["snapshots"]
 clean-targets:
   - "target"
   - "dbt_packages"
-
-models:
-  paradime_social_media_challenge:
-    example:
-      +materialized: view
