@@ -83,4 +83,3 @@ In this project, I will be investigating the importance of timing and music char
 <img width="1309" alt="image" src="https://github.com/user-attachments/assets/3fa61129-f03b-40d8-bc89-49b6c94034c2">
 <img width="1381" alt="image" src="https://github.com/user-attachments/assets/203b2cd5-8728-46a8-b87d-49edecfc9209">
 
-<img width="1386" alt="image" src="https://github.com/user-attachments/assets/37b89d63-ca5e-4a21-910e-45b1525ad6c7">
