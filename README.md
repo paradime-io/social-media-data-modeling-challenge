@@ -6,7 +6,7 @@ Submission by: [Jayeson Gao](https://www.linkedin.com/in/jayesongao)
 
 ## **📋 Table of Contents**
 
-1. [Intro & Objective](#🎯-introduction-and-objective)
+1. [Intro & Objective](#-introduction-and-objective)
 2. [Data Sources & Lineage](#🕸️-data-sources-and-lineage)
     - [Sources](#sources-and-seeds)
     - [Model Layers](#intermediate-models)
