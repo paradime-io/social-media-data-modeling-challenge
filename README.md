@@ -80,7 +80,7 @@ Written out in order to avoid duplication of this logic throughout the models.
 - *`.sqlfluff`*: This file makes sure that all the models are up to good formatting standards accroding to extensive set of rules defined.
 
 ### **Data Lineage**
-![plot](/images/lineage.png)
+![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/isin-pesch/images/lineage.png?raw=true)
 
 # **Methodology 🧪**
 ### **Tools Used**
@@ -132,17 +132,20 @@ pre-aggregated columns. This a design choice made specific to the tool stack her
 - Using a color palette for optimum BI experience and visual consistency.
 
 # **Visualizations** 📊
-![plot](/images/first.png)
-![plot](/images/second.png)
-![plot](/images/third.png)
-![plot](/images/fourth.png)
-![plot](/images/fifth.png)
-![plot](/images/sixth.png)
-![plot](/images/seventh.png)
-![plot](/images/eight.png)
-![plot](/images/ninth.png)
-![plot](/images/tenth.png)
 
+You can find my fully published **interactive Hex dashboard** [here](https://app.hex.tech/54bd1a3e-1a4b-4a5c-82c3-62f6eff85176/app/58c486d5-bdcb-429e-a873-83dc129b9bba/latest) although everything is presented below as well.
+
+![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/isin-pesch/images/first.png?raw=true)
+![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/isin-pesch/images/second.png?raw=true)
+![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/isin-pesch/images/third.png?raw=true)
+![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/isin-pesch/images/fourth.png?raw=true)
+![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/isin-pesch/images/fifth.png?raw=true)
+![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/isin-pesch/images/sixth.png?raw=true)
+![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/isin-pesch/images/seventh.png?raw=true)
+![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/isin-pesch/images/eight.png?raw=true)
+![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/isin-pesch/images/ninth.png?raw=true)
+![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/isin-pesch/images/tenth.png?raw=true)
+![plot](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/isin-pesch/images/race_chart.gif?raw=true)
 
 # **Conclusion 🌎**
 
@@ -161,3 +164,16 @@ In this project, we went through the Instagram posts to uncover the **most Insta
 
 # **Potential Future Exploration 🔮**
 
+If there is more time to explore, I would love to identify more travel - Instagram patterns. Some of those ideas are;
+
+- Does business accounts affect the travel behaviour of individual's choices? Are there some 
+    particular wave patterns over time where a first wave of people going to a destination is dominated by business accounts and then a second wave followed by individuals?
+
+- Are there any particular months for certain places getting better engagement or more posts? Popular times to travel to certain countries....
+
+- Top topics discussed in travel category for certain countries.
+
+I really enjoyed participating in this challenge. I think it is the most comprehensive data modelling challenge out there!
+Using all the tools was a real pleasure 😎
+
+Thanks for making this possible!
