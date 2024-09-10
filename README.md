@@ -13,9 +13,48 @@ This project analyzes GitHub activities and discussions on Hacker News to gain i
 
 ## Data Sources
 
+**Sources**
 - Dataset 1: **GitHub Events**: A log of user activities on GitHub, including pushes, pull requests, issues, watches, and forks.
 - Dataset 2: **Hacker News Posts**: Discussions and comments related to GitHub from Hacker News.
+
+**Seeds** : event_type_categories
+
+New Datasets:
 - Dataset 3: **Hacker News Sentiment and Topics**: Sentiment scores and topic classifications generated using LLMs.
+
+#### **Staging Layer**
+
+- **github_events:** Raw GitHub events data
+- **hacker_news:** Hacker News post data
+- **hn_sentiment_topics:** Sentiment and topic analysis of Hacker News posts
+
+#### **Intermediate Layer**
+- int_github_daily_activity: Daily GitHub activity including event types and unique actors
+- int_hn_discussions: Hacker News discussions mentioning GitHub repositories, with sentiment and topic analysis
+
+### **Mart Layer**
+
+#### **Core**
+  - **dim_users:** Dimension table for GitHub users
+  - **dim_repositories:** Dimension table for GitHub repositories
+  - **fct_github_events:** Fact table containing all GitHub events
+  - **fct_github_repository_activity:** Fact table containing daily aggregated activity per repository
+
+#### **Product**
+  - **daily_active_users:** Daily count of active users and contributors
+
+  - **event_type_distribution:** Distribution of event types by date
+
+  - **fct_hn_github_mentions:** Hacker News posts mentioning GitHub repositories, along with sentiment and topic analysis"
+  
+  - **fct_hn_sentiment_analysis:** Aggregated sentiment analysis of Hacker News posts mentioning GitHub, grouped by topic and date"
+
+#### **Marketing**
+  - **user_acquisition**: Daily count of new users
+
+**Macros and Others**
+- **generate_custom_schema:** This macro creates a custom schema
+- **.sqlfluff:** This file makes sure that all the models are up to good formatting standards accroding to extensive set of rules defined.
 
 ### Data Preparation and Cleaning
 
@@ -95,6 +134,7 @@ WHERE
 Refer analyze_hn_data.ipynb notebook under analyses folder which generates **hn_sentiment_topics** file
 
 
+
 ### **Data Lineage**
 
 ![Lineage1](https://i.imgur.com/19C6Sy7.png)
@@ -119,6 +159,10 @@ Refer analyze_hn_data.ipynb notebook under analyses folder which generates **hn_
 - Dimensional modeling for GitHub events and users
 - Sentiment analysis and topic modeling using LLMs
 - Data visualization techniques for clear insight communication
+
+## DBT Project Strcuture
+
+![dbt_project](https://i.imgur.com/9muQllu.png)
 
 ## Insights
 
