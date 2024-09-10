@@ -26,7 +26,17 @@ Some of the questions we'll explore include:
 - Dataset 4: Data Job Postings - Job postings data from 2023, by [Luke Barousse via HuggingFace](https://huggingface.co/datasets/lukebarousse/data_jobs ), filtered out for LinkedIn job postings. 
 
 ### Data Lineage
+Hacker News
+![hn_lineage.png](./images/hn_lineage.png)
 
+Kaggle
+![kaggle_lineage.png](./images/kaggle_lineage.png)
+
+Stack Overflow
+![so_lineage.png](./images/so_lineage.png)
+
+LinkedIn Jobs
+![lkn_jobs.png](./images/lkn_jobs.png)
 
 
 Other models:
