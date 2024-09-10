@@ -22,3 +22,37 @@ sources:
             description: "Whether the event occurred in a public repository"
           - name: org_login
             description: "GitHub organization associated with the event (if applicable)"
+
+      - name: hacker_news
+        description: "Hacker News post data"
+        columns:
+          - name: id
+            description: "Unique identifier for each post"
+          - name: type
+            description: "Type of the Hacker News item (e.g., story, comment, etc.)"
+          - name: author
+            description: "Author who submitted the post"
+          - name: created_at
+            description: "Timestamp of when the post was created"
+          - name: title
+            description: "Title of the post"
+          - name: text
+            description: "Text content of the post (for comments or stories)"
+          - name: url
+            description: "URL linked to the post (if any)"
+          - name: score
+            description: "Score of the post (upvotes)"
+          - name: parent
+            description: "ID of the parent post (for replies/comments)"
+
+      - name: hn_sentiment_topics
+        description: "Sentiment and topic analysis of Hacker News posts"
+        columns:
+          - name: id
+            description: "Unique identifier for each post (corresponding to Hacker News data)"
+          - name: sentiment
+            description: "Sentiment score of the post (negative, neutral, or positive)"
+          - name: main_topic
+            description: "Main topic category assigned to the post"
+          - name: sub_topic
+            description: "Sub-topic category assigned to the post"

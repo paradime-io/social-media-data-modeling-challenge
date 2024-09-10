@@ -1,23 +1,52 @@
 version: 2
 
 models:
-  - name: int_daily_events
-    description: "Daily aggregated GitHub events data"
+  - name: int_github_daily_activity
+    description: "Daily GitHub activity including event types and unique actors"
     columns:
       - name: event_date
-        description: "Date of the events"
+        description: "Date when the event occurred"
         tests:
           - unique
           - not_null
+      - name: repo_name
+        description: "Full name of the repository (owner/repo_name) where the event occurred"
       - name: event_type
-        description: "Type of GitHub event"
+        description: "Type of GitHub event (e.g., PushEvent, PullRequestEvent, etc.)"
       - name: event_count
         description: "Total number of events of this type on this date"
-      - name: unique_users
-        description: "Number of unique users who performed this event type on this date"
-      - name: public_event_count
-        description: "Number of events that occurred in public repositories"
-      - name: org_event_count
-        description: "Number of events associated with organizations"
-      - name: avg_push_size
-        description: "Average number of commits per push event on this date"
+      - name: unique_actors
+        description: "Number of unique GitHub users who performed this event type on this date"
+  
+  - name: int_hn_discussions
+    description: "Hacker News discussions mentioning GitHub repositories, with sentiment and topic analysis"
+    columns:
+      - name: id
+        description: "Unique identifier for each Hacker News post"
+        tests:
+          - unique
+          - not_null
+      - name: created_at
+        description: "Timestamp of when the Hacker News post was created"
+      - name: author
+        description: "Username of the author who created the post"
+      - name: type
+        description: "Type of the Hacker News item (e.g., story, comment)"
+      - name: title
+        description: "Title of the Hacker News post"
+      - name: text
+        description: "Text content of the Hacker News post"
+      - name: url
+        description: "URL linked to the post (if any)"
+      - name: score
+        description: "Score of the post (upvotes)"
+      - name: parent
+        description: "ID of the parent post (for comments or replies)"
+      - name: mentioned_repo
+        description: "GitHub repository mentioned in the post (if any)"
+      - name: sentiment
+        description: "Sentiment score of the post (negative, neutral, or positive)"
+      - name: topic
+        description: "Main topic assigned to the post based on sentiment analysis"
+      - name: sub_topic
+        description: "Sub-topic assigned to the post based on sentiment analysis"

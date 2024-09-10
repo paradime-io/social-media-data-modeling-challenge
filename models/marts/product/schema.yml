@@ -25,3 +25,47 @@ models:
         description: "Number of events of this type on this date"
       - name: event_percentage
         description: "Percentage of events of this type relative to all events on this date"
+
+  - name: fct_hn_github_mentions
+    description: "Hacker News posts mentioning GitHub repositories, along with sentiment and topic analysis"
+    columns:
+      - name: id
+        description: "Unique identifier for each Hacker News post"
+        tests:
+          - unique
+          - not_null
+      - name: created_at
+        description: "Timestamp when the Hacker News post was created"
+      - name: author
+        description: "Author of the Hacker News post"
+      - name: title
+        description: "Title of the Hacker News post"
+      - name: text
+        description: "Text content of the Hacker News post"
+      - name: url
+        description: "URL of the Hacker News post"
+      - name: score
+        description: "Score (upvotes) of the post"
+      - name: sentiment
+        description: "Sentiment score associated with the post (negative, neutral, positive)"
+      - name: main_topic
+        description: "Main topic related to the post, derived from sentiment analysis"
+      - name: sub_topic
+        description: "Sub-topic related to the post, derived from sentiment analysis"
+
+  - name: fct_hn_sentiment_analysis
+    description: "Aggregated sentiment analysis of Hacker News posts mentioning GitHub, grouped by topic and date"
+    columns:
+      - name: analysis_date
+        description: "The date on which sentiment analysis was performed"
+        tests:
+          - unique
+          - not_null
+      - name: main_topic
+        description: "Main topic of the posts on this date"
+      - name: sub_topic
+        description: "Sub-topic of the posts on this date"
+      - name: avg_sentiment
+        description: "Average sentiment score of posts mentioning GitHub on this date"
+      - name: mention_count
+        description: "Number of posts mentioning GitHub on this date"

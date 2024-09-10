@@ -1,7 +1,7 @@
 {{ config(materialized='table') }}
 
 SELECT DISTINCT
-    actor_login AS user_id,
+    user_id,
     MIN(created_at) AS first_seen_at,
     MAX(created_at) AS last_seen_at,
     COUNT(DISTINCT org_login) AS organization_count

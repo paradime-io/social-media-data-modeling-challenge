@@ -6,7 +6,7 @@
 SELECT DISTINCT  -- Add DISTINCT to remove duplicates
     event_id,
     created_at,
-    actor_login AS user_id,
+    user_id,
     repo_name AS repository_id,
     event_type,
     push_size,
