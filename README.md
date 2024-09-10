@@ -9,7 +9,8 @@
 
 ## Introduction
 
-This project analyzes GitHub activities and discussions on Hacker News to gain insights into GitHub's ecosystem and its perception in the tech community. We focus on the period from **August 12-18, 2024**, including a significant outage on **August 14-15**, to understand user behavior, engagement patterns, and community sentiment.
+- As an analytics engineer at GitHub, you're tasked with building a comprehensive data model to analyze platform activity. This includes general usage patterns, event trends, user engagement, and repository activity. 
+- This project analyzes GitHub activities and discussions on Hacker News to gain insights into GitHub's ecosystem and its perception in the tech community. We focus on the period from **August 12-18, 2024**, including a significant outage on **August 14-15**, to understand user behavior, engagement patterns, and community sentiment.
 
 ## Data Sources
 
