@@ -93,7 +93,21 @@ Finally, the resulting data is saved in **MotherDuck** as a source table (as con
 	**Note**: Since the dataset contains a limited number of keywords, the resulting data will not represent the entire breadth of themes discussed across these platforms.
 
 **- Marts**
+1. **media_metrics**: This mart provides general metrics to compare both social media platforms. The following metrics are calculated:
 
+	-   **Total Posts**: Counts the total number of posts from each social media platform.
+	
+	-   **Distinct Authors**: A distinct count of the users who posted on each social media platform.
+
+	-   **Total Comments**: The total number of comments across all posts.
+
+	-   **Comments per Post**: The average number of comments per post, calculated by dividing the total number of comments by the total number of posts. This shows the average engagement each post receives on each platform.
+
+2. **Posts by Date (or months)**: This mart table counts the number of posts by date, allowing for analysis of posting trends over time, particularly to observe changes in post activity by month.
+
+3. **Principal Themes**: This table combines the theme counts from both social media platforms. It also calculates the percentage of each theme based on the total occurrences of all themes across both platforms.
+
+4. **User by Each Media**: This table calculates the total number of posts made by each user on both social media platforms. It also determines the percentage of posts contributed by each user relative to the total posts on their respective platform.
 
 ## Insights
 
