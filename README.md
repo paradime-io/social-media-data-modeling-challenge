@@ -146,8 +146,8 @@ The analysis was conducted separately for each platform:
 ![total_posts](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/demik_freitas/analyses/images/themes_hacker_news.png?raw=true)
 ## Conclusions
 
-Esta análise mostra que o Hacker News tem um volume significativamente maior de postagens em comparação ao Slashdot, refletindo seus modelos distintos: o Hacker News opera com uma abordagem mais aberta, permitindo que uma ampla gama de usuários contribua com postagens, enquanto o Slashdot tem um modelo mais fechado, com conteúdo gerado principalmente por um grupo específico de usuários.
+This analysis shows that Hacker News has a significantly higher volume of posts compared to Slashdot, reflecting their distinct models: Hacker News operates with a more open approach, allowing a wide range of users to contribute posts, while Slashdot has a more closed model, with content generated primarily by a specific group of users.
 
-Apesar do menor volume de postagens, o Slashdot exibe um engajamento muito maior. Isso o torna uma plataforma valiosa para obter opiniões e experiências detalhadas, principalmente sobre produtos e redes sociais. A análise de 2022 indica que as discussões em redes sociais são notavelmente prevalentes no Slashdot, tornando-o uma plataforma relevante para insights detalhados nesta área.
+Despite the lower volume of posts, Slashdot has much higher engagement. This makes it a valuable platform for gaining in-depth opinions and experiences, particularly on products and social media. The 2022 analysis indicates that social media discussions are notably prevalent on Slashdot, making it a relevant platform for in-depth insights in this area.
 
-Por outro lado, o Hacker News oferece mais liberdade para discutir e escrever sobre produtos, anúncios ou campanhas devido ao seu maior volume de postagens e maior visibilidade. Seu alcance mais amplo pode fornecer maior exposição para o conteúdo.
+Por News offers more freedom to discuss and write about products, announcements, or campaigns due to its higher volume of posts and greater visibility. Its broader reach can provide greater exposure for content.
