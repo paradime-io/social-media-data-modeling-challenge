@@ -18,9 +18,16 @@ with programming_languages as (
 )
 
 select 
-  distinct trim(lower(lang)) as programming_languages
-from programming_languages
-where 
-  lower(lang) not in ('na', 'other', 'none', '')
-  and lower(lang) is not null
+    case 
+        when programming_languages like 'go%' then 'golang '
+        else rpad(programming_languages, cast(length(programming_languages) + 1 as integer), ' ') 
+    end as programming_languages
+from (
+    select 
+    distinct trim(lower(lang)) as programming_languages
+    from programming_languages
+    where 
+    lower(lang) not in ('na', 'other', 'none', '')
+    and lower(lang) is not null
+)
 order by 1 asc

@@ -15,7 +15,11 @@ sources:
   - name: hns
     database: source_data
     tables:
-      - name: hacker_news_2022_2023
+      - name: hn_to_2023
+  - name: jobs
+    database: source_data
+    tables:
+      - name: lbarousse_data
   - name: hn
     database: sample_data
     tables:

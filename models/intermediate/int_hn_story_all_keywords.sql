@@ -1,7 +1,12 @@
+-- Find posts with all related keywords, including
+-- ML keywords
+-- Data keywords 
+-- Job skills keywords
+-- Job Roles
+
 with keywords_to_match as (
-  select
-    lower(ml_keywords) as ml_keywords 
-  from {{ ref('int_ml_keywords') }}
+	select distinct keywords 
+	from {{ ref('int_keywords') }}
 )
 
 , posts as (
@@ -21,25 +26,27 @@ with keywords_to_match as (
 , posts_w_keywords as (
     select
     p.id
-    ,coalesce(k.ml_keywords, k2.ml_keywords) as ml_keywords
+    ,coalesce(k.keywords, k2.keywords) as keywords
     ,p.post_year
     ,p.post_month
     ,p.title
     ,p.text
-    ,row_number() over (partition by p.id, coalesce(k.ml_keywords, k2.ml_keywords)) as rn
+    ,row_number() over (partition by p.id, coalesce(k.keywords, k2.keywords)) as rn
     from posts p
-    -- Check if keyword is in title/text
+    -- Check if keyword is in title/text, and appears after space or at start
     left join keywords_to_match k
-    on position(k.ml_keywords in p.title) > 0 
+    on (p.title LIKE k.keywords || '%'
+        OR p.title LIKE '% ' || k.keywords || '%') 
     left join keywords_to_match k2
-    on position(k2.ml_keywords in p.text) > 0 
-    where k.ml_keywords is not null
-    or k2.ml_keywords is not null
+    on (p.text LIKE k2.keywords || '%'
+        OR p.text LIKE '% ' || k2.keywords || '%') 
+    where k.keywords is not null
+    or k2.keywords is not null
 )
 
 select 
   id
-  ,ml_keywords
+  ,keywords
   ,post_year
   ,post_month
   ,title

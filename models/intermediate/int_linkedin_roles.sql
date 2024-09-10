@@ -45,58 +45,66 @@ with custom_roles as (
 
 , posts as (
   select
-    p.id
-    ,p.post_year
-    ,p.post_month
-    ,lower(p.title) as title
-    ,lower(p.text) as text
-  from {{ ref('stg_hackernews') }} p
-  where ((post_type = 'job'))
+    job_id
+    ,listed_job_role
+    ,job_title as job_description
+    ,experience_level
+    ,post_year 
+    ,post_month 
+    ,yearly_comp_usd
+    ,job_skills 
+    ,job_type_skills
+  from {{ ref('stg_linkedin_jobs') }} 
 )
 
 , posts_w_keywords as (
     select
-    p.id
-    ,k.job_role
-    ,p.title
-    ,row_number() over (partition by p.id, k.job_role) as rn
+		  p.job_id
+      ,p.listed_job_role
+      ,k.job_role
+	    ,row_number() over (partition by p.job_id, k.job_role) as rn
     from posts p
-    -- Check if keyword is in title. Remove all spaces and punctuation to maximize match
+    -- Check if keyword is in job_role. Remove all spaces and punctuation to maximize match
     left join keywords_to_match k
-    on position(regexp_replace(k.job_role, '[- ]+', '', 'g') in regexp_replace(p.title, '[- ]+', '', 'g')) > 0 
+    on position(regexp_replace(k.job_role, '[- ]+', '', 'g') in regexp_replace(p.listed_job_role, '[- ]+', '', 'g')) > 0 
     where k.job_role is not null
 )
 
 , ranked_jobs as (
   select 
-    id 
-    ,job_role
-    ,rank() over (partition by id order by {{ consolidate_job_roles('job_role') }} ) as job_rank
-    ,title
+    *
+    ,rank() over (partition by listed_job_role order by {{ consolidate_job_roles('job_role') }} ) as job_rank
   from posts_w_keywords
   where rn = 1 -- Ensure there's no repeated id/keyword combo
 )
 
 , found_jobs as (
   select
-    r.id
-    ,r.title
-    ,r.job_role 
-    ,{{ get_job_experience_level('p.title') }} as experience_level
+    r.job_id
+    ,r.listed_job_role
+    ,r.job_role
+    ,job_description
+    ,experience_level
     ,post_year 
-    ,post_month
+    ,post_month 
+    ,yearly_comp_usd
+    ,job_skills 
+    ,job_type_skills
   from ranked_jobs r
   join posts p 
-  using (id)
+  using (job_id)
   where job_rank = 1
 )
 
 select 
-  id
-  ,title
-  ,{{ clean_job_roles('job_role') }} as job_role
-  ,experience_level
-  ,post_year 
-  ,post_month
+    job_id
+    ,listed_job_role
+    ,job_role
+    ,job_description
+    ,experience_level
+    ,post_year 
+    ,post_month 
+    ,yearly_comp_usd
+    ,job_skills
 from found_jobs 
-order by 1, 3
+order by 1
