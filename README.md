@@ -111,12 +111,15 @@ Finally, the resulting data is saved in **MotherDuck** as a source table (as con
 
 ## Insights
 
-### Insight 1
-- Title
+### Total Posts
+- 
 - Visualization
 - Analysis
 
-[Repeat for additional insights]
+### User Comparision by each Social Media
+
+Looking the data we see that the Slashdot has just 5 users authors while the Hacker News have more than ten thousand posting all day
+
 
 ## Conclusions
 [Summarize key findings and their implications]
