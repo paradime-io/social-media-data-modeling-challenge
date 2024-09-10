@@ -17,8 +17,8 @@ with base as (
         video_width,
         video_duration
     from {{ ref('stg_tiktok_videos') }}
+
 )
 
 select * from base
   
-

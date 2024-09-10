@@ -1,0 +1,53 @@
+version: 2
+models:
+  - name: dim_tracks
+    description: "This model aggregates track data including music IDs, artist names, popularity, and genre information from TikTok and Spotify to create a detailed view of tracks for further analysis."
+    columns:
+      - name: track_id
+        description: "Unique identifier for the track."
+      - name: music_id
+        description: "Unique identifier for the music associated with TikTok."
+      - name: genres
+        description: "Generalized genre of the track."
+      - name: artist_name
+        description: "The name of the artist performing the track."
+      - name: track_name
+        description: "The name of the track."
+      - name: popularity
+        description: "The popularity score of the track on Spotify."
+      - name: loudness
+        description: "Overall loudness of the track in decibels."
+      - name: speechiness
+        description: "Measure of the presence of spoken words in the track."
+      - name: acousticness
+        description: "Measure of how acoustic the track is."
+      - name: instrumentalness
+        description: "Predicts the presence of vocals in the track."
+      - name: liveness
+        description: "Detects the presence of a live audience in the track."
+      - name: positiveness
+        description: "Measure of the musical positivity of the track."
+      - name: tempo
+        description: "The tempo of the track in beats per minute."
+      - name: beats_per_bar
+        description: "Time signature of the track, representing beats per measure."
+
+  - name: mrt_tiktok_music_correlation
+    description: "This model computes correlation values between TikTok engagement metrics and various music-related features such as popularity, intensity, rhythm, and sound type quartiles."
+    columns:
+      - name: tiktok_metric
+        description: "TikTok engagement metric being correlated (e.g., play count, likes count)."
+      - name: popularity_quartile_corr
+        description: "Correlation between TikTok metric and the popularity quartile of the track."
+      - name: genre_value_corr
+        description: "Correlation between TikTok metric and the genre value of the track."
+      - name: intensity_quartile_corr
+        description: "Correlation between TikTok metric and the intensity quartile of the track."
+      - name: rhythm_quartile_corr
+        description: "Correlation between TikTok metric and the rhythm quartile of the track."
+      - name: sound_type_quartile_corr
+        description: "Correlation between TikTok metric and the sound type quartile of the track."
+      - name: liveness_quartile_corr
+        description: "Correlation between TikTok metric and the liveness quartile of the track."
+      - name: beats_per_bar_quartile_corr
+        description: "Correlation between TikTok metric and the beats per bar quartile of the track."

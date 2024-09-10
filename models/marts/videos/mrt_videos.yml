@@ -1,0 +1,37 @@
+version: 2
+models:
+  - name: dim_tiktok_videos
+    description: "This model retrieves and structures TikTok video data, including video details, author information, and engagement metrics. The data is sourced from the staging table 'stg_tiktok_videos'."
+    columns:
+      - name: video_id
+        description: "Unique identifier for each video."
+      - name: music_id
+        description: "Unique identifier for the music associated with the video."
+      - name: caption
+        description: "Text description or caption provided for the video by the author."
+      - name: created_at
+        description: "Timestamp representing when the video was created."
+      - name: likes_count
+        description: "The total number of likes the video has received."
+      - name: shares_count
+        description: "The total number of shares the video has received."
+      - name: play_count
+        description: "The total number of times the video has been played."
+      - name: comment_count
+        description: "The total number of comments on the video."
+      - name: is_downloaded
+        description: "Flag indicating whether the video has been downloaded."
+      - name: author_name
+        description: "The name of the author who posted the video."
+      - name: author_nickname
+        description: "The nickname of the author on TikTok."
+      - name: author_verified
+        description: "Boolean value indicating if the author is a verified TikTok user."
+      - name: author_signature
+        description: "The author's profile signature or bio."
+      - name: video_height
+        description: "The height of the video in pixels."
+      - name: video_width
+        description: "The width of the video in pixels."
+      - name: video_duration
+        description: "Duration of the video in seconds."

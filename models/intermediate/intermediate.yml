@@ -1,0 +1,49 @@
+version: 2
+models:
+  - name: int_spotify_full_tracks
+    description: "This model joins Spotify track data with artist details and genre information to provide a full overview of track metadata for further analysis."
+    columns:
+      - name: track_id
+        description: "Unique identifier for the track."
+      - name: track_name
+        description: "The name of the track."
+      - name: artist_name
+        description: "The name of the artist associated with the track."
+      - name: genres
+        description: "Generalized genre of the track based on the artist's genre."
+      - name: popularity
+        description: "Track's popularity score on Spotify."
+      - name: danceability
+        description: "Measure of how suitable the track is for dancing."
+      - name: energy
+        description: "Energy level of the track."
+      - name: loudness
+        description: "Overall loudness of the track in decibels."
+      - name: speechiness
+        description: "Measure of the presence of spoken words in the track."
+      - name: acousticness
+        description: "Measure of how acoustic the track is."
+      - name: instrumentalness
+        description: "Predicts the presence of vocals in the track."
+      - name: liveness
+        description: "Detects the presence of an audience in the track."
+      - name: positiveness
+        description: "Measure of the track's musical positivity."
+      - name: tempo
+        description: "The overall tempo of the track in beats per minute."
+      - name: beats_per_bar
+        description: "Time signature of the track, indicating beats per measure."
+
+  - name: int_genres_generalised
+    description: "This model generalizes track genres into broader categories for a simplified analysis, based on Spotify track and artist data."
+    columns:
+      - name: track_id
+        description: "Unique identifier for the track."
+      - name: track_name
+        description: "The name of the track."
+      - name: artist_name
+        description: "The name of the artist associated with the track."
+      - name: genres
+        description: "Generalized genre of the track derived from detailed Spotify genre classifications."
+      - name: genre_string
+        description: "Original genre string for the track from Spotify data."

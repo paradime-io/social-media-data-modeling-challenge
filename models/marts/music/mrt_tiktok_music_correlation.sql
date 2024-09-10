@@ -1,18 +1,5 @@
--- correlation whether or not a viral video with certain music goes hand in hand with popularity on spotify
-
 with base as (
-    select
-        music_id,
-        track_name,
-        artist_name,
-        sum(total_play_count) as total_play_count,
-        sum(total_likes_count) as total_likes_count,
-        sum(total_shares_count) as total_shares_count,
-        avg(popularity) as avg_spotify_popularity,
-        sum(total_comment_count) AS total_comment_count
-    from 
-        {{ ref('int_tiktok_music_joined') }}
-    {{ group_by(3) }}
+    select * from {{ ref('fct_tiktok_music_joined_features')}}
 ),
 
 correlation_matrix as (
@@ -22,15 +9,22 @@ correlation_matrix as (
         'total_shares_count',
         'total_comment_count'
     ] %}
-    {% set streaming_metrics = [
-        'avg_spotify_popularity'
+    
+    {% set music_metrics = [
+        'popularity_quartile',
+        'genre_value',
+        'intensity_quartile',
+        'rhythm_quartile',
+        'sound_type_quartile',
+        'liveness_quartile',
+        'beats_per_bar_quartile'
     ] %}
 
     {% for tiktok_metric in tiktok_metrics %}
     SELECT
-         '{{ tiktok_metric }}'  as tiktok_metric
-        {% for streaming_metric in streaming_metrics %}
-        , {{ corr(tiktok_metric, streaming_metric, 'base') }} as {{ streaming_metric }}_corr
+        '{{ tiktok_metric }}' as tiktok_metric
+        {% for music_metric in music_metrics %}
+        , {{ corr(tiktok_metric, music_metric, 'base') }} as {{ music_metric }}_corr
         {% endfor %}
     FROM base
     {% if not loop.last %}
