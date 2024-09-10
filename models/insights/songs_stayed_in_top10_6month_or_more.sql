@@ -43,6 +43,7 @@ select
     snapshot_date,
     fk_country,
     fk_song,
+    fk_artists,
     estimated_number_month_top_50_by_countries,
     first_month_country,
     max_month_country,
@@ -51,7 +52,9 @@ select
     max_month_all_country
 from pool
 where  
-(estimated_number_month_top_50_by_countries >= 6 and first_month_country <= snapshot_date and (max_month_country = snapshot_date or max_month_country >= snapshot_date))
+(estimated_number_month_top_50_by_countries >= 6 and first_month_country <= snapshot_date and (max_month_country = snapshot_date or max_month_country = snapshot_date))
 or 
-(estimated_number_month_top_50_all_countries >=6  and first_month_all_country <= snapshot_date and (max_month_all_country = snapshot_date or max_month_all_country >= snapshot_date))
+(estimated_number_month_top_50_all_countries >=6  and first_month_all_country <= snapshot_date and (max_month_all_country = snapshot_date or max_month_all_country = snapshot_date))
+and position <= 10
 group by all
+

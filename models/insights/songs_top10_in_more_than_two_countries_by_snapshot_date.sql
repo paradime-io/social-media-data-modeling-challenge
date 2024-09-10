@@ -19,4 +19,4 @@ fk_artists,
 fk_country
 )
 select * from pool 
-where count_song_distinct_country > 2
+where count_song_distinct_country >= 2

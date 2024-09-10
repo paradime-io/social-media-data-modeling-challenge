@@ -2,10 +2,10 @@ select *
 FROM
 	{{ ref('fact_qualified_songs') }}  pool
 left join {{ ref('dim_artists') }} art on
-	pool.artists_pk = art.fk_artists
+	pool.fk_artists = art.artists_pk
 left join {{ ref('dim_countries') }} country
 on
-	pool.countries_pk = country.fk_country
+	pool.fk_country = country.countries_pk
 left join {{ ref('dim_songs') }} song
 on
-	pool.song_pk = song.fk_song
+	pool.fk_song = song.song_pk
