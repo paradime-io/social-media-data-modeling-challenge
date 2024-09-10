@@ -88,7 +88,7 @@ In this project, I will be investigating the importance of timing and music char
 <a href="Analysis/trendline_scatter_popularity_vs_engagement.py" style="font-size: 6pt; color: #0077cc;">Engagement by Popularity (Scatter) source code</a>
 <br><br>
 
-<img width="1353" alt="image" src="https://github.com/user-attachments/assets/7beb378f-13fe-4868-b8a7-69facb421d6b">
+![Uploading image.png…]()
 <a href="Analysis/tiktok_engagement_by_popularity_ratio.sql" style="font-size: 6pt; color: #0077cc;">Engagement by Popularity source code</a>
 <br><br>
 
