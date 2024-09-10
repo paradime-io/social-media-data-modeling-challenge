@@ -1,4 +1,3 @@
---
 {% macro get_job_experience_level(column_name) %}
 case 
   when ({{ column_name }} like '%junior%')

@@ -13,9 +13,9 @@ The recent job market left many people discussing online about seeking a new job
 
 Some of the questions we'll explore include:
 
+* What data job roles are in demand?
 * Are folks on Hacker News, Kaggle, Stack Overflow interacting with the job skills in demand? 
 * What is the Hacker News community talking about when it comes to machine learning? How does this community feel about machine learning? 
-* What data job roles are in demand?
 
 
 ## Data Sources
@@ -63,6 +63,7 @@ For consistency across data sources, I first narrowed down the dataset to the da
   - For example, for compensation: Kaggle provided inconsistent salary bins, while SO used an open input box for participants to enter salary details. I opted to clean up the manual entries and converted the numerics into categorical salary bins
   - The job title inconsistencies and ambiguous stratification of roles also required some intensive cleaning. For instance, Kaggle's survey grouped 'Machine Learning Engineer' and 'MLOps Engineer' as one category and 'Data Scientist' as another, while SO grouped 'Data Scientist' and 'Machine Learning' together. Since these two surveys served as the basis of the topics I'm interested in exploring, it took time to look into the data to decide how best to treat it.
   - Since these were survey questions, there were many questions where participants were allowed to select multiple answers. During cleaning, I had to wrangle these fields into an array and split them.
+  - I also manually filled in some custom data roles and keywords to maximize post retreival when matching keywords, but they were mostly filtered out upon consolidating the topics to align with the survey topics.
 
 - For Hacker News (HN), I aimed to narrow down stories and job posts relevant to tech readers and job seekers. Using the cleaned topics from Kaggle and SO, I identified matching topics and extracted posts that aligned with the interests of tech professionals. To guage the feelings towards these topics, I used sentiment analysis to explore the posts with related keywords. 
 
@@ -114,6 +115,7 @@ Pytorch seems to be of higher interest than Tensorflow in the Hacker News commun
 These topics come up again with NMF topic modeling, a good sign of the model converging and validating the presence of these topics in Hacker News:
 ![018.png](./images/018.png)
 ![](./images/017.png)
+
 Looking vertically through the heatmap at the weights, we can see that `deep learning` contributes most to Topic 2.
 
 
@@ -166,7 +168,7 @@ Out of the 374 job posts seeking software engineers / engineers who are knowledg
 
 ### LinkedIn's data-focused jobs seeked data analysts, data engineers, and data scientists
 ![0277.png](./images/0277.png)
-Despite Hacker News's enthusiams towards ChatGPT and OpenAI, there weren't a lot of machine learning roles compared to other data roles.
+Despite Hacker News's enthusiam towards ChatGPT and OpenAI, there weren't a lot of machine learning roles compared to other data roles.
 
 ### 2022 saw more Hacker News job postings than in 2023, and most companies were hiring engineers, software engineers, full-stack developers
 
@@ -177,9 +179,11 @@ There are almost half as many machine learning roles posted in 2023 compared to 
 ### Both Hacker News and LinkedIn job posts share asks for cloud computing (AWS, Azure), as well as data related roles
 ![024.png](./images/024.png)
 ![](./images/025.png) 
+
 Hacker News job posting topic modeling heatmap
 
 ![](./images/026.png)
+
 LinkedIn job posting topic modeling heatmap
 
 
@@ -187,10 +191,10 @@ The heatmap suggests that both job boards place an emphasis on remote work (HN T
 
 ## Conclusions
 
+The data roles in demand in 2023 were data analyst, data engineer, and data scientist. While the LinkedIn jobs focus on data-related roles, so do the Kaggle survey participants, as well as Hacker News as indicated by topics observed through topic modeling. 
+
 The Hacker News (HN), Kaggle, Stack Overflow (SO) communities are generally interacting with the job skills that are in demand. HN Jobs and SO communities seem to lean more towards software engineering / engineering roles, so it would make sense to have a focus on Javascript, Typescript, Java, and Rust.
 
-The HN community talked mostly about generative AI and ChatGPT in 2022-2023, and their posts on average had neutral sentiment towards these topics. Aside from that they were also interested in deep learning/neural networks. If this community looks for jobs in HN Jobs, then their interest in Python suggests they are interacting with the job skills in demand for the data roles. Since SQL is a top requirement in data roles, the HN community could benefit from having more interest in this topic.
-
-The data roles in demand in 2023 were data analyst, data engineer, and data scientist. While the LinkedIn jobs focus on data-related roles, so do the Kaggle survey participants, as well as Hacker News as indicated by topics observed through topic modeling. 
+The HN community talked mostly about generative AI and ChatGPT in 2023, and their posts on average had neutral sentiment towards these topics. Aside from that they were also interested in deep learning/neural networks. If this community looks for data jobs according to their interest in gen AI and Python, then they would be interacting with the job skills in demand for the data roles. Additionally, since SQL is a top requirement in data roles, the HN community could benefit from having more interest in this topic. However, their interest in Rust doesn't overlap with Kaggle and SO communities, and it also doesn't seem to be a top requirement for data roles.
 
 In conclusion, all three communities displayed an interest in Python through their posts and survey responses, which aligns well with what companies require to fill data positions. 

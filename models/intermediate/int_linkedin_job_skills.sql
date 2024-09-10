@@ -33,5 +33,4 @@ with jobs as (
 
 select distinct job_skills
 from clean_keywords
-
 order by 1 asc

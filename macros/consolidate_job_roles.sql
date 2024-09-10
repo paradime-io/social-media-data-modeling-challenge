@@ -18,4 +18,3 @@
     else 1
   end
 {% endmacro %}
-
