@@ -1,10 +1,16 @@
 version: 2
 
 models:
-  - name: all_story_management
+  - name: all_story_engagement
+    config:
+      tags: "mart"
+  - name: all_story_engagement_summaru_stats
     config:
       tags: "mart"
   - name: outlier_story_engagement
+    config:
+      tags: "mart"
+  - name: outlier_story_engagement_with_stir_score
     config:
       tags: "mart"
   - name: gt_overall_trends

@@ -3,7 +3,6 @@ version: 2
 models:
   - name: int_gt__overall_trends
   - name: int_gt__related_trends
-  - name: int_hn__comments_enriched
   - name: int_hn__stories_engagement
   - name: int_hn__stories_outliers
   - name: int_hn__top_level_comments
