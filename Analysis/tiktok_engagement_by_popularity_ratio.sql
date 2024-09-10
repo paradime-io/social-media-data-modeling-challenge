@@ -15,7 +15,7 @@ filtered_data AS (
     SELECT 
         CASE 
             WHEN popularity BETWEEN 0 AND 8 THEN '0-8'
-            WHEN popularity BETWEEN 9 AND 17 THEN '9-17'
+            WHEN popularity BETWEEN 9 AND 17 THEN '09-17'
             WHEN popularity BETWEEN 18 AND 26 THEN '18-26'
             WHEN popularity BETWEEN 27 AND 34 THEN '27-34'
             WHEN popularity BETWEEN 35 AND 43 THEN '35-43'

@@ -28,8 +28,8 @@ models:
         description:  Track's popularity score on Spotify. 
         data_tests:
           - dbt_expectations.expect_column_values_to_be_between:
-              min_value: 0  # (Optional)
-              max_value: 10
+              min_value: 0  
+              max_value: 100
 
       - name: danceability
         description:  Measure of how suitable the track is for dancing. 

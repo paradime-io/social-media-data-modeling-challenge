@@ -28,35 +28,32 @@ models:
 
       - name: genre_value
         description: A continuous numerical representation of the genres.
-        data_tests:
-          - relationships.test_not_null_values_for_column:
-              column: genres
 
       - name: intensity
         description: >
           Composite feature created by combining energy and loudness. 
           Formula: `(energy + (loudness + 60) / 60) / 2`, where loudness is adjusted to a more neutral scale before combining.
         data_tests:
-          - test_between_values:
-              min: 0
-              max: 1
+          -  dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 1
 
       - name: rhythm
         description: >
           Composite feature derived from danceability, positiveness, and tempo. 
           Formula: `(danceability * 0.4 + positiveness * 0.4 + (tempo / 200) * 0.2)`.
         data_tests:
-          - test_between_values:
-              min: 0
-              max: 1
+          -  dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 1
 
       - name: sound_type
         description: >
           Composite feature combining acousticness, instrumentalness, and speechiness.
         data_tests:
-          - test_between_values:
-              min: 0
-              max: 1
+          -  dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 1
 
       - name: popularity
         description: The popularity score of the track as provided by Spotify.

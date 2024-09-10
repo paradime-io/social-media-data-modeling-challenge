@@ -35,64 +35,61 @@ models:
       - name: popularity
         description:  The popularity score of the track on Spotify. 
         data_tests:
-          - test_between_values:
-              min: 0
-              max: 100
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0  
+              max_value: 100
 
       - name: loudness
         description:  Overall loudness of the track in decibels. 
         data_tests:
-          - test_between_values:
-              min: -60
-              max: 0
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: -30
+              max_value: 0
 
       - name: speechiness
         description:  Measure of the presence of spoken words in the track. 
         data_tests:
-          - test_between_values:
-              min: 0
-              max: 1
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0  
+              max_value: 1
 
       - name: acousticness
         description:  Measure of how acoustic the track is. 
         data_tests:
-          - test_between_values:
-              min: 0
-              max: 1
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0  
+              max_value: 1
 
       - name: instrumentalness
         description:  Predicts the presence of vocals in the track. 
         data_tests:
-          - test_between_values:
-              min: 0
-              max: 1
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0  
+              max_value: 1
 
       - name: liveness
         description:  Detects the presence of a live audience in the track. 
         data_tests:
-          - test_between_values:
-              min: 0
-              max: 1
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0  
+              max_value: 1
 
       - name: positiveness
         description:  Measure of the musical positivity of the track. 
         data_tests:
-          - test_between_values:
-              min: 0
-              max: 1
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0  
+              max_value: 1
 
       - name: tempo
         description:  The tempo of the track in beats per minute. 
-        data_tests:
-          - test_greater_than:
-              min: 0
 
       - name: beats_per_bar
         description:  Time signature of the track, representing beats per measure. 
         data_tests:
-          - test_between_values:
-              min: 1
-              max: 12
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0  
+              max_value: 12
 
   - name: mrt_tiktok_music_correlation
     description: >

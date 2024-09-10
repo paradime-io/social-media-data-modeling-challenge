@@ -14,9 +14,8 @@ WITH tiktok AS (
 music AS (
     SELECT
         DISTINCT 
-        music.music_id,
         tracks.artists AS artist_name,
-        COALESCE(music.spotify_track_id, tracks.track_id) AS track_id,
+        COALESCE(tracks.track_id, music.spotify_track_id) AS track_id,
         tracks.track_name,
         genre.genres,
         tracks.popularity,
@@ -29,7 +28,8 @@ music AS (
         tracks.liveness,
         tracks.positiveness,
         tracks.tempo,
-        tracks.beats_per_bar
+        tracks.beats_per_bar,
+        MAX(music.music_id) as music_id 
     FROM
         {{ ref('stg_music_tracks') }} AS music
     LEFT JOIN
@@ -37,6 +37,7 @@ music AS (
             ON tracks.track_id = music.spotify_track_id
     LEFT JOIN {{ ref('int_genres_generalised') }} genre
         ON genre.track_id = tracks.track_id 
+    {{ group_by(15)}}
 ),
 
 music_with_quartiles AS (
@@ -129,5 +130,4 @@ final AS (
         ON gc.genres = music_with_quartiles.genres
     {{ group_by(26) }}
 )
-
 SELECT * FROM final
