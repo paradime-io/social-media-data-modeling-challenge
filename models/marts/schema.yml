@@ -7,3 +7,16 @@ models:
   - name: outlier_story_engagement
     config:
       tags: "mart"
+  - name: gt_overall_trends
+    config:
+      tags: "mart"
+  - name: gt_related_trends
+    config:
+      tags: "mart"
+  - name: hn_term_frequency
+    config:
+      tags: "mart"
+      materialized: table
+  - name: hn_term_frequency_deduped
+    config:
+      tags: "mart"

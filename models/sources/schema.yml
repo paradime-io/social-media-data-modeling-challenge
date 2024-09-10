@@ -4,3 +4,5 @@ models:
   - name: stg_hn__stories
   - name: stg_hn__comments
   - name: stg_hn__entity_text
+  - name: stg_gt__overall_trends
+  - name: stg_gt__related_trends

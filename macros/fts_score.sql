@@ -5,7 +5,8 @@
     analytics.fts_raw_data_entity_text.match_bm25(
         {{id}},
         '{{query_str}}',
-        fields := '{{fields_str}}'
+        fields := '{{fields_str}}',
+        conjunctive := 1
     )
 {% endmacro %}
 

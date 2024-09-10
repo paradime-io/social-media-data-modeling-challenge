@@ -1,0 +1,1 @@
+select * from {{ ref('int_gt__overall_trends') }}
