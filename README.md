@@ -72,7 +72,8 @@ In this project, I will be investigating the importance of timing and music char
 
 <img width="1372" alt="image" src="https://github.com/user-attachments/assets/60b42c59-5b5a-4dc5-9b68-285abab6d50e">
 <img width="1316" alt="image" src="https://github.com/user-attachments/assets/0bf64b13-a96a-4260-9a37-55f4a6e08bf3">
-<img width="1322" alt="image" src="https://github.com/user-attachments/assets/1d62e360-a045-4113-9692-d60ab7bfddc1">
+<img width="1334" alt="image" src="https://github.com/user-attachments/assets/d22c2259-c271-43f5-a747-794d2bc286b8">
+
 <img width="1339" alt="image" src="https://github.com/user-attachments/assets/d81cdf4d-e2a9-4906-912c-35d8c3fbebd8">
 <img width="1353" alt="image" src="https://github.com/user-attachments/assets/7beb378f-13fe-4868-b8a7-69facb421d6b">
 
