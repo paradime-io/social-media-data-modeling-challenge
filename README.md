@@ -90,7 +90,7 @@ In this project, I will be investigating the importance of timing and music char
 <img width="1353" alt="image" src="https://github.com/user-attachments/assets/7beb378f-13fe-4868-b8a7-69facb421d6b">
 <a href="Analysis/tiktok_engagement_by_popularity_ratio.sql" style="font-size: 6pt; color: #0077cc;">Engagement by Popularity source code</a>
 <br><br>
-![Screenshot of Popularity](screenshot_popularity.png)
+<img src="screenshot_popularity.png" alt="Screenshot of Popularity" width="500">
 
 <img width="1309" alt="image" src="https://github.com/user-attachments/assets/3fa61129-f03b-40d8-bc89-49b6c94034c2">
 <a href="Analysis/trendline_scatter_rhythm_vs_engagement.py" style="font-size: 6pt; color: #0077cc;">Engagement by Rhythm (Scatter) source code</a>
