@@ -21,8 +21,8 @@ Some of the questions we'll explore include:
 ## Data Sources
 
 - Dataset 1: HackerNews - Social media data from Jan 2022 - Nov 2023, by [OpenPipe via HuggingFace](https://huggingface.co/datasets/OpenPipe/hacker-news)
-- Dataset 2: Kaggle Data/ML Survey - Survey data from 2022
-- Dataset 3: Stack Overflow Developer Survey - Survey data from 2022 and 2023
+- Dataset 2: [Kaggle Data/ML Survey](https://www.kaggle.com/competitions/kaggle-survey-2022/data#) - Survey data from 2022
+- Dataset 3: [Stack Overflow Developer Survey](https://survey.stackoverflow.co) - Survey data from 2022 and 2023
 - Dataset 4: Data Job Postings - Job postings data from 2023, by [Luke Barousse via HuggingFace](https://huggingface.co/datasets/lukebarousse/data_jobs ), filtered out for LinkedIn job postings. 
 
 ### Data Lineage
@@ -144,6 +144,7 @@ Notably,
 
 ### Python and Rust are the top 2 programming languages mentioned in Hacker News stories
 ![021.png](./images/021.png)
+
 Javascript comes in as the 3rd most mentioned programming language in Hacker News.
 
 ![022.png](./images/022.png)
