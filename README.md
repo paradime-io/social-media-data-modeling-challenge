@@ -7,22 +7,22 @@ Submission by: [Jayeson Gao](https://www.linkedin.com/in/jayesongao)
 ## **📋 Table of Contents**
 
 1. [Intro & Objective](#-introduction-and-objective)
-2. [Data Sources & Lineage](#🕸️-data-sources-and-lineage)
+2. [Data Sources & Lineage](#-data-sources-and-lineage)
     - [Sources](#sources-and-seeds)
     - [Model Layers](#intermediate-models)
     - [Data Lineage](#data-lineage)
-3. [Methodology & Definitions](#⚒️-methodology-and-definitions)
+3. [Methodology & Definitions](#-methodology-and-definitions)
     - [Tools Used](#tools)
     - [Data Preparation](#data-preparation)
     - [Key Metrics & Methodology](#key-metrics-and-methodology)
-4. [Key Insights & Visualizations](#📊-key-insights-and-visualizations)
+4. [Key Insights & Visualizations](#-key-insights-and-visualizations)
     - [Data Profile - What Stands Out?](#section-00)
     - [Stat Stuffers of 2019 thru Mid-2021: Audios/Artists That Took Over TikTok](#section-01)
     - [The "Best Performing" TikTok Audios - Standardized and Scored](#section-02)
     - [Predictors of Success: Which Song Attributes Do Well?](#section-03)
     - [Bonus 👀](#bonus-section)
-5. [Summary & Conclusions](#📃-summary-and-conclusions)
-6. [Reflection](#🪞-reflection)
+5. [Summary & Conclusions](#-summary-and-conclusions)
+6. [Reflection](#-reflection)
 
 ***
 
