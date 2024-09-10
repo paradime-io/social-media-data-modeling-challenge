@@ -1,0 +1,1102 @@
+schemaVersion: 3
+meta:
+  sourceVersionId: c33bcf89-87ca-4b1d-9eac-a4eab2e5737e # DO NOT CHANGE - Hex uses this to match up project versions when reimporting the file
+  description: ""
+  projectId: e53ad0c3-8776-41a0-b530-6afcff91f3e2 # DO NOT CHANGE - Unique ID of the project from which this file was generated
+  title: Analyses Comparing Hacker News and Slashdot
+  timezone: null
+  appTheme: SYS_PREF
+  codeLanguage: PYTHON
+  status: null
+  categories: []
+  castDecimalsDefault: true
+  logicQueryCacheTimeout: null
+  publishedQueryCacheTimeout: null
+  hexType: PROJECT
+  allowExecutionReordering: true
+  prerunApp: false
+  cachePublishedAppState: true
+  refreshStalePublishedApp: false
+  autoRerunApp: true
+projectAssets:
+  dataConnections: []
+  envVars: []
+  secrets: []
+sharedAssets:
+  secrets: []
+  vcsPackages: []
+  dataConnections:
+    - dataConnectionId: df38a6ed-afa6-40ce-bfde-abc695647004 # analytics (motherduck)
+  externalFileIntegrations: []
+cells:
+  - cellType: BLOCK
+    cellId: 911bd53f-46b2-4a30-a0c5-08ceff3cce63 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      blockConfig:
+        sqlCellId: 9c9c7163-3578-4d17-a1f7-179cdea1b918
+        chartCellId: 48f4e6cd-6df9-427b-8bc2-6d1924ea750c
+        activeTab: display
+      cells:
+        - cellType: SQL
+          cellId: 9c9c7163-3578-4d17-a1f7-179cdea1b918
+          cellLabel: Retrieve Media Metrics
+          config:
+            source: SELECT * FROM analytics.dbt_social_media_challenge.media_metrics;
+            dataFrameCell: false
+            dataConnectionId: df38a6ed-afa6-40ce-bfde-abc695647004
+            resultVariableName: dataframe
+            useRichDisplay: true
+            sqlCellOutputType: PANDAS
+            useQueryMode: false
+            castDecimals: true
+            useNativeDates: true
+            outputFilteredResult: true
+            allowDuplicateColumns: false
+            tableDisplayConfig:
+              pageSize: 50
+              height: null
+              hideIcons: false
+              hideIndex: false
+              defaultSortColumn: null
+              defaultSortIndexColumn: null
+              defaultSortDirection: ASC
+              conditionalFormatting: null
+              calcs: null
+              filters: null
+              columnProperties:
+                - originalName: all_comments
+                  renameTo: null
+                  size: 128
+                  wrapText: null
+                  displayFormat: null
+                - originalName: comments_by_posts
+                  renameTo: null
+                  size: 164
+                  wrapText: null
+                  displayFormat: null
+                - originalName: different_authors
+                  renameTo: null
+                  size: 146
+                  wrapText: null
+                  displayFormat: null
+                - originalName: media
+                  renameTo: null
+                  size: 103
+                  wrapText: null
+                  displayFormat: null
+                - originalName: row-index-0
+                  renameTo: null
+                  size: 39
+                  wrapText: null
+                  displayFormat: null
+                - originalName: total_posts
+                  renameTo: null
+                  size: 113
+                  wrapText: null
+                  displayFormat: null
+              columnOrdering: null
+              customColumnOrdering: null
+              pinnedColumns: null
+              hiddenColumns: null
+              pinIndexColumns: false
+              showAggregations: false
+              columnAggregations: null
+        - cellType: CHARTV2
+          cellId: 48f4e6cd-6df9-427b-8bc2-6d1924ea750c
+          cellLabel: null
+          config:
+            height: null
+            chartSpec:
+              type: layered
+              layers:
+                - id: 91fbe7c9-b519-4414-86da-33e5baaa181d
+                  xAxis:
+                    type: string
+                    style:
+                      grid:
+                        style: solid
+                      ticks: {}
+                      labels: {}
+                    dataFrameColumn: media
+                  series:
+                    - id: 5c66bf30-9c3d-4a4e-a732-652116264207
+                      type: bar
+                      axis:
+                        type: number
+                        style:
+                          grid:
+                            style: solid
+                          ticks: {}
+                          labels: {}
+                        aggregate: sum
+                      dataFrameColumns:
+                        - total_posts
+                      colorOrder: ascending
+                      color:
+                        type: static
+                      opacity:
+                        type: static
+                        value: 1
+                      tooltip:
+                        type: auto
+                      barWidth: 1
+                      orientation: vertical
+                      layout: stacked
+                  dataFrame: dataframe
+              settings:
+                legend:
+                  position: right
+                tooltip: true
+                selectionEnabled: false
+            chartSelection: {}
+            colorMappings: {}
+            resultVariable: chart_result
+            outputResult: false
+            displayType: CHART
+            displayTableConfig: null
+  - cellType: CHARTV2
+    cellId: 7c6ee066-276f-4bd1-bb01-028affec76be # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: Total Posts by Media
+    config:
+      height: null
+      chartSpec:
+        type: layered
+        layers:
+          - id: 2e83b404-f728-4097-83d0-19f1e48df959
+            xAxis:
+              type: string
+              style:
+                grid:
+                  style: none
+                ticks: {}
+                labels: {}
+              title: ""
+              dataFrameColumn: media
+            series:
+              - id: 1e89da9a-a84c-4bf8-bb80-0c07acf7813a
+                type: bar
+                axis:
+                  type: number
+                  style:
+                    grid:
+                      style: none
+                    zero: true
+                    ticks: {}
+                    labels: {}
+                  title: ""
+                  aggregate: sum
+                  numberFormat:
+                    format: PLAIN
+                    currency: ""
+                    columnType: NUMBER
+                    numDecimalDigits: 2
+                dataFrameColumns:
+                  - total_posts
+                colorDataFrameColumn: media
+                colorOrder: ascending
+                color:
+                  type: series
+                  colorsBySeriesValues:
+                    Slashdot: "#54A24B"
+                    Hacker News: "#F58518"
+                opacity:
+                  type: static
+                  value: 1
+                dataLabels:
+                  color: "#e4e6ec"
+                  fontSize: 25
+                  position: outside-end
+                barWidth: 1
+                orientation: horizontal
+                layout: stacked
+            dataFrame: dataframe
+        settings:
+          font:
+            baseSize: 15
+          legend:
+            position: none
+          tooltip: true
+          selectionEnabled: false
+      chartSelection: {}
+      colorMappings:
+        Slashdot: "#F58518"
+        Hacker News: "#4C78A8"
+      resultVariable: chart_result
+      outputResult: false
+      displayType: CHART
+      displayTableConfig: null
+  - cellType: BLOCK
+    cellId: 20adebe8-466d-4bdd-a19d-e40db65cf0de # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      blockConfig:
+        sqlCellId: e70f5864-8187-4093-b68c-2b46fb77921d
+        chartCellId: 115fbf23-af03-45bf-8eb3-2394e59b28cb
+        activeTab: display
+      cells:
+        - cellType: SQL
+          cellId: e70f5864-8187-4093-b68c-2b46fb77921d
+          cellLabel: Media Metrics Query
+          config:
+            source: |-
+              SELECT
+                  media,
+                  different_authors
+              FROM analytics.dbt_social_media_challenge.media_metrics;
+            dataFrameCell: false
+            dataConnectionId: df38a6ed-afa6-40ce-bfde-abc695647004
+            resultVariableName: dataframe_2
+            useRichDisplay: true
+            sqlCellOutputType: PANDAS
+            useQueryMode: false
+            castDecimals: true
+            useNativeDates: true
+            outputFilteredResult: true
+            allowDuplicateColumns: false
+            tableDisplayConfig:
+              pageSize: 50
+              height: null
+              hideIcons: false
+              hideIndex: false
+              defaultSortColumn: null
+              defaultSortIndexColumn: null
+              defaultSortDirection: ASC
+              conditionalFormatting: null
+              calcs: null
+              filters: null
+              columnProperties:
+                - originalName: different_authors
+                  renameTo: null
+                  size: 146
+                  wrapText: null
+                  displayFormat: null
+                - originalName: media
+                  renameTo: null
+                  size: 103
+                  wrapText: null
+                  displayFormat: null
+                - originalName: row-index-0
+                  renameTo: null
+                  size: 39
+                  wrapText: null
+                  displayFormat: null
+              columnOrdering: null
+              customColumnOrdering: null
+              pinnedColumns: null
+              hiddenColumns: null
+              pinIndexColumns: false
+              showAggregations: false
+              columnAggregations: null
+        - cellType: CHARTV2
+          cellId: 115fbf23-af03-45bf-8eb3-2394e59b28cb
+          cellLabel: null
+          config:
+            height: null
+            chartSpec:
+              type: layered
+              layers:
+                - id: 7980b1ae-b516-4232-a9a8-d8bc0b693be7
+                  xAxis:
+                    type: string
+                    style:
+                      grid:
+                        style: solid
+                      ticks: {}
+                      labels: {}
+                    dataFrameColumn: media
+                  series:
+                    - id: 7861223c-4e39-4e1b-a9fc-816f7d973076
+                      type: bar
+                      axis:
+                        type: number
+                        style:
+                          grid:
+                            style: solid
+                          ticks: {}
+                          labels: {}
+                        aggregate: sum
+                      dataFrameColumns:
+                        - different_authors
+                      colorOrder: ascending
+                      color:
+                        type: static
+                      opacity:
+                        type: static
+                        value: 1
+                      tooltip:
+                        type: auto
+                      barWidth: 1
+                      orientation: vertical
+                      layout: stacked
+                  dataFrame: dataframe_2
+              settings:
+                legend:
+                  position: right
+                tooltip: true
+                selectionEnabled: false
+            chartSelection: {}
+            colorMappings: {}
+            resultVariable: chart_result
+            outputResult: false
+            displayType: CHART
+            displayTableConfig: null
+  - cellType: BLOCK
+    cellId: cdb2eb64-a9ba-4e28-ade1-3921f9612bab # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      blockConfig:
+        sqlCellId: 5dd7dc8e-5261-413d-a535-e2cd971347d3
+        chartCellId: 1ba80844-a1f7-4cc9-a8d6-29eebffd701f
+        activeTab: chart
+      cells:
+        - cellType: SQL
+          cellId: 5dd7dc8e-5261-413d-a535-e2cd971347d3
+          cellLabel: Top Media Authors
+          config:
+            source: |-
+              SELECT
+                  users_posts,
+                  CONCAT(media, ' - ', author) AS media_author
+              FROM analytics.dbt_social_media_challenge.user_by_each_media
+              WHERE author IS NOT NULL
+              LIMIT 10;
+            dataFrameCell: false
+            dataConnectionId: df38a6ed-afa6-40ce-bfde-abc695647004
+            resultVariableName: dataframe_6
+            useRichDisplay: true
+            sqlCellOutputType: PANDAS
+            useQueryMode: false
+            castDecimals: true
+            useNativeDates: true
+            outputFilteredResult: true
+            allowDuplicateColumns: false
+            tableDisplayConfig:
+              pageSize: 50
+              height: null
+              hideIcons: false
+              hideIndex: false
+              defaultSortColumn: null
+              defaultSortIndexColumn: null
+              defaultSortDirection: ASC
+              conditionalFormatting: null
+              calcs: null
+              filters: null
+              columnProperties:
+                - originalName: author
+                  renameTo: null
+                  size: 100
+                  wrapText: null
+                  displayFormat: null
+                - originalName: media
+                  renameTo: null
+                  size: 103
+                  wrapText: null
+                  displayFormat: null
+                - originalName: row-index-0
+                  renameTo: null
+                  size: 46
+                  wrapText: null
+                  displayFormat: null
+                - originalName: total_posts
+                  renameTo: null
+                  size: 113
+                  wrapText: null
+                  displayFormat: null
+                - originalName: user_post_rate
+                  renameTo: null
+                  size: 134
+                  wrapText: null
+                  displayFormat: null
+                - originalName: users_posts
+                  renameTo: null
+                  size: 118
+                  wrapText: null
+                  displayFormat: null
+              columnOrdering: null
+              customColumnOrdering: null
+              pinnedColumns: null
+              hiddenColumns: null
+              pinIndexColumns: false
+              showAggregations: false
+              columnAggregations: null
+        - cellType: CHARTV2
+          cellId: 1ba80844-a1f7-4cc9-a8d6-29eebffd701f
+          cellLabel: Top Media Authors
+          config:
+            height: 547
+            chartSpec:
+              type: layered
+              layers:
+                - id: b7589a52-fd1c-4bb0-9128-fc5b40496aab
+                  xAxis:
+                    sort: -x
+                    type: string
+                    style:
+                      grid:
+                        style: none
+                      ticks: {}
+                      labels: {}
+                    title: .
+                    dataFrameColumn: media_author
+                  series:
+                    - id: 65f0be16-c3e6-4048-bf87-80d3256eb047
+                      type: bar
+                      axis:
+                        type: number
+                        style:
+                          grid:
+                            style: none
+                          ticks: {}
+                          labels: {}
+                        title: .
+                        aggregate: sum
+                      dataFrameColumns:
+                        - users_posts
+                      colorOrder:
+                        - Hacker News - Tomte
+                        - Hacker News - gmays
+                        - Hacker News - mooreds
+                        - Hacker News - pseudolus
+                        - Hacker News - rbanffy
+                        - Hacker News - rntn
+                        - Hacker News - todsacerdoti
+                        - Hacker News - tosh
+                        - Slashdot - BeauHD
+                        - Slashdot - msmash
+                      color:
+                        type: series
+                        defaultColor: "#4C78A8"
+                        colorsBySeriesValues:
+                          Slashdot - BeauHD: "#54A24B"
+                          Slashdot - msmash: "#54A24B"
+                          Hacker News - rntn: "#F58518"
+                          Hacker News - tosh: "#F58518"
+                          Hacker News - Tomte: "#F58518"
+                          Hacker News - gmays: "#F58518"
+                          Hacker News - mooreds: "#F58518"
+                          Hacker News - rbanffy: "#F58518"
+                          Hacker News - pseudolus: "#F58518"
+                          Hacker News - todsacerdoti: "#F58518"
+                      opacity:
+                        type: static
+                        value: 1
+                      tooltip:
+                        type: auto
+                      dataLabels:
+                        fontSize: 15
+                        position: inside-end
+                      barWidth: 1
+                      orientation: horizontal
+                      layout: stacked
+                  dataFrame: dataframe_6
+              settings:
+                font:
+                  baseSize: 12
+                legend:
+                  position: right
+                tooltip: true
+                selectionEnabled: false
+            chartSelection: {}
+            colorMappings: {}
+            resultVariable: chart_result
+            outputResult: false
+            displayType: CHART
+            displayTableConfig: null
+  - cellType: BLOCK
+    cellId: 57d01e21-93ad-4873-b77f-d6b318ea1efb # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      blockConfig:
+        sqlCellId: e628156d-cc0c-42fb-87cc-26056c4b84af
+        chartCellId: 32bccf3f-df33-4f3f-85d1-83628331eb83
+        activeTab: display
+      cells:
+        - cellType: SQL
+          cellId: e628156d-cc0c-42fb-87cc-26056c4b84af
+          cellLabel: Media Comments Summary
+          config:
+            source: |-
+              SELECT
+                  media,
+                  ROUND(comments_by_posts, 0) AS comments_by_posts
+              FROM analytics.dbt_social_media_challenge.media_metrics;
+            dataFrameCell: false
+            dataConnectionId: df38a6ed-afa6-40ce-bfde-abc695647004
+            resultVariableName: dataframe_5
+            useRichDisplay: true
+            sqlCellOutputType: PANDAS
+            useQueryMode: false
+            castDecimals: true
+            useNativeDates: true
+            outputFilteredResult: true
+            allowDuplicateColumns: false
+            tableDisplayConfig:
+              pageSize: 50
+              height: null
+              hideIcons: false
+              hideIndex: false
+              defaultSortColumn: null
+              defaultSortIndexColumn: null
+              defaultSortDirection: ASC
+              conditionalFormatting: null
+              calcs: null
+              filters: null
+              columnProperties:
+                - originalName: comments_by_posts
+                  renameTo: null
+                  size: 164
+                  wrapText: null
+                  displayFormat: null
+                - originalName: media
+                  renameTo: null
+                  size: 103
+                  wrapText: null
+                  displayFormat: null
+                - originalName: row-index-0
+                  renameTo: null
+                  size: 39
+                  wrapText: null
+                  displayFormat: null
+              columnOrdering: null
+              customColumnOrdering: null
+              pinnedColumns: null
+              hiddenColumns: null
+              pinIndexColumns: false
+              showAggregations: false
+              columnAggregations: null
+        - cellType: CHARTV2
+          cellId: 32bccf3f-df33-4f3f-85d1-83628331eb83
+          cellLabel: Media Comments Summary
+          config:
+            height: null
+            chartSpec:
+              type: layered
+              layers:
+                - id: 767b34c3-2de5-4fcf-a791-6a1e1cac5c94
+                  xAxis:
+                    sort: descending
+                    type: string
+                    style:
+                      grid:
+                        style: solid
+                      ticks: {}
+                      labels: {}
+                    dataFrameColumn: media
+                  series:
+                    - id: 76f3e905-89a9-4df2-b10b-5be7532ba253
+                      type: bar
+                      axis:
+                        type: number
+                        style:
+                          grid:
+                            style: solid
+                          ticks: {}
+                          labels: {}
+                        aggregate: sum
+                      dataFrameColumns:
+                        - comments_by_posts
+                      colorOrder: ascending
+                      color:
+                        type: static
+                      opacity:
+                        type: static
+                        value: 1
+                      tooltip:
+                        type: auto
+                      barWidth: 1
+                      orientation: horizontal
+                      layout: stacked
+                  dataFrame: dataframe_5
+              settings:
+                legend:
+                  position: right
+                tooltip: true
+                selectionEnabled: false
+            chartSelection: {}
+            colorMappings: {}
+            resultVariable: chart_result
+            outputResult: false
+            displayType: CHART
+            displayTableConfig: null
+  - cellType: CHARTV2
+    cellId: c2eb763d-57ca-4425-8a76-661cfc9654c9 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: Comments by Posts
+    config:
+      height: null
+      chartSpec:
+        type: layered
+        layers:
+          - id: 2e83b404-f728-4097-83d0-19f1e48df959
+            xAxis:
+              sort: descending
+              type: string
+              style:
+                grid:
+                  style: none
+                ticks: {}
+                labels: {}
+              title: ""
+              dataFrameColumn: media
+            series:
+              - id: 1e89da9a-a84c-4bf8-bb80-0c07acf7813a
+                type: bar
+                axis:
+                  type: number
+                  style:
+                    grid:
+                      style: none
+                    zero: true
+                    ticks: {}
+                    labels: {}
+                  title: ""
+                  aggregate: sum
+                  numberFormat:
+                    format: PLAIN
+                    currency: ""
+                    columnType: NUMBER
+                    numDecimalDigits: 2
+                dataFrameColumns:
+                  - comments_by_posts
+                colorDataFrameColumn: media
+                colorOrder: ascending
+                color:
+                  type: series
+                  colorsBySeriesValues:
+                    Slashdot: "#54A24B"
+                    Hacker News: "#F58518"
+                opacity:
+                  type: static
+                  value: 1
+                dataLabels:
+                  color: "#e4e6ec"
+                  fontSize: 25
+                  position: outside-end
+                barWidth: 1
+                orientation: horizontal
+                layout: stacked
+            dataFrame: dataframe_5
+        settings:
+          font:
+            baseSize: 15
+          legend:
+            position: none
+          tooltip: true
+          selectionEnabled: false
+      chartSelection: {}
+      colorMappings:
+        Slashdot: "#F58518"
+        Hacker News: "#4C78A8"
+      resultVariable: chart_result_2
+      outputResult: false
+      displayType: CHART
+      displayTableConfig: null
+  - cellType: SQL
+    cellId: a556338f-516a-4f9f-b690-75176e88d414 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      source: |-
+        SELECT
+            technologykeys,
+            ROUND(percent_ocurrences_total, 2) AS percent_ocurrences_total
+        FROM analytics.dbt_social_media_challenge.principal_themes
+        WHERE media = 'Slashdot'
+        ORDER BY percent_ocurrences_total DESC
+        LIMIT 10
+      dataFrameCell: false
+      dataConnectionId: df38a6ed-afa6-40ce-bfde-abc695647004
+      resultVariableName: dataframe_7
+      useRichDisplay: true
+      sqlCellOutputType: PANDAS
+      useQueryMode: false
+      castDecimals: true
+      useNativeDates: true
+      outputFilteredResult: true
+      allowDuplicateColumns: false
+      tableDisplayConfig:
+        pageSize: 50
+        height: null
+        hideIcons: false
+        hideIndex: false
+        defaultSortColumn: null
+        defaultSortIndexColumn: null
+        defaultSortDirection: ASC
+        conditionalFormatting: null
+        calcs: null
+        filters: null
+        columnProperties:
+          - originalName: media
+            renameTo: null
+            size: 85
+            wrapText: null
+            displayFormat: null
+          - originalName: ocurrences
+            renameTo: null
+            size: 112
+            wrapText: null
+            displayFormat: null
+          - originalName: percent_ocurrences_total
+            renameTo: null
+            size: 191
+            wrapText: null
+            displayFormat: null
+          - originalName: qtt_posts
+            renameTo: null
+            size: 104
+            wrapText: null
+            displayFormat: null
+          - originalName: row-index-0
+            renameTo: null
+            size: 46
+            wrapText: null
+            displayFormat: null
+          - originalName: technologykeys
+            renameTo: null
+            size: 136
+            wrapText: null
+            displayFormat: null
+        columnOrdering: null
+        customColumnOrdering: null
+        pinnedColumns: null
+        hiddenColumns: null
+        pinIndexColumns: false
+        showAggregations: false
+        columnAggregations: null
+  - cellType: CHARTV2
+    cellId: 79089817-7043-4a8c-92d1-103ca3949cfc # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      height: null
+      chartSpec:
+        type: layered
+        facet: {}
+        layers:
+          - id: d6f08132-ab4f-436d-8ba7-9f8582c2e2b5
+            xAxis:
+              sort: -x
+              type: string
+              style:
+                grid:
+                  style: none
+                ticks: {}
+                labels: {}
+              title: .
+              dataFrameColumn: technologykeys
+            series:
+              - id: f58d9f5c-3c1c-4c11-8617-e74ff2662802
+                type: bar
+                axis:
+                  type: number
+                  style:
+                    grid:
+                      style: none
+                    ticks: {}
+                    labels:
+                      angle: 0
+                  title: .
+                  aggregate: sum
+                  numberFormat:
+                    format: PERCENT
+                    currency: USD
+                    columnType: NUMBER
+                    showSeparators: false
+                    numDecimalDigits: -1
+                    abbreviateLargeNumbers: false
+                dataFrameColumns:
+                  - percent_ocurrences_total
+                colorOrder:
+                  - ANDROID
+                  - GO
+                  - HACK
+                  - IOS
+                  - LESS
+                  - LINUX
+                  - PLAY
+                  - ROBOT
+                  - ROCKET
+                  - WINDOWS
+                color:
+                  type: series
+                  defaultColor: "#4C78A8"
+                  colorsBySeriesValues:
+                    GO: "#29A07C"
+                    IOS: "#29A07C"
+                    HACK: "#54A24B"
+                    LESS: "#54A24B"
+                    PLAY: "#54A24B"
+                    LINUX: "#29A07C"
+                    ROBOT: "#54A24B"
+                    GITHUB: "#54A24B"
+                    ROCKET: "#54A24B"
+                    ANDROID: "#29A07C"
+                    WINDOWS: "#29A07C"
+                    FOUNDATION: "#54A24B"
+                opacity:
+                  type: static
+                  value: 1
+                dataLabels:
+                  fontSize: 15
+                  position: inside-end
+                barWidth: 1
+                orientation: horizontal
+                layout: grouped
+            dataFrame: dataframe_7
+        settings:
+          font:
+            baseSize: 12
+          legend:
+            position: right
+          tooltip: true
+          selectionEnabled: false
+      chartSelection: {}
+      colorMappings:
+        Hacker News: "#4C78A8"
+      resultVariable: chart_result_3
+      outputResult: false
+      displayType: CHART
+      displayTableConfig: null
+  - cellType: SQL
+    cellId: aee3b009-c951-4733-91a6-8721786f1f28 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      source: |-
+        SELECT
+            technologykeys,
+            ROUND(percent_ocurrences_total, 2) AS percent_ocurrences_total
+        FROM analytics.dbt_social_media_challenge.principal_themes
+        WHERE media = 'Hacker News'
+        ORDER BY percent_ocurrences_total DESC
+        LIMIT 10
+      dataFrameCell: false
+      dataConnectionId: df38a6ed-afa6-40ce-bfde-abc695647004
+      resultVariableName: dataframe_8
+      useRichDisplay: true
+      sqlCellOutputType: PANDAS
+      useQueryMode: false
+      castDecimals: true
+      useNativeDates: true
+      outputFilteredResult: true
+      allowDuplicateColumns: false
+      tableDisplayConfig:
+        pageSize: 50
+        height: null
+        hideIcons: false
+        hideIndex: false
+        defaultSortColumn: null
+        defaultSortIndexColumn: null
+        defaultSortDirection: ASC
+        conditionalFormatting: null
+        calcs: null
+        filters: null
+        columnProperties:
+          - originalName: media
+            renameTo: null
+            size: 85
+            wrapText: null
+            displayFormat: null
+          - originalName: ocurrences
+            renameTo: null
+            size: 112
+            wrapText: null
+            displayFormat: null
+          - originalName: percent_ocurrences_total
+            renameTo: null
+            size: 191
+            wrapText: null
+            displayFormat: null
+          - originalName: qtt_posts
+            renameTo: null
+            size: 104
+            wrapText: null
+            displayFormat: null
+          - originalName: row-index-0
+            renameTo: null
+            size: 46
+            wrapText: null
+            displayFormat: null
+          - originalName: technologykeys
+            renameTo: null
+            size: 136
+            wrapText: null
+            displayFormat: null
+        columnOrdering: null
+        customColumnOrdering: null
+        pinnedColumns: null
+        hiddenColumns: null
+        pinIndexColumns: false
+        showAggregations: false
+        columnAggregations: null
+  - cellType: CHARTV2
+    cellId: b85b13d1-24a8-4a1e-bb0b-059e3d7297fb # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      height: null
+      chartSpec:
+        type: layered
+        facet: {}
+        layers:
+          - id: d6f08132-ab4f-436d-8ba7-9f8582c2e2b5
+            xAxis:
+              sort: -x
+              type: string
+              style:
+                grid:
+                  style: none
+                ticks: {}
+                labels: {}
+              title: .
+              dataFrameColumn: technologykeys
+            series:
+              - id: f58d9f5c-3c1c-4c11-8617-e74ff2662802
+                type: bar
+                axis:
+                  type: number
+                  style:
+                    grid:
+                      style: none
+                    ticks: {}
+                    labels: {}
+                  title: .
+                  aggregate: sum
+                  numberFormat:
+                    format: PERCENT
+                    currency: USD
+                    columnType: NUMBER
+                    showSeparators: false
+                    numDecimalDigits: -1
+                    abbreviateLargeNumbers: false
+                dataFrameColumns:
+                  - percent_ocurrences_total
+                colorOrder:
+                  - ANDROID
+                  - GO
+                  - HACK
+                  - IOS
+                  - LESS
+                  - LINUX
+                  - PLAY
+                  - ROBOT
+                  - ROCKET
+                  - WINDOWS
+                color:
+                  type: series
+                  defaultColor: "#4C78A8"
+                  colorsBySeriesValues:
+                    GO: "#F58518"
+                    IOS: "#D67133"
+                    HACK: "#54A24B"
+                    LESS: "#F58518"
+                    PLAY: "#F58518"
+                    RUST: "#F58518"
+                    LINUX: "#D67133"
+                    ROBOT: "#54A24B"
+                    GITHUB: "#D67133"
+                    PYTHON: "#D67133"
+                    ROCKET: "#54A24B"
+                    ANDROID: "#D67133"
+                    WINDOWS: "#F58518"
+                    JAVASCRIPT: "#F58518"
+                opacity:
+                  type: static
+                  value: 1
+                dataLabels:
+                  fontSize: 15
+                  position: inside-end
+                barWidth: 1
+                orientation: horizontal
+                layout: grouped
+            dataFrame: dataframe_8
+        settings:
+          font:
+            baseSize: 12
+          legend:
+            position: right
+          tooltip: true
+          selectionEnabled: false
+      chartSelection: {}
+      colorMappings:
+        Hacker News: "#4C78A8"
+      resultVariable: chart_result_4
+      outputResult: false
+      displayType: CHART
+      displayTableConfig: null
+  - cellType: SQL
+    cellId: 0ac5f6a5-00bf-4c64-855f-91343dfe3c51 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: Monthly Post Summary
+    config:
+      source: |
+        SELECT
+            media,
+            DATE_TRUNC('MONTH', creation_post_date) AS month,
+            SUM(qtt_posts) AS total_posts
+        FROM analytics.dbt_social_media_challenge.posts_by_months
+        GROUP BY media, month
+      dataFrameCell: false
+      dataConnectionId: df38a6ed-afa6-40ce-bfde-abc695647004
+      resultVariableName: dataframe_10
+      useRichDisplay: true
+      sqlCellOutputType: PANDAS
+      useQueryMode: false
+      castDecimals: true
+      useNativeDates: true
+      outputFilteredResult: true
+      allowDuplicateColumns: false
+      tableDisplayConfig:
+        pageSize: 50
+        height: null
+        hideIcons: false
+        hideIndex: false
+        defaultSortColumn: null
+        defaultSortIndexColumn: null
+        defaultSortDirection: ASC
+        conditionalFormatting: null
+        calcs: null
+        filters: null
+        columnProperties:
+          - originalName: creation_post_date
+            renameTo: null
+            size: 157
+            wrapText: null
+            displayFormat: null
+          - originalName: date_trunc('MONTH', creation_post_date)
+            renameTo: null
+            size: 276
+            wrapText: null
+            displayFormat: null
+          - originalName: media
+            renameTo: null
+            size: 103
+            wrapText: null
+            displayFormat: null
+          - originalName: qtt_posts
+            renameTo: null
+            size: 104
+            wrapText: null
+            displayFormat: null
+          - originalName: row-index-0
+            renameTo: null
+            size: 46
+            wrapText: null
+            displayFormat: null
+        columnOrdering: null
+        customColumnOrdering: null
+        pinnedColumns: null
+        hiddenColumns: null
+        pinIndexColumns: false
+        showAggregations: false
+        columnAggregations: null
+appLayout:
+  visibleMetadataFields:
+    - NAME
+    - DESCRIPTION
+    - AUTHOR
+    - LAST_EDITED
+    - LAST_RUN
+    - CATEGORIES
+    - STATUS
+    - TABLE_OF_CONTENTS
+  fullWidth: false
+  tabs:
+    - name: Tab 1
+      rows: []
+sharedFilters: []
