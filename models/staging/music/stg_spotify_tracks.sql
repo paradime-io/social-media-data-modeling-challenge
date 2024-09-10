@@ -4,8 +4,6 @@ with base as (
        track_name, 
        popularity, 
        duration_seconds,
-       --REPLACE(REPLACE(REPLACE(artists, '[', ''), ']', ''), '''', '') AS artists,
-       --REPLACE(REPLACE(REPLACE(id_artists, '[', ''), ']', ''), '''', '') AS id_artists,
        artists,
        id_artists,
        release_date, 
