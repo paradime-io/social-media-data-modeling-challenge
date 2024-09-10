@@ -14,9 +14,10 @@
    - 3.1 [Tools Used](#tools-used)
    - 3.2 [Applied Techniques](#applied-techniques)
 4. [Insights](#insights)
-   - 4.1 [Insight 1](#insight-1)
-   - 4.2 [Insight 2](#insight-2)
-   - 4.3 [Insight 3](#insight-3)
+   - 4.1 [Total Posts](#total-posts)
+   - 4.2 [User Comparision by each Social Media](#user-comparision-by-each-social-media)
+   - 4.3 [Comments by Posts](#comments-by-posts)
+   - 4.4 [Technology Topics Covered](#technology-topics-covered)
 5. [Conclusions](#conclusions)
 
 ## Introduction
@@ -120,6 +121,7 @@ Analyzing the total number of posts on Hacker News and Slashdot reveals a signif
 ### User Comparision by each Social Media
 
 ![total_posts](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/demik_freitas/analyses/images/different_authors_by_media.png?raw=true)
+
 Looking at the data, we see that Slashdot has only 5 active authors, while Hacker News has over ten thousand users posting daily. This indicates with a small group of individuals responsible for generating posts and only the wider audience to comment. In contrast, Hacker News functions more like an open forum, with a much larger and more diverse group of users contributing posts regularly.
 
 ![total_posts](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/demik_freitas/analyses/images/top_media_authors.png?raw=true)
