@@ -15,10 +15,10 @@
 ## :bookmark_tabs: Menu
 
 1. [Introduction](#Introduction)
-2. [Data Sources](#Data-Sources)
-3. [Data Lineage](#Data-Lineage)
-4. [Methodology](#Methodology)
-5. [Insights](#Insights)
+2. [Data Sources](#Data-Sources-)
+3. [Data Lineage](#Data-Lineage-)
+4. [Methodology](#Methodology-)
+5. [Insights](#Insights-)
 6. [Author](#Author)
 
 ## Introduction 🛈
