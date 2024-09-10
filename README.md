@@ -350,7 +350,7 @@ top 10 performers based on viral spread and not depth whereas the final winner e
 - ❓ *Question for the reader - While I weighed both dimensions equally in the final scoring, what dimension do you think is a better, stronger, or more important measure of virality?*
 
 **🥇 All it takes is one** - trends are short-lived with sounds in the analysis averaging a mere 1-2 months on the top 100 leaderboards. At the same time, an audio that is pushed and circulated at the right time and place has an opportunity to blow up in viral reach. 
-16 different sounds in this analysis had a chance to win "top performer" if we weighed peak stats in our performance score more highly! 
+16 different sounds in this analysis had a chance to win "top performer" (by views-based scoring) if we weighed peak stats in our performance score more highly! 
 
 - 😑 *[Wiggle](https://www.youtube.com/watch?v=RDIMl4VKBf8) by Jason Derulo feat. Snoop Dogg made it to #14. See ['Additional Tables'](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/jayeson-gao/APPENDIX.md) section for Top 20 placements in the appendix file!* 
 
