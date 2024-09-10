@@ -98,6 +98,7 @@ In 2023, the popularity of Gen AI surged in HackerNews. OpenAI's GPT-4 released 
 ![029.png](./images/029.png)
 ![](./images/010.png)
 The average user sentiment towards the most popular ML topics at Hacker News over time was predominantly neutral.
+
 ![028.png](./images/028.png)
 ![008.png](./images/008.png)
 
