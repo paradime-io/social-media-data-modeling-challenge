@@ -75,6 +75,7 @@ In this project, I will be investigating the importance of timing and music char
 
 <img width="1372" alt="image" src="https://github.com/user-attachments/assets/60b42c59-5b5a-4dc5-9b68-285abab6d50e">
 [Engagement by Music Characteristic Heatmap Analysis](Analysis/heatmap_engagement_by_music_characteristic.py)
+[Engagement by Music Characteristic Heatmap Analysis](https://github.com/paradime-io/social-media-data-modeling-challenge/tree/mads-spanggaard/Analysis/heatmap_engagement_by_music_characteristic.py)
 <br><br>
 
 <img width="1316" alt="image" src="https://github.com/user-attachments/assets/0bf64b13-a96a-4260-9a37-55f4a6e08bf3">
