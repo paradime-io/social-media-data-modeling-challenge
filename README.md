@@ -95,15 +95,17 @@ From 2022 to 2023, there have been more than 11k posts mentioning `gpt` and the 
 In 2023, the popularity of Gen AI surged in HackerNews. OpenAI's GPT-4 released on March 14, 2023. This upgrade introduced multimodal capabilities, and around the same time Microsoft integrated GPT-4 Turbo into its Copilot product for free. All these exciting new features seem to be a topic of interest for Hacker Rank, with nearly 2k posts mentioning `gpt`. In regards to ML related topics, it seems like ChatGPT is on this community's mind.
 
 ### Hacker News sentiment towards the top ML topics was mostly neutral
+![029.png](./images/029.png)
 ![](./images/010.png)
 The average user sentiment towards the most popular ML topics at Hacker News over time was predominantly neutral.
-
+![028.png](./images/028.png)
 ![008.png](./images/008.png)
 
 March 2023 saw the highest positive sentiment towards `artificial intelligence`, where an average of 48% of the sentiment were positive in the related posts.
 ![009.png](./images/009.png)
 
 January of 2022 saw the highest negative sentiment towards `chatbot`, where an average of 23% of the sentiment were negative, and the next month in February saw the highest positive sentiment with an average of 45% of the sentiment being positive. That said, the overall sentiment of the posts across all months in 2022 and 2023 were neutral.
+
 ![006.png](./images/006.png)
 
 Note that the blank sentiments (see `generative ai` Jan - Apr) mean the posts returned non-meaningful text. For example, there was a post with just the title, 'neural networks in 1991'. When performing sentiment analysis, we remove non-alpha charaters, stopwords and punctuation, resulting in missing sentiment and hence gaps in the plot.
