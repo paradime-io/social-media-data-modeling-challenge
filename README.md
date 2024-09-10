@@ -124,20 +124,20 @@ Refer analyze_hn_data.ipynb notebook under analyses folder which generates **hn_
 
 ## Insight 1
 
-![dbt](https://i.imgur.com/yLIweIm.png)
+![dbt_1](https://i.imgur.com/yLIweIm.png)
 
-![dbt](https://i.imgur.com/FoSE0EW.png)
+![dbt_2](https://i.imgur.com/FoSE0EW.png)
 
 - The outage period on August 14-15 had a significant impact on both daily active users and daily active contributors. There is a visible dip in activity during those two days compared to the preceding and following days
 
-![dbt](https://i.imgur.com/xYb0mqX.png)
+![dbt_3](https://i.imgur.com/xYb0mqX.png)
 
 - **githubdungchung/trigger** is the most active repository with 175,983 events, significantly more than others in the top 10.
 - Activity among the top repositories is substantial, with all showing over 62,000 total events, indicating high engagement across various projects.
 
 ## Insight 2
 
-![dbt](https://i.imgur.com/FzEYT7t.png)
+![dbt_4](https://i.imgur.com/FzEYT7t.png)
 
 - Repository tracking **(WatchEvent)** and code contributions **(PushEvent)** consistently dominate GitHub's event type distribution.
 - The outage period temporarily shifts the focus towards collaboration and issue resolution, but the distribution quickly recovers post-outage.
@@ -145,8 +145,7 @@ Refer analyze_hn_data.ipynb notebook under analyses folder which generates **hn_
 
 ### Insight 3
 
-![dbt](https://i.imgur.com/JruP1if.png)
-
+![dbt_5](https://i.imgur.com/0a9arCK.png)
 - **Outage Impact:**  The dip in both sentiment and mention count on August 15 likely corresponds to the GitHub outage, demonstrating how service disruptions significantly affect community engagement and perception.
 - **Quick Recovery:**  The steady increase in sentiment from August 16 onwards, culminating in a sharp rise on August 18, suggests effective crisis management by GitHub and resilience in community trust.
 - High mention counts early in the week (Aug 12-14) followed by a decrease indicate intense pre-outage discussion, while the inverse relationship between mention count and sentiment on some days (e.g., Aug 12 vs Aug 18) highlights that discussion volume doesn't always correlate with positive sentiment
@@ -158,13 +157,13 @@ Following visualization will show you:
 - How different main topics compare in terms of sentiment and mention frequency
 - The distribution of subtopics within main topics
 
-![dbt](https://i.imgur.com/YEjalD6.png)
+![dbt_6](https://i.imgur.com/YEjalD6.png)
 
 - Most topics showed neutral to positive sentiment, with some fluctuations across days.
 - Polarized reactions were observed for a few topics on specific days, despite a generally diverse discussion landscape.
 
 
-![dbt](https://i.imgur.com/Y6yA2vs.png)
+![dbt_7](https://i.imgur.com/Y6yA2vs.png)
 
 - **Sentiment Shift:** There's a noticeable shift in sentiment from August 14 to August 15, with more negative sentiments appearing on the 15th, likely corresponding to the peak of the GitHub outage.
 - **Outage-Related Topics:**  Subtopics such as "downtime," "outage," "service interruption," and "technical issue" are prominent, particularly on August 15, indicating the community's focus on the GitHub service disruption.
