@@ -1,0 +1,106 @@
+version: 2
+
+models:
+  - name: fct_tiktok_music_joined_features
+    description: >
+      This model aggregates TikTok video engagement metrics with Spotify music features to analyze how musical attributes and post timing influence user interaction. It includes composite features such as intensity, rhythm, and sound type based on various audio characteristics from Spotify's API, along with quartile-based segmentations for further analysis.
+
+    columns:
+      - name: music_id
+        description: "The unique identifier for the music track in TikTok."
+
+      - name: artist_name
+        description: "The name of the artist for the corresponding music track."
+
+      - name: track_id
+        description: "The Spotify track identifier for each piece of music."
+
+      - name: track_name
+        description: "The name of the music track."
+
+      - name: genres
+        description: "The generalized music genre associated with the track."
+
+      - name: genre_value
+        description: "A continuous numerical representation of the genres."
+
+      - name: intensity
+        description: >
+          Composite feature created by combining energy and loudness. 
+          Formula: `(energy + (loudness + 60) / 60) / 2`, where loudness is adjusted to a more neutral scale before combining.
+          
+      - name: rhythm
+        description: >
+          Composite feature derived from danceability, positiveness, and tempo. 
+          Formula: `(danceability * 0.4 + positiveness * 0.4 + (tempo / 200) * 0.2)` assigns the highest weights to danceability and positiveness, with tempo contributing less to reflect the balance between rhythm and mood.
+
+      - name: sound_type
+        description: >
+          Composite feature combining acousticness, instrumentalness, and speechiness. 
+          Formula: `(acousticness * 0.4 + instrumentalness * 0.4 + speechiness * 0.2)`, with equal emphasis on acousticness and instrumentalness, while speechiness has a slightly lower influence.
+
+      - name: popularity
+        description: "The popularity score of the track as provided by Spotify."
+
+      - name: liveness
+        description: "Describes the presence of a live audience in the track."
+
+      - name: beats_per_bar
+        description: "The number of beats in each bar of the track, representing the time signature."
+
+      - name: danceability
+        description: "Spotify's measure of how suitable the track is for dancing, based on tempo, rhythm stability, beat strength, and overall regularity."
+
+      - name: energy
+        description: "Spotify's measure of intensity and activity in the track, typically associated with fast, loud, and noisy attributes."
+
+      - name: loudness
+        description: "The overall loudness of the track in decibels (dB), averaged across the entire track."
+
+      - name: speechiness
+        description: "Measures the presence of spoken words in a track. The higher the value, the more speech-like the recording."
+
+      - name: acousticness
+        description: "A confidence measure of whether the track is acoustic."
+
+      - name: instrumentalness
+        description: "Predicts whether a track contains no vocals. 'Ooh' and 'aah' sounds are treated as instrumental in this context."
+
+      - name: positiveness
+        description: "Describes the musical positiveness conveyed by a track, with higher values indicating a more happy or cheerful tone."
+
+      - name: tempo
+        description: "The tempo of the track in beats per minute (BPM)."
+
+      - name: popularity_quartile
+        description: "The quartile segmentation of the track's popularity."
+
+      - name: intensity_quartile
+        description: "The quartile segmentation based on the intensity feature."
+
+      - name: rhythm_quartile
+        description: "The quartile segmentation based on the rhythm feature."
+
+      - name: sound_type_quartile
+        description: "The quartile segmentation based on the sound type feature."
+
+      - name: liveness_quartile
+        description: "The quartile segmentation based on the liveness feature."
+
+      - name: beats_per_bar_quartile
+        description: "The quartile segmentation based on the beats per bar feature."
+
+      - name: number_of_videos
+        description: "The total number of TikTok videos using this specific music track."
+
+      - name: total_likes_count
+        description: "The total number of likes across all TikTok videos using this music track."
+
+      - name: total_shares_count
+        description: "The total number of shares across all TikTok videos using this music track."
+
+      - name: total_comment_count
+        description: "The total number of comments across all TikTok videos using this music track."
+
+      - name: total_play_count
+        description: "The total number of play counts across all TikTok videos using this music track."
