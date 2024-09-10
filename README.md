@@ -343,16 +343,17 @@ three top spot titles - two in back-to-back months - are the reasons behind its 
 
 In this analysis, we learned that consistency is rare among TikTok sounds and trends are constantly evolving which give a variety of different audios time to shine in the spotlight. 
 
-**🔝 Viral spread vs viral depth** - In my analysis, I aimed to find the "best performing" TikTok sound using these two dimensions. A song like [Lalala](https://www.youtube.com/watch?v=FZZogxdiJMA) was a top 10 performer based on viral depth (views) 
-but not based on viral spread (videos). On the flipside, audios like [Steven Universe](https://www.youtube.com/watch?v=7_RVoLCx7MU), [Play Date](https://www.youtube.com/watch?v=rODr5Zfj8RA), [Savage](https://www.youtube.com/watch?v=eJEKHdvntPI) were 
-top 10 performers based on viral spread and not depth.
+**🔝 Viral spread vs viral depth** - In my analysis, I aimed to find the "best performing" TikTok sound using these two dimensions. A song like [Lalala](https://www.youtube.com/watch?v=FZZogxdiJMA) was a top 10 performer based on viral depth (views-based scoring) 
+but not based on viral spread (videos-based scoring). On the flipside, audios like [Steven Universe](https://www.youtube.com/watch?v=7_RVoLCx7MU), [Play Date](https://www.youtube.com/watch?v=rODr5Zfj8RA), [Savage](https://www.youtube.com/watch?v=eJEKHdvntPI) were 
+top 10 performers based on viral spread and not depth whereas the final winner exhibited strength in both.
 
 - ❓ *Question for the reader - While I weighed both dimensions equally in the final scoring, what dimension do you think is a better, stronger, or more important measure of virality?*
 
 **🥇 All it takes is one** - because trends are so short-lived, an audio that is pushed and circulated at the right time and place has an opportunity to blow up in viral reach. 
 
-**🤪 Goofiness: a common denominator of success** - some of the best performing audios - by consistency, peak, and overall - including our winner, are meme tracks. Monkeys Spinning Monkeys, 
-Spongebob, and Oh No are iconic comedic sounds that consistently placed well throughout the analysis and also take up way too much real-estate in my Gen Z brain (and likely the brains of millions of others).
+**🤪 Goofiness: a common denominator of success** - some of the best performing audios - by consistency, peak, and overall - including our winner, are meme tracks. [Monkeys Spinning Monkeys](https://www.youtube.com/watch?v=NPdgPZ0u3zQ), 
+[Spongebob](https://www.youtube.com/watch?v=4qXVIbs4CR0), and [Oh No](https://www.youtube.com/watch?v=R75Xcfqy-2I) are iconic comedic sounds that consistently placed well throughout the analysis and also take up way too much real-estate 
+in my Gen Z brain (and likely the brains of millions of others).
 
 **👑 The Queen of Christmas** - this analysis also inadvertently identified possibly the strongest performing Christmas sound with the most unique path to the final top 10: 
 consistent Christmas peaks. Whether or not Mariah Carey is still the face of Christmas TikTok sound today would be an interesting question to answer with more recent data.
