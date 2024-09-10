@@ -67,8 +67,7 @@ def get_track_data(track_id):
             'liveness': track_features['liveness'],
             'positiveness': track_features['valence'],
             'tempo': track_features['tempo'],
-            'beats_per_bar': track_features['time_signature'],
-            'genres': track_data.get('genres', [])
+            'beats_per_bar': track_features['time_signature']
         }
         return data
     except spotipy.exceptions.SpotifyException as e:
