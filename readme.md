@@ -39,7 +39,7 @@
   - dim_songs : lists of songs from both spotify's datasets
   - dim_artists : lists of artists from both spotify's datasets
   - dim_countries: list of country form iso code countries
-  - *missing similarity 
+  - *missing similarity for artists and countries 's dimension to unify. 
 - SQL, dbt to get base table for insights :
   - songs_stayed in top10 in more than one country by snapshot date
   - more than five year old songs in top10 by country and by snapshot date
@@ -47,7 +47,7 @@
   - songs in top 10 by country and by snapshot date
   - songs in top 10 in more than one country by snapshot date
 
-## Insights
+## What is the period for old songs to be in top playlists ?
 
 ### Insight 1
 - top songs that are more than 25 years old by country region
@@ -56,7 +56,7 @@
 
 ### Insight 2
 - Who is the artists in Europe with more than 25 years old songs in top playlists ? (you certainly already know)
-![alt text]("./img/insight2.png")
+![alt text](img/insight2.png)
 - Yeah, it's Maria Carey. Because of the dataset, Maria Carey and her Christmas'song is always in top playlists on spotify (like other musics platforms)
 
 ### Insight 3
@@ -65,14 +65,23 @@
 - We have Belarus where Nautiluse Pompiius take more than 75% about the count of position in all playlists. But we can quickly see that Maria Carey's song is over all countries in Europe
 
 ### Insight 4
-- Is it sure that the song that top retro's songs are about Christmas's song ? 
+- What is the theme for top old songs in all region ? 
 ![alt text](img/insight4.png)
+
 - By the picture, we can confirm that the :
   - "All I Want for Christmas is You" from Mariah Carey is in top songs in every region
   - "Let It Snow! Let It Snow! Let It Snow!" from Dean martin is like the first one but without Africa region
   - "It's the Most Wonderful Time of the Year" from Andy Williams is like the second one
   - "Jingle Bell Rock" from  Bobby Helms is like the last one
-  
+- Top old's song came back alive when Christmas arrives
+
+### Insight 5 
+- Olds songs more than 25 years old on more than 15 countries 's top playlists are essentially on Christmas Period :
+![alt text](insight5.png)
+- Christmas implied in all countries a big increased of retro's populars christmas's songs 
+- Here I used two kpi_facts, 1 to get olds songs and the other focusing on which songs is popular in more than 1 country
 
 ## Conclusions
-[Summarize key findings and their implications]
+- By lack of time, I choose this simple example. 
+- I focused on old songs.
+- On spotify API, we can see that we can classify music with more attributes (loudness, instrumental, etc...). From theses attributes, maybe we can find some keys characteristics. Much more analyses can be done.
