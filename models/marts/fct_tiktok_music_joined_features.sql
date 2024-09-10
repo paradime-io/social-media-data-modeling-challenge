@@ -39,7 +39,6 @@ music AS (
         ON genre.track_id = tracks.track_id 
 ),
 
--- Move the NTILE window functions to a subquery
 music_with_quartiles AS (
     SELECT  
         DISTINCT 
@@ -118,7 +117,6 @@ final AS (
         music_with_quartiles.liveness_quartile,
         music_with_quartiles.beats_per_bar_quartile,
 
-        -- Aggregate metrics
         COUNT(DISTINCT tiktok.video_id) AS number_of_videos,
         SUM(tiktok.likes_count) AS total_likes_count,
         SUM(tiktok.shares_count) AS total_shares_count,
@@ -129,8 +127,7 @@ final AS (
         ON tiktok.music_id = music_with_quartiles.music_id
     INNER JOIN genres_continous gc 
         ON gc.genres = music_with_quartiles.genres
-    GROUP BY 
-        {{ group_by(26) }}
+    {{ group_by(26) }}
 )
 
 SELECT * FROM final
