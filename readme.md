@@ -33,6 +33,7 @@
 - Paradime: SQL and dbt™ development
 - MotherDuck: Data storage and computing
 - Hex: Data visualization
+- duckdb for Inserting data from local files into motherduck (create table as ... from read_csv_auto('/tmp/file_*.csv'))
 
 ### Applied Techniques
 - SQL, dbt to get facts and dims :
@@ -40,12 +41,14 @@
   - dim_artists : lists of artists from both spotify's datasets
   - dim_countries: list of country form iso code countries
   - *missing similarity for artists and countries 's dimension to unify. 
-- SQL, dbt to get base table for insights :
+- SQL, dbt to get base table :
   - songs_stayed in top10 in more than one country by snapshot date
   - more than five year old songs in top10 by country and by snapshot date
   - songs that stayed in top 10 for 6 months or more
   - songs in top 10 by country and by snapshot date
   - songs in top 10 in more than one country by snapshot date
+- SQL, dbt to get insights :
+  - Every insights is in analyses dbt's folder
 
 ## What is the period for old songs to be in top playlists ?
 
@@ -77,7 +80,7 @@
 
 ### Insight 5 
 - Olds songs more than 25 years old on more than 15 countries 's top playlists are essentially on Christmas Period :
-![alt text](insight5.png)
+![alt text](img/insight5.png)
 - Christmas implied in all countries a big increased of retro's populars christmas's songs 
 - Here I used two kpi_facts, 1 to get olds songs and the other focusing on which songs is popular in more than 1 country
 
