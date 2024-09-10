@@ -11,13 +11,17 @@
 In this project, I will be investigating the importance of timing and music characteristics when working with TikTok content. Specifically, the analysis will focus on how different musical attributes—such as rhythm, intensity, and genre—affect user engagement metrics like likes, shares, comments, and play counts. Additionally, I will explore how the timing of TikTok posts throughout the day influences content interaction, helping to identify optimal posting windows for maximum visibility and engagement. This comprehensive analysis aims to uncover actionable insights that can be applied to content creation strategies, leveraging both the musical aspects and timing to enhance engagement on the platform.
 
 ## Data Sources
-- Dataset 1: TikTok Dataset - This is a dataset found on Kaggle that included 1000 posts from 2020 Q4, including
-   - various engagement metrics
-   - music data (spotify and apple)
-   - Author data
-- Dataset 2: Spotify dataset - After figuring out that the spotify dataset in the kaggle dataset didn't contain the data that I hoped for, gathered I the list of
-  spotify ids and scraped it myself.
-- Dataset 3: Extra Author dataset found on Kaggle - A more nuanced author dataset that I used to join genres on. 
+## Data Sources
+- **Dataset 1: TikTok Dataset**  
+  - Kaggle dataset with 1000 posts from 2020 Q4  
+  - Includes various engagement metrics (likes, comments, shares, play counts), music data (Spotify and Apple), and author data.
+
+- **Dataset 2: Spotify Dataset**  
+  - Due to incomplete Spotify data in the original TikTok dataset, I scraped additional Spotify data using their API. This additional data includes track popularity and musical features such as rhythm, loudness, and danceability.
+
+- **Dataset 3: Extra Author Dataset**  
+  - An additional Kaggle dataset providing more detailed author information, used to join genres on.
+
 
 ### Data Lineage
 <img width="1372" alt="image" src="https://github.com/user-attachments/assets/8206a900-0d57-43f2-b97f-3ba3d0a078c4">
@@ -25,9 +29,33 @@ In this project, I will be investigating the importance of timing and music char
 
 ## Methodology
 ### Tools Used
-- Paradime: SQL and dbt™ development
-- MotherDuck: Data storage and computing
-- Hex: Data visualization and further transformation
+- **Paradime**: SQL and dbt™ development
+- **MotherDuck**: Data storage and computing
+- **Hex**: Data visualization and further transformation
+
+### Applied Techniques
+- **Data Cleaning and Preprocessing**  
+  - Standardized data formats and handled missing values to ensure data consistency across all models.  
+  - Removed duplicates to maintain data accuracy.
+  
+- **Feature Engineering**  
+  - Created composite features such as **intensity**, **rhythm**, and **sound type** to capture musical characteristics beyond basic metrics.  
+  - For example, **intensity** combines loudness and energy, while **rhythm** factors in danceability, positiveness, and tempo.
+
+- **Binning and Quartiles**  
+  - Utilized NTILE functions to divide data into quartiles based on features like popularity, rhythm, and intensity, providing deeper insights through segmented analysis.
+
+- **Outlier Removal**  
+  - Applied Interquartile Range (IQR) method to remove outliers that could distort engagement metrics, focusing on the most relevant data points.
+
+- **Exploratory Data Analysis (EDA)**  
+  - Employed visualization tools to explore data distributions, relationships, and trends. This included heatmaps, scatter plots, and line charts for initial insights.
+
+- **Logarithmic Scale Transformation**  
+  - Used logarithmic scales in visualizations to manage large variances and bring out trends that might be missed on linear scales.
+
+- **Correlation Analysis**  
+  - Created correlation matrices to measure the relationships between engagement metrics (likes, plays, comments) and music features. This helped in identifying key factors that influence user interaction.
 
 ### Applied Techniques
 - Dbt modelling using custom macros, CTEs, window functions and other aggregations on differen granularity.
