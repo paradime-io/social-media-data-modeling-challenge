@@ -16,8 +16,10 @@ In this project, I will be investigating the importance of timing and music char
   - Kaggle dataset with 1000 posts from 2020 Q4  
   - Includes various engagement metrics (likes, comments, shares, play counts), music data (Spotify and Apple), and author data.
 
-- **Dataset 2: Spotify Dataset**  
+- **Dataset 2: Extra Spotify Dataset**  
   - Due to incomplete Spotify data in the original TikTok dataset, I scraped additional Spotify data using their API. This additional data includes track popularity and musical features such as rhythm, loudness, and danceability.
+<a href="Analysis/spotify_api_extract.py" style="font-size: 6pt; color: #0077cc;">Spotify extract script</a>
+
 
 - **Dataset 3: Extra Author Dataset**  
   - An additional Kaggle dataset providing more detailed author information, used to join genres on.
