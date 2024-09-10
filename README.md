@@ -74,7 +74,7 @@ In this project, I will be investigating the importance of timing and music char
 [Engagement by music features (heatmap) source code](Analysis/heatmap_engagement_by_music_characteristic.py)
 
 <img width="1316" alt="image" src="https://github.com/user-attachments/assets/0bf64b13-a96a-4260-9a37-55f4a6e08bf3">
-[Engagement by music features (heatmap) source code](Analysis/tiktok_engagement_by_genres_ratio.py)
+[Engagement by music features (heatmap) source code](Analysis/tiktok_engagement_by_genres_ratio.sql)
 
 <img width="1322" alt="image" src="https://github.com/user-attachments/assets/1d62e360-a045-4113-9692-d60ab7bfddc1">
 <img width="1339" alt="image" src="https://github.com/user-attachments/assets/d81cdf4d-e2a9-4906-912c-35d8c3fbebd8">
