@@ -78,6 +78,6 @@ In this project, I will be investigating the importance of timing and music char
 
 
 <img width="1309" alt="image" src="https://github.com/user-attachments/assets/3fa61129-f03b-40d8-bc89-49b6c94034c2">
-<img width="1381" alt="image" src="https://github.com/user-attachments/assets/203b2cd5-8728-46a8-b87d-49edecfc9209">
+<img width="1388" alt="image" src="https://github.com/user-attachments/assets/a074e973-ac80-4996-a8cc-0e767d354e9c">
 <img width="1433" alt="image" src="https://github.com/user-attachments/assets/d2f204af-8ad6-4dc9-9041-dfe2916b1398">
 
