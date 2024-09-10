@@ -232,7 +232,7 @@ officially produced sound. Regardless, it cracks the top 5 here as a - in Gen Z 
 When we skew for peak, we find that…
 
 1. **Audios take turns in the viral spotlight** - There is little separating the “best performers”. Two audios are tied for first, and all top 10 audios are separated by a score difference of 0.04. 
-In fact, there is not a major drop-off in performance score until rank 16. With so many audios laying claim to “best performer” when we skew for peak, it reinforces one of our initial 
+In fact, there is not a major drop-off in performance score until rank 16. With many audios including former bangers like [Lalala](https://www.youtube.com/watch?v=FZZogxdiJMA), [Up](https://www.youtube.com/watch?v=N2LPTvuIQ5U), [Backyard Boy](https://www.youtube.com/watch?v=Mbj26vHDMII) laying claim to “best performer” when we skew for peak, it reinforces one of our initial 
 observations: virality is short-lived and many audios can enjoy the viral limelight though at different times.
 2. **Official songs reign supreme** - While we see 4 non-official audios/songs represented in this group, [Spongebob](https://www.youtube.com/watch?v=4qXVIbs4CR0) and [Hot Headzz Ya Ya](https://www.tiktok.com/music/Hott-Headzz-Ya-Ya-Ya-6833427876558293766?lang=en)  are based on officially produced sounds and created by 
 smaller artists (not picked up in the data cleaning process) respectively. Even [Patatak](https://www.youtube.com/watch?v=EPrIMUo68g4), which is tied for 10th, is derived from a [Dominican Republic song](https://www.youtube.com/watch?v=bokSLKeWVyE).
@@ -342,6 +342,12 @@ three top spot titles - two in back-to-back months - are the reasons behind its 
 ## **📃 Summary and Conclusions**
 
 In this analysis, we learned that consistency is rare among TikTok sounds and trends are constantly evolving which give a variety of different audios time to shine in the spotlight. 
+
+**🔝 Viral spread vs viral depth** - In my analysis, I aimed to find the "best performing" TikTok sound using these two dimensions. A song like [Lalala](https://www.youtube.com/watch?v=FZZogxdiJMA) was a top 10 performer based on viral depth (views) 
+but not based on viral spread (videos). On the flipside, audios like [Steven Universe](https://www.youtube.com/watch?v=7_RVoLCx7MU), [Play Date](https://www.youtube.com/watch?v=rODr5Zfj8RA), [Savage](https://www.youtube.com/watch?v=eJEKHdvntPI) were 
+top 10 performers based on viral spread (videos) and not depth.
+
+- ❓ *Question for the reader - While I weighed both dimensions equally in the final scoring, what dimension do you think is a better, stronger, or more important measure of virality?*
 
 **🥇 All it takes is one** - because trends are so short-lived, an audio that is pushed and circulated at the right time and place has an opportunity to blow up in viral reach. 
 
