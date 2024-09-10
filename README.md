@@ -73,7 +73,7 @@ The layers are as follows:
 ### Applied Techniques
 - **Data Modeling**: Engaged in data modeling, including creating new tables using Motherduck's unnesting function to refine the dataset and support deeper analysis.
 - **Visualization**: Utilized various types of bar charts (normal, stacked, and grouped) and heatmaps to represent the data visually and uncover patterns.
-- **Correlation Analysis**: Examined the relationships between different variables to identify correlations using a Heatmap.
+- **Correlation Analysis**: Examined the relationships between different variables to identify correlations using a Heatmap. [Added the Python code from Hex here for reference.](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/rasmus-engelbrecht/python_scripts/heatmap.py)
 - **OLS Regression**: Applied Ordinary Least Squares (OLS) regression to explore the determinants of mental health scores and assess the influence of different factors. [Added the Python code from Hex here for reference.](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/rasmus-engelbrecht/python_scripts/OLS_regression.py)
 
 
