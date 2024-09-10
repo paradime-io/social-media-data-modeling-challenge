@@ -237,7 +237,7 @@ Thanks for going through these analyses with me! Now we have the fun part!
 ![image](images/14.png)
 ![image](images/15.png)
 <p align="center">
-   <img src="images/simone.png" width="200">
+   <img src="https://media.giphy.com/media/dyFx6AkcYyCnB7RQtQ/giphy.gif" width="200">
 </p>
 
 #### Instagram Events 📷
@@ -271,3 +271,11 @@ The Social Media Olympics 2024 was all about showing how athletes can shine onli
 - **Cross-Platform Isn’t Always a Thing 🔄**: Just because you’re big on one platform doesn’t mean it’ll carry over to others. Each platform has its own audience and quirks, so athletes need to tweak their game plan depending on where they’re posting.
 
 - **Fans Have Feelings 😊😡**: The bigger the success, the louder the reactions—both good and bad. Gold medalists tend to stir up the strongest feelings, showing that being at the top comes with a spotlight that’s not always friendly.
+
+## Taking This Project Further 🚀
+
+A compelling analysis would involve tracking the daily growth of followers during the Olympics, ideally capturing data at multiple points throughout each day. This approach would allow for a more nuanced correlation between follower spikes and specific event times, as well as events with or without medal outcomes. By aligning these insights, we could better understand how particular moments drive engagement and fan interest.
+
+Additionally, linking follower data with Google Trends and Twitter activity could reveal deeper patterns of audience interaction, highlighting how social media buzz and search interest align with athletic performances.
+
+However, a limitation of this project is that the data was gathered after the Olympics had concluded, which prevented access to daily granular insights without incurring significant costs through the Social Blade API. To overcome this in future analyses, planning for daily batch data extraction during the Olympic Games could provide better insights at a more detailed level.
