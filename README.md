@@ -127,6 +127,7 @@ For the outcome variable, we calculate the aggregate `mental_health_score` measu
 The correlation between variables was visualised using a Heatmap, if interested you can view that in the full Hex Notebook [here](https://app.hex.tech/c7e89ceb-cdfb-4937-a7c2-39913a269634/app/37474c32-c68d-4d07-82c9-6ddfb7d622b3/latest).
 
 ![Determinants of Mental Health](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/rasmus-engelbrecht/images/ols_regression.png)
+[Added the Python code from Hex here for reference.](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/rasmus-engelbrecht/python_scripts/OLS_regression.py)
 
 #### Conclusion
 The analysis of mental health scores reveals several key insights:
