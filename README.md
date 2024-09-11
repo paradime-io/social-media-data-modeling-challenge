@@ -162,6 +162,7 @@ However, a pivotal event that shifted overall sentiment from negative to positiv
 </div>
 
 The most negatively impactful events were when global COVID-19 cases exceeded a million, the WHO declared the pandemic, and social distancing guidelines were introduced, marking key turning points during the crisis.
+
 ---
 
 #### Top positive events
