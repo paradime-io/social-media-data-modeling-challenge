@@ -56,6 +56,8 @@ This project delves into how two critical factors—timing and music characteris
   - Created correlation matrices to measure the relationships between engagement metrics (likes, plays, comments) and music features. This helped in identifying key factors that influence user interaction.
 
 ## Insights
+**Link to dashboard:**
+https://app.hex.tech/6acecc42-da97-463b-9456-e13e98633ecc/app/25d36789-159e-4b00-88c3-79b3e2c6749a/latest
 
 <img width="1384" alt="image" src="https://github.com/user-attachments/assets/2b641ba5-34ac-4fab-ab3b-3f8c5561371a">
 <img width="1353" alt="image" src="https://github.com/user-attachments/assets/56cd5b61-81c0-41d2-bdde-19c91ae52daf">
