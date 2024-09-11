@@ -261,7 +261,9 @@ So then... 🥁 🥁 🥁 🥁 🥁 🥁 🥁 🥁
 
 Our final winner is…
 
-![final_performance_scatter_plot_table](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/jayeson-gao/screenshots/final_performance_scatter_plot_table.png?raw=true)
+![final_performance_bar](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/jayeson-gao/screenshots/final_performance_bar.png?raw=true)
+
+![final_performance_scatter](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/jayeson-gao/screenshots/final_performance_scatter.png?raw=true)
 
 ### ✨ **[Monkeys Spinning Monkeys](https://www.youtube.com/watch?v=NPdgPZ0u3zQ)** by **Kevin MacLeod**! ✨ 
 
