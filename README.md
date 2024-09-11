@@ -175,4 +175,4 @@ The analysis of Reddit comments during the COVID-19 pandemic reveals a fluctuati
 
 ## Author
 
-- [@ufukceyhanli](www.linkedin.com/in/ufukceyhanli)
+- [Ufuk Ceyhanli](https://www.linkedin.com/in/ufukceyhanli)
