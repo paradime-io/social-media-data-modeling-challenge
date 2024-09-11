@@ -11,7 +11,6 @@
 This project delves into how two critical factors—timing and music characteristics—affect TikTok engagement. First, we explore the impact of posting times, uncovering when TikTok content performs best throughout the day to maximize likes, comments, shares, and play counts. Then, we shift focus to music, analyzing how elements like rhythm, popularity, and genre influence user interaction. By combining insights from both the timing of posts and the musical features of content, this study aims to provide actionable strategies for boosting engagement and improving content performance on the platform.
 
 ## Data Sources
-## Data Sources
 - **Dataset 1: TikTok Dataset**  
   - Kaggle dataset with 1000 posts from 2020 Q4  
   - Includes various engagement metrics (likes, comments, shares, play counts), music data (Spotify and Apple), and author data.
@@ -22,7 +21,6 @@ This project delves into how two critical factors—timing and music characteris
 
 - **Dataset 3: Extra Author Dataset**  
   - An additional Kaggle dataset providing more detailed author information, used to join genres on.
-
 
 ### Data Lineage
 <img width="1424" alt="image" src="lineage.png" alt="Screenshot of Popularity">
@@ -56,7 +54,6 @@ This project delves into how two critical factors—timing and music characteris
 
 - **Correlation Analysis**  
   - Created correlation matrices to measure the relationships between engagement metrics (likes, plays, comments) and music features. This helped in identifying key factors that influence user interaction.
-
 
 ## Insights
 
@@ -98,5 +95,6 @@ This project delves into how two critical factors—timing and music characteris
 <img width="1388" alt="image" src="https://github.com/user-attachments/assets/a074e973-ac80-4996-a8cc-0e767d354e9c">
 <a href="Analysis/tiktok_engagement_by_rhythm_ratio.sql" style="font-size: 6pt; color: #0077cc;">Engagement by Rhythm source code</a>
 <br><br>
+
 ## Conclusions
 <img width="1433" alt="image" src="https://github.com/user-attachments/assets/d2f204af-8ad6-4dc9-9041-dfe2916b1398">
