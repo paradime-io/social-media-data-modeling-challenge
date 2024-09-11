@@ -79,7 +79,7 @@ In this project, I will be investigating the importance of timing and music char
 <br><br>
 
 <img width="1316" alt="image" src="https://github.com/user-attachments/assets/0bf64b13-a96a-4260-9a37-55f4a6e08bf3">
-<a href="Analysis/tiktok_engagement_by_genres_ratio.sql" style="font-size: 6pt; color: #0077cc;">Engagement by music features (heatmap) source code</a>
+<a href="Analysis/tiktok_engagement_by_genres_ratio.sql" style="font-size: 6pt; color: #0077cc;">Engagement by genres source code</a>
 <br><br>
 
 <img width="1322" alt="image" src="https://github.com/user-attachments/assets/1d62e360-a045-4113-9692-d60ab7bfddc1">
