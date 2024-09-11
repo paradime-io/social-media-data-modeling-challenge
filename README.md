@@ -27,17 +27,17 @@ Some of the questions we'll explore include:
 
 ### Data Lineage
 Hacker News
-![hn_lineage.png](./images/hn_lineage.png)
+![hn_lineage_2.png](./images/hn_lineage_2.png)
 
 Kaggle
-![kaggle_lineage.png](./images/kaggle_lineage.png)
+![kaggle_lineage_2.png](./images/kaggle_lineage_2.png)
 
 Stack Overflow
-![so_lineage.png](./images/so_lineage.png)
+![so_lineage_2.png](./images/so_lineage_2.png)
 
 LinkedIn Jobs
-![lkn_jobs.png](./images/lkn_jobs.png)
 
+![lkn_lineage_2.png](./images/lkn_lineage_2.png)
 
 Other models:
 * `clean_job_roles` - macro to clean job roles to keep the titles consistent across data sources
