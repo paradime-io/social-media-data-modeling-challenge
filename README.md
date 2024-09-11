@@ -66,7 +66,7 @@ For *post-level analysis*, a separate final model was created that zeroed in on 
 The final dataset was imported into Hex for visualisation. Interactive dashboards were built to allow exploration of key metrics, such as average engagement by post type, most frequent posting times, and hashtag trends. These visualisations provided valuable insights into the factors driving engagement on social media, with clear takeaways about optimal content strategies.
 
 ## Insights
-[**Dashboard Link**](https://app.hex.tech/52941720-d1c9-44bf-a2ec-e05eec443937/hex/fe651505-5b5f-40de-a909-2d06c74fd07c/draft/logic?view=app&dialog=preview)
+[**Dashboard Link**]( https://app.hex.tech/52941720-d1c9-44bf-a2ec-e05eec443937/app/fe651505-5b5f-40de-a909-2d06c74fd07c/latest)
 
 #### User-Level Metrics Summary:
 Our dataset consists of 485,125 distinct users, with an average of 595.72 and a median of 243 posts per user. On average, each user generates 699 engagements per post, which includes likes and comments. Additionally, users utilise an average of 4.49 distinct hashtags in their posts, highlighting a moderate level of hashtag diversity.
