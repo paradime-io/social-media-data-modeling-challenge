@@ -182,7 +182,7 @@ Out of the 374 job posts seeking software engineers / engineers who are knowledg
 
 ### LinkedIn's data-focused jobs seeked data analysts, data engineers, and data scientists
 ![0277.png](./images/0277.png)
-Despite Hacker News's enthusiam towards ChatGPT and OpenAI, there weren't a lot of machine learning roles compared to other data roles.
+Despite Hacker News's enthusiam towards ChatGPT and OpenAI, there weren't a lot of machine learning roles compared to other data roles. Perhaps the general tasks of machine learning is absorbed by data scientists?
 
 ### 2022 saw more Hacker News job postings than in 2023, and most companies were hiring engineers, software engineers, full-stack developers
 
