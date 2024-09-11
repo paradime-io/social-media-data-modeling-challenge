@@ -25,7 +25,7 @@ In this project, I will be investigating the importance of timing and music char
 
 
 ### Data Lineage
-<img width="1424" alt="image" src="https://github.com/user-attachments/assets/2d4c1c97-8f0a-467e-b895-6f162687d660">
+<img width="1424" alt="image" src="lineage.png" alt="Screenshot of Popularity">
 
 ## Methodology
 ### Tools Used
