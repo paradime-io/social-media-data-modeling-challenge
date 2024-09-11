@@ -22,7 +22,7 @@ g.map(sns.scatterplot, "rhythm", "metric_value", color="#1f77b4", s=70)
 
 # Adding trendlines to each subplot
 for ax in g.axes.flat:
-    metric = ax.get_title().split('=')[1].strip()  # Extract the metric name
+    metric = ax.get_title().split('=')[1].strip()  
     sns.regplot(
         x='rhythm', y='metric_value',
         data=dataframe_22[dataframe_22['metric'] == metric],
@@ -41,7 +41,7 @@ for ax in g.axes.flat:
 
 #Titles and label 
 g.set_axis_labels("rhythm", "Metric Value", fontsize=13, color="#333333")
-g.fig.subplots_adjust(top=0.85, hspace=0.3)  # Adjust space between plots
+g.fig.subplots_adjust(top=0.85, hspace=0.3)  
 g.fig.suptitle("rhythm vs. Engagement Metrics (Log Scale)", fontsize=18, color="#333333", weight='bold')
 
 for ax in g.axes.flat:
