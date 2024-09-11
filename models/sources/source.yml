@@ -10,10 +10,6 @@ sources:
         identifier: tiktok_dataset
         description: "Raw TikTok video data including video metadata, author information, music metadata, and engagement metrics."
 
-      - name: spotify_tracks
-        identifier: spotify_tracks
-        description: "Raw data of Spotify tracks including track details, album information, and artist associations."
-
       - name: spotify_tracks_data 
         identifier: spotify_tracks_data
         description: "Raw data of Spotify tracks - additional dataset containing 100k+ tracks"
@@ -25,11 +21,6 @@ sources:
       - name: spotify_artists_2
         identifier: spotify_artists_2
         description: "Raw data of Spotify artists including artist information, genres, followers, and popularity."
-
-
-      - name: apple_music_tracks
-        identifier: apple_music_tracks
-        description: "Raw data of Apple Music tracks including track and album details, as well as popularity metrics."
 
       - name: music_tracks
         identifier: music_tracks

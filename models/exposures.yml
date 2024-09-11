@@ -1,0 +1,44 @@
+version: 2
+
+exposures:
+  - name: Basic stats
+    type: dashboard
+    depends_on:
+      - ref('dim_tiktok_videos')
+    owner:
+      name: "msc"
+
+  - name: Engagement by timeslot
+    type: dashboard
+    depends_on:
+      - ref('dim_tiktok_videos')
+    owner:
+      name: "msc"
+
+  - name: Correlation heatmap between tiktok videos and music features
+    type: dashboard
+    depends_on:
+      - ref('mrt_tiktok_music_correlation')
+    owner:
+      name: "msc"
+
+  - name: Engagement by popularity
+    type: dashboard
+    depends_on:
+      - ref('fct_tiktok_music_joined_features')
+    owner:
+      name: "msc"
+
+  - name: Engagement by rhythm
+    type: dashboard
+    depends_on:
+      - ref('fct_tiktok_music_joined_features')
+    owner:
+      name: "msc"
+
+  - name: Engagement by genres
+    type: dashboard
+    depends_on:
+      - ref('fct_tiktok_music_joined_features')
+    owner:
+      name: "msc"

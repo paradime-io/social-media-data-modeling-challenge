@@ -1,0 +1,29 @@
+version: 2
+macros:
+  - name: corr
+    description: |
+      This macro calculates the Kendall Tau rank correlation coefficient between two columns in a specified table.
+      It works by performing pairwise comparisons between the values in the specified columns and checking whether 
+      the pairs are concordant (both increase or both decrease) or discordant (one increases, the other decreases).
+    arguments:
+      - name: column_a
+        type: string
+        description: "The name of the first column for which you want to calculate the correlation."
+      - name: column_b
+        type: string
+        description: "The name of the second column for which you want to calculate the correlation."
+      - name: table_name
+        type: string
+        description: "The name of the table containing the columns for correlation calculation."
+    
+
+  - name: group_by
+    description: |
+      This macro dynamically generates a `GROUP BY` clause for a specified number of columns.
+      It is useful when you need to programmatically specify a group of columns without manually writing them out. 
+      E.g.  group_by(3)  instead of GROUP BY 1,2,3
+    arguments:
+      - name: n
+        type: integer
+        description: "The number of columns to include in the GROUP BY clause."
+    

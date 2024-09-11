@@ -8,7 +8,7 @@ WITH tiktok AS (
         comment_count,
         play_count
     FROM
-        {{ ref('stg_tiktok_videos') }}
+        {{ ref('dim_tiktok_videos') }}
 ),
 
 music AS (
