@@ -8,7 +8,7 @@
 5. [Conclusions](#conclusions)
 
 ## Introduction
-In this project, I will be investigating the importance of timing and music characteristics when working with TikTok content. Specifically, the analysis will focus on how different musical attributes—such as rhythm, intensity, and genre—affect user engagement metrics like likes, shares, comments, and play counts. Additionally, I will explore how the timing of TikTok posts throughout the day influences content interaction, helping to identify optimal posting windows for maximum visibility and engagement. This comprehensive analysis aims to uncover actionable insights that can be applied to content creation strategies, leveraging both the musical aspects and timing to enhance engagement on the platform.
+This project delves into how two critical factors—timing and music characteristics—affect TikTok engagement. First, we explore the impact of posting times, uncovering when TikTok content performs best throughout the day to maximize likes, comments, shares, and play counts. Then, we shift focus to music, analyzing how elements like rhythm, popularity, and genre influence user interaction. By combining insights from both the timing of posts and the musical features of content, this study aims to provide actionable strategies for boosting engagement and improving content performance on the platform.
 
 ## Data Sources
 ## Data Sources
@@ -49,7 +49,7 @@ In this project, I will be investigating the importance of timing and music char
   - Applied Interquartile Range (IQR) method to remove outliers that could distort engagement metrics, focusing on the most relevant data points.
 
 - **Exploratory Data Analysis (EDA)**  
-  - Employed visualization tools to explore data distributions, relationships, and trends. This included heatmaps, scatter plots, and line charts for initial insights.
+  - Explored data distributions, relationships, and trends. This included heatmaps, scatter plots, and line charts for initial insights.
 
 - **Logarithmic Scale Transformation**  
   - Used logarithmic scales in visualizations to manage large variances and bring out trends that might be missed on linear scales.
