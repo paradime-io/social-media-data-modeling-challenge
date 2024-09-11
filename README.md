@@ -40,17 +40,17 @@ This dataset contains **943 technology-related keywords** extracted from [kaggle
 
 ### Data Lineage
 
-    - Hacker News Data Lineage
+- Hacker News Data Lineage
 
-        ![Hacker News Lineage](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/demik_freitas/analyses/images/hacker_news_data_lineage.jpg?raw=true)
+    ![Hacker News Lineage](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/demik_freitas/analyses/images/hacker_news_data_lineage.jpg?raw=true)
 
-    - Slashdot Lineage
+- Slashdot Lineage
 
-        ![Slashdot Lineage](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/demik_freitas/analyses/images/slashdot_data_lineage.jpg?raw=true)
+    ![Slashdot Lineage](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/demik_freitas/analyses/images/slashdot_data_lineage.jpg?raw=true)
 
-    - Technology Themes Data Lineage
+- Technology Themes Data Lineage
 
-        ![Themes Lineage](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/demik_freitas/analyses/images/technology_themes_data_lineage.jpg?raw=true)
+    ![Themes Lineage](https://github.com/paradime-io/social-media-data-modeling-challenge/blob/demik_freitas/analyses/images/technology_themes_data_lineage.jpg?raw=true)
 
 ## Methodology
 ### Tools Used
