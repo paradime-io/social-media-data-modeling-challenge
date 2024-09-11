@@ -14,9 +14,9 @@ The recent job market left many people discussing online about seeking a new job
 Some of the questions we'll explore include:
 
 * What data job roles are in demand?
-* Are folks on Hacker News, Kaggle, Stack Overflow interacting with the job skills in demand? 
+* Are folks on Hacker News, Kaggle, Stack Overflow interacting with the job skills in demand?
+* What tools and programming languages do they care about?
 * What is the Hacker News community talking about when it comes to machine learning? How does this community feel about machine learning? 
-
 
 ## Data Sources
 
@@ -44,15 +44,16 @@ Other models:
 * `consolidate_job_roles` - macro to consolidate redundant job roles. e.g. if pattern matching finds 'engineer' and 'software engineer' in a job post, choose 'software engineer'
 * `get_job_experience_level` - macro to find experience level required of job position
 
-In `scripts/`
+In `scripts/`:
 * `sentiment_analysis.py` - Python script to determine the sentiment of a post
 * `nmf_topic_modeling.py` - Python script to perform topic modeling with NMF
+* `unpivot_sentiment_scores.sql` - Not a model, but SQL used to pivot sentiment score table from topic modeling output
 
 ## Methodology
 ### Tools Used
 - Paradime: SQL and dbt™ development
 - MotherDuck: Data storage and computing
-- Hex: Data visualization (SQL for analysis & Python `nltk` library for sentiment analysis, topic modeling)
+- Hex: Data visualization (SQL for analysis & Python `seaborn` library for visualization, `nltk` library for sentiment analysis, topic modeling)
 
 
 ### Applied Techniques
@@ -61,13 +62,13 @@ For consistency across data sources, I first narrowed down the dataset to the da
 
 - From Kaggle and Stack Overflow (SO), I aimed to generate a clean list of topics that these communities care about. Using Paradime, I cleaned the survey results, which proved to be a tedious process due to variations in data formatting. While both surveys asked the typical 'What is your job title' and 'What is your total yearly compensation', they may have different data intake formats to reconcile.
   - For example, for compensation: Kaggle provided inconsistent salary bins, while SO used an open input box for participants to enter salary details. I opted to clean up the manual entries and converted the numerics into categorical salary bins
-  - The job title inconsistencies and ambiguous stratification of roles also required some intensive cleaning. For instance, Kaggle's survey grouped 'Machine Learning Engineer' and 'MLOps Engineer' as one category and 'Data Scientist' as another, while SO grouped 'Data Scientist' and 'Machine Learning' together. Since these two surveys served as the basis of the topics I'm interested in exploring, it took time to look into the data to decide how best to treat it.
+  - The job title inconsistencies and ambiguous stratification of roles also required some intensive cleaning. For instance, Kaggle's survey grouped 'Machine Learning Engineer' and 'MLOps Engineer' as one category and 'Data Scientist' as another, while SO grouped 'Data Scientist' and 'Machine Learning' together. Since these two surveys served as the basis of the topics I'm interested in exploring, it took time to look into the data to decide how best to treat it. (In this case, I grouped the former as 'Machine Learning', and also grouped the latter as 'Machine Learning' because their salaries were higher than Kaggle's Data scientist role.)
   - Since these were survey questions, there were many questions where participants were allowed to select multiple answers. During cleaning, I had to wrangle these fields into an array and split them.
   - I also manually filled in some custom data roles and keywords to maximize post retreival when matching keywords, but they were mostly filtered out upon consolidating the topics to align with the survey topics.
 
-- For Hacker News (HN), I aimed to narrow down stories and job posts relevant to tech readers and job seekers. Using the cleaned topics from Kaggle and SO, I identified matching topics and extracted posts that aligned with the interests of tech professionals. To guage the feelings towards these topics, I used sentiment analysis to explore the posts with related keywords. 
+- For Hacker News (HN), I aimed to narrow down stories and job posts relevant to tech readers and job seekers. Using the cleaned topics from Kaggle and SO, I identified matching topics and extracted posts that matched these topics/keywords. To guage the feelings towards these topics, I used sentiment analysis to explore the posts with related keywords. 
 
-- Topic modeling with non-negative matrix factorization (NMF): To get a general understanding of what the HN community mostly posts about **without** categorizing them using pre-defined topics, I chose to find 10 topics (for interpretability) of interest. To visualize the weights across topics for topic modeling, I used `seaborn` to plot the heatmap.
+- Topic modeling with non-negative matrix factorization (NMF): To get a general understanding of what the HN community mostly posts about **without** categorizing them using pre-defined topics, I chose to find 10 topics (for interpretability) of interest. To visualize the weights across topics for topic modeling, I used `seaborn` to plot the heatmap. [See SQL query to unpivot the sentiment scores for this graph](./scripts/unpivot_sentiment_scores.sql)
 
 
 ## Insights
@@ -144,7 +145,6 @@ Notably,
 
 ### Python and Rust are the top 2 programming languages mentioned in Hacker News stories
 ![021.png](./images/021.png)
-
 Javascript comes in as the 3rd most mentioned programming language in Hacker News.
 
 ![022.png](./images/022.png)
@@ -153,22 +153,32 @@ The prevalence of these three languages stayed consistent in 2022 - 2023. `pytho
 ### Python, Javascript, Typescript, and Java are popular programming languages of choice in the Kaggle & Stack Overflow community
 
 ![023.png](./images/023.png)
-Stack Overflow folks' top 3 programming languages are Javascript, Typescript, and HTML/CSS. Kaggle's community prefer Python, SQL, and R. Kaggle is known being a platform that hosts data science competitions and provides datasets, so it makes sense that this community has a focus on data science tools.
+Stack Overflow (SO) folks' top 3 programming languages are Javascript, Typescript, and HTML/CSS. Kaggle's community prefer Python, SQL, and R. Kaggle is known being a platform that hosts data science competitions and provides datasets, so it makes sense that this community has a focus on data science tools. 
+
+In general, aside from Hacker Rank's interest towards Rust, the three community share similar top 10 programming languages.
 
 #### Stack Overflow community earns more than the Kaggle community in the US
 ![020.png](./images/020.png)
 Stack Overflow (SO) had more survey responses in total (162k responses vs Kaggle's 24k), and after filtering out for responses in the US, the number of responses dropped even more, which helps explain why there are more SO responses. Still, the proportion of high-earners (200k - 240k USD) is much higher in the SO community compared to Kaggle. Also note that self reported numbers always have a margin of error.
 
-### Python is important to companies hiring for data roles
+### Python is important to companies hiring for data roles, and Tableau, AWS, and Azure are the top 3 enterprise tools that jobs use
 ![014.png](./images/014.png)
 Python is the second most sought after skill (after SQL) in the job postings for data roles.
 
+![030.png](./images/030.png)
+SQL is required of data engineer roles the most, followed by data analysts.
+
+### Back-end, full-stack, embedded app developers use Rust
+![031.png](./images/031.png)
+According to Stack Overflow survey participants, back-end and full-stack developers are the two jobs that use Rust. 
 
 ![016.png](./images/016.png)
-Among job postings that required Rust, the positions that most commonly seeked this skill are Data Engineer and Data Scientist.
+Among job postings that required Rust, the positions that most commonly seeked this skill are data engineer and data scientist.
+
 
 ![015.png](./images/015.png)
 Out of the 374 job posts seeking software engineers / engineers who are knowledgable in Python or Rust, 40% of jobs asked for Python, and only 4 jobs required Rust (and Python).
+
 
 ### LinkedIn's data-focused jobs seeked data analysts, data engineers, and data scientists
 ![0277.png](./images/0277.png)
@@ -177,10 +187,9 @@ Despite Hacker News's enthusiam towards ChatGPT and OpenAI, there weren't a lot 
 ### 2022 saw more Hacker News job postings than in 2023, and most companies were hiring engineers, software engineers, full-stack developers
 
 ![019.png](./images/019.png)
-There are almost half as many machine learning roles posted in 2023 compared to 2022.
+There are almost half as many machine learning roles posted in 2023 compared to 2022. There are more machine learning roles here than are listed in the LinkedIn job posts, though the numbers are much smaller compared to other roles.
 
-
-### Both Hacker News and LinkedIn job posts share asks for cloud computing (AWS, Azure), as well as data related roles
+### Both Hacker News and LinkedIn job posts share asks for cloud computing, as well as data related roles
 ![024.png](./images/024.png)
 ![](./images/025.png) 
 
@@ -190,8 +199,7 @@ Hacker News job posting topic modeling heatmap
 
 LinkedIn job posting topic modeling heatmap
 
-
-The heatmap suggests that both job boards place an emphasis on remote work (HN Topic 5; LinkedIn Topic 8).
+Rust seems to be in demand for Hacker News Jobs, as mentioned in Topics 5, 8, and 9. While both job boards asked for cloud, LinkedIn mentioned more specific platforms like AWS and Azure. The heatmap suggests that both job boards place an emphasis on remote/hybrid work (HN Topic 5; LinkedIn Topic 8). 
 
 ## Conclusions
 
@@ -199,6 +207,8 @@ The data roles in demand in 2023 were data analyst, data engineer, and data scie
 
 The Hacker News (HN), Kaggle, Stack Overflow (SO) communities are generally interacting with the job skills that are in demand. HN Jobs and SO communities seem to lean more towards software engineering / engineering roles, so it would make sense to have a focus on Javascript, Typescript, Java, and Rust.
 
-The HN community talked mostly about generative AI and ChatGPT in 2023, and their posts on average had neutral sentiment towards these topics. Aside from that they were also interested in deep learning/neural networks. If this community looks for data jobs according to their interest in gen AI and Python, then they would be interacting with the job skills in demand for the data roles. Additionally, since SQL is a top requirement in data roles, the HN community could benefit from having more interest in this topic. However, their interest in Rust doesn't overlap with Kaggle and SO communities, and it also doesn't seem to be a top requirement for data roles.
+The HN community talked mostly about generative AI and ChatGPT in 2023, and their posts on average had neutral sentiment towards these topics. Aside from that they were also interested in deep learning/neural networks. If this community looks for data jobs according to their interest in gen AI and Python, then they would be interacting with the job skills in demand for the data roles. 
 
-In conclusion, all three communities displayed an interest in Python through their posts and survey responses, which aligns well with what companies require to fill data positions. 
+Additionally, since SQL, AWS, and Azure are top requirements in data roles, the HN community could benefit from having even more interest in these topics. However, their interest in Rust doesn't overlap requirements for most data roles.
+
+All three communities displayed an interest in Python through their posts and survey responses, which aligns well with what companies require to fill data positions. 

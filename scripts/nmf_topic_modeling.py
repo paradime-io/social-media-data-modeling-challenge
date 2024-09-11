@@ -10,6 +10,8 @@ from nltk import pos_tag
 from sklearn.decomposition import NMF
 from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
 import nltk
+import seaborn as sns
+import matplotlib.pyplot as plt
 
 nltk.download('stopwords')
 nltk.download('wordnet')
@@ -97,3 +99,13 @@ def get_docs(df_story):
     df['post_content'] = df['title'].fillna('') + '. ' + df['text'].fillna('')
     docs = df['post_content'].unique()
     return [x for x in docs]
+
+
+heatmap_data = topics_df.pivot(index='Word', columns='Topic', values='Weight')
+plt.figure(figsize=(12, 20))
+sns.heatmap(heatmap_data, cmap="YlGnBu", annot=True, fmt=".2f", linewidths=.5)
+plt.title("Heatmap of Top Words Per Topic")
+plt.xlabel("Topic")
+plt.ylabel("Word")
+plt.xticks(rotation=45)
+plt.show()
