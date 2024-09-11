@@ -161,13 +161,16 @@ However, a pivotal event that shifted overall sentiment from negative to positiv
 <img src="images/insight5.png" alt="drawing" width="800"/> <br />
 </div>
 
+The most negatively impactful events were when global COVID-19 cases exceeded a million, the WHO declared the pandemic, and social distancing guidelines were introduced, marking key turning points during the crisis.
 ---
 
-#### Top negative events
+#### Top positive events
 
 <div align="center">
 <img src="images/insight6.png" alt="drawing" width="800"/> <br />
 </div>
+
+The top positive events from the chart show that the FDA's full approval of the Pfizer-BioNTech vaccine had the most significant positive impact, followed by Pfizer's announcement of successful vaccine trials. Additionally, the UK's lifting of most COVID-19 restrictions contributed positively, though to a lesser extent.
 <br /><br />
 
 ## Conclusions
