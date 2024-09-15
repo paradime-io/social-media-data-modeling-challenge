@@ -2,7 +2,7 @@
 
 Submission by: [Jayeson Gao](https://www.linkedin.com/in/jayesongao)
 
-*Note: view **[this writeup in Google Docs](https://docs.google.com/document/d/1egNWsOu8AHEGoMG0UKnR0IU1qeC1QueCydCiZiwLSAk/edit?usp=sharing)** if images don't load*
+*Note: view the analysis portion in [Canva](https://www.canva.com/design/DAGQfeecTw8/mbV2jcyHfJH_ldnSyxWi6g/view?utm_content=DAGQfeecTw8&utm_campaign=designshare&utm_medium=link&utm_source=editor) or [PDF](https://drive.google.com/file/d/1YMDrT6nRgqfTrWssSC2wrzutjYJAuNIK/view?usp=sharing) format*
 
 ## **📋 Table of Contents**
 
