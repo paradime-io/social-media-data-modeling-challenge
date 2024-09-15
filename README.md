@@ -1,4 +1,4 @@
-# Social Media Data Analysis - dbt™ Modeling Challenge
+# Tech Communities and Data Job Market Alignment: A Cross-Platform Analysis | dbt™ Modeling Challenge
 
 ## Table of Contents
 1. [Introduction](#introduction)
