@@ -1,6 +1,33 @@
 # dbt™ Data Modeling Challenge - Social Media Edition
 
-Welcome to the [dbt™ Data Modeling Challenge - Social Media Edition](https://www.paradime.io/dbt-data-modeling-challenge)! This challenge invites you to showcase your data modeling skills using social media data.
+## 🏁 Competition Status: Completed
+
+The dbt™ Data Modeling Challenge - Social Media Edition has concluded. We extend our heartfelt gratitude to all participants for their outstanding contributions and innovative insights into the world of social media data.
+
+### 🏆 View All Submissions
+
+Explore the remarkable work of our participants:
+
+- 🥇 [Bruno Souza De Lima](https://github.com/paradime-io/social-media-data-modeling-challenge/tree/bruno-lima)
+- 🥈 [Jayeson Gao](https://github.com/paradime-io/social-media-data-modeling-challenge/tree/jayeson-gao)
+- 🥉 [Mads Spanggaard](https://github.com/paradime-io/social-media-data-modeling-challenge/tree/mads-spanggaard)
+- 🥉 [Hetvi Parekh](https://github.com/paradime-io/social-media-data-modeling-challenge/tree/hetvi-parekh)
+- [Alexandra Vajda](https://github.com/paradime-io/social-media-data-modeling-challenge/tree/alexandra_vajda)
+- [Andy Malo](https://github.com/paradime-io/social-media-data-modeling-challenge/tree/andy-malo)
+- [Cyril Motte](https://github.com/paradime-io/social-media-data-modeling-challenge/tree/cyril_motte)
+- [Demik Freitas](https://github.com/paradime-io/social-media-data-modeling-challenge/tree/demik_freitas)
+- [Ilse Tse](https://github.com/paradime-io/social-media-data-modeling-challenge/tree/ilse-tse)
+- [Isin Pesch](https://github.com/paradime-io/social-media-data-modeling-challenge/tree/isin-pesch)
+- [Nancy Amandi](https://github.com/paradime-io/social-media-data-modeling-challenge/tree/nancy-amandi)
+- [Raj Kumar](https://github.com/paradime-io/social-media-data-modeling-challenge/tree/raj-kumar)
+- [Rasmus Sorensen](https://github.com/paradime-io/social-media-data-modeling-challenge/tree/rasmus-engelbrecht)
+- [Sophie Li](https://github.com/paradime-io/social-media-data-modeling-challenge/tree/sophie-li)
+- [Ufuk Ceyhanli](https://github.com/paradime-io/social-media-data-modeling-challenge/tree/ufuk-ceyhanli)
+- [Waldemar Hujo](https://github.com/paradime-io/social-media-data-modeling-challenge/tree/waldemar-hujo)
+
+We encourage you to review these submissions for inspiration and to learn from the diverse approaches taken by our participants.
+
+---
 
 ## 📋 Table of Contents
 
